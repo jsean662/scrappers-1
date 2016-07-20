@@ -1,0 +1,46 @@
+data_id,Building_name,config_type,Selling_price,Monthly_Rent,lat,longt,platform,city,listing_date,txn_type,property_type,locality,sqft,Status,listing_by,name_lister,Details,address,price_on_req,sublocality,age,google_place_id,immediate_possession,mobile_lister,areacode,management_by_landlord
+4234909,None,,800000.0,0,0,0,Sulekha,Mumbai,06/06/2016,Sale,Commercial,Vangani,185,None,manik constructions,None,None,None,false,None,None,None,None,None,None,None
+4712133,Aarambh Residency,1 RK,1350000.0,0,0,0,Sulekha,Mumbai,07/14/2016,Sale,Residential,Karjat,500,None,Sree Ram Developers,None,None,None,false,None,None,None,None,None,None,None
+4102785,None,,1584000.0,0,0,0,Sulekha,Mumbai,05/23/2016,Sale,Commercial,Ambernath West,220,None,R.S Enterprises,None,None,None,false,None,None,None,None,None,None,None
+4527563,Bhavani Paradise,1 BHK,1755000.0,0,0,0,Sulekha,Mumbai,07/12/2016,Sale,Residential,Palghar West,650,None,Munna Bhai Patel,None,None,None,false,None,None,None,None,None,None,None
+4653230,None,1 BHK,1768000.0,0,0,0,Sulekha,Mumbai,06/24/2016,Sale,Residential,Badlapur East,505,None,Jai Ambe Enterprises,None,None,None,false,None,None,None,None,None,None,None
+4648913,None,1 RK,1036000.0,0,0,0,Sulekha,Mumbai,06/23/2016,Sale,Residential,Neral,415,None,Fine Solutions,None,None,None,false,None,None,None,None,None,None,None
+3788123,None,1 BHK,1300000.0,0,0,0,Sulekha,Mumbai,07/12/2016,Sale,Residential,Khopoli,475,None,Arvind Nirmal,None,None,None,false,None,None,None,None,None,None,None
+4567427,None,1 RK,1060000.0,0,0,0,Sulekha,Mumbai,06/27/2016,Sale,Residential,Neral,409,None,Mr Ramjiyani,None,None,None,false,None,None,None,None,None,None,None
+4696107,Hrieday,1 BHK,1970000.0,0,0,0,Sulekha,Mumbai,07/09/2016,Sale,Residential,Badlapur East,640,None,Sukh Shanti Realtors,None,None,None,false,None,None,None,None,None,None,None
+4649643,None,1 RK,1480000.0,0,0,0,Sulekha,Mumbai,06/23/2016,Sale,Residential,Nalasopara West,400,None,Deep Homess,None,None,None,false,None,None,None,None,None,None,None
+4692279,None,1 RK,1066000.0,0,0,0,Sulekha,Mumbai,07/08/2016,Sale,Residential,Badlapur East,395,None,Shree Satyam Group,None,None,None,false,None,None,None,None,None,None,None
+4486799,None,1 RK,881000.0,0,0,0,Sulekha,Mumbai,07/02/2016,Sale,Residential,Vangani,375,None,Shanti Nath Associates,None,None,None,false,None,None,None,None,None,None,None
+4622270,None,1 BHK,1850000.0,0,0,0,Sulekha,Mumbai,06/15/2016,Sale,Residential,Palghar West,315,None,Mhatre Realtors,None,None,None,false,None,None,None,None,None,None,None
+4700666,None,1 HALL,4500000.0,0,0,0,Sulekha,Mumbai,07/11/2016,Sale,Residential,Jogeshwari East,350,None,Harshada Estate Agency,None,None,None,false,None,None,None,None,None,None,None
+4656401,None,1 BHK,888000.0,0,0,0,Sulekha,Mumbai,06/25/2016,Sale,Residential,Neral,355,None,Shubh Laxmi Infra,None,None,None,false,None,None,None,None,None,None,None
+4138885,None,,658000.0,0,0,0,Sulekha,Mumbai,06/30/2016,Sale,Commercial,Badlapur West,235,None,Arihant Enterprises,None,None,None,false,None,None,None,None,None,None,None
+4700650,None,1 RK,4930000.0,0,0,0,Sulekha,Mumbai,07/11/2016,Sale,Residential,Borivali West,290,None,D'Silva Properties,None,None,None,false,None,None,None,None,None,None,None
+4706952,Gokul Mohan,1 BHK,11200000.0,0,0,0,Sulekha,Mumbai,07/13/2016,Sale,Residential,Santacruz West,447,None,Sneha Enterprises,None,None,None,false,None,None,None,None,None,None,None
+4401978,Kalpataru Immensa,1 BHK,6300000.0,0,0,0,Sulekha,Mumbai,06/04/2016,Sale,Residential,Thane,680,None,Neha Sharma,None,None,None,false,None,None,None,None,None,None,None
+4649367,None,1 BHK,1822000.0,0,0,0,Sulekha,Mumbai,06/29/2016,Sale,Residential,Dombivali East,375,None,Dgm Property Solutions Pvt Ltd,None,None,None,false,None,None,None,None,None,None,None
+4427061,Spring Grove,1 BHK,5500000.0,0,0,0,Sulekha,Mumbai,06/09/2016,Sale,Residential,Kandivali East,400,None,Ketan,None,None,None,false,None,None,None,None,None,None,None
+4637379,None,,6500000.0,0,0,0,Sulekha,Mumbai,06/20/2016,Sale,Commercial,Malad West,330,None,Pushti Navlakshmi Real Estate,None,None,None,false,None,None,None,None,None,None,None
+4227508,None,1 RK,1231000.0,0,0,0,Sulekha,Mumbai,06/04/2016,Sale,Residential,Karjat,342,None,Dedhia Estate,None,None,None,false,None,None,None,None,None,None,None
+4471761,None,1 BHK,1800000.0,0,0,0,Sulekha,Mumbai,05/18/2016,Sale,Residential,Palghar West,550,None,Prashant Builder & Developer,None,None,None,false,None,None,None,None,None,None,None
+4476552,None,2 BHK,44800000.0,0,0,0,Sulekha,Mumbai,06/29/2016,Sale,Residential,Mumbai Central,1280,None,SahiyarasPropertySolutions,None,None,None,false,None,None,None,None,None,None,None
+4025980,None,2 BHK,14000000.0,0,0,0,Sulekha,Mumbai,07/08/2016,Sale,Residential,Goregaon West,1350,None,Anil Ghag,None,None,None,false,None,None,None,None,None,None,None
+3800294,None,2 BHK,13000000.0,0,0,0,Sulekha,Mumbai,05/25/2016,Sale,Residential,Bhandup East,1000,None,Royal Decorum,None,None,None,false,None,None,None,None,None,None,None
+3950687,None,1 BHK,9500000.0,0,0,0,Sulekha,Mumbai,06/26/2016,Sale,Residential,Chembur East,429,None,Sai Leela And Co.,None,None,None,false,None,None,None,None,None,None,None
+4255582,None,1 RK,1092000.0,0,0,0,Sulekha,Mumbai,06/23/2016,Sale,Residential,Ambernath West,420,None,Shagun Enterprises,None,None,None,false,None,None,None,None,None,None,None
+4250241,Raj Exotica,2 BHK,6650000.0,0,0,0,Sulekha,Mumbai,05/29/2016,Sale,Residential,Mira Road,955,None,Sudhir,None,None,None,false,None,None,None,None,None,None,None
+4593122,Runwal Forest,1 BHK,8700000.0,0,0,0,Sulekha,Mumbai,06/07/2016,Sale,Residential,Kanjurmarg West,725,None,Ashish Ruke,None,None,None,false,None,None,None,None,None,None,None
+4470190,None,1 BHK,3300000.0,0,0,0,Sulekha,Mumbai,06/26/2016,Sale,Residential,Palava,594,None,Bright Real Estate Consultants,None,None,None,false,None,None,None,None,None,None,None
+4633570,None,2 BHK,14800000.0,0,0,0,Sulekha,Mumbai,06/18/2016,Sale,Residential,Thane,1500,None,hemang,None,None,None,false,None,None,None,None,None,None,None
+4695544,None,3 BHK,14000000.0,0,0,0,Sulekha,Mumbai,07/09/2016,Sale,Residential,Thane,1620,None,Terravenue,None,None,None,false,None,None,None,None,None,None,None
+4579257,None,1 BHK,10600000.0,0,0,0,Sulekha,Mumbai,06/02/2016,Sale,Residential,Borivali West,416,None,Homelife Realty,None,None,None,false,None,None,None,None,None,None,None
+4710085,None,1 RK,1142000.0,0,0,0,Sulekha,Mumbai,07/14/2016,Sale,Residential,Raigad,395,None,Green Concept,None,None,None,false,None,None,None,None,None,None,None
+4693114,None,1 BHK,12800000.0,0,0,0,Sulekha,Mumbai,07/08/2016,Sale,Residential,Chembur East,466,None,Harish Real Estate,None,None,None,false,None,None,None,None,None,None,None
+3898860,Wagheswari Darshan,1 BHK,11000000.0,0,0,0,Sulekha,Mumbai,07/07/2016,Sale,Residential,Goregaon East,620,None,Sonu,None,None,None,false,None,None,None,None,None,None,None
+4538646,D.N.Nagar,2 BHK,20000000.0,0,0,0,Sulekha,Mumbai,05/27/2016,Sale,Residential,Andheri West,1050,None,Abdul Khaliq Sayed,None,None,None,false,None,None,None,None,None,None,None
+4597143,None,1 RK,1300000.0,0,0,0,Sulekha,Mumbai,06/08/2016,Sale,Residential,Virar East,350,None,OM SAI RAM PROPERTY CONSULTANT,None,None,None,false,None,None,None,None,None,None,None
+4702646,0,1 RK,600000.0,0,0,0,Sulekha,Mumbai,07/12/2016,Sale,Residential,Asangaon East,350,None,Rajesh real estate agency,None,None,None,false,None,None,None,None,None,None,None
+4707104,None,,7000000.0,0,0,0,Sulekha,Mumbai,07/13/2016,Sale,Commercial,Walkeshwar Road,225,None,Ramson Properties,None,None,None,false,None,None,None,None,None,None,None
+4692177,Vedant Krishna Pride,1 RK,1521000.0,0,0,0,Sulekha,Mumbai,07/08/2016,Sale,Residential,Dombivali East,385,None,Vedant Group of Property,None,None,None,false,None,None,None,None,None,None,None
+4448201,Siddhi KMC Park,1 BHK,1894000.0,0,0,0,Sulekha,Mumbai,07/13/2016,Sale,Residential,Virar East,505,None,Siddhi Developers,None,None,None,false,None,None,None,None,None,None,None
+4484339,None,4 BHK,15400000.0,0,0,0,Sulekha,Mumbai,05/19/2016,Sale,Residential,Lonavala,3581,None,Niraj Kumar Associates Pvt Ltd,None,None,None,false,None,None,None,No

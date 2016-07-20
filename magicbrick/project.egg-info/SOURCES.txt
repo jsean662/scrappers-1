@@ -1,0 +1,12 @@
+setup.py
+magicbrick/__init__.py
+magicbrick/items.py
+magicbrick/pipelines.py
+magicbrick/settings.py
+magicbrick/spiders/__init__.py
+magicbrick/spiders/magicSpider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

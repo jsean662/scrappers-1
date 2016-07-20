@@ -1,0 +1,376 @@
+data_id,Building_name,config_type,Selling_price,Monthly_Rent,lat,longt,platform,city,listing_date,txn_type,property_type,locality,sqft,Status,listing_by,name_lister,Details,address,price_on_req,sublocality,age,google_place_id,immediate_possession,mobile_lister,areacode,management_by_landlord
+19042117,None,3 BHK,0,1000.0,0,0,magicbrick,Mumbai,06/25/2016,Rent,Residential,Mumbai,1110,"Semi-Furnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"2
+Bath
+ East Facing 2 Car Parking None",None,false,None,None,None,None,None,None,None
+20496781,Project Oshiwara,1 BHK,0,1900.0,19.1297376,72.8291555,magicbrick,Mumbai,06/25/2016,Rent,Residential,Andheri West,500,"Unfurnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 3rd Floor (of 7) Main Road Facing South Facing",None,false,None,None,None,None,None,None,None
+20738237,None,1 BHK,0,3000.0,0,0,magicbrick,Mumbai,06/25/2016,Rent,Residential,Mumbai,275,"Furnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 6th Floor (of 7) None None",None,false,None,None,None,None,None,None,None
+20672665,None,1 BHK,0,3000.0,0,0,magicbrick,Mumbai,06/25/2016,Rent,Residential,Mumbai,489,"Unfurnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 3rd Floor (of 4) Garden/Park Facing None",None,false,None,None,None,None,None,None,None
+20636051,None,1 BHK,0,3300.0,19.4053281,72.7882785,magicbrick,Mumbai,06/25/2016,Rent,Residential,Nalasopara West,400,"Semi-Furnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 3rd Floor (of 7) Garden/Park Facing East Facing",None,false,None,None,None,None,None,None,None
+20626627,None,1 BHK,0,3500.0,19.4053281,72.7882785,magicbrick,Mumbai,06/25/2016,Rent,Residential,Nalasopara West,500,"Semi-Furnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 1st Floor (of 7) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20556338,None,1 BHK,0,3500.0,19.4557716,72.8456399,magicbrick,Mumbai,06/25/2016,Rent,Residential,Virar East,365,"Unfurnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 3rd Floor (of 4) Main Road Facing North Facing",None,false,None,None,None,None,None,None,None
+20043755,None,1 BHK,0,3500.0,19.4540588,72.7688226,magicbrick,Mumbai,06/25/2016,Rent,Residential,Virar West,425,"Semi-Furnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ Dimensions 12 X 35.42 ft 3rd Floor (of 4) Main Road Facing",None,false,None,None,None,None,None,None,None
+20975233,None,1 BHK,0,3500.0,0,0,magicbrick,Mumbai,06/25/2016,Rent,Residential,Mumbai,550,"Semi-Furnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 2nd Floor (of 4) 3 Balconies None",None,false,None,None,None,None,None,None,None
+20685553,None,1 BHK,0,3500.0,0,0,magicbrick,Mumbai,06/25/2016,Rent,Residential,Mumbai,590,"Semi-Furnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 3rd Floor (of 7) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+19810622,Ritu Horizon,2 BHK,0,3500.0,19.2879846373084,72.8681720609002,magicbrick,Mumbai,06/25/2016,Rent,Residential,Mira Bhayandar,1100,"Furnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"2
+Bath
+ 5th Floor (of 13) Main Road Facing 3 Balconies",None,false,None,None,None,None,None,None,None
+20448147,None,1 BHK,0,3500.0,19.4621578,72.8056851,magicbrick,Mumbai,06/25/2016,Rent,Residential,Virar,400,"Furnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 2nd Floor (of 5) Pool Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+21005390,Shanti Nagar,1 BHK,0,3500.0,19.4308199,72.808621,magicbrick,Mumbai,06/25/2016,Rent,Residential,Nalasopara West,560,"Unfurnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 3rd Floor (of 7) Garden/Park Facing, Main Road Facing West Facing",None,false,None,None,None,None,None,None,None
+20961808,None,1 BHK,0,3500.0,0,0,magicbrick,Mumbai,06/25/2016,Rent,Residential,Mumbai,690,"Unfurnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 2nd Floor (of 4) East Facing 3 Balconies",None,false,None,None,None,None,None,None,None
+20732136,None,1 BHK,0,3500.0,0,0,magicbrick,Mumbai,06/25/2016,Rent,Residential,Mumbai,610,"Unfurnished, Immediately
+Available
+",Owner,Vrushalivilas Barve,"1
+Bath
+ 7th Floor (of 7) Garden/Park Facing None",None,false,None,None,None,None,None,None,None
+21090529,Om Sai Heights,1 BHK,0,3500.0,19.43052233,72.8092711,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara,410,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ 1st Floor (of 7) Garden/Park Facing, Main Road Facing 1 Car Parking",None,false,None,None,None,None,None,None,None
+21079827,Orange Heights,1 BHK,0,3500.0,19.43226167,72.8103648,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara West,590,"Semi-Furnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ Dimensions 30 X 19.67 ft 5th Floor (of 9) Garden/Park Facing, Main Road Facing",None,false,None,None,None,None,None,None,None
+20900650,Shanti Nagar,1 BHK,0,3500.0,19.4308199,72.808621,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara West,560,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ 1st Floor (of 7) Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20847834,None,1 BHK,0,3500.0,19.4053281,72.7882785,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara West,468,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ 1st Floor (of 7) Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20048269,None,1 BHK,0,3700.0,19.4232188378519,72.8099268809509,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara West,550,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"2
+Bath
+ 2nd Floor (of 7) Garden/Park Facing East Facing",None,false,None,None,None,None,None,None,None
+20626279,Yashwant Gaurav Complex,1 BHK,0,3800.0,19.43136708,72.81092566,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara West,545,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20717949,None,1 BHK,0,3800.0,19.4313678741455,72.8109283447266,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara West,500,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"2
+Bath
+ 3rd Floor (of 7) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20685675,None,1 BHK,0,3800.0,0,0,magicbrick,Mumbai,7/13/2016,Rent,Residential,Mumbai,550,"Semi-Furnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ 4th Floor (of 7) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20613254,Yashwant Gaurav Complex,1 BHK,0,3800.0,19.43136708,72.81092566,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara West,600,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+21006522,None,1 BHK,0,3800.0,19.4053281,72.7882785,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara West,625,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ 6th Floor (of 7) Garden/Park Facing North - East Facing",None,false,None,None,None,None,None,None,None
+21000349,None,2 BHK,0,3800.0,19.05048,72.87762,magicbrick,Mumbai,7/13/2016,Rent,Residential,Everard Nagar,1700,"Semi-Furnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ 4th Floor (of 5) Garden/Park Facing East Facing",None,false,None,None,None,None,None,None,None
+20765287,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara West,575,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20764891,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+19028883,None,1 BHK,0,4000.0,0,0,magicbrick,Mumbai,7/13/2016,Rent,Residential,Mumbai,510,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ 1st Floor (of 4) Garden/Park Facing 1 Balcony",None,false,None,None,None,None,None,None,None
+20994826,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,7/13/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,SiddhiVinayak Real Estate,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+21047249,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20893515,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20780433,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) East Facing 2 Car Parking",None,false,None,None,None,None,None,None,None
+20929529,None,1 BHK,0,4000.0,0,0,magicbrick,Mumbai,07/11/2016,Rent,Residential,Mumbai,500,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 5th Floor (of 6) 3 Balconies None",None,false,None,None,None,None,None,None,None
+20677330,None,1 BHK,0,4000.0,19.4053287506104,72.7882766723633,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,560,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"2
+Bath
+ 2nd Floor (of 7) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20680412,None,1 BHK,0,4000.0,19.4053287506104,72.7882766723633,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,545,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"2
+Bath
+ 1st Floor (of 7) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+21065573,None,1 BHK,0,4000.0,19.4557716,72.8456399,magicbrick,Mumbai,07/11/2016,Rent,Residential,Virar East,280,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 4th Floor (of 4) East Facing None",None,false,None,None,None,None,None,None,None
+20524067,None,1 BHK,0,4000.0,19.4295673370361,72.8105697631836,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,610,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 3rd Floor (of 7) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20984951,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20635902,None,1 BHK,0,4000.0,19.4053281,72.7882785,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,575,"Semi-Furnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 3rd Floor (of 7) Garden/Park Facing East Facing",None,false,None,None,None,None,None,None,None
+20775356,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20787253,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20684326,None,1 BHK,0,4000.0,19.4313678741455,72.8109283447266,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,575,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 2nd Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20899781,None,1 BHK,0,4000.0,19.4313678741455,72.8109283447266,magicbrick,Mumbai,07/11/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 3rd Floor (of 7) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20569423,None,1 BHK,0,4000.0,0,0,magicbrick,Mumbai,07/11/2016,Rent,Residential,Mumbai,650,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 4th Floor (of 9) Garden/Park Facing, Main Road Facing South Facing",None,false,None,None,None,None,None,None,None
+20683601,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) 1 Car Parking 2 Balconies",None,false,None,None,None,None,None,None,None
+20822645,None,1 BHK,0,4000.0,0,0,magicbrick,Mumbai,06/07/2016,Rent,Residential,Mumbai,674,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 4th Floor (of 7) East Facing 2 Balconies",None,false,None,None,None,None,None,None,None
+20458338,None,1 BHK,0,4000.0,19.4282719,72.8503861,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara East,345,"Furnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 1st Floor (of 4) None None",None,false,None,None,None,None,None,None,None
+20752427,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara West,575,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20752545,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) 2 Car Parking 2 Balconies",None,false,None,None,None,None,None,None,None
+20695278,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara West,575,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20695051,None,1 BHK,0,4000.0,19.4053281,72.7882785,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara West,545,"Semi-Furnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 5th Floor (of 9) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20695578,None,1 BHK,0,4000.0,0,0,magicbrick,Mumbai,06/07/2016,Rent,Residential,Mumbai,675,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 4th Floor (of 7) 3 Balconies None",None,false,None,None,None,None,None,None,None
+20694868,None,1 BHK,0,4000.0,19.4053281,72.7882785,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara West,600,"Semi-Furnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 3rd Floor (of 7) Garden/Park Facing 1 Car Parking",None,false,None,None,None,None,None,None,None
+20548916,None,1 BHK,0,4000.0,0,0,magicbrick,Mumbai,06/07/2016,Rent,Residential,Mumbai,400,"Semi-Furnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"2
+Bath
+ 2nd Floor (of 4) None None",None,false,None,None,None,None,None,None,None
+20978839,None,1 BHK,0,4000.0,19.4053281,72.7882785,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara West,550,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ 7th Floor (of 9) 2 Balconies None",None,false,None,None,None,None,None,None,None
+20384742,Om Sai Heights,1 BHK,0,4000.0,19.43052233,72.8092711,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara,560,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"2
+Bath
+ 3rd Floor (of 7) Garden/Park Facing North Facing",None,false,None,None,None,None,None,None,None
+20634438,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) 1 Balcony None",None,false,None,None,None,None,None,None,None
+20985229,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara West,580,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20635146,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/07/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Agent,Maha Laxmi Real Estate Consultant,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20779236,None,1 BHK,0,4000.0,0,0,magicbrick,Mumbai,06/16/2016,Rent,Residential,Mumbai,460,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ 3rd Floor (of 3) Main Road Facing 1 Balcony",None,false,None,None,None,None,None,None,None
+20813641,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara West,575,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20672799,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20813345,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20674592,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ Upper Basement Floor (of 10) 2 Balconies None",None,false,None,None,None,None,None,None,None
+20672956,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara West,575,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20742939,Sai Krupa Apartment,1 BHK,0,4000.0,19.4053281,72.7882785,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara West,400,"Semi-Furnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ 1st Floor (of 4) Garden/Park Facing None",None,false,None,None,None,None,None,None,None
+20894430,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara West,590,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing North Facing",None,false,None,None,None,None,None,None,None
+20824214,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara West,575,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20938318,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara West,580,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20938236,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara West,575,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20665317,None,1 BHK,0,4000.0,0,0,magicbrick,Mumbai,06/16/2016,Rent,Residential,Mumbai,225,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ 6th Floor (of 6) Main Road Facing East Facing",None,false,None,None,None,None,None,None,None
+20729746,Nakoda Heights,1 BHK,0,4000.0,19.4312929578338,72.8113817124473,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara,545,"Semi-Furnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ 4th Floor (of 9) 3 Balconies None",None,false,None,None,None,None,None,None,None
+20669118,None,1 BHK,0,4000.0,19.100385,72.850466,magicbrick,Mumbai,06/16/2016,Rent,Residential,Vile Parle East,400,"Semi-Furnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ 4th Floor (of 4) North Facing 1 Balcony",None,false,None,None,None,None,None,None,None
+20880874,Yashwant Gaurav Complex,1 BHK,0,4000.0,19.43136708,72.81092566,magicbrick,Mumbai,06/16/2016,Rent,Residential,Nalasopara East,590,"Unfurnished, Immediately
+Available
+",Owner,Dharmendra Khadye,"1
+Bath
+ Upper Basement Floor (of 10) Garden/Park Facing, Main Road Facing East Facing",None,false,None,None,None,None,None,None,None

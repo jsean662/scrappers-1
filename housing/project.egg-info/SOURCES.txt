@@ -1,0 +1,16 @@
+setup.py
+housing/__init__.py
+housing/items.py
+housing/pipelines.py
+housing/settings.py
+housing/spiders/__init__.py
+housing/spiders/housingAndheri.py
+housing/spiders/housingGore.py
+housing/spiders/housingMalad.py
+housing/spiders/housingSpider.py
+housing/spiders/housingVile.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

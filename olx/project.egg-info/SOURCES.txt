@@ -1,0 +1,12 @@
+setup.py
+olx/__init__.py
+olx/items.py
+olx/pipelines.py
+olx/settings.py
+olx/spiders/__init__.py
+olx/spiders/olxSpider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
