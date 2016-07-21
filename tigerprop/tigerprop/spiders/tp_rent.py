@@ -69,8 +69,11 @@ class purpleyoSpider(Spider):
 			dt2 = int(path[i]['currentListingPrice']['updatedAt'] * 0.001)
 			item['updated_date'] = time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(dt2))
 
-			item['lat'] = path[i]['latitude']
-			
+			try:
+				item['lat'] = path[i]['latitude']
+			except:
+				item['lat'] = 0
+				
 			item['longt'] = path[i]['longitude']
 
 			item['txn_type'] = path[i]['listingCategory']

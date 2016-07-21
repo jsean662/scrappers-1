@@ -26,16 +26,16 @@ class MagicrentSpider(scrapy.Spider):
         #self.url_rem = []
     
     def parse(self,response):
-        handle = [ 301 , 401 , 403 , 404 , 408 , 429 , 503 ]
-        if response.status in handle:
-            time.sleep(300)
-            url = response.url
-            yield Request(url,callback=self.parse)
+        #handle = [ 301 , 401 , 403 , 404 , 408 , 429 , 503 ]
+        #if response.status in handle:
+        #    time.sleep(300)
+        #    url = response.url
+        #    yield Request(url,callback=self.parse)
             #self.url_rem.append(response.url)
             #curPage=int(response.url.split("-")[-1])
             #next_url = 'http://www.magicbricks.com/property-for-rent/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment,Residential-House,Villa&cityName=Mumbai/Page-' + str(curPage+1)
             #yield Request(next_url, callback=self.parse)
-        else:
+        #else:
             hxs = Selector(response)
             
             data = hxs.xpath('//div[@class="srpColm2"]/div[@class="proColmleft"]')
