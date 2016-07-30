@@ -1,105 +1,22 @@
 data_id,Building_name,config_type,Selling_price,Monthly_Rent,lat,longt,platform,city,listing_date,txn_type,property_type,locality,sqft,Status,listing_by,name_lister,Details,address,price_on_req,sublocality,age,google_place_id,immediate_possession,mobile_lister,areacode,management_by_landlord,carpet_area,updated_date
-1014028409,None,2BHK,0,7000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Wadala, Mumbai",475 ,None,None,Rodricks,None,None,false,None,None,None,None,+91 9892419230,None,None,None,7/16/2016
-1013917349,None,1BHK,7100000,0,0,0,OLX,Mumbai,7/16/2016,Sale,Residential,"Juhu, Mumbai",350 ,None,None,Dev,None,None,false,None,None,None,None,+91 9819129366,None,None,None,7/16/2016
-895052649,None,1 BHK,11000000,0,0,0,OLX,Mumbai,7/16/2016,Sale,Residential,"Malad, Mumbai",495 ,None,None,Tapin Khanna,None,None,false,None,None,None,None,9819904595,None,None,None,7/16/2016
-1003541179,None,1BHK,0,11000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Andheri East, Mumbai",250 ,None,None,Sonia,None,None,false,None,None,None,None,+91 9773262087,None,None,None,7/16/2016
-1013919719,None,1BHK,4500000,0,0,0,OLX,Mumbai,7/16/2016,Sale,Residential,"Kandivali, Mumbai",310 ,None,None,Amar,None,None,false,None,None,None,None,+91 9022257522,None,None,None,7/16/2016
-1013917239,None, 1BHK,0,16000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Kandivali, Mumbai",400 ,None,None,Amar,None,None,false,None,None,None,None,+91 9004184542,None,None,None,7/16/2016
-1013921913,None,3 BHK,0,26000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Kandivali, Mumbai","1,395 ",None,None,Sandeep,None,None,false,None,None,None,None,+91 9022257522,None,None,None,7/16/2016
-984111051,None,1BHK,0,15000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Vikhroli, Mumbai",450 ,None,None,Vicky,None,None,false,None,None,None,None,+91 9702766669,None,None,None,7/16/2016
-1013943525,None,2BHK,0,13000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Kandivali, Mumbai",850 ,None,None,shineproperties,None,None,false,None,None,None,None,+91 7710841229,None,None,None,7/16/2016
-1013914825,None,3BHK,0,26500000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Kandivali, Mumbai","1,475 ",None,None,Amar,None,None,false,None,None,None,None,+91 9004184542,None,None,None,7/16/2016
-1013949839,None,"""2BHK",0,42000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Kanjurmarg, Mumbai","1,050 ",None,None,Vicky,None,None,false,None,None,None,None,+91 9702766669,None,None,None,7/16/2016
-1013935397,None,1BHK,0,22000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Bandra West, Mumbai",200 ,None,None,sameer,None,None,false,None,None,None,None,+91 9773487773,None,None,None,7/16/2016
-1013966167,None,3BHK,0,30000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Dahisar, Mumbai","1,200 ",None,None,Rohit Wade,None,None,false,None,None,None,None,+91 9664839842,None,None,None,7/16/2016
-1013806103,None,1BHK,70000,0,0,0,OLX,Mumbai,7/16/2016,Sale,Residential,"Mumbai Central, Mumbai",800 ,None,None,Rashmi,None,None,false,None,None,None,None,+91 7757015294,None,None,None,7/16/2016
-1013792715,None,2BHK,0,30000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Chembur, Mumbai",488 ,None,None,Harendra kosia,None,None,false,None,None,None,None,+91 8689864646,None,None,None,7/15/2016
-1013956517,None,2BHK,0,13000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Antop Hill, Mumbai","1,065 ",None,None,bablo bisen,None,None,false,None,None,None,None,+91 8655208230,None,None,None,7/16/2016
-984168833,None,2BHK,2100000,0,0,0,OLX,Mumbai,7/16/2016,Sale,Residential,"Govandi, Mumbai",360 ,None,None,Shaizan Khot,None,None,false,None,None,None,None,+91 9167162756,None,None,None,7/16/2016
-1013787963,None,1BHK,0,6000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Bhandup, Mumbai",250 ,None,None,Narayan choudhary,None,None,false,None,None,None,None,+91 9820550934,None,None,None,7/15/2016
-1013801925,None,2BHK,55,0,0,0,OLX,Mumbai,7/15/2016,Sale,Residential,"Malad West, Mumbai",700 ,None,None,Shahid khan,None,None,false,None,None,None,None,+91 7385454836,None,None,None,7/15/2016
-1011542211,None,1BHK,6000000,0,0,0,OLX,Mumbai,7/16/2016,Sale,Residential,"Borivali West, Mumbai",225 ,None,None,Sunil Bile,None,None,false,None,None,None,None,+91 9594892012,None,None,None,7/16/2016
-878978901,None,None,0,8000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,Mumbai,"4,000 ",None,None,Sameena,None,None,false,None,None,None,None,+91 9673322159,None,None,None,7/16/2016
-995303073,None,1BHK,0,7500,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Kurla West, Mumbai",160 ,None,None,Bindu,None,None,false,None,None,None,None,+91 9819789740,None,None,None,7/16/2016
-1000892033,None,1BHK,0,14000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Goregaon, Mumbai",330 ,None,None,Pushpra Realty,None,None,false,None,None,None,None,+91 8097168039,None,None,None,7/16/2016
-1013790721,None,1BHK,0,18000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Goregaon West, Mumbai",650 ,None,None,Sachin Sharma,None,None,false,None,None,None,None,+91 9324020014,None,None,None,7/15/2016
-1012418433,None,1 BHK,3600000,0,0,0,OLX,Mumbai,7/16/2016,Sale,Residential,"Malad West, Mumbai",460 ,None,None,Raj,None,None,false,None,None,None,None,+91 9819997715,None,None,None,7/16/2016
-1013794949,None,1BHK,0,12500,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Goregaon West, Mumbai",410 ,None,None,Sachin,None,None,false,None,None,None,None,+91 9324020014,None,None,None,7/15/2016
-1010492537,None,2BHK,2800000,0,0,0,OLX,Mumbai,7/15/2016,Sale,Residential,"Mulund West, Mumbai",660 ,None,None,Vaibhav Shah,None,None,false,None,None,None,None,+91 9769749777,None,None,None,7/15/2016
-1013841135,None,1BHK,4000000,0,0,0,OLX,Mumbai,7/16/2016,Sale,Residential,Mumbai,495 ,None,None,Atri Mukherjee,None,None,false,None,None,None,None,7720046486,None,None,None,7/16/2016
-999797891,None,2 BHK,0,20000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Goregaon, Mumbai",764 ,None,None,Pushpra Realty,None,None,false,None,None,None,None,+91 9323846546,None,None,None,7/16/2016
-969346481,None,3BHK,23500000,0,0,0,OLX,Mumbai,7/16/2016,Sale,Residential,"Malad West, Mumbai","1,650 ",None,None,Varun,None,None,false,None,None,None,None,+91 9820410965,None,None,None,7/16/2016
-1013808339,None,1BHK,0,6500,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Malad West, Mumbai",225 ,None,None,Mumbai Property Consultant,None,None,false,None,None,None,None,+91 7045827566,None,None,None,7/16/2016
-1013816107,None,2BHK,845000,0,0,0,OLX,Mumbai,7/16/2016,Sale,Residential,"Vikhroli, Mumbai",300 ,None,None,Stevan,None,None,false,None,None,None,None,+91 9004333659,None,None,None,7/16/2016
-1000893873,None,1 BHK,0,20000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Goregaon, Mumbai",540 ,None,None,Pushpra Realty,None,None,false,None,None,None,None,+91 8097168039,None,None,None,7/16/2016
-1013808701,None,1BHK,0,6500,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Malad West, Mumbai",225 ,None,None,Mumbai Property Consultant,None,None,false,None,None,None,None,+91 7045827566,None,None,None,7/16/2016
-1013836797,None,1BHK,6800000,0,0,0,OLX,Mumbai,7/16/2016,Sale,Residential,"Kandivali, Mumbai",450 ,None,None,Rohit B,None,None,false,None,None,None,None,+91 9769293853,None,None,None,7/16/2016
-1013562837,None,2BHK,0,20000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Dahisar West, Mumbai",560 ,None,None,Krunal shah,None,None,false,None,None,None,None,+91 9870471727,None,None,None,7/14/2016
-1013547565,None, 2BHK,0,32000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Jogeshwari West, Mumbai",950 ,None,None,sohail,None,None,false,None,None,None,None,+91 9870440447,None,None,None,7/14/2016
-1014020721,None,,0,10000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Kurla West, Mumbai",,None,None,prem shah,None,None,false,None,None,None,None,+91 9819674331,None,None,None,7/16/2016
-1013563383,None,1BHK,0,12500,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Malad, Mumbai",225 ,None,None,Amar Tailor,None,None,false,None,None,None,None,+91 9773327947,None,None,None,7/14/2016
-1013543327,None,2BHK,23500000,0,0,0,OLX,Mumbai,7/14/2016,Sale,Residential,"Mazagaon, Mumbai",725 ,None,None,Murtaza,None,None,false,None,None,None,None,+91 9320415152,None,None,None,7/14/2016
-1012061971,None,,0,3999,0,0,OLX,Mumbai,7/8/2016,Rent,Residential,"Bhandup, Mumbai",,None,None,Vikas,None,None,false,None,None,None,None,+91 9833063203,None,None,None,7/8/2016
-1012230383,None,,0,2800,0,0,OLX,Mumbai,7/9/2016,Rent,Residential,"Colaba, Mumbai",,None,None,Nupi,None,None,false,None,None,None,None,,None,None,None,7/9/2016
-1013543267,None,1BHK,5500000,0,0,0,OLX,Mumbai,7/14/2016,Sale,Residential,"Bandra West, Mumbai",290 ,None,None,Hussain,None,None,false,None,None,None,None,+91 8080566544,None,None,None,7/14/2016
-1001507475,None,1 BHK,0,9000,0,0,OLX,Mumbai,7/8/2016,Rent,Residential,"Vile Parle West, Mumbai",,None,None,kdchotaliya,None,None,false,None,None,None,None,+91 9022097100,None,None,None,7/8/2016
-1012340253,None,,0,8000,0,0,OLX,Mumbai,7/10/2016,Rent,Residential,Mumbai,,None,None,Jannat Villa,None,None,false,None,None,None,None,9594005174,None,None,None,7/10/2016
-1009750217,None,,0,25000,0,0,OLX,Mumbai,7/9/2016,Rent,Residential,"Kandivali West, Mumbai",,None,None,Suraj Iyer,None,None,false,None,None,None,None,+91 9930323860,None,None,None,7/9/2016
-1012531403,None,,0,2400,0,0,OLX,Mumbai,7/10/2016,Rent,Residential,"Andheri, Mumbai",,None,None,Poonam,None,None,false,None,None,None,None,+91 9699560100,None,None,None,7/10/2016
-1007180325,None,,0,3000,0,0,OLX,Mumbai,7/10/2016,Rent,Residential,"Andheri West, Mumbai",,None,None,Savita Sachwani,None,None,false,None,None,None,None,+91 9820878993,None,None,None,7/10/2016
-858589405,None,5 BHK,0,19990,0,0,OLX,Mumbai,7/10/2016,Rent,Residential,"Bandra West, Mumbai",,None,None,ahmedjuned,None,None,false,None,None,None,None,+91 9819546867,None,None,None,7/10/2016
-992518395,None,1BHK,0,20000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Sion, Mumbai",652 ,None,None,Uttam lad,None,None,false,None,None,None,None,+91 9922919336,None,None,None,7/15/2016
-998639851,None,3BHK,850000,0,0,0,OLX,Mumbai,7/15/2016,Sale,Residential,"Antop Hill, Mumbai",400 ,None,None,mustaqeemattari,None,None,false,None,None,None,None,+91 9920918845,None,None,None,7/15/2016
-1013712011,None,2BHK,0,35000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Bandra West, Mumbai",600 ,None,None,Bushra Shaikh,None,None,false,None,None,None,None,+91 8879363919,None,None,None,7/15/2016
-1013716351,None,2 BHK,0,62000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Bandra West, Mumbai",735 ,None,None,Dev,None,None,false,None,None,None,None,+91 9819462225,None,None,None,7/15/2016
-1013726797,None, 1BHK,0,33000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Powai, Mumbai",600 ,None,None,Sagar G,None,None,false,None,None,None,None,+91 9820211445,None,None,None,7/15/2016
-1008161779,None,1 BHK,0,14000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Kandivali, Mumbai",400 ,None,None,Deepak Singh,None,None,false,None,None,None,None,+91 9820828574,None,None,None,7/15/2016
-1013718605,None,3 BHK,0,92000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Bandra West, Mumbai","1,266 ",None,None,Dev,None,None,false,None,None,None,None,+91 9819462225,None,None,None,7/15/2016
-1008162483,None,,0,5000,0,0,OLX,Mumbai,6/21/2016,Rent,Residential,"Mumbai Central, Mumbai",,None,None,Adv Virkud  diveagar,None,None,false,None,None,None,None,+91 9767903661,None,None,None,6/21/2016
-1013710537,None,1BHK,0,3300,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Andheri East, Mumbai",200 ,None,None,saurabh,None,None,false,None,None,None,None,+91 7045653517,None,None,None,7/15/2016
-1008360673,None,,0,1400,0,0,OLX,Mumbai,6/22/2016,Rent,Residential,"Andheri East, Mumbai",,None,None,Rajesh Salian,None,None,false,None,None,None,None,+91 9594311660,None,None,None,6/22/2016
-1009251315,None,1 BHK,0,14500,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Kandivali, Mumbai",400 ,None,None,Deepak Singh,None,None,false,None,None,None,None,+91 9820828574,None,None,None,7/15/2016
-1008442929,None,,0,1750,0,0,OLX,Mumbai,6/22/2016,Rent,Residential,"Malad West, Mumbai",,None,None,Nikki Wadhwani,None,None,false,None,None,None,None,+91 9821099972,None,None,None,6/22/2016
-1008361897,None,,0,2400,0,0,OLX,Mumbai,6/22/2016,Rent,Residential,"Powai, Mumbai",,None,None,Nobleconsul,None,None,false,None,None,None,None,+91 9594311660,None,None,None,6/22/2016
-1010119265,None, 2BHK,7300000,0,0,0,OLX,Mumbai,7/14/2016,Sale,Residential,"Dahisar West, Mumbai",890 ,None,None,Lester Fernandes,None,None,false,None,None,None,None,,None,None,None,7/14/2016
-1013367343,None,3BHK,0,90000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Andheri West, Mumbai","2,100 ",None,None,Sudeep  Chavan,None,None,false,None,None,None,None,+91 9892175068,None,None,None,7/14/2016
-1011000849,None,2BHK,2075000,0,0,0,OLX,Mumbai,7/14/2016,Sale,Residential,"Vidya Vihar, Mumbai",475 ,None,None,Durgesh Taware,None,None,false,None,None,None,None,+91 9967867826,None,None,None,7/14/2016
-1013379151,None,1BHK,0,7500,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Malad West, Mumbai",350 ,None,None,Vijay shetty,None,None,false,None,None,None,None,+91 9892149419,None,None,None,7/14/2016
-872281559,None,1BHK,300000,0,0,0,OLX,Mumbai,7/14/2016,Sale,Residential,"Juhu, Mumbai","2,153 ",None,None,Mohmmed Naik,None,None,false,None,None,None,None,+91 9920873101,None,None,None,7/14/2016
-1013543803,None,1 BHK,0,2400,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Vikhroli, Mumbai",550 ,None,None,Savya Dubey,None,None,false,None,None,None,None,+91 9833455445,None,None,None,7/14/2016
-1013550793,None,1 BHK,0,25000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,Mumbai,450 ,None,None,Yasin Fadnaik,None,None,false,None,None,None,None,9029042253,None,None,None,7/14/2016
-1013371023,None,1BHK,0,2500,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Kandivali West, Mumbai",120 ,None,None,Nilesh,None,None,false,None,None,None,None,+91 7066155192,None,None,None,7/14/2016
-1006054805,None,1BHK,0,26000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Andheri West, Mumbai",600 ,None,None,Pravin Jadhav,None,None,false,None,None,None,None,+91 9222135052,None,None,None,7/15/2016
-1013565601,None,5 BHK,0,190000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Borivali West, Mumbai","2,700 ",None,None,K Doshi,None,None,false,None,None,None,None,+91 7506600877,None,None,None,7/14/2016
-1013537525,None,2 BHK,8000000,0,0,0,OLX,Mumbai,7/14/2016,Sale,Residential,"Parel, Mumbai","1,050 ",None,None,Raju Thakur,None,None,false,None,None,None,None,+91 8422955522,None,None,None,7/14/2016
-1009800259,None,3BHK,0,16000,0,0,OLX,Mumbai,7/13/2016,Rent,Residential,"Borivali West, Mumbai","1,200 ",None,None,Atmiya estate agency,None,None,false,None,None,None,None,+91 8097418769,None,None,None,7/13/2016
-1013560251,None,2 BHK,0,45000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Powai, Mumbai","1,150 ",None,None,Lucky Sharma,None,None,false,None,None,None,None,+91 9320251012,None,None,None,7/14/2016
-1013145635,None,1BHK,0,14000,0,0,OLX,Mumbai,7/13/2016,Rent,Residential,"Jogeshwari West, Mumbai",250 ,None,None,Sudeep,None,None,false,None,None,None,None,+91 9892175068,None,None,None,7/13/2016
-987864435,None,,0,25000,0,0,OLX,Mumbai,4/19/2016,Rent,Residential,"Gamdevi, Mumbai",,None,None,Kahane,None,None,false,None,None,None,None,9930102393,None,None,None,4/19/2016
-1013173485,None,2BHK,0,65000,0,0,OLX,Mumbai,7/13/2016,Rent,Residential,"Worli, Mumbai","1,200.60 ",None,None,Satish,None,None,false,None,None,None,None,+91 9820333905,None,None,None,7/13/2016
-998695615,None,2BHK,7300000,0,0,0,OLX,Mumbai,7/13/2016,Sale,Residential,"Mulund Colony, Mumbai",850 ,None,None,Kamal,None,None,false,None,None,None,None,+91 9619238085,None,None,None,7/13/2016
-1013309107,None,1BHK,0,45000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Lower Parel, Mumbai",600 ,None,None,Bharat Vora,None,None,false,None,None,None,None,+91 8380088510,None,None,None,7/14/2016
-1013193181,None,2BHK,2500000,0,0,0,OLX,Mumbai,7/13/2016,Sale,Residential,"Ghatkopar West, Mumbai",325 ,None,None,Salim Shaikh,None,None,false,None,None,None,None,+91 9867876276,None,None,None,7/13/2016
-1007690715,None,1 BHK,1250000,0,0,0,OLX,Mumbai,7/14/2016,Sale,Residential,"Mulund West, Mumbai",615 ,None,None,bhushan pandit,None,None,false,None,None,None,None,+91 7678049005,None,None,None,7/14/2016
-1013404021,None,2 BHK,11500000,0,0,0,OLX,Mumbai,7/14/2016,Sale,Residential,"Dahisar West, Mumbai",700 ,None,None,Sameer,None,None,false,None,None,None,None,+91 9920359839,None,None,None,7/14/2016
-924071837,None,,0,2100,0,0,OLX,Mumbai,3/7/2016,Rent,Residential,"Borivali, Mumbai",,None,None,Rohit Mullick,None,None,false,None,None,None,None,8108406490,None,None,None,3/7/2016
-1013207683,None,2BHK,1850999,0,0,0,OLX,Mumbai,7/13/2016,Sale,Residential,"Andheri, Mumbai",500 ,None,None,Akshay,None,None,false,None,None,None,None,+91 8879343238,None,None,None,7/13/2016
-1013391247,None,2BHK,0,20000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Andheri, Mumbai",800 ,None,None,Priank,None,None,false,None,None,None,None,+91 8424056509,None,None,None,7/14/2016
-1013405473,None,2BHK,0,16000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Mumbai Central, Mumbai","1,000 ",None,None,prachi,None,None,false,None,None,None,None,+91 7040071715,None,None,None,7/14/2016
-1013443657,None,1 BHK,0,4500,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Dahisar, Mumbai",510 ,None,None,Jitu chaurasia,None,None,false,None,None,None,None,+91 9967702977,None,None,None,7/14/2016
-1013407225,None, 3BHK,0,27000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Borivali West, Mumbai","1,400 ",None,None,Vaibhav Kadam,None,None,false,None,None,None,None,+91 8655050975,None,None,None,7/14/2016
-1013412211,None,2 BHK,0,20000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Kandivali, Mumbai",675 ,None,None,Moin,None,None,false,None,None,None,None,+91 9833217215,None,None,None,7/14/2016
-1013210195,None,2 BHK,0,33000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Kandivali, Mumbai",925 ,None,None,ram,None,None,false,None,None,None,None,+91 9867670101,None,None,None,7/14/2016
-1013427783,None,2BHK,28000000,0,0,0,OLX,Mumbai,7/14/2016,Sale,Residential,"Andheri West, Mumbai","1,100 ",None,None,Ibrahim Shaikh,None,None,false,None,None,None,None,+91 9967438069,None,None,None,7/14/2016
-1013411559,None,1 BHK,0,15000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Kandivali, Mumbai",410 ,None,None,Moin,None,None,false,None,None,None,None,+91 9833217215,None,None,None,7/14/2016
-1010259757,None,1BHK,1728000,0,0,0,OLX,Mumbai,7/14/2016,Sale,Residential,"Mumbai Central, Mumbai",640 ,None,None,Vijay Thakur,None,None,false,None,None,None,None,+91 7498588828,None,None,None,7/14/2016
-1013266099,None,E BHK,0,22000,0,0,OLX,Mumbai,7/13/2016,Rent,Residential,"Bandra West, Mumbai",300 ,None,None,George miranda,None,None,false,None,None,None,None,+91 9892863053,None,None,None,7/13/2016
-1013279663,None,2BHK,15000000,0,0,0,OLX,Mumbai,7/13/2016,Sale,Residential,"Santacruz, Mumbai",520 ,None,None,iggy m,None,None,false,None,None,None,None,+91 7350500059,None,None,None,7/13/2016
-1013275921,None,2BHK,5500000,0,0,0,OLX,Mumbai,7/13/2016,Sale,Residential,"Kurla West, Mumbai",280 ,None,None,Abrar Shaikh,None,None,false,None,None,None,None,,None,None,None,7/13/2016
-993414361,None,2BHK,1650000,0,0,0,OLX,Mumbai,7/13/2016,Sale,Residential,"Malad West, Mumbai",365 ,None,None,Ajay Pandit,None,None,false,None,None,None,None,+91 9819146368,None,None,None,7/13/2016
-1009451385,None,2BHK,2500000,0,0,0,OLX,Mumbai,7/11/2016,Sale,Residential,"Vikhroli, Mumbai",200 ,None,None,saurabh,None,None,false,None,None,None,None,+91 9702404173,None,None,None,7/11/2016
-1013276697,None,1 BHK,8200000,0,0,0,OLX,Mumbai,7/13/2016,Sale,Residential,"Kandivali, Mumbai",513 ,None,None,Jay,None,None,false,None,None,None,None,+91 9811701066,None,None,None,7/13/2016
-966052271,None,1BHK,0,20000,0,0,OLX,Mumbai,7/13/2016,Rent,Residential,"Powai, Mumbai",550 ,None,None,Prashant,None,None,false,None,None,None,None,+91 9167901591,None,None,None,7/13/2016
-1012846969,None,None,6000000,0,0,0,OLX,Mumbai,7/11/2016,Sale,Residential,"Borivali West, Mumbai",300 ,None,None,Prashhant Wadikar,None,None,false,None,None,None,None,+91 9819962608,None,None,None,7/11/2016
-1013099431,None,1BHK,0,9000,0,0,OLX,Mumbai,7/12/2016,Rent,Residential,"Nariman Point, Mumbai",660 ,None,None,Ramesh Bhatia,None,None,false,None,None,None,None,+91 9819445220,None,None,None,7/12/2016
-982538041,None,2BHK,22500000,0,0,0,OLX,Mumbai,7/13/2016,Sale,Residential,"Jogeshwari West, Mumbai","1,100 ",None,None,salim TOHFA PROPERTY jogeshwari W,None,None,false,None,None,None,None,+91 9820878666,None,None,None,7/13/2
+1006629453,None,,0,14999,0,0,OLX,Mumbai,7/30/2016,Rent,Residential,"Girgaum, Mumbai",,None,None,Deepak,None,None,false,None,None,None,,+91 9819240563,None,None,None,7/30/2016
+999872145,None,4 BHK,0,18000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Bandra West, Mumbai",,None,None,ahmedjuned,None,None,false,None,None,None,,+91 9819546867,None,None,None,7/15/2016
+1013500039,None,,0,5000,0,0,OLX,Mumbai,7/14/2016,Rent,Residential,"Santacruz West, Mumbai",,None,None,Sagar,None,None,false,None,None,None,,+91 9167977626,None,None,None,7/14/2016
+1013594917,None,,0,300000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Bandra West, Mumbai",,None,None,Sujit yadav,None,None,false,None,None,None,,+91 9503948995,None,None,None,7/15/2016
+1013569513,None,,0,3000,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Andheri East, Mumbai",,None,None,Aayush Mathur,None,None,false,None,None,None,,+91 8107179651,None,None,None,7/15/2016
+1014019317,None,,0,10000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Kurla West, Mumbai",,None,None,prem shah,None,None,false,None,None,None,,+91 9819674331,None,None,None,7/16/2016
+1013715167,None,,0,1999,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Dahisar, Mumbai",,None,None,Jayesh,None,None,false,None,None,None,,+91 8422822542,None,None,None,7/15/2016
+1014020721,None,,0,10000,0,0,OLX,Mumbai,7/16/2016,Rent,Residential,"Kurla West, Mumbai",,None,None,prem shah,None,None,false,None,None,None,,+91 9819674331,None,None,None,7/16/2016
+980203665,None,3BHK,0,10000,0,0,OLX,Mumbai,7/17/2016,Rent,Residential,"Colaba, Mumbai",,None,None,lonavalabungalows,None,None,false,None,None,None,,+91 8097191001,None,None,None,7/17/2016
+858589405,None,5 BHK,0,19990,0,0,OLX,Mumbai,7/18/2016,Rent,Residential,"Lower Parel, Mumbai",,None,None,ahmedjuned,None,None,false,None,None,None,,+91 9819546867,None,None,None,7/18/2016
+864869563,None,,0,7000,0,0,OLX,Mumbai,7/17/2016,Rent,Residential,"Bandra, Mumbai",,None,None,Ahmed,None,None,false,None,None,None,,9967735945,None,None,None,7/17/2016
+1013750677,None,,0,1600,0,0,OLX,Mumbai,7/15/2016,Rent,Residential,"Andheri East, Mumbai",,None,None,pramod,None,None,false,None,None,None,,+91 9819164274,None,None,None,7/15/2016
+1003212169,None,,0,7000,0,0,OLX,Mumbai,7/19/2016,Rent,Residential,"Malabar Hill, Mumbai",,None,None,saima shakil,None,None,false,None,None,None,,+91 9699350033,None,None,None,7/19/2016
+1014052439,None,,0,1000,0,0,OLX,Mumbai,7/17/2016,Rent,Residential,"Santacruz West, Mumbai",,None,None,RM Dalvi,None,None,false,None,None,None,,+91 9833231991,None,None,None,7/17/2016
+987202355,None,4 BHK,39900000,0,0,0,OLX,Mumbai,7/29/2016,Sale,Residential,"Andheri West, Mumbai",,None,None,Shishu Yadava,None,None,false,None,None,None,,+91 7718888878,None,None,None,7/29/2016
+1014277151,None,,0,15000,0,0,OLX,Mumbai,7/17/2016,Rent,Residential,"Mulund, Mumbai",,None,None,Viabhav,None,None,false,None,None,None,,+91 8652619147,None,None,None,7/17/2016
+1017147783,None,2 BHK,0,6000,0,0,OLX,Mumbai,7/30/2016,Rent,Residential,"Andheri East, Mumbai",,None,None,Raj Jaroda,None,None,false,None,None,None,,+91 9975144844,None,None,None,7/30/2016
+1009496963,None,,0,1500,0,0,OLX,Mumbai,6/27/2016,Rent,Residential,"Kandivali West, Mumbai",,None,None,Gautami,None,None,false,None,None,None,,+91 9820166825,None,None,None,6/27/2016
+973596869,None,1BHK,0,13000,0,0,OLX,Mumbai,7/29/2016,Rent,Residential,"Malad West, Mumbai",,None,None,Prabhakar Sawant,None,None,false,None,None,None,,+91 9821629049,None,None,None,7/29/2016
+1010336471,None,,0,1200,0,0,OLX,Mumbai,6/30/2016,Rent,Residential,"Malad West, Mumbai",,None,None,Ravindra,None,None,false,None,None,None,,+91 9821416467,None,None,None,6/30/2016
+1017151699,None,1 BHK,0,25000,0,0,OLX,Mumbai,7/29/2016,Rent,Residential,"Malad West, Mumbai",,None,None,vinesh

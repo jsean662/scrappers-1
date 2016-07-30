@@ -21,7 +21,7 @@ class purpleyoSpider(Spider):
 	rules = (Rule(LinkExtractor(deny=(), allow=('http://www.proptiger.com/'), ), callback='parse', follow=True, ),)
 	custom_settings = {
 	        'BOT_NAME': 'tigerprop',
-	        'DEPTH_LIMIT': 1000,
+	        'DEPTH_LIMIT': 10000,
 	        'DOWNLOAD_DELAY': 2
 	    }
 
@@ -33,10 +33,10 @@ class purpleyoSpider(Spider):
 		base_url = "https://www.proptiger.com/"
 		max_page = int(jd["totalCount"])#"propertyid"]["ngroups"])
 		cur_page = int(response.url.split(',')[2].split('start')[1].split(':')[1])
-		print max_page,cur_page
+		#print max_page,cur_page
 		cur_page1 = cur_page + 15
 		page_num =str(cur_page1)
-		print page_num
+		#print page_num
 		url = 'https://www.proptiger.com/app/v2/project-listing?selector={{%22filters%22:{{%22and%22:[{{%22equal%22:{{%22cityId%22:18}}}},{{%22equal%22:{{%22cityId%22:18}}}}]}},%22paging%22:{{%22start%22:{x},%22rows%22:15}}}}'.format(x=str(cur_page1))
 		#if jd["statusCode"] == "2XX":
 		#A = json.load(urllib.urlopen(url))
@@ -125,6 +125,7 @@ class purpleyoSpider(Spider):
 				item['platform'] = 'tigerprop'
 				item['name_lister'] = 'None'
 				item['Details'] = 'None'
+				item['Launch_date'] = 'None'
 				item['age'] = 'None'
 				item['google_place_id'] = 'None'
 				item['mobile_lister'] = 'None'
@@ -139,6 +140,10 @@ class purpleyoSpider(Spider):
 				    item['quality1'] = 1
 				else:
 				    item['quality1'] = 0
+				if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
+					item['quality2'] = 1
+				else:
+					item['quality2'] = 0
 				if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None')):
 				    item['quality3'] = 1
 				else:

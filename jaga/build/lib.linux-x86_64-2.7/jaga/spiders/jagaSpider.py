@@ -62,12 +62,13 @@ class JagahaSpider(Spider):
                         item['longt'] = i.xpath('input[1]/@value').extract_first().split(' ')[1]
                         item['google_place_id'] = i.xpath('input[3]/@value').extract_first()
                         item['Building_name'] = i.xpath('div/span/text()').extract_first().split(',')[0]
-                        item['sqft'] = i.xpath('a/div/span[2]/text()').extract_first().replace("Sq. Ft.","")
+                        item['Bua_sqft'] = i.xpath('a/div/span[2]/text()').extract_first().replace("Sq. Ft.","")
                         item['address'] = i.xpath('div/span/text()').extract_first()
                         item['listing_by'] = 'None'
                         item['name_lister'] = 'None'
                         item['config_type'] = 'None'
                         item['mobile_lister'] = 'None'
+                        item['Launch_date'] = 'None'
                         item['areacode'] = 'None'
                         item['management_by_landlord'] = 'None'
                         item['sublocality'] = 'None'
@@ -97,7 +98,21 @@ class JagahaSpider(Spider):
         item['Details'] = x.xpath('div[2]/p[2]/text()').extract_first()
         item['property_type'] = x.xpath('div[3]/div[2]/span/text()').extract_first()
         item['Status'] = x.xpath('div[3]/div[4]/span/text()').extract_first()
-        item['immediate_possession'] = x.xpath('div[3]/div[5]/span/text()').extract_first()
+        item['Possession'] = x.xpath('div[3]/div[5]/span/text()').extract_first()
         item['age'] = x.xpath('div[3]/div[7]/span/text()').extract_first()
         item['locality'] = x.xpath('div[2]/p[4]/strong/text()').extract_first()
+        if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
+            item['quality1'] = 1
+        else:
+            item['quality1'] = 0
+            
+        if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
+            item['quality2'] = 1
+        else:
+            item['quality2'] = 0
+
+        if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None')):
+            item['quality3'] = 1
+        else:
+            item['quality3'] = 0
         yield item

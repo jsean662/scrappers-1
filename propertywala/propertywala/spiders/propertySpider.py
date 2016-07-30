@@ -305,7 +305,7 @@ class SeekingAlpha(CrawlSpider):
             #item['immediate_possession'] = rt5
             #print item['availability']
             rt6 = rt.xpath('li[contains(text(),"Possession:")]/span/text()').extract()
-            item['immediate_possession'] = rt6 + rt5
+            item['Possession'] = rt6 + rt5
             #print item['immediate_possession']
             rt7 = rt.xpath('li[contains(text(),"Age of Construction:")]/span/text()').extract()
             item['age'] = rt7

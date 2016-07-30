@@ -23,8 +23,8 @@ class purpleyoSpider(Spider):
 	rules = (Rule(LinkExtractor(deny=(), allow=('http://www.purpleyo.com/'), ), callback='parse_item', follow=True, ),)
 	custom_settings = {
 	        'BOT_NAME': 'purpleyo',
-	        'DEPTH_LIMIT': 1000,
-	        'DOWNLOAD_DELAY': 0
+	        'DEPTH_LIMIT': 10000,
+	        'DOWNLOAD_DELAY': 5
 	    }
 
 	def parse(self, response):
@@ -54,24 +54,39 @@ class purpleyoSpider(Spider):
 			item['areacode'] = path[i]['doclist']['docs'][0]['areacode']
 			item['city'] = path[i]['doclist']['docs'][0]['city']
 			item['locality'] = path[i]['doclist']['docs'][0]['locality']
-			item['sqft'] = path[i]['doclist']['docs'][0]['total_size']
+			item['Bua_sqft'] = path[i]['doclist']['docs'][0]['total_size']
 			item['platform'] = 'purpleyo'
 			item['management_by_landlord'] = path[i]['doclist']['docs'][0]['management_by_landlord']
 			item['config_type'] = 'None'
 			item['Selling_price'] = '0'
 			item['Monthly_Rent'] = '0'
 			item['price_on_req'] = 'false'
+			item['price_per_sqft'] = 'None'
 			item['listing_by'] = 'None'
 			item['name_lister'] = 'None'
 			item['Details'] = 'None'
 			item['sublocality'] = 'None'
 			item['age'] = 'None'
 			item['google_place_id'] = 'None'
-			item['immediate_possession'] = 'None'
+			item['Possession'] = 'None'
+			item['Launch_date'] = 'None'
 			item['mobile_lister'] = 'None'
 			item['carpet_area'] = 'None'
 			item['listing_date'] = item['listing_date']
-			
+			if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
+				item['quality1'] = 1
+        	else:
+        		item['quality1'] = 0
+            
+        	if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
+        		item['quality2'] = 1
+        	else:
+        		item['quality2'] = 0
+
+        	if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None')):
+        		item['quality3'] = 1
+        	else:
+        		item['quality3'] = 0
 			yield item
 
 		if (cur_page+8) < max_page:

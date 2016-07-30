@@ -47,7 +47,9 @@ class MySpider(CrawlSpider):
             item['sublocality'] = 'None'
             item['age'] = 'None'
             item['google_place_id'] = 'None'
-            item['immediate_possession'] = 'None'
+            item['Possession'] = 'None'
+            item['Launch_date'] = 'None'
+            item['price_per_sqft'] = 'None'
             item['areacode'] = 'None'
             item['management_by_landlord'] = 'None'
             item['carpet_area'] = 'None'
@@ -156,10 +158,10 @@ class MySpider(CrawlSpider):
             st=st[1:num]
             st=st.replace("u","")
             st=st.replace("'","")
-            item['sqft']=st
+            item['Bua_sqft']=st
             f=0
-            if item['sqft'] == '':
-                item['sqft'] = 0
+            if item['Bua_sqft'] == '':
+                item['Bua_sqft'] = 0
             
             if "oom" in str(map(unicode.strip, detail.xpath("tr[1]/td[1]/div[1]/text()").extract())) and no==-1:
                 st=str(map(unicode.strip, detail.xpath("tr[1]/td[1]/div[1]/strong/text()").extract()))
@@ -187,5 +189,19 @@ class MySpider(CrawlSpider):
                 item['config_type']="3BHK"
             if item['config_type'] == '':
                 item['config_type'] = 'None'
+            if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
+                item['quality1'] = 1
+            else:
+                item['quality1'] = 0
+            
+            if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
+                item['quality2'] = 1
+            else:
+                item['quality2'] = 0
+
+            if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None')):
+                item['quality3'] = 1
+            else:
+                item['quality3'] = 0
         items.append(item)
         return(items)

@@ -1,0 +1,12 @@
+setup.py
+fip_contact/__init__.py
+fip_contact/items.py
+fip_contact/pipelines.py
+fip_contact/settings.py
+fip_contact/spiders/__init__.py
+fip_contact/spiders/fip.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

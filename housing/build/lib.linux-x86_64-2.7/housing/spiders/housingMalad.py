@@ -71,6 +71,8 @@ class HousingSpider(scrapy.Spider):
             item['mobile_lister'] = 'None'
             item['areacode'] = 'None'
             item['management_by_landlord'] = 'None'
+            item['carpet_area'] = 'None'
+            item['updated_date'] = item['listing_date']
                 
             yield item
         

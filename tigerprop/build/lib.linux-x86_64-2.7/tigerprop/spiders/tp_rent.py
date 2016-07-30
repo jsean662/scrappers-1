@@ -19,7 +19,7 @@ class purpleyoSpider(Spider):
 	rules = (Rule(LinkExtractor(deny=(), allow=('http://www.proptiger.com/'), ), callback='parse', follow=True, ),)
 	custom_settings = {
 	        'BOT_NAME': 'tigerprop',
-	        'DEPTH_LIMIT': 1000,
+	        'DEPTH_LIMIT': 10000,
 	        'DOWNLOAD_DELAY': 2
 	    }
 
@@ -51,33 +51,69 @@ class purpleyoSpider(Spider):
 				#yield item
 			item['data_id'] = path[i]['propertyId']
 			
-			item['listing_by'] = path[i]['companySeller']['company']['type']
+			try:
+				item['listing_by'] = path[i]['companySeller']['company']['type']
+			except:
+				item['listing_by'] = 'None'
 			
-			item['name_lister'] = path[i]['companySeller']['user']['fullName']
+			try:
+				item['name_lister'] = path[i]['companySeller']['user']['fullName']
+			except:
+				item['name_lister'] = 'None'
 			
-			item['mobile_lister'] = path[i]['companySeller']['user']['contactNumbers'][0]['contactNumber']
+			try:
+				item['mobile_lister'] = path[i]['companySeller']['user']['contactNumbers'][0]['contactNumber']
+			except:
+				item['mobile_lister'] = 'None'
 
-			item['price_per_sqft'] = path[i]['currentListingPrice']['pricePerUnitArea']
+			try:
+				item['price_per_sqft'] = path[i]['currentListingPrice']['pricePerUnitArea']
+			except:
+				item['price_per_sqft'] = 'None'
 
-			item['Selling_price'] = str(path[i]['currentListingPrice']['price'])
+			try:
+				item['Selling_price'] = str(path[i]['currentListingPrice']['price'])
+			except:
+				item['Selling_price'] = '0'
 
 			item['Monthly_Rent'] = '0'
 
-			dt1 = int(path[i]['currentListingPrice']['createdAt'] * 0.001)
-			item['listing_date'] = time.strftime('%m/%d/%Y %H:%M:%S', time.gmtime(dt1))
+			try:
+				dt1 = int(path[i]['currentListingPrice']['createdAt'] * 0.001)
+				item['listing_date'] = time.strftime('%m/%d/%Y %H:%M:%S', time.gmtime(dt1))
+			except:
+				item['listing_date'] = 'None'
 			
-			dt2 = int(path[i]['currentListingPrice']['updatedAt'] * 0.001)
-			item['updated_date'] = time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(dt2))
+			try:
+				dt2 = int(path[i]['currentListingPrice']['updatedAt'] * 0.001)
+				item['updated_date'] = time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(dt2))
+			except:
+				item['updated_date'] = 'None'
 
-			item['lat'] = path[i]['latitude']
-			
-			item['longt'] = path[i]['longitude']
+			try:
+				item['lat'] = path[i]['latitude']
+			except:
+				item['lat'] = 0
+				
+			try:
+				item['longt'] = path[i]['longitude']
+			except:
+				item['longt'] = 0
 
-			item['txn_type'] = path[i]['listingCategory']
+			try:
+				item['txn_type'] = path[i]['listingCategory']
+			except:
+				item['txn_type'] = 'None'
 
-			item['config_type'] = str(path[i]['property']['bedrooms']) + 'BHK'
+			try:
+				item['config_type'] = str(path[i]['property']['bedrooms']) + 'BHK'
+			except:
+				item['config_type'] = 'None'
 
-			item['property_type'] = path[i]['property']['unitType']
+			try:
+				item['property_type'] = path[i]['property']['unitType']
+			except:
+				item['property_type'] = 'None'
 
 			try:
 				item['Bua_sqft'] = str(path[i]['property']['size'])
@@ -88,15 +124,30 @@ class purpleyoSpider(Spider):
 			except:
 				item['carpet_area'] = '0'
 
-			item['areacode'] = path[i]['property']['project']['localityId']
+			try:
+				item['areacode'] = path[i]['property']['project']['localityId']
+			except:
+				item['areacode'] = 'None'
 
-			item['city'] = path[i]['property']['project']['locality']['suburb']['city']['label']
+			try:
+				item['city'] = path[i]['property']['project']['locality']['suburb']['city']['label']
+			except:
+				item['city'] = 'None'
 
-			item['locality'] = path[i]['property']['project']['locality']['suburb']['label']
+			try:
+				item['locality'] = path[i]['property']['project']['locality']['suburb']['label']
+			except:
+				item['locality'] = 'None'
 
-			item['sublocality'] = path[i]['property']['project']['locality']['label']
+			try:
+				item['sublocality'] = path[i]['property']['project']['locality']['label']
+			except:
+				item['sublocality'] = 'None'
 
-			item['Building_name'] = path[i]['property']['project']['locality']['newsTag']
+			try:
+				item['Building_name'] = path[i]['property']['project']['locality']['newsTag']
+			except:
+				item['Building_name'] = 'None'
 
 			try:
 				dt3 = int(path[i]['property']['project']['launchDate'] * 0.001)
@@ -104,16 +155,26 @@ class purpleyoSpider(Spider):
 			except:
 				item['Launch_date'] = 'None'
 
-			item['address'] = path[i]['property']['project']['address']
+			try:
+				item['address'] = path[i]['property']['project']['address']
+			except:
+				item['address'] = 'None'
 
 			try:
 				dt4 = int(path[i]['property']['project']['possessionDate'] * 0.001)
 				item['Possession'] = str(time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(dt4)))
 			except:
 				item['Possession'] = 'None'
-			item['Status'] = path[i]['property']['project']['projectStatus']
+			
+			try:
+				item['Status'] = path[i]['property']['project']['projectStatus']
+			except:
+				item['Status'] = 'None'
 
-			item['platform'] = path[i]['listingSourceDomain']
+			try:
+				item['platform'] = path[i]['listingSourceDomain']
+			except:
+				item['platform'] = 'None'
 
 			item['management_by_landlord'] = 'None'
 
@@ -147,7 +208,7 @@ class purpleyoSpider(Spider):
 		if (cur_page+15) < ( max_page):
 			yield Request(url, callback=self.parse)	
 
-			'''	item['config_type'] = str(path[i]['properties'][j]['bedrooms']) + "BHK"
+			'''item['config_type'] = str(path[i]['properties'][j]['bedrooms']) + "BHK"
 				item['property_type'] = path[i]['properties'][j]['unitType']
 
 				item['txn_type'] = "sale"

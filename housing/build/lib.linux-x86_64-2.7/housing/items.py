@@ -10,11 +10,14 @@ class HousingItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     #pass
+    carpet_area = scrapy.Field()
+    updated_date = scrapy.Field()
     management_by_landlord = scrapy.Field()
     areacode = scrapy.Field()
     mobile_lister = scrapy.Field()
     google_place_id = scrapy.Field()
-    immediate_possession = scrapy.Field()
+    Launch_date = scrapy.Field()
+    Possession = scrapy.Field()
     age = scrapy.Field()
     address = scrapy.Field()
     price_on_req = scrapy.Field()
@@ -29,7 +32,8 @@ class HousingItem(scrapy.Item):
     lat = scrapy.Field()
     longt = scrapy.Field()
     locality = scrapy.Field()
-    sqft = scrapy.Field()
+    price_per_sqft = scrapy.Field()
+    Bua_sqft = scrapy.Field()
     Status = scrapy.Field()
     listing_by = scrapy.Field()
     name_lister = scrapy.Field()
@@ -37,3 +41,7 @@ class HousingItem(scrapy.Item):
     Monthly_Rent = scrapy.Field()
     Details = scrapy.Field()
     data_id = scrapy.Field()
+    quality1 = scrapy.Field()
+    quality2 = scrapy.Field()
+    quality3 = scrapy.Field()
+

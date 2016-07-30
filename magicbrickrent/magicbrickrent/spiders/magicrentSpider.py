@@ -18,7 +18,7 @@ class MagicrentSpider(scrapy.Spider):
     allowed_domains = ['magicbricks.com']
     start_urls = ['http://www.magicbricks.com/property-for-rent/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment,Residential-House,Villa&cityName=Mumbai/Page-1']
     custom_settings = {
-            'DEPTH_LIMIT' : 1000,
+            'DEPTH_LIMIT' : 10000,
 	        'DOWNLOAD_DELAY': 4
 	    }
 	    
@@ -45,7 +45,7 @@ class MagicrentSpider(scrapy.Spider):
             for i in data:
                 item = MagicbrickrentItem()
             
-                item['platform'] = 'magicbrick'
+                item['platform'] = 'Magicbrick'
                 item['txn_type'] = 'Rent'
                 item['property_type'] = 'Residential'
                 item['city'] = 'Mumbai'
@@ -73,12 +73,14 @@ class MagicrentSpider(scrapy.Spider):
                     item['price_on_req'] = 'true'
                 else:
                     item['price_on_req'] = 'false'
+                item['price_per_sqft'] = 'None'
                 item['carpet_area'] = 'None'
                 item['address'] = 'None'
                 item['sublocality'] = 'None'
                 item['age'] = 'None'
                 item['google_place_id'] = 'None'
-                item['immediate_possession'] = 'None'
+                item['Launch_date'] = 'None'
+                item['Possession'] = 'None'
                 item['mobile_lister'] = 'None'
                 item['areacode'] = 'None'
                 item['management_by_landlord'] = 'None'
@@ -86,9 +88,9 @@ class MagicrentSpider(scrapy.Spider):
                 item['name_lister'] = str(str(lister.xpath('div[5]/div[3]/ul/li[3]/div/div[3]/text()').extract_first()).replace("\n",""))
                 check = i.xpath('div[2]/div[1]/label/text()').extract_first()
                 if check == 'Details':
-                    item['sqft'] = i.xpath('div[2]/div[1]/ul/li[1]/span/text()').extract_first().split()[0]
+                    item['Bua_sqft'] = i.xpath('div[2]/div[1]/ul/li[1]/span/text()').extract_first().split()[0]
                 else:
-                    item['sqft'] = ''
+                    item['Bua_sqft'] = ''
                 item['Status'] = i.xpath('div[2]/div[2]/text()').extract()[1:]
                 item['Details'] = str(i.xpath('div[2]/div[1]/ul/li[2]/text()').extract_first())+' '+str(i.xpath('div[2]/div[1]/ul/li[3]/text()').extract_first())+' '+str(i.xpath('div[2]/div[1]/ul/li[4]/text()').extract_first())+' '+str(i.xpath('div[2]/div[1]/ul/li[5]/text()').extract_first())
             
@@ -96,34 +98,55 @@ class MagicrentSpider(scrapy.Spider):
                 day = day.replace("Posted: ","").replace("Posted ","")
             
                 if 'Today' in day:
-                    item['listing_date'] = str(date.today().month)+'/'+str(date.today().day)+'/'+str(date.today().year)
+                    item['listing_date'] = str(date.today().month)+'/'+str(date.today().day)+'/'+str(date.today().year) + ' 00:00:00'
                 elif 'Yesterday' in day:
-                    item['listing_date'] = str((date.today() - timedelta(days=1)).month)+"/"+str((date.today() - timedelta(days=1)).day)+"/"+str((date.today() - timedelta(days=1)).year)
+                    item['listing_date'] = str((date.today() - timedelta(days=1)).month)+"/"+str((date.today() - timedelta(days=1)).day)+"/"+str((date.today() - timedelta(days=1)).year) + ' 00:00:00'
                 elif 'th' in day:
                     day = day.replace("th","")
-                    day = dt.strftime(dt.strptime(day,'%d %b'),'%m/%d')+'/'+str(date.today().year)
+                    day = dt.strftime(dt.strptime(day,'%d %b'),'%m/%d')+'/'+str(date.today().year) + ' 00:00:00'
                     item['listing_date'] = day
                 elif 'st' in day:
                     day = day.replace("st","")
-                    day = dt.strftime(dt.strptime(day,'%d %b'),'%m/%d')+'/'+str(date.today().year)
+                    day = dt.strftime(dt.strptime(day,'%d %b'),'%m/%d')+'/'+str(date.today().year) + ' 00:00:00'
                     item['listing_date'] = day
                 elif 'rd' in day:
                     day = day.replace("rd","")
-                    day = dt.strftime(dt.strptime(day,'%d %b'),'%m/%d')+'/'+str(date.today().year)
+                    day = dt.strftime(dt.strptime(day,'%d %b'),'%m/%d')+'/'+str(date.today().year) + ' 00:00:00'
                     item['listing_date'] = day
                 elif 'nd' in day:
                     day = day.replace("nd","")
-                    day = dt.strftime(dt.strptime(day,'%d %b'),'%m/%d')+'/'+str(date.today().year)
+                    day = dt.strftime(dt.strptime(day,'%d %b'),'%m/%d')+'/'+str(date.today().year) + ' 00:00:00'
                     item['listing_date'] = day
                 item['updated_date'] = item['listing_date']
+
+                if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
+                    item['quality1'] = 1
+                else:
+                    item['quality1'] = 0
+            
+                if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
+                    item['quality2'] = 1
+                else:
+                    item['quality2'] = 0
+
+                if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None')):
+                    item['quality3'] = 1
+                else:
+                    item['quality3'] = 0
                 yield item
         
             curPage=int(response.url.split("-")[-1])    
             #print curPage
-            maxPage = int(hxs.xpath('//div[@id="pagination"]/span/a[last()]/@href').extract_first().split('-')[-1])
+            try:
+                maxPage = int(hxs.xpath('//div[@id="pagination"]/span/a[last()]/@href').extract_first().split('-')[-1])
+            except:
+                try:
+                    maxPage = int(hxs.xpath('//div[@id="pagination"]/span/a[@class="act selected"]/text()').extract_first()) + 1
+                except:
+                    maxPage = curPage + 1
             #print maxPage
         
-            if curPage < maxPage :
+            if curPage <= maxPage :
                 nextPage = curPage+1
                 next_url = 'http://www.magicbricks.com/property-for-rent/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment,Residential-House,Villa&cityName=Mumbai/Page-' + str(nextPage)
                 yield Request(next_url, callback=self.parse)

@@ -23,8 +23,8 @@ class purpleyoSpider(Spider):
 	rules = (Rule(LinkExtractor(deny=(), allow=('http://www.purpleyo.com/'), ), callback='parse_item', follow=True, ),)
 	custom_settings = {
 	        'BOT_NAME': 'purpleyo',
-	        'DEPTH_LIMIT': 1000,
-	        'DOWNLOAD_DELAY': 0
+	        'DEPTH_LIMIT': 10000,
+	        'DOWNLOAD_DELAY': 5
 	    }
 
 	def parse(self, response):

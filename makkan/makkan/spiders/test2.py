@@ -102,12 +102,12 @@ class SeekingAlpha(CrawlSpider):
 
                   
              	
-                    #item['per_sqft'] = i.xpath("div/div/div[2]/div[1]/div[1]/div[1]/div[2]/span/text()").extract()
+                    item['price_per_sqft'] = i.xpath("div/div/div[2]/div[1]/div[1]/div[1]/div[2]/span/text()").extract()
                     item['config_type'] = i.xpath("div/div/div[2]/div[1]/div[2]/div/h2/a/span/span/text()").extract()
                     try:
-                            item['sqft'] = i.xpath("div/div/div[2]/div[1]/div[2]/span/text()").extract_first().replace("sq ft","")
+                            item['Bua_sqft'] = i.xpath("div/div/div[2]/div[1]/div[2]/span/text()").extract_first().replace("sq ft","")
                     except AttributeError:
-                            item['sqft'] = '0'
+                            item['Bua_sqft'] = '0'
                     item['Building_name'] = str(i.xpath("div/div/div[2]/div[2]/div/span[1]/a/span/text()").extract_first())
                     if item['Building_name'] == '':
                         item['Building_name'] = 'None'
@@ -132,7 +132,8 @@ class SeekingAlpha(CrawlSpider):
                     item['updated_date'] = item['listing_date']
                     item['areacode'] = 'None'
                     item['google_place_id'] = 'None'
-                    item['immediate_possession'] = 'None'
+                    item['Launch_date'] = 'None'
+                    item['Possession'] = 'None'
                     item['address'] = 'None'
                     item['sublocality'] = 'None'
                     
@@ -181,5 +182,20 @@ class SeekingAlpha(CrawlSpider):
             s = i.xpath("div[@data-module='mapsModule']/script/text()").extract()
             item['lat'] = str(s).split('"')[3]
             item['longt'] = str(s).split('"')[7]
+
+            if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
+                item['quality1'] = 1
+            else:
+                item['quality1'] = 0
+            
+            if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
+                item['quality2'] = 1
+            else:
+                item['quality2'] = 0
+
+            if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None')):
+                item['quality3'] = 1
+            else:
+                item['quality3'] = 0
             yield item
         
