@@ -63,9 +63,9 @@ class MySpider(CrawlSpider):
             #print ldate
             
             if 'at' in ldate:
-                item['listing_date']=str(date.today().month)+"/"+str(date.today().day)+"/"+str(date.today().year)
+                item['listing_date']=str(date.today().month)+"/"+str(date.today().day)+"/"+str(date.today().year) + " 00:00:00"
             elif 'terday' in ldate:
-                item['listing_date']=str((date.today() - timedelta(days=1)).month)+"/"+str((date.today() - timedelta(days=1)).day)+"/"+str((date.today() - timedelta(days=1)).year)
+                item['listing_date']=str((date.today() - timedelta(days=1)).month)+"/"+str((date.today() - timedelta(days=1)).day)+"/"+str((date.today() - timedelta(days=1)).year) + " 00:00:00"
             elif 'on' in ldate:
                 a=ldate.find('on')
                 ldate=ldate[a+3:a+10]
@@ -75,7 +75,7 @@ class MySpider(CrawlSpider):
                 date1=ldate.split(" ")
                 if date1[2] in date_d.keys():
                     date1[2]=date_d[date1[2]]
-                item['listing_date']=str(date1[2])+"/"+str(date1[0])+"/"+str(date.today().year)
+                item['listing_date']=str(date1[2])+"/"+str(date1[0])+"/"+str(date.today().year) + " 00:00:00"
             item['updated_date'] = item['listing_date']
             '''if "at" in ldate:
                 item['listing_date']=date.today()

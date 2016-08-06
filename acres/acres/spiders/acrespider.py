@@ -16,17 +16,17 @@ class JagahaSpider(CrawlSpider):
     allowed_domains = ['99acres.com']
 
     start_urls = [
-            'http://www.99acres.com/property-in-mumbai-ffid-page-1?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&lstacn=SEARCH&pageid=QS&search_id=7019357638975910&src=PAGING&lastAcn=SEARCH&lastAcnId=7019357638975910',
-            'http://www.99acres.com/rent-property-in-mumbai-ffid-page-1?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&pageid=QS&search_id=7024716630429298&src=PAGING&lastAcn=SEARCH&lastAcnId=7024716630429298&fsl_results=Y&total_fsl_count=2',
-            'http://www.99acres.com/commercial-property-in-mumbai-ffid-page-1?orig_property_type=C&class=O,A,B&search_type=QS&search_location=SH&lstacn=SEARCH&pageid=QS&search_id=7025026338708533&src=PAGING&lastAcn=SEARCH&lastAcnId=7025026338708533&fsl_results=Y&total_fsl_count=2',
-            'http://www.99acres.com/rent-commercial-property-in-mumbai-ffid-page-1?orig_property_type=C&class=O,A,B&search_type=QS&search_location=SH&lstacn=SEARCH&pageid=QS&keyword_orig=mumbai&search_id=7025187469574654&src=PAGING&lastAcn=SEARCH&lastAcnId=7025187469574654&fsl_results=Y&total_fsl_count='
+            'http://www.99acres.com/property-in-mumbai-ffid-page-1?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&lstacn=SEARCH&pageid=QS&search_id=7019357638975910&src=PAGING&lastAcn=SEARCH&lastAcnId=7019357638975910'
+            #'http://www.99acres.com/rent-property-in-mumbai-ffid-page-1?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&pageid=QS&search_id=7024716630429298&src=PAGING&lastAcn=SEARCH&lastAcnId=7024716630429298&fsl_results=Y&total_fsl_count=2',
+            #'http://www.99acres.com/commercial-property-in-mumbai-ffid-page-1?orig_property_type=C&class=O,A,B&search_type=QS&search_location=SH&lstacn=SEARCH&pageid=QS&search_id=7025026338708533&src=PAGING&lastAcn=SEARCH&lastAcnId=7025026338708533&fsl_results=Y&total_fsl_count=2',
+            #'http://www.99acres.com/rent-commercial-property-in-mumbai-ffid-page-1?orig_property_type=C&class=O,A,B&search_type=QS&search_location=SH&lstacn=SEARCH&pageid=QS&keyword_orig=mumbai&search_id=7025187469574654&src=PAGING&lastAcn=SEARCH&lastAcnId=7025187469574654&fsl_results=Y&total_fsl_count='
             ]
     custom_settings = {
             'BOT_NAME': 'acres',
             'DEPTH_LIMIT': 7000,
             'DOWNLOAD_DELAY': 5
         }
-    data_list = []
+    #data_list = []
     def parse(self,response):
         hxs = Selector(response)
         path1 = "//div[@id='ysf']/h1"
@@ -35,11 +35,12 @@ class JagahaSpider(CrawlSpider):
         x = hxs.xpath(path)
         
         for i in x:
-            data_id = i.xpath("@data-propid").extract_first()
-            if data_id not in self.data_list:
+            
+            #if data_id not in self.data_list:
                 try:
                     item = AcresItem()
-                    self.data_list.append(data_id)
+                    #self.data_list.append(data_id)
+                    data_id = i.xpath("@data-propid").extract_first()
                     sqft_check = i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span[1]/b[1]/text()").extract_first().replace("Sq.Ft.","").replace("Sq. Meter","").strip()
                     check = 0
                     #print sqft_check
@@ -68,8 +69,11 @@ class JagahaSpider(CrawlSpider):
                                 item['price_per_sqft'] = 'None'
                         except:
                             item['price_per_sqft'] = 'None'                         
-                        item['Building_name'] = str(i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span[2]/a[@class='sName']/b/text()").extract_first())
-                        if item['Building_name'] == '':
+                        try:
+                            item['Building_name'] = str(i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span[2]/a[@class='sName']/b/text()").extract_first())
+                            if item['Building_name'] == '':
+                                item['Building_name'] = 'None'
+                        except:
                             item['Building_name'] = 'None'
                     
                         
@@ -114,12 +118,14 @@ class JagahaSpider(CrawlSpider):
                                     item['Possession'] = 'None'
                         except:
                             item['Possession'] = 'None'
+                        
                         stat1 = str(i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span[3]/span/text()").extract()).replace('\\xa0','').replace('u','').replace(',','').replace("'","")
                         if 'Highlights:' in stat1:
                             item['Status'] = stat1
                         stat2 = str(i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span[2]/span/text()").extract()).replace('\\xa0','').replace('u','').replace(',','').replace("'","")
                         if 'Highlights:' in stat2:
                             item['Status'] = stat2
+                        
                         detail1 = i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/div[4]/b/text()").extract_first()
                         if 'Description :' in detail1:
                             item['Details'] = i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/div[4]/text()").extract()[-1].strip()
@@ -127,15 +133,23 @@ class JagahaSpider(CrawlSpider):
                             detail2 = i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/div[3]/b/text()").extract_first()
                             if 'Description :' in detail2:
                                 item['Details'] = i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/div[3]/text()").extract()[-1].strip()
+                        
                         if item['property_type'] == 'Residential':
-                            item['config_type'] = i.xpath("div[@class='wrapttl']/div[1]/a/text()").extract_first().split(',')[0].replace("Sq.Ft.","").replace("(","").replace(")","")[:5]
-                            if 'Bed' in item['config_type']:
-                                item['config_type']  = item['config_type'].split(" ")[0] + ' BHK'
-                            if not 'K' in item['config_type']:
+                            conf1 = i.xpath("div[@class='wrapttl']/div[1]/a/text()").extract_first().split(',')[0]
+                            conf2 = i.xpath("div[@class='wrapttl']/div[1]/a/text()").extract_first().split(')')[0].split('(')[-1]
+                            if ('BHK' in conf1):
+                                item['config_type'] = conf1
+                            elif ('RK' in conf2):
+                                item['config_type'] = conf2
+                            elif 'Bedroom' in conf1:
+                                item['config_type']  = conf1.split(" ")[0] + ' BHK'
+                            else:
                                 item['config_type'] = 'None'
                         else:
                             item['config_type'] = 'None'
+                        
                         item['locality'] = i.xpath("div[@class='wrapttl']/div[1]/a/text()").extract_first().split(' in ')[-1]
+                        
                         date_string = str(i.xpath("div[@class='srpDetail']/div[last()]/text()").extract()).split(':')[-1].replace(' ','').replace(']','').replace('\\n','').replace("'","")
                         if date_string == 'Today':
                             date = time.strftime('%b%d,%Y')
@@ -146,6 +160,7 @@ class JagahaSpider(CrawlSpider):
                                 date = date_string
                         date = dt.strftime(dt.strptime(date,'%b%d,%Y'),'%m/%d/%Y %H:%M:%S')
                         item['listing_date'] = date
+                        
                         price = i.xpath("div[@class='wrapttl']/div[1]/b[2]/text()").extract_first()
                         if price:
                             if 'to' in price:
@@ -224,16 +239,8 @@ class JagahaSpider(CrawlSpider):
                         yield item
                 except Exception:
                         print Exception
-        
-            page_path = "//div[@id='results']/div[1]/div[contains(@class,'pgdiv')]"
-            page = hxs.xpath(page_path)
-            page1 = page.xpath("span[@class='pgdis']/a[last()]/@href").extract_first()
-            page2 = page.xpath("a[last()]/@href").extract_first()
-            if page1:
-                url = page1
-                next_url = urljoin('http://www.99acres.com',url)
-                yield Request(next_url, callback=self.parse)
-            if page2:
-                url = page2
-                next_url = urljoin('http://www.99acres.com',url)
-                yield Request(next_url, callback=self.parse)
+
+        curPage = int(response.url.split('?')[0].split('-')[-1])
+        if curPage <= 2800 :
+            next_url = 'http://www.99acres.com/property-in-mumbai-ffid-page-{x}?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&lstacn=SEARCH&pageid=QS&search_id=7019357638975910&src=PAGING&lastAcn=SEARCH&lastAcnId=7019357638975910'.format(x=str(curPage+1))
+            yield Request(next_url,callback=self.parse)

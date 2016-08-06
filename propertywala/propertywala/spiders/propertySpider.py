@@ -72,9 +72,9 @@ class SeekingAlpha(CrawlSpider):
     	                item['city'] = tp.split('?')[0].split('_')[0]
     	      
     	      
-    	            item['sqft'] = i.xpath("div[@class='summary']/ul/li[@class='features']/span[@class='areaUnit']/text()").extract_first()
-    	            if item['sqft'] == 'None':
-    	                item['sqft'] = '0'
+    	            item['Bua_sqft'] = i.xpath("div[@class='summary']/ul/li[@class='features']/span[@class='areaUnit']/text()").extract_first()
+    	            if item['Bua_sqft'] == 'None':
+    	                item['Bua_sqft'] = '0'
     	            	             	       
     	            r = i.xpath("div[@class='summary']/ul/li[@class='contact']/button/@title").extract_first()
     	            r1 = str(r).split()[-1].split("(")[1].split(")")[0]
@@ -177,9 +177,9 @@ class SeekingAlpha(CrawlSpider):
     	                item['city'] = tp.split('?')[0].split('_')[0]
     	      
     	      
-    	            item['sqft'] = i.xpath("div[@class='summary']/ul/li[@class='features']/span[@class='areaUnit']/text()").extract_first()
-                    if item['sqft'] == 'None':
-                        item['sqft'] = '0'    	        
+    	            item['Bua_sqft'] = i.xpath("div[@class='summary']/ul/li[@class='features']/span[@class='areaUnit']/text()").extract_first()
+                    if item['Bua_sqft'] == 'None':
+                        item['Bua_sqft'] = '0'    	        
     	         
     	       
     	            r = i.xpath("div[@class='summary']/ul/li[@class='contact']/button/@title").extract_first()
@@ -298,8 +298,8 @@ class SeekingAlpha(CrawlSpider):
                 item['Selling_price'] = '0'
             rt3 = rt.xpath('li[contains(text(),"Furnished:")]/span/text()').extract()
             item['Status'] = rt3
-            rt4 = rt.xpath('li[contains(text(),"Lease Period:")]/span/text()').extract()
-            item['lease_period'] = rt4
+            #rt4 = rt.xpath('li[contains(text(),"Lease Period:")]/span/text()').extract()
+            #item['lease_period'] = rt4
             rt5 = rt.xpath('li[contains(text(),"Available:")]/span/text()').extract()
             #item['availability'] = rt5
             #item['immediate_possession'] = rt5

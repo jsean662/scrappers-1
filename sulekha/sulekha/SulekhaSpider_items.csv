@@ -1,18 +1,58 @@
 data_id,Building_name,config_type,Selling_price,Monthly_Rent,lat,longt,platform,city,listing_date,txn_type,property_type,locality,sqft,Status,listing_by,name_lister,Details,address,price_on_req,sublocality,age,google_place_id,immediate_possession,mobile_lister,areacode,management_by_landlord,carpet_area,updated_date
-4234909,None,,800000.0,0,0,0,Sulekha,Mumbai,06/06/2016,Sale,Commercial,Vangani,,None,manik constructions,None,None,None,false,None,None,None,,None,None,None,None,06/06/2016
-4008210,None,1 BHK,1784000.0,0,0,0,Sulekha,Mumbai,06/02/2016,Sale,Residential,Ambernath West,,None,Laxmi Kamal Associates,None,None,None,false,None,None,None,,None,None,None,None,06/02/2016
-4102785,None,,1584000.0,0,0,0,Sulekha,Mumbai,07/20/2016,Sale,Commercial,Ambernath West,,None,R.S Enterprises,None,None,None,false,None,None,None,,None,None,None,None,07/20/2016
-4277229,Ushakiran Residency,1 BHK,2398000.0,0,0,0,Sulekha,Mumbai,06/21/2016,Sale,Residential,Badlapur East,,None,Usha Construction Co,None,None,None,false,None,None,None,,None,None,None,None,06/21/2016
-4653230,None,1 BHK,1768000.0,0,0,0,Sulekha,Mumbai,06/24/2016,Sale,Residential,Badlapur East,,None,Jai Ambe Enterprises,None,None,None,false,None,None,None,,None,None,None,None,06/24/2016
-3788123,None,1 BHK,1300000.0,0,0,0,Sulekha,Mumbai,07/12/2016,Sale,Residential,Khopoli,,None,Arvind Nirmal,None,None,None,false,None,None,None,,None,None,None,None,07/12/2016
-4712133,Aarambh Residency,1 RK,1350000.0,0,0,0,Sulekha,Mumbai,07/14/2016,Sale,Residential,Karjat,,None,Sree Ram Developers,None,None,None,false,None,None,None,,None,None,None,None,07/14/2016
-4747341,Hrieday,1 BHK,1938000.0,0,0,0,Sulekha,Mumbai,07/25/2016,Sale,Residential,Badlapur East,,None,PRAVIN WAGH,None,None,None,false,None,None,None,,None,None,None,None,07/25/2016
-4692279,None,1 RK,1066000.0,0,0,0,Sulekha,Mumbai,07/08/2016,Sale,Residential,Badlapur East,,None,Shree Satyam Group,None,None,None,false,None,None,None,,None,None,None,None,07/08/2016
-4505783,None,1 BHK,1800000.0,0,0,0,Sulekha,Mumbai,07/06/2016,Sale,Residential,Nalasopara West,,None,Shree Saisiddhivinayak Real Eatate Consultant,None,None,None,false,None,None,None,,None,None,None,None,07/06/2016
-4627314,None,2 BHK,13000000.0,0,0,0,Sulekha,Mumbai,06/16/2016,Sale,Residential,Thane,,None,Kajal Property,None,None,None,false,None,None,None,,None,None,None,None,06/16/2016
-3950687,None,1 BHK,9500000.0,0,0,0,Sulekha,Mumbai,06/26/2016,Sale,Residential,Chembur East,,None,Sai Leela And Co.,None,None,None,false,None,None,None,,None,None,None,None,06/26/2016
-4751001,None,,25000000.0,0,0,0,Sulekha,Mumbai,07/26/2016,Sale,Commercial,Worli,,None,ajit aeer,None,None,None,false,None,None,None,,None,None,None,None,07/26/2016
-4427061,Spring Grove,1 BHK,5500000.0,0,0,0,Sulekha,Mumbai,06/09/2016,Sale,Residential,Kandivali East,,None,Ketan,None,None,None,false,None,None,None,,None,None,None,None,06/09/2016
-3800294,None,2 BHK,13000000.0,0,0,0,Sulekha,Mumbai,07/22/2016,Sale,Residential,Bhandup East,,None,Royal Decorum,None,None,None,false,None,None,None,,None,None,None,None,07/22/2016
-4531596,None,3 BHK,25000000.0,0,0,0,Sulekha,Mumbai,07/27/2016,Sale,Residential,Bhandup West,,None,Virdi Estate Agency,None,None,None,false,None,None,None,,None,None,None,None,07/27/2016
-4758414,None,1 BHK,8700000.0,0,0,0,Sulekha,Mumbai,07/29/2016,Sale,Residential,Nahur West,,None,Ganesh Jatale,None,None,None,false,None,None,None,,None,None,None,None,07/29/2016
+4232862,Sudama Greens,1 BHK,2300000.0,0,19.1483,72.9933,Sulekha,mumbai,,"
+",None,Diva Junction East,,,"
+                                patil developers
+                            ",None,"
+            Area of 576 Sqft Flat for immediate Sale at Diva Junction East. 1 BHK Flat with Vaastu Compliant, Lift, Club House, Community Hall, Power Backup, Compound Wall, Parking, Rain Water Harvesting, Garden, Kids Play Area & More. Price: Rs.23,00,000/-
+            
+        ",None,None,None,None,None,,None,None,None,None,
+4654627,Svakam Vihar,1 RK,832000.0,0,18.8205,73.3077,Sulekha,mumbai,,"
+",None,Bhivpuri,,,"
+                                Poddar Developers Ltd
+                            ",None,"
+            1 RK Flat for immediate Sale at Bhivpuri. Area of 320 Sqft with Security, Compound Wall, Kids Play Area & more. Price: Rs.8,32,000/-
+            
+        ",None,None,None,None,None,,None,None,None,None,
+4515546,Nidhi Palace,1 BHK,1732000.0,0,19.6952,72.7671,Sulekha,mumbai,,"
+",None,Palghar West,,,"
+                                Bhagvati Constructions
+                            ",None,"
+            Area of 495 Sqft Flat for immediate Sale at Mahim Road, Palghar West. 1 BHK Flat with Vaastu Compliant, Vitrified Tiles Flooring, Lift, Drinking Water, Compound Wall, Parking & More. Price: Rs.17,32,000/-
+            
+        ",None,None,None,None,None,,None,None,None,None,
+4527563,Bhavani Paradise,1 BHK,1755000.0,0,19.69745,72.75089,Sulekha,mumbai,,"
+",None,Palghar West,, Unfurnished,"
+                                Bhavani Builders & Developers
+                            ",None,"
+            Flat available for Sale at Palghar West, Mumbai. Area measuring 650 Sq.Feet, 1 BHK Unfurnished flat is positioned at 3 floor. Price: Rs.17.55 lakh(s)/-.
+            
+        ",None,None,None,None,None,,None,None,None,None,
+4008210,Laxmi Kamal Shankar Heights Phase II,1 BHK,1784000.0,0,19.2796,73.0997,Sulekha,mumbai,,"
+",None,Ambernath West,, Unfurnished,"
+                                Laxmi Kamal Associates
+                            ",None,"
+            Area of 615 Sqft Flat for immediate Sale at Ambernath West. 1 BHK Flat with Swimming Pool, Lift, Gym, Club House, Power Backup, Compound Wall, Parking, Rain Water Harvesting, Garden, Kids Play Area & More. Price: Rs.17,84,000/-
+            
+        ",None,None,None,None,None,,None,None,None,None,
+4234909,Manik Rudra Residency,None,800000.0,0,19.076,72.8777,Sulekha,mumbai,,"
+",None,Vangani,,,"
+                                Manik Constructions
+                            ",None,"
+            Commercial Showrooms for Sale at Vangani. Area of 185 Sqft, ideal for Drinking Water , Vaastu Compliant , Bank/ATM, Prime Location. Prime location & a Perfect place for Business. Price: Rs.8,00,000/-
+            
+        ",None,None,None,None,None,,None,None,None,None,
+4622270,Bhakti Park,1 BHK,1850000.0,0,19.6952,72.7671,Sulekha,mumbai,,"
+",None,Palghar West,,,"
+                                Mhatre Realtors
+                            ",None,"
+            1 BHK Flat for immediate Sale at Palghar West. Area of 315 Sqft with Parking  , Tiles Flooring, Play Area & more. Price: Rs.18,50,000/-
+            
+        ",None,None,None,None,None,,None,None,None,None,
+4471761,Prashant Apartment,1 BHK,1800000.0,0,19.6952,72.7671,Sulekha,mumbai,,"
+",None,Palghar West,,,"
+                                Prashant Builder & Developer
+                            ",None,"
+            1 BHK Flat for immediate Sale at Palghar West. Area of 550 Sqft with Compound Wall, Parking, Vaastu Compliant & more. Price: Rs.18,00,000/-
+            
+        ",None,None,None,None,None,,None,None,None,None,
+4748427,Naina Apartments,1 BHK,1223000.0,0,19.0759837

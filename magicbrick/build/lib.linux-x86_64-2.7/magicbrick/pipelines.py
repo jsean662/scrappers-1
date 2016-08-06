@@ -29,10 +29,10 @@ class CSVPipeline(object):
     file = open('%s_items.csv' % spider.name, 'w+b')
     self.files[spider] = file
     self.exporter = CsvItemExporter(file)
-    self.exporter.fields_to_export = ['quality1','quality2','quality3','data_id','Building_name','config_type','Selling_price','Monthly_Rent',
-    'price_per_sqft','lat','longt','platform','city','listing_date','txn_type','property_type','locality','Bua_sqft','Status','listing_by',
-    'name_lister','Details','address','price_on_req','sublocality','age','google_place_id','Possession','Launch_date','mobile_lister',
-    'areacode','management_by_landlord','carpet_area','updated_date']
+    self.exporter.fields_to_export = ['data_id','Building_name','config_type','Selling_price','Monthly_Rent','lat','longt',
+    'platform','city','listing_date','txn_type','property_type','locality','Bua_sqft','price_per_sqft','Status','listing_by',
+    'name_lister','Details','address','price_on_req','sublocality','age','google_place_id','Possession','Launch_date',
+    'mobile_lister','areacode','management_by_landlord','carpet_area','updated_date','quality1','quality2','quality3']
     self.exporter.start_exporting()
 
   def spider_closed(self, spider):

@@ -57,9 +57,9 @@ class SeekingAlpha(CrawlSpider):
             base_url = "https://www.makaan.com"
             
             item = Website()
-            s = i.xpath("div/script/text()").extract_first()
+            s = i.xpath("div[@class='cardWrapper']/script/text()").extract_first()
             
-            dt5 = s.split('"postedDate"')[1].split(',')[0].split('"')[1]#[-21].split('"')[1]
+            dt5 = s.split('"verificationDate"')[1].split(',')[0].split('"')[1]#[-21].split('"')[1]
           #  print dt5
             number = int(dt5) * 0.001
             dt2 = time.strftime('%m/%d/%Y %H:%M:%S', time.gmtime(number))
@@ -101,8 +101,9 @@ class SeekingAlpha(CrawlSpider):
         	        		item['Selling_price'] = str(sell2)
 
                   
-             	
-                    item['price_per_sqft'] = i.xpath("div/div/div[2]/div[1]/div[1]/div[1]/div[2]/span/text()").extract()
+             	    item['price_per_sqft'] = str(i.xpath("div/div/div[2]/div[1]/div[1]/div[1]/div[2]/span/text()").extract()).replace('[','').replace(']','').replace('u','').replace('/','').replace(' sq ft','').replace("'","").replace(',','')
+                    if item['price_per_sqft'] == '':
+                        item['price_per_sqft'] = 'None'
                     item['config_type'] = i.xpath("div/div/div[2]/div[1]/div[2]/div/h2/a/span/span/text()").extract()
                     try:
                             item['Bua_sqft'] = i.xpath("div/div/div[2]/div[1]/div[2]/span/text()").extract_first().replace("sq ft","")

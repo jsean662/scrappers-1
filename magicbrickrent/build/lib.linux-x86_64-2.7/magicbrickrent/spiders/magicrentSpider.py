@@ -19,28 +19,19 @@ class MagicrentSpider(scrapy.Spider):
     start_urls = ['http://www.magicbricks.com/property-for-rent/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment,Residential-House,Villa&cityName=Mumbai/Page-1']
     custom_settings = {
             'DEPTH_LIMIT' : 10000,
-	        'DOWNLOAD_DELAY': 5
+	        'DOWNLOAD_DELAY': 4
 	    }
 	    
     #def __init__(self, category=None):
         #self.url_rem = []
     
     def parse(self,response):
-        #handle = [ 301 , 401 , 403 , 404 , 408 , 429 , 503 ]
-        #if response.status in handle:
-        #    time.sleep(300)
-        #    url = response.url
-        #    yield Request(url,callback=self.parse)
-            #self.url_rem.append(response.url)
-            #curPage=int(response.url.split("-")[-1])
-            #next_url = 'http://www.magicbricks.com/property-for-rent/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment,Residential-House,Villa&cityName=Mumbai/Page-' + str(curPage+1)
-            #yield Request(next_url, callback=self.parse)
-        #else:
             hxs = Selector(response)
             
-            data = hxs.xpath('//div[@class="srpColm2"]/div[@class="proColmleft"]')
-            lister = hxs.xpath('//div[@class="srpColm2"]')
-            dates = hxs.xpath('//span[@class="postedBy"]')
+            data = hxs.xpath('//div[@class="srpColm2"]')
+            #print data
+            #lister = hxs.xpath('//div[@class="srpColm2"]')
+            #dates = hxs.xpath('//span[@class="postedBy"]')
         
             for i in data:
                 item = MagicbrickrentItem()
@@ -49,30 +40,39 @@ class MagicrentSpider(scrapy.Spider):
                 item['txn_type'] = 'Rent'
                 item['property_type'] = 'Residential'
                 item['city'] = 'Mumbai'
-                item['data_id'] = i.xpath('div[1]/div[1]/@onclick').extract_first().split("'")[5]
-                item['lat'] = i.xpath('div[1]/div[1]/div[1]/div[2]/span/a/@onclick').extract_first().split('&')[0].split("?")[-1].split("=")[-1]
+                item['data_id'] = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/@onclick').extract_first().split("'")[5]
+                
+                item['lat'] = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpAnchor"]/span[@class="seeOnMapLink seeOnMapLinkRent"]/a/@onclick').extract_first().split('&')[0].split("?")[-1].split("=")[-1]
                 if item['lat'] == '':
                     item['lat'] = 0
-                item['longt'] = i.xpath('div[1]/div[1]/div[1]/div[2]/span/a/@onclick').extract_first().split('&')[1].split("=")[-1]
+                
+                item['longt'] = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpAnchor"]/span[@class="seeOnMapLink seeOnMapLinkRent"]/a/@onclick').extract_first().split('&')[1].split("=")[-1]
                 if item['longt'] == '':
                     item['longt'] = 0
-                item['locality'] = i.xpath('div[1]/div[1]/div[1]/div[2]/p/a/span[1]/span/text()').extract_first()
-                item['Building_name'] = i.xpath('div[1]/div[1]/div[1]/div[2]/p/a/span[1]/text()').extract_first().replace("in","").replace("\n","")
+                
+                item['locality'] = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpAnchor"]/p[@class="proHeading"]/a/span[@class="maxProDesWrap showNonCurtailed"]/span[@class="localityFirst"]/text()').extract_first()
+                
+                item['Building_name'] = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpAnchor"]/p[@class="proHeading"]/a/span[@class="maxProDesWrap showNonCurtailed"]/text()').extract_first().replace("in","").replace("\n","")
                 if item['Building_name'] == '':
                     item['Building_name'] = 'None'
-                item['config_type'] = i.xpath('div[1]/div[1]/div[1]/div[2]/p/a/strong/text()').extract_first()[:5]
+                
+                item['config_type'] = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpAnchor"]/p[@class="proHeading"]/a/@href').extract_first().split('/')[-1].split('-')[:2]
+                
                 item['Selling_price'] = '0'
-                price = i.xpath('div[1]/div[1]/div[1]/div[1]/div[1]/div/span/text()').extract_first()
+                
+                price = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpPriceWrap newPriceBlock"]/div[@class="proPriceColm2"]/div[@class="proPrice"]/span[@class="proPriceField"]/text()').extract_first()
                 if 'Lac' in price:
                     price = float(price.replace("Lac",""))*100000
                     item['Monthly_Rent'] = str(price)
                 else:
                     price = price.replace(",","")
                     item['Monthly_Rent'] = str(float(price))
+                
                 if item['Selling_price'] == '0' and item['Monthly_Rent'] == '0':
                     item['price_on_req'] = 'true'
                 else:
                     item['price_on_req'] = 'false'
+                
                 item['price_per_sqft'] = 'None'
                 item['carpet_area'] = 'None'
                 item['address'] = 'None'
@@ -84,17 +84,18 @@ class MagicrentSpider(scrapy.Spider):
                 item['mobile_lister'] = 'None'
                 item['areacode'] = 'None'
                 item['management_by_landlord'] = 'None'
-                item['listing_by'] = lister.xpath('div[5]/div[3]/ul/li[3]/div/div[1]/div/div[1]/text()').extract_first()
-                item['name_lister'] = str(str(lister.xpath('div[5]/div[3]/ul/li[3]/div/div[3]/text()').extract_first()).replace("\n",""))
-                check = i.xpath('div[2]/div[1]/label/text()').extract_first()
-                if check == 'Details':
-                    item['Bua_sqft'] = i.xpath('div[2]/div[1]/ul/li[1]/span/text()').extract_first().split()[0]
-                else:
-                    item['Bua_sqft'] = ''
-                item['Status'] = i.xpath('div[2]/div[2]/text()').extract()[1:]
-                item['Details'] = str(i.xpath('div[2]/div[1]/ul/li[2]/text()').extract_first())+' '+str(i.xpath('div[2]/div[1]/ul/li[3]/text()').extract_first())+' '+str(i.xpath('div[2]/div[1]/ul/li[4]/text()').extract_first())+' '+str(i.xpath('div[2]/div[1]/ul/li[5]/text()').extract_first())
-            
-                day = dates.xpath('text()').extract_first()
+                
+                item['listing_by'] = i.xpath('div[@class="proBtnRow"]/div[@class="srpBlockLeftBtn"]/ul/li[@class="agentDeatilsBox"]/div[@class="proAgentWrap"]/div[@class="iconAgentSmartCont"]/div[@class="proAgent"]/div[1]/text()').extract_first()
+                
+                item['name_lister'] = i.xpath('div[@class="proBtnRow"]/div[@class="srpBlockLeftBtn"]/ul/li[@class="agentDeatilsBox"]/div[@class="proAgentWrap"]/div[@class="comNameElip"]/text()').extract_first().replace('\n','')
+                
+                item['Bua_sqft'] = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpAnchor"]/p[@class="proHeading"]/a/@href').extract_first().split('/')[-1].split('-')[2]
+                
+                item['Status'] = str(i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proDetailsRow proDetailsRowListing proDetailsRowRent"]/div[@class="proDetailsRowElm"]/text()').extract()).replace('[u','').replace(']','').replace(',',' ').replace(' u','').replace("'",'').replace('\\n','')
+                
+                item['Details'] = str(i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proDetailsRow proDetailsRowListing proDetailsRowRent"]/div[@class="proDetailsRowElm"]/ul/li/text()').extract()).replace('[u','').replace(']','').replace(',',' ').replace(' u','').replace("'",'').replace('\\n','')
+                
+                day = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="proRentPost"]/span[@class="postedBy"]/text()').extract_first()
                 day = day.replace("Posted: ","").replace("Posted ","")
             
                 if 'Today' in day:
@@ -134,8 +135,8 @@ class MagicrentSpider(scrapy.Spider):
                 else:
                     item['quality3'] = 0
                 yield item
-        
-            curPage=int(response.url.split("-")[-1])    
+
+            curPage=int(response.url.split("-")[-1])
             #print curPage
             try:
                 maxPage = int(hxs.xpath('//div[@id="pagination"]/span/a[last()]/@href').extract_first().split('-')[-1])
@@ -145,13 +146,8 @@ class MagicrentSpider(scrapy.Spider):
                 except:
                     maxPage = curPage + 1
             #print maxPage
-        
             if curPage <= maxPage :
                 nextPage = curPage+1
                 next_url = 'http://www.magicbricks.com/property-for-rent/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment,Residential-House,Villa&cityName=Mumbai/Page-' + str(nextPage)
                 yield Request(next_url, callback=self.parse)
-            
-            
-            
-    
-    
+                

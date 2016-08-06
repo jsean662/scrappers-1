@@ -20,14 +20,14 @@ class LinkedinSpider(Spider):
 
     def parse(self, response):
         formdata = {'session_key': 'karanchudasama1@gmail.com',
-                'session_password': 'ACCNT_PASSWORD' }
+                'session_password': 'K@r@N#25#10#94' }
         yield FormRequest.from_response(response,
                                         formdata=formdata,
                                         clickdata={'name': 'signin'},
                                         callback=self.parse1)
 
     def parse1(self, response):
-        url = 'https://www.linkedin.com/vsearch/p?company=EY&postalCode=400019&openAdvancedForm=true&companyScope=C&locationType=I&countryCode=in&distance=75&rsid=4975470201469813678561&orig=ADVS&page_num=1&pt=people'
+        url = 'https://www.linkedin.com/vsearch/p?keywords=human%20resources&postalCode=400076&openAdvancedForm=true&locationType=I&countryCode=in&distance=50&rsid=4975470201469879493923&orig=MDYS&page_num=1&pt=people'
         yield Request(url,callback = self.parse_items)
 
     def parse_items(self,response):
@@ -57,13 +57,14 @@ class LinkedinSpider(Spider):
                     item['position'] = path[i]['person']['snippets'][0]['heading'].replace('<B>','').replace('</B>','').replace(';','').replace(',','').replace('&amp','')
                 except:                        
                     item['position'] = path[i]['person']['fmt_headline'].replace('<B>','').replace('</B>','').replace(";","").replace(',','').replace('&amp','')
-                item['company'] = 'EY'
+
+                item['company'] = item['position'].split('at ')[-1]
             except:
                 print 'nextIndex'
             yield item
 
-        if pageNo<=85:
-            next_url = 'https://www.linkedin.com/vsearch/p?company=EY&postalCode=400019&openAdvancedForm=true&companyScope=C&locationType=I&countryCode=in&distance=75&rsid=4975470201469813678561&orig=ADVS&page_num={x}&pt=people'.format(x=str(pageNo+1))
+        if pageNo<=100:
+            next_url = 'https://www.linkedin.com/vsearch/p?keywords=human%20resources&postalCode=400076&openAdvancedForm=true&locationType=I&countryCode=in&distance=50&rsid=4975470201469879493923&orig=MDYS&page_num={x}&pt=people'.format(x=str(pageNo+1))
             time.sleep(4)
             yield Request(next_url,callback=self.parse_items)
         #path = response.xpath('.')#//ol[@id="results"]')

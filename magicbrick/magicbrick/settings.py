@@ -19,7 +19,8 @@ ROBOTSTXT_OBEY = False
 #USER_AGENT = 'magicbrick (+http://www.yourdomain.com)'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS=32
+#CONCURRENT_REQUESTS=16
+#DOWNLOAD_TIMEOUT = 600
 
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
@@ -50,8 +51,10 @@ ROBOTSTXT_OBEY = False
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'magicbrick.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'scrapy_crawlera.CrawleraMiddleware': 300,
 #}
+#CRAWLERA_ENABLED = True
+#CRAWLERA_APIKEY = 'ffb166fd814546b49031b184a2b78927'
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -68,7 +71,7 @@ ITEM_PIPELINES = {
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 # NOTE: AutoThrottle will honour the standard settings for concurrency and delay
-#AUTOTHROTTLE_ENABLED=True
+#AUTOTHROTTLE_ENABLED=False
 # The initial download delay
 #AUTOTHROTTLE_START_DELAY=5
 # The maximum download delay to be set in case of high latencies
