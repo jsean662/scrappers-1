@@ -16,8 +16,8 @@ class JagahaSpider(CrawlSpider):
     allowed_domains = ['99acres.com']
 
     start_urls = [
-            'http://www.99acres.com/property-in-mumbai-ffid-page-1?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&lstacn=SEARCH&pageid=QS&search_id=7019357638975910&src=PAGING&lastAcn=SEARCH&lastAcnId=7019357638975910'
-            #'http://www.99acres.com/rent-property-in-mumbai-ffid-page-1?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&pageid=QS&search_id=7024716630429298&src=PAGING&lastAcn=SEARCH&lastAcnId=7024716630429298&fsl_results=Y&total_fsl_count=2',
+            'http://www.99acres.com/property-in-mumbai-ffid-page-1?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&lstacn=SEARCH&pageid=QS&search_id=7019357638975910&src=PAGING&lastAcn=SEARCH&lastAcnId=7019357638975910' , 
+            'http://www.99acres.com/rent-property-in-mumbai-ffid-page-1?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&pageid=QS&search_id=7024716630429298&src=PAGING&lastAcn=SEARCH&lastAcnId=7024716630429298&fsl_results=Y&total_fsl_count=2'
             #'http://www.99acres.com/commercial-property-in-mumbai-ffid-page-1?orig_property_type=C&class=O,A,B&search_type=QS&search_location=SH&lstacn=SEARCH&pageid=QS&search_id=7025026338708533&src=PAGING&lastAcn=SEARCH&lastAcnId=7025026338708533&fsl_results=Y&total_fsl_count=2',
             #'http://www.99acres.com/rent-commercial-property-in-mumbai-ffid-page-1?orig_property_type=C&class=O,A,B&search_type=QS&search_location=SH&lstacn=SEARCH&pageid=QS&keyword_orig=mumbai&search_id=7025187469574654&src=PAGING&lastAcn=SEARCH&lastAcnId=7025187469574654&fsl_results=Y&total_fsl_count='
             ]
@@ -71,11 +71,13 @@ class JagahaSpider(CrawlSpider):
                             item['price_per_sqft'] = 'None'                         
                         try:
                             item['Building_name'] = str(i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span[2]/a[@class='sName']/b/text()").extract_first())
-                            if item['Building_name'] == '':
-                                item['Building_name'] = 'None'
                         except:
+                            try:
+                                item['Building_name'] = str(i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span[2]/b/text()").extract_first())
+                            except:
+                                item['Building_name'] = 'None'
+                        if item['Building_name'] == '':
                             item['Building_name'] = 'None'
-                    
                         
                         try:
                             age = i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span[3]/span[4]/text()").extract()[-1].strip()
@@ -241,6 +243,16 @@ class JagahaSpider(CrawlSpider):
                         print Exception
 
         curPage = int(response.url.split('?')[0].split('-')[-1])
-        if curPage <= 2800 :
-            next_url = 'http://www.99acres.com/property-in-mumbai-ffid-page-{x}?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&lstacn=SEARCH&pageid=QS&search_id=7019357638975910&src=PAGING&lastAcn=SEARCH&lastAcnId=7019357638975910'.format(x=str(curPage+1))
-            yield Request(next_url,callback=self.parse)
+        maxPage = str(response.xpath("//div[@class='lcol_new']/div[@class='pgdiv']/a[last()-1]/text()").extract_first())
+        if maxPage == 'None':
+            maxPage = curPage
+        #print maxPage
+        #print response.body
+        if curPage <= maxPage :
+            if 'rent-property' in response.url:
+                next_url = 'http://www.99acres.com/rent-property-in-mumbai-ffid-page-{x}?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&pageid=QS&search_id=7024716630429298&src=PAGING&lastAcn=SEARCH&lastAcnId=7024716630429298&fsl_results=Y&total_fsl_count=2'.format(x=str(curPage+1))
+                yield Request(next_url,callback=self.parse)
+            else:
+                if 'property' in response.url:
+                    next_url = 'http://www.99acres.com/property-in-mumbai-ffid-page-{x}?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&lstacn=SEARCH&pageid=QS&search_id=7019357638975910&src=PAGING&lastAcn=SEARCH&lastAcnId=7019357638975910'.format(x=str(curPage+1))
+                    yield Request(next_url,callback=self.parse)

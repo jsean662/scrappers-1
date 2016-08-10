@@ -83,8 +83,8 @@ class Contact(CrawlSpider):
         phone = self.driver.find_element_by_name('phone')
         phone.send_keys('9004074337')
 
-        post = self.driver.find_element_by_xpath('//button[@class="btn bg-color-yellow min-width-btn"]')
-        post.click()
+        #post = self.driver.find_element_by_xpath('//button[@class="btn bg-color-yellow min-width-btn"]')
+        #post.click()
 
         time.sleep(20)
 
