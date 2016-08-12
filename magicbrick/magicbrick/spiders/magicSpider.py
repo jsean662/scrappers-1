@@ -33,25 +33,37 @@ class MagicSpider(scrapy.Spider):
                 for i in data:
                     item = MagicbrickItem()
             
-                    item['Building_name'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/p[@class="proHeading"]/a/abbr/span[@class="maxProDesWrap showNonCurtailed"]/text()').extract_first().replace("in","").replace("The Address","").replace("\n","")
-                    if item['Building_name'] == '':
+                    try:
+                        item['Building_name'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/p[@class="proHeading"]/a/abbr/span[@class="maxProDesWrap showNonCurtailed"]/text()').extract_first().replace("in","").replace("The Address","").replace("\n","")
+                        if item['Building_name'] == '':
+                            item['Building_name'] = 'None'
+                    except:
                         item['Building_name'] = 'None'
                 
-                    #item['lat'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/span[@class="seeOnMapLink seeOnMapLinkBuy"]/span[@class="stopParentLink"]/@onclick').extract_first().split('&')[0].split('?')[-1].split("=")[-1]
-                    #if item['lat'] == '':
-                    #    item['lat'] = 0
+                    try:
+                        item['lat'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/span[@class="seeOnMapLink seeOnMapLinkBuy"]/span[@class="stopParentLink"]/@onclick').extract_first().split('&')[0].split('?')[-1].split("=")[-1]
+                        if item['lat'] == '':
+                            item['lat'] = 0
+                    except:
+                        item['lat'] = 0
                 
-                    #item['longt'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/span[@class="seeOnMapLink seeOnMapLinkBuy"]/span[@class="stopParentLink"]/@onclick').extract_first().split('&')[1].split("=")[-1]
-                    #if item['longt'] == '':
-                    #    item['longt'] = 0
-                
+                    try:
+                        item['longt'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/span[@class="seeOnMapLink seeOnMapLinkBuy"]/span[@class="stopParentLink"]/@onclick').extract_first().split('&')[1].split("=")[-1]
+                        if item['longt'] == '':
+                            item['longt'] = 0
+                    except:
+                        item['longt'] = 0
+
                     item['platform'] = 'magicbricks'
                     item['carpet_area'] = 'None'
                 
                     item['data_id'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/@onclick').extract_first().split("'")[5]
                 
-                    item['config_type'] = i.xpath('div[@class="proColmleft"]/div[1]/div/p/a/strong/text()').extract_first()[:6]
-                    if not 'K' in item['config_type']:
+                    try:
+                        item['config_type'] = i.xpath('div[@class="proColmleft"]/div[1]/div/p/a/strong/text()').extract_first()[:6]
+                        if not 'K' in item['config_type']:
+                            item['config_type'] = 'None'
+                    except:
                         item['config_type'] = 'None'
                 
                     item['Bua_sqft'] = i.xpath('div[@class="proColmleft"]/div[1]/div/p/a/span[@class="proNameSizeTxt"]/text()').extract()[0].split()[0]
@@ -88,9 +100,15 @@ class MagicSpider(scrapy.Spider):
                     except:
                         item['price_per_sqft'] = '0'
                 
-                    item['listing_by'] = i.xpath('div[@class="proBtnRow"]/div[3]/ul/li[@class="agentDeatilsBox"]/div/div[1]/div/div[1]/text()').extract_first()
+                    try:
+                        item['listing_by'] = i.xpath('div[@class="proBtnRow"]/div[3]/ul/li[@class="agentDeatilsBox"]/div/div[1]/div/div[1]/text()').extract_first()
+                    except:
+                        item['listing_by'] = 'None'
                 
-                    item['name_lister'] = i.xpath('div[@class="proBtnRow"]/div[3]/ul/li[@class="agentDeatilsBox"]/div/div[3]/text()').extract_first()
+                    try:
+                        item['name_lister'] = i.xpath('div[@class="proBtnRow"]/div[3]/ul/li[@class="agentDeatilsBox"]/div/div[3]/text()').extract_first()
+                    except:
+                        item['name_lister'] = 'None'
                 
                     item['property_type'] = 'Residential'
                 
@@ -100,8 +118,8 @@ class MagicSpider(scrapy.Spider):
                     item['sublocality'] = 'None'
                     item['age'] = 'None'
                     item['google_place_id'] = 'None'
-                    item['lat'] = 0
-                    item['longt'] = 0
+                    #item['lat'] = 0
+                    #item['longt'] = 0
                     item['Possession'] = 'None'
                     item['Launch_date'] = 'None'
                     item['mobile_lister'] = 'None'
