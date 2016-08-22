@@ -8,11 +8,11 @@
 import scrapy
 
 
-class MakaanformItem(scrapy.Item):
+class AgentItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    locality = scrapy.Field()
-    price = scrapy.Field()
-    prop = scrapy.Field()
-    amin = scrapy.Field()
+    company = scrapy.Field()
+    agent_name = scrapy.Field()
+    phone = scrapy.Field()
+    detail = scrapy.Field()
     pass

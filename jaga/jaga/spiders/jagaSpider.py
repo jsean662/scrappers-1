@@ -14,7 +14,7 @@ import datetime
 from requests.auth import HTTPProxyAuth
 
 class JagahaSpider(Spider):
-    name = "jaga"
+    name = "jagahaSpider"
     allowed_domains = ['jagaha.com']
 
     start_urls = [
@@ -26,7 +26,7 @@ class JagahaSpider(Spider):
     base_url = 'http://www.jagaha.com'
     custom_settings = {
             'BOT_NAME': 'jagaha',
-            'DEPTH_LIMIT': 1000,
+            'DEPTH_LIMIT': 7000,
             'DOWNLOAD_DELAY': 3
         }
     start_time = time.time()

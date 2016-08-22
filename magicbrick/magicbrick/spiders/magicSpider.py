@@ -26,7 +26,7 @@ class MagicSpider(scrapy.Spider):
                 hxs = Selector(response)
             #maxNo = int(str(hxs.xpath('//div[@class="srpHdrComLeft"]/h1/text()').extract()).split(" ")[0].replace("[","").replace("u","").replace("'",""))
             #print maxNo
-                data = hxs.xpath('//div[@class="srpColm2"]')
+                data = hxs.xpath('//div[@class="srpBlockListRow "]')
             #print data
             #dates = hxs.xpath('//div[@class="postedBy"]')
             #try:
@@ -34,12 +34,13 @@ class MagicSpider(scrapy.Spider):
                     item = MagicbrickItem()
             
                     try:
-                        item['Building_name'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/p[@class="proHeading"]/a/abbr/span[@class="maxProDesWrap showNonCurtailed"]/text()').extract_first().replace("in","").replace("The Address","").replace("\n","")
+                        item['Building_name'] = i.xpath('div/input[contains(@id,"projectName")]/@value').extract_first()
                         if item['Building_name'] == '':
                             item['Building_name'] = 'None'
                     except:
                         item['Building_name'] = 'None'
-                
+                    print item
+                '''
                     try:
                         item['lat'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/span[@class="seeOnMapLink seeOnMapLinkBuy"]/span[@class="stopParentLink"]/@onclick').extract_first().split('&')[0].split('?')[-1].split("=")[-1]
                         if item['lat'] == '':
@@ -185,7 +186,7 @@ class MagicSpider(scrapy.Spider):
                         maxPage = curPage + 1
             #print maxPage
 
-                if curPage <= maxPage :
+                if curPage < maxPage :
                     nextPage=curPage+1
                     #print curPage,maxPage,nextPage
                     next_url = 'http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Mumbai/Page-' + str(nextPage)

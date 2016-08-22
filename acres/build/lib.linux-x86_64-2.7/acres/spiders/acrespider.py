@@ -245,10 +245,10 @@ class JagahaSpider(CrawlSpider):
         curPage = int(response.url.split('?')[0].split('-')[-1])
         maxPage = str(response.xpath("//div[@class='lcol_new']/div[@class='pgdiv']/a[last()-1]/text()").extract_first())
         if maxPage == 'None':
-            maxPage = curPage
+            maxPage = curPage+1
         #print maxPage
         #print response.body
-        if curPage <= maxPage :
+        if curPage < maxPage :
             if 'rent-property' in response.url:
                 next_url = 'http://www.99acres.com/rent-property-in-mumbai-ffid-page-{x}?orig_property_type=R&class=O,A,B&search_type=QS&search_location=CP12&pageid=QS&search_id=7024716630429298&src=PAGING&lastAcn=SEARCH&lastAcnId=7024716630429298&fsl_results=Y&total_fsl_count=2'.format(x=str(curPage+1))
                 yield Request(next_url,callback=self.parse)

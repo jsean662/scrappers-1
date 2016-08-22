@@ -12,7 +12,7 @@ import datetime
 from datetime import datetime as dt
 
 class JagahaSpider(CrawlSpider):
-    name = "aspy"
+    name = "acresSpider"
     allowed_domains = ['99acres.com']
 
     start_urls = [

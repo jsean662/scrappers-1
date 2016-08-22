@@ -13,7 +13,7 @@ from urlparse import urljoin
 import urllib
 import time
 class purpleyoSpider(Spider):
-	name = "pspy"
+	name = "propTigerSpider"
 	start_urls = [
 			'https://www.proptiger.com/app/v2/project-listing?selector={%22filters%22:{%22and%22:[{%22equal%22:{%22cityId%22:18}},{%22equal%22:{%22cityId%22:18}}]},%22paging%22:{%22start%22:0,%22rows%22:15}}'
 			]

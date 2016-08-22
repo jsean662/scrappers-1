@@ -15,7 +15,7 @@ from scrapy.selector import XmlXPathSelector
 import lxml.etree as etree
 from urlparse import urljoin
 class purpleyoSpider(Spider):
-	name = "purpl"
+	name = "purpleyoSpider"
 	start_urls = [
 			'http://www.purpleyo.com/solr/search?q=Mumbai+India&rows=8&searchtype=resultpage&sort=listingtype+asc,plantype+asc,listingstatus+asc,+issizeavailable+desc,+random_1466580605918+desc,+total_available_size+desc,+viewcount+desc,+updated_at+desc,+pyoindex+desc&start=0&url=http:%2F%2F172.31.17.31%2Fsolr%2Fcollection1%2Fselect%3Ffq%3Dlocaleid:1%26fq%3Dpyoindex:%5B0+TO+1000%5D%26fq%3D(total_available_size:%5B*+TO+*%5D+OR+sizeavailable:%5B*+TO+*%5D)%26fq%3Dcity:%22Mumbai%22%26fq%3Dstatus:%22ACTIVE%22%26fq%3Dpropertytype:(%22OFFICE%22+OR+%22RETAIL%22+OR+%22OFFICE+AND+RETAIL%22)%26fq%3Davailability:("SALE"+OR+"LEASE"+OR+"LEASE%2FSALE")%26start%3D0&wt=json'
 			]

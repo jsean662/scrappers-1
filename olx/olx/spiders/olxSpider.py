@@ -6,7 +6,7 @@ from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from datetime import datetime,time,timedelta,date
 
 class MySpider(CrawlSpider):
-    name = "OlxSpider"
+    name = "olxSpider"
     allowed_domains = ['www.olx.in']
     start_urls = ["https://www.olx.in/mumbai/houses/?search%5Bphotos%5D=false",
     "https://www.olx.in/mumbai/apartments/?search%5Bphotos%5D=false",

@@ -13,7 +13,7 @@ from urlparse import urljoin
 import urllib
 import time
 class purpleyoSpider(Spider):
-	name = "pspyRent"
+	name = "propTigerRentSpider"
 	start_urls = ['https://www.proptiger.com/data/v2/entity/resale-listing?selector={%22filters%22:{%22and%22:[{%22equal%22:{%22bookingStatusId%22:1}},{%22equal%22:{%22cityId%22:18}}]},%22paging%22:{%22start%22:0,%22rows%22:15}}']
 	allowed_domains = ["www.proptiger.com"]
 	rules = (Rule(LinkExtractor(deny=(), allow=('http://www.proptiger.com/'), ), callback='parse', follow=True, ),)

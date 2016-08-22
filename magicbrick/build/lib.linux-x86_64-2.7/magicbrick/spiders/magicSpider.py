@@ -185,7 +185,7 @@ class MagicSpider(scrapy.Spider):
                         maxPage = curPage + 1
             #print maxPage
 
-                if curPage <= maxPage :
+                if curPage < maxPage :
                     nextPage=curPage+1
                     #print curPage,maxPage,nextPage
                     next_url = 'http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Mumbai/Page-' + str(nextPage)
