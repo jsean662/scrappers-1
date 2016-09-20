@@ -1,4 +1,3 @@
-
 from scrapy.http import FormRequest
 from link.items import LinkItem
 from scrapy.spiders import Spider
@@ -27,7 +26,7 @@ class LinkedinSpider(Spider):
                                         callback=self.parse1)
 
     def parse1(self, response):
-        url = 'https://www.linkedin.com/vsearch/p?keywords=human%20resources&postalCode=400076&openAdvancedForm=true&locationType=I&countryCode=in&distance=50&rsid=4975470201469879493923&orig=MDYS&page_num=1&pt=people'
+        url = 'https://www.linkedin.com/vsearch/p?company=citibank&postalCode=400051&openAdvancedForm=true&companyScope=C&locationType=I&countryCode=in&distance=100&rsid=4975470201472375727838&orig=ADVS&page_num=1&pt=people'
         yield Request(url,callback = self.parse_items)
 
     def parse_items(self,response):
@@ -35,11 +34,14 @@ class LinkedinSpider(Spider):
         hxs = Selector(response)
         #print response.body
     
-        data =  hxs.xpath("//code[@id='voltron_srp_main-content']").extract_first()
+        data =  hxs.xpath("//code[@id='voltron_srp_main-content']").extract()[0]
         #print data
         data = data.replace("\u002d1","2")
+        #print "--------------------------------------------------------"
         #print data
+        #print "--------------------------------------------------------"
         jsndata = json.loads(data.split("--")[-2])
+        #print "++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
         #print jsndata
         path =  jsndata['content']['page']['voltron_unified_search_json']['search']['results']
         no = len(path)
@@ -64,10 +66,10 @@ class LinkedinSpider(Spider):
             yield item
 
         if pageNo<=100:
-            next_url = 'https://www.linkedin.com/vsearch/p?keywords=human%20resources&postalCode=400076&openAdvancedForm=true&locationType=I&countryCode=in&distance=50&rsid=4975470201469879493923&orig=MDYS&page_num={x}&pt=people'.format(x=str(pageNo+1))
+            next_url = 'https://www.linkedin.com/vsearch/p?company=citibank&postalCode=400051&openAdvancedForm=true&companyScope=C&locationType=I&countryCode=in&distance=100&rsid=4975470201472375727838&orig=ADVS&page_num={x}&pt=people'.format(x=str(pageNo+1))
             time.sleep(4)
             yield Request(next_url,callback=self.parse_items)
-        #path = response.xpath('.')#//ol[@id="results"]')
+        #path = response.xpath('.')#//ol[@id="results"]')'''
         #item = LinkItem()
         #item['name'] = path
     '''

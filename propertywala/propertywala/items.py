@@ -43,7 +43,7 @@ class PropertywalaItem(scrapy.Item):
     Monthly_Rent = scrapy.Field()
     Details = scrapy.Field()
     data_id = scrapy.Field()
-    quality1 = scrapy.Filed()
+    quality1 = scrapy.Field()
     quality2 = scrapy.Field()
     quality3 = scrapy.Field()
     

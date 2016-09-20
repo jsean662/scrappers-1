@@ -1,17 +1,20 @@
 import scrapy
 from selenium import webdriver
 from scrapy.spiders import CrawlSpider
+from scrapy.http import Request
 from agent.items import AgentItem
 from selenium.webdriver.common.action_chains import ActionChains
 from scrapy.selector import Selector
 import time
+from datetime import datetime as dt
 
 class MagicAgent(CrawlSpider):
 	name = 'agentSpider'
 	allowed_domains = ['magicbricks.com']
 
-	start_urls = ['http://www.magicbricks.com/Real-estate-property-agents/agent-in-Mumbai?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa,Commercial-Office-Space,Office-ITPark-SEZ,Commercial-Shop,Commercial-Showroom,Commercial-Land,Industrial-Land&Locality=Andheri-West,Bandra-West,Four-Bungalows,Seven-Bungalows&dealingIn=Rent-Lease']
+	start_urls = ['http://www.magicbricks.com/Real-estate-property-agents/agent-in-Mumbai/Page-5?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa,Commercial-Office-Space,Office-in-IT-Park/-SEZ,Commercial-Shop,Commercial-Showroom,Commercial-Land,Industrial-Land&Locality=Andheri-West,Bandra-West,4-Bunglows&dealingIn=Rent-Lease&nsrSearchBar=N&searchTransMode=driving&bar_propertyType_R_new=10002_10003_10021_10022_10020,10001_10017,10007_10018,10008_10009,10006_10012&category=R&price=Y&bar_propertyType_new=10002_10003_10021_10022_10020,10001_10017,10007_10018,10008_10009,10006_10012&mbTrackSrc=agentHomeSearchForm&tab1=agent']
 	item = AgentItem()
+	count = 1
 
 	def parse(self , response):
 		driver = webdriver.Chrome()
@@ -19,8 +22,9 @@ class MagicAgent(CrawlSpider):
 		driver.get(response.url)
 
 		driver.implicitly_wait(30)
-		count = 1
-
+		#f = open('agents.csv','ab')
+		#f.write('Name,Company,Phone,Emails,"Date of Addition"\n')
+		#f.close()
 		cont = driver.find_elements_by_xpath('//div[@class="srpBlock"]')
 		
 		for c in cont:
@@ -35,7 +39,7 @@ class MagicAgent(CrawlSpider):
 				driver.implicitly_wait(30)
 			except:
 				print 'No Button'
-			if (count==1) and ('display: block;' in c.find_element_by_xpath('div[@class="srpBtnWrap"]/div[@class="contactForms"]/div[@class="formsWrap viewPhoneForm"]').get_attribute('style')):
+			if (self.count==1) and ('display: block;' in c.find_element_by_xpath('div[@class="srpBtnWrap"]/div[@class="contactForms"]/div[@class="formsWrap viewPhoneForm"]').get_attribute('style')):
 				ind = c.find_element_by_xpath('div[@class="srpBtnWrap"]/div[@class="contactForms"]/div[@class="formsWrap viewPhoneForm"]/div[@class=" "]/div[@class="formCont propUpdatePop forForm"]/div[@class="formCont propUpdatePop"]/form/div/div[@class="formBlock"]/ul/li[1]/div[@class="userType"]/div[@class="formValue usetype"]/label[2]')
 				act_ind = ActionChains(driver)
 				act_ind.move_to_element(ind)
@@ -46,7 +50,7 @@ class MagicAgent(CrawlSpider):
 				act_name = ActionChains(driver)
 				act_name.move_to_element(name)
 				act_name.click(name)
-				act_name.send_keys('shlok').perform()
+				act_name.send_keys('pratham').perform()
 				driver.implicitly_wait(40)
 				time.sleep(5)
 
@@ -54,7 +58,7 @@ class MagicAgent(CrawlSpider):
 				act_mob = ActionChains(driver)
 				act_mob.move_to_element(mob)
 				act_mob.click(mob)
-				act_mob.send_keys('9769036234').perform()
+				act_mob.send_keys('9702293897').perform()
 				driver.implicitly_wait(40)
 				time.sleep(8)
 
@@ -74,16 +78,14 @@ class MagicAgent(CrawlSpider):
 				time.sleep(8)
 
 				if "pupWrap popContainer" in driver.page_source:
-					print "+++++++++++++++++++++++++++++++"
-					print 'got it'
-					print '+++++++++++++++++++++++++++++++'
-					
-
+					driver.quit()
+					time.sleep(2)
+				
 				dig = c.find_element_by_id('smsNo')
 				act_dig = ActionChains(driver)
 				act_dig.move_to_element(dig)
 				act_dig.click(dig)
-				act_dig.send_keys('190').perform()
+				act_dig.send_keys('296').perform()
 				driver.implicitly_wait(40)
 				time.sleep(8)
 
@@ -92,18 +94,26 @@ class MagicAgent(CrawlSpider):
 				act_press.move_to_element(press)
 				act_press.click(press).perform()
 				driver.implicitly_wait(40)
-				count = 0
+				self.count = 0
+				time.sleep(2)
+			
+			if "pupWrap popContainer" in driver.page_source:
+				driver.quit()
+				time.sleep(2)
 
 			try:
-				self.item['phone'] = c.find_element_by_xpath('div[@class="srpBtnWrap"]/div[@class="contactForms"]/div[@class="formsWrap viewPhoneForm"]/div[@class=" "]/div[@class="newSimilarForDetail"]/div/div[@class="infoCont"]/div[@class="localText"]/div[@class="contact"]/div').text
+				self.item['phone'] = c.find_element_by_xpath('div[@class="srpBtnWrap"]/div[@class="contactForms"]/div[@class="formsWrap viewPhoneForm"]/div[@class=" "]/div[@class="newSimilarForDetail"]/div/div[@class="infoCont"]/div[@class="localText"]/div[@class="contact"]/div[contains(@id,"mobileDiv")]/strong').text
 			except:
-				self.item['phone'] = None
-
-			f =open('agent','ab')
-			f.write("company:"+self.item['company']+" "+"agent_name:"+self.item['agent_name']+" "+"phone:"+self.item['phone']+"\n")
+				self.item['phone'] = 'None'
+			if ',' in self.item['phone']:
+				self.item['phone'] = self.item['phone'].replace(',',';')
+			f = open('agents.csv','ab')
+			f.write('"'+self.item['agent_name']+'","'+self.item['company']+'",'+self.item['phone']+',"sample@sample.com","'+dt.strftime(dt.now(),'%Y-%m-%d %H:%M:%S')+'"'+'\n')
 			f.close()
 			driver.implicitly_wait(30)
+			print "++++++++++++++++++++++++++++++++++++++"
 			print self.item
+			print "++++++++++++++++++++++++++++++++++++++"
 			time.sleep(20)
 
 		driver.quit()

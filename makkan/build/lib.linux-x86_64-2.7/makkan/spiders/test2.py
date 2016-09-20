@@ -17,7 +17,7 @@ import time
 import datetime
 from datetime import datetime as dt
 class SeekingAlpha(CrawlSpider):
-    name = "s2"
+    name = "makaanSpider"
     
     allowed_domains = ['makaan.com']
 

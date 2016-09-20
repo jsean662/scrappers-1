@@ -1,4 +1,5 @@
 import scrapy
+import logging
 from magicbrick.items import MagicbrickItem
 from scrapy.spiders import Spider
 from scrapy.spiders import CrawlSpider, Rule
@@ -10,16 +11,17 @@ from datetime import datetime as dt
 from datetime import time,timedelta
 from datetime import date
 import time
+import sys
 
 class MagicSpider(scrapy.Spider):
     name = 'magicSpider'
     allowed_domains = ['magicbricks.com']
     start_urls = ['http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Mumbai/Page-1']
-    #rules = (Rule(LinkExtractor(deny=(), allow=('http://www.magicbricks.com/'), ), callback='parse', follow=True, ),)
+    #http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Navi-Mumbai/Page-1
     custom_settings = {
             'DEPTH_LIMIT' : 10000,
-	        'DOWNLOAD_DELAY': 5
-	    }
+            'DOWNLOAD_DELAY': 5
+        }
     prevPage = 0    
       
     def parse(self,response):
@@ -34,8 +36,10 @@ class MagicSpider(scrapy.Spider):
                     item = MagicbrickItem()
             
                     try:
-                        item['Building_name'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/p[@class="proHeading"]/a/abbr/span[@class="maxProDesWrap showNonCurtailed"]/text()').extract_first().replace("in","").replace("The Address","").replace("\n","")
-                        if item['Building_name'] == '':
+                        item['Building_name'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/p[@class="proHeading"]/a/abbr/span[@class="maxProDesWrap showNonCurtailed"]/text()').extract_first()
+                        if (' in\n' in item['Building_name']) and (',' in item['Building_name']):
+                            item['Building_name'] = item['Building_name'].split(' in\n')[-1].split(',')[0]
+                        elif ' in' in item['Building_name']:
                             item['Building_name'] = 'None'
                     except:
                         item['Building_name'] = 'None'
@@ -57,7 +61,11 @@ class MagicSpider(scrapy.Spider):
                     item['platform'] = 'magicbricks'
                     item['carpet_area'] = 'None'
                 
-                    item['data_id'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/@onclick').extract_first().split("'")[5]
+                    try:
+                        item['data_id'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/@onclick').extract_first().split("'")[5]
+                    except:
+                        print i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/@onclick').extract_first()
+                        item['data_id'] = 'None'
                 
                     try:
                         item['config_type'] = i.xpath('div[@class="proColmleft"]/div[1]/div/p/a/strong/text()').extract_first()[:6]
@@ -188,7 +196,7 @@ class MagicSpider(scrapy.Spider):
                 if curPage < maxPage :
                     nextPage=curPage+1
                     #print curPage,maxPage,nextPage
-                    next_url = 'http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Mumbai/Page-' + str(nextPage)
+                    next_url = 'http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Navi-Mumbai/Page-' + str(nextPage)
                     self.prevPage = curPage - 1
                 #print self.prevPage
                     yield Request(next_url, callback=self.parse)

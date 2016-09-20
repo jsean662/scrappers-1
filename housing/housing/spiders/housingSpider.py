@@ -14,7 +14,8 @@ class HousingSpider(scrapy.Spider):
     name = 'housing'
     
     allowed_domains = ['housing.com']
-    start_urls = ['https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1ca99c33e3d8b987ccf1&sort_key=date_added&show_collections=true&show_aggregations=true&placeholder_ids=6,2,3,7&p=1']
+    start_urls = ['https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=32964110855b9736fd94&p=1&sort_key=date_added&show_collections=true&show_aggregations=true&placeholder_ids=6,2,3,7&p=1']
+    #https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1ca99c33e3d8b987ccf1&sort_key=date_added&show_collections=true&show_aggregations=true&placeholder_ids=6,2,3,7&p=1
 
     custom_settings = {
         'DEPTH_LIMIT' : 5000,
@@ -76,6 +77,9 @@ class HousingSpider(scrapy.Spider):
                 except:
                     item['locality'] = 'None'
 
+                '''
+                Assignning Default values
+                '''
                 item['carpet_area'] = 'None'
                 item['management_by_landlord'] = 'None'
                 item['areacode'] = 'None'
@@ -107,5 +111,5 @@ class HousingSpider(scrapy.Spider):
                 yield item
 
         if data['is_last_page']==False:
-            next_url = 'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1ca99c33e3d8b987ccf1&sort_key=date_added&show_collections=true&show_aggregations=true&placeholder_ids=6,2,3,7&p='+str(pageNo+1)
+            next_url = 'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=32964110855b9736fd94&p=1&sort_key=date_added&show_collections=true&show_aggregations=true&placeholder_ids=6,2,3,7&p='+str(pageNo+1)
             yield Request(next_url,callback=self.parse)
