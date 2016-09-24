@@ -50,11 +50,11 @@ DOWNLOAD_TIMEOUT = 300
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-    'scrapy_crawlera.CrawleraMiddleware': 300,
-}
-CRAWLERA_ENABLED = True
-CRAWLERA_APIKEY = 'ffb166fd814546b49031b184a2b78927'
+# DOWNLOADER_MIDDLEWARES = {
+#     'scrapy_crawlera.CrawleraMiddleware': 300,
+# }
+# CRAWLERA_ENABLED = True
+# CRAWLERA_APIKEY = 'ffb166fd814546b49031b184a2b78927'
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -64,14 +64,14 @@ CRAWLERA_APIKEY = 'ffb166fd814546b49031b184a2b78927'
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'magicbrick.pipelines.CSVPipeline': 300,
-}
+# ITEM_PIPELINES = {
+#     'magicbrick.pipelines.CSVPipeline': 300,
+# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 # NOTE: AutoThrottle will honour the standard settings for concurrency and delay
-AUTOTHROTTLE_ENABLED=False
+#AUTOTHROTTLE_ENABLED=False
 # The initial download delay
 #AUTOTHROTTLE_START_DELAY=5
 # The maximum download delay to be set in case of high latencies

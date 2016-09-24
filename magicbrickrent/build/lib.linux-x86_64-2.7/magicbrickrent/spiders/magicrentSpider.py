@@ -51,11 +51,11 @@ class MagicrentSpider(scrapy.Spider):
                 
                 item['lat'] = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpAnchor"]/span[@class="seeOnMapLink seeOnMapLinkRent"]/a/@onclick').extract_first().split('&')[0].split("?")[-1].split("=")[-1]
                 if item['lat'] == '':
-                    item['lat'] = 0
+                    item['lat'] = '0'
                 
                 item['longt'] = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpAnchor"]/span[@class="seeOnMapLink seeOnMapLinkRent"]/a/@onclick').extract_first().split('&')[1].split("=")[-1]
                 if item['longt'] == '':
-                    item['longt'] = 0
+                    item['longt'] = '0'
                 
                 item['locality'] = i.xpath('div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpAnchor"]/p[@class="proHeading"]/a/span[@class="maxProDesWrap showNonCurtailed"]/span[@class="localityFirst"]/text()').extract_first()
                 
@@ -93,8 +93,8 @@ class MagicrentSpider(scrapy.Spider):
                 else:
                     item['price_on_req'] = 'false'
                 
-                item['price_per_sqft'] = 0
-                item['carpet_area'] = 'None'
+                item['price_per_sqft'] = '0'
+                item['carpet_area'] = '0'
                 item['address'] = 'None'
                 item['sublocality'] = 'None'
                 item['age'] = 'None'

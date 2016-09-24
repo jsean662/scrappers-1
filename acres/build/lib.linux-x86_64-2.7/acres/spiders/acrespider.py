@@ -12,7 +12,7 @@ import time
 import datetime
 from datetime import datetime as dt
 
-class JagahaSpider(CrawlSpider):
+class AcresSpider(CrawlSpider):
 	name = "acresSpider"
 	allowed_domains = ['99acres.com']
 
@@ -61,8 +61,8 @@ class JagahaSpider(CrawlSpider):
 				item['txn_type'] = 'None'
 				item['Status'] = 'None'
 				item['age'] = 'None'
-				item['lat'] = 0
-				item['longt'] = 0
+				item['lat'] = '0'
+				item['longt'] = '0'
 				item['address'] = 'None'
 				item['sublocality'] = 'None'
 				item['google_place_id'] = 'None'
@@ -70,7 +70,7 @@ class JagahaSpider(CrawlSpider):
 				item['mobile_lister'] = 'None'
 				item['areacode'] = 'None'
 				item['management_by_landlord'] = 'None'
-				item['carpet_area'] = 0
+				item['carpet_area'] = '0'
 
 				item['data_id'] = data_id
 				
@@ -86,9 +86,9 @@ class JagahaSpider(CrawlSpider):
 					item['price_per_sqft'] = i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span/text()").extract()[2].replace(' / Sq.Ft.','').replace('/','').strip()
 					#print item['price_per_sqft']
 					if item['price_per_sqft'] == '':
-						item['price_per_sqft'] = 0
+						item['price_per_sqft'] = '0'
 				except:
-					item['price_per_sqft'] = 0                       
+					item['price_per_sqft'] = '0'                       
 				try:
 					item['Building_name'] = str(i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span[2]/a[@class='sName']/b/text()").extract_first()).strip()
 				except:
@@ -264,8 +264,10 @@ class JagahaSpider(CrawlSpider):
 				if len(lat_lng)>1:
 					item['longt'] = lat_lng[1]
 				else:
-					item['longt'] = 0
-				
+					item['longt'] = '0'
+				if (('None' in lat_lng) or lat_lng==None):
+					item['lat'] = '0'
+					item['longt'] = '0'
 								
 				if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
 					item['quality1'] = 1

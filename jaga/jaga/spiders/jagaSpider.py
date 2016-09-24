@@ -72,7 +72,8 @@ class JagahaSpider(Spider):
                         item['areacode'] = 'None'
                         item['management_by_landlord'] = 'None'
                         item['sublocality'] = 'None'
-                        item['carpet_area'] = 'None'
+                        item['price_per_sqft'] = '0'
+                        item['carpet_area'] = '0'
                         item['updated_date'] = item['listing_date']
                         if item['Selling_price'] == '0' and item['Monthly_Rent'] == '0':
                             item['price_on_req'] = 'true'

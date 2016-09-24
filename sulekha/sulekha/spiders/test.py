@@ -52,7 +52,7 @@ class MySpider(CrawlSpider):
 		self.item['city'] = 'mumbai'
 		#self.c['city'] = 'mumbai'
 		self.item['platform'] = 'Sulekha'
-		self.item['carpet_area'] = 'None'
+		self.item['carpet_area'] = '0'
 		self.item['management_by_landlord'] = 'None'
 		self.item['areacode'] = 'None'
 		self.item['mobile_lister'] = 'None'
@@ -60,7 +60,7 @@ class MySpider(CrawlSpider):
 		self.item['Launch_date'] = 'None'
 		self.item['Possession'] = 'None'
 		self.item['config_type'] = 'None'
-		self.item['Bua_sqft'] = 0
+		self.item['Bua_sqft'] = '0'
 		self.item['property_type'] = 'None'
 		self.item['txn_type'] = 'None'
 		self.item['Status'] = 'None'
@@ -69,7 +69,7 @@ class MySpider(CrawlSpider):
 		self.item['address'] = 'None'
 		self.item['price_on_req'] = 'false'
 		self.item['sublocality'] = 'None'
-		self.item['price_per_sqft'] = 0
+		self.item['price_per_sqft'] = '0'
 		self.item['name_lister'] = 'None'
 		self.item['Monthly_Rent'] = '0'
 

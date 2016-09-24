@@ -38,8 +38,8 @@ class MySpider(CrawlSpider):
             item = OlxItem()
             item["data_id"] = map(unicode.strip, titles.xpath("text()").extract())
             item['Building_name'] = 'None'
-            item['lat'] = 0
-            item['longt'] = 0
+            item['lat'] = '0'
+            item['longt'] = '0'
             item['Status'] = 'None'
             item['listing_by'] = 'None'
             item['Details'] = 'None'
@@ -49,10 +49,10 @@ class MySpider(CrawlSpider):
             item['google_place_id'] = 'None'
             item['Possession'] = 'None'
             item['Launch_date'] = 'None'
-            item['price_per_sqft'] = 'None'
+            item['price_per_sqft'] = '0'
             item['areacode'] = 'None'
             item['management_by_landlord'] = 'None'
-            item['carpet_area'] = 'None'
+            item['carpet_area'] = '0'
             
             item['platform']="OLX"  
             item['city']="Mumbai"     
@@ -161,7 +161,7 @@ class MySpider(CrawlSpider):
             item['Bua_sqft']=st
             f=0
             if item['Bua_sqft'] == '':
-                item['Bua_sqft'] = 0
+                item['Bua_sqft'] = '0'
             
             if "oom" in str(map(unicode.strip, detail.xpath("tr[1]/td[1]/div[1]/text()").extract())) and no==-1:
                 st=str(map(unicode.strip, detail.xpath("tr[1]/td[1]/div[1]/strong/text()").extract()))
@@ -182,11 +182,11 @@ class MySpider(CrawlSpider):
                 st=str(map(unicode.strip, detail.xpath("tr[3]/td[3]/div[1]/strong/a/text()").extract()))
                 f=1
             if f==1 and "1" in st:
-                item['config_type']="1BHK"
+                item['config_type']="1 BHK"
             elif f==1 and "2" in st:
-                item['config_type']="2BHK"
+                item['config_type']="2 BHK"
             elif f==1 and "3" in st:
-                item['config_type']="3BHK"
+                item['config_type']="3 BHK"
             if item['config_type'] == '':
                 item['config_type'] = 'None'
             if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):

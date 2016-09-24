@@ -16,32 +16,17 @@ import unicodedata
 import time
 import datetime
 from datetime import datetime as dt
-class SeekingAlpha(CrawlSpider):
+class MakaanSpider(CrawlSpider):
     name = "makaanSpider"
     
     allowed_domains = ['makaan.com']
-
-    
-    
-
-    start_urls = [  
-                   "https://www.makaan.com/listings?listingType=buy&pageType=LISTINGS_PROPERTY_URLS&cityName=Mumbai&cityId=18&templateId=MAKAAN_CITY_LISTING_BUY&page=1",
-                   "https://www.makaan.com/listings?listingType=rent&pageType=CITY_URLS&cityName=Mumbai&cityId=18&templateId=MAKAAN_CITY_LISTING_BUY&page=1"
-                    
-        ]     
+    start_urls = ["https://www.makaan.com/listings?listingType=buy&pageType=LISTINGS_PROPERTY_URLS&cityName=Mumbai&cityId=18&templateId=MAKAAN_CITY_LISTING_BUY&page=1","https://www.makaan.com/listings?listingType=rent&pageType=CITY_URLS&cityName=Mumbai&cityId=18&templateId=MAKAAN_CITY_LISTING_BUY&page=1"]     
     data_id_list = []
-            
     #for i in range(2, 40) :
         #start_urls.append(start_urls + "/?page=" + i)
-
-   
-    
     rules = (Rule(LinkExtractor(deny=(), allow=('http://www.makaan.com/'),), callback='parse_item', follow=True, ),)
-   
-    
   #  def parse(self, response):
-        
-     
+    
     def parse(self, response):
         #self.log("Scraping: %s" % response.url, level=log.INFO)
         #time.sleep(2.5)
@@ -75,9 +60,6 @@ class SeekingAlpha(CrawlSpider):
 
                     item['listing_date'] = dt2
                     
-                    
-                    
-                    
                     item['platform'] = 'makaan'
                     
                     item['txn_type'] = sale.split('in Mumbai')[0].split('for')[1]
@@ -85,7 +67,6 @@ class SeekingAlpha(CrawlSpider):
                     
                     sell = i.xpath("div/div/div[2]/div[1]/div[1]/div[1]/div[1]/div/span[1]/meta[1]/@content").extract_first()
                     
-                   
                     if sell.find("Cr") :
         	        	sell1 = i.xpath("div/div/div[2]/div[1]/div[1]/div[1]/div[1]/div/span[1]/meta[1]/@content").extract_first().split()[-1]
         	        	if sell1 == 'Cr':
@@ -146,9 +127,7 @@ class SeekingAlpha(CrawlSpider):
                     dt1 = s1.split('"listingUrl"')[1].split(',')[0].split('"')[1]
                     #print dt1
 
-                    
                     url1 = base_url + str(dt1)
-
 
                     yield Request(url1, callback=self.parse_item,  meta={'item': item}, dont_filter = True)
                 
@@ -172,8 +151,6 @@ class SeekingAlpha(CrawlSpider):
             
         
     def parse_item(self,response):
-        
-    
         hxs = Selector(response)
         item = response.meta['item']
         P = "//div[@class='map-area']"

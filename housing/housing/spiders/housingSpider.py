@@ -50,7 +50,7 @@ class HousingSpider(scrapy.Spider):
 
                 item['Selling_price'] = path[i]['inventory_configs'][j]['price']
 
-                item['Monthly_Rent'] = 0
+                item['Monthly_Rent'] = '0'
 
                 item['Bua_sqft'] = path[i]['inventory_configs'][j]['area']
 
@@ -63,7 +63,10 @@ class HousingSpider(scrapy.Spider):
 
                 item['price_on_req'] = path[i]['inventory_configs'][j]['price_on_request']
 
-                item['name_lister'] = path[i]['contact_persons_info'][0]['name']
+                try:
+                    item['name_lister'] = path[i]['contact_persons_info'][0]['name']
+                except:
+                    item['name_lister'] = 'None'
 
                 item['city'] = 'mumbai'
 
@@ -80,7 +83,7 @@ class HousingSpider(scrapy.Spider):
                 '''
                 Assignning Default values
                 '''
-                item['carpet_area'] = 'None'
+                item['carpet_area'] = '0'
                 item['management_by_landlord'] = 'None'
                 item['areacode'] = 'None'
                 item['mobile_lister'] = 'None'

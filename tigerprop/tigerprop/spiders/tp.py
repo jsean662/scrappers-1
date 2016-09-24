@@ -12,7 +12,7 @@ import lxml.etree as etree
 from urlparse import urljoin
 import urllib
 import time
-class purpleyoSpider(Spider):
+class PropSellSpider(Spider):
 	name = "propTigerSpider"
 	start_urls = [
 			'https://www.proptiger.com/app/v2/project-listing?selector={%22filters%22:{%22and%22:[{%22equal%22:{%22cityId%22:18}},{%22equal%22:{%22cityId%22:18}}]},%22paging%22:{%22start%22:0,%22rows%22:15}}'
@@ -95,7 +95,7 @@ class purpleyoSpider(Spider):
 				try:
 					item['price_per_sqft'] = path[i]['locality']['avgPricePerUnitArea']
 				except:
-					item['price_per_sqft'] = 'None'
+					item['price_per_sqft'] = '0'
 					
 				item['Building_name'] = path[i]['name']
 				item['address'] = path[i]['address']

@@ -47,19 +47,19 @@ class MagicSpider(scrapy.Spider):
                     try:
                         item['lat'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/span[@class="seeOnMapLink seeOnMapLinkBuy"]/span[@class="stopParentLink"]/@onclick').extract_first().split('&')[0].split('?')[-1].split("=")[-1]
                         if item['lat'] == '':
-                            item['lat'] = 0
+                            item['lat'] = '0'
                     except:
-                        item['lat'] = 0
+                        item['lat'] = '0'
                 
                     try:
                         item['longt'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/span[@class="seeOnMapLink seeOnMapLinkBuy"]/span[@class="stopParentLink"]/@onclick').extract_first().split('&')[1].split("=")[-1]
                         if item['longt'] == '':
-                            item['longt'] = 0
+                            item['longt'] = '0'
                     except:
-                        item['longt'] = 0
+                        item['longt'] = '0'
 
                     item['platform'] = 'magicbricks'
-                    item['carpet_area'] = 'None'
+                    item['carpet_area'] = '0'
                 
                     try:
                         item['data_id'] = i.xpath('div[@class="proColmleft"]/div[@class="proNameWrap proNameWrapBuy"]/div[@class="proNameColm1"]/@onclick').extract_first().split("'")[5]
@@ -196,7 +196,7 @@ class MagicSpider(scrapy.Spider):
                 if curPage < maxPage :
                     nextPage=curPage+1
                     #print curPage,maxPage,nextPage
-                    next_url = 'http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Navi-Mumbai/Page-' + str(nextPage)
+                    next_url = 'http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Mumbai/Page-' + str(nextPage)
                     self.prevPage = curPage - 1
                 #print self.prevPage
                     yield Request(next_url, callback=self.parse)

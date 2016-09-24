@@ -26,6 +26,7 @@ class Contact(CrawlSpider):
 		self.collection_A = db['Andheri_1']
 		self.collection_B = db['Bandra_1']
 		self.collection_s = db['Santacruz']
+		self.collection_v = db['vile']
 		self.collection_p = db['post']
 
 	def parse(self,response):
@@ -34,10 +35,12 @@ class Contact(CrawlSpider):
 		data1 = list(self.collection_A.find().limit(20))
 		data2 = list(self.collection_B.find().limit(20))
 		data3 = list(self.collection_s.find().limit(20))
+		data4 = list(self.collection_v.find().limit(20))
 		for n in range(0,len(data1)):
 			data_post.append(data1[n])
 			data_post.append(data2[n])
 			data_post.append(data3[n])
+			data_post.append(data4[n])
 
 		for i in range(0,len(data_post)):
 			if (not i==0):
@@ -51,10 +54,11 @@ class Contact(CrawlSpider):
 			time.sleep(3)
 
 			#for brokers posting
-			# broker = self.driver.find_element_by_xpath('//label[@for="broker"]')
-			# broker.click()
-			# self.driver.implicitly_wait(20)
-			# time.sleep(3)
+			if i<40:
+				broker = self.driver.find_element_by_xpath('//label[@for="broker"]')
+				broker.click()
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
 
 			rent = self.driver.find_element_by_xpath('//div[@class="col-md-12 col-sm-12 col-xs-12"]/ul[@class="radio-posting"]/li[2]')
 			rent.click()
@@ -63,15 +67,15 @@ class Contact(CrawlSpider):
 
 			project = self.driver.find_element_by_name('adProject')
 			project.send_keys(data_post[i]['locality'][0])
-			self.driver.implicitly_wait(5)
+			self.driver.implicitly_wait(15)
 			project.send_keys(data_post[i]['locality'][1])
-			self.driver.implicitly_wait(5)
+			self.driver.implicitly_wait(15)
 			project.send_keys(data_post[i]['locality'][2])
-			self.driver.implicitly_wait(5)
+			self.driver.implicitly_wait(15)
 			project.send_keys(data_post[i]['locality'][3])
-			self.driver.implicitly_wait(5)
+			self.driver.implicitly_wait(15)
 			project.send_keys(data_post[i]['locality'][4:])
-			self.driver.implicitly_wait(5)
+			self.driver.implicitly_wait(15)
 			#project.send_keys(data_post[i]['locality'][5:])
 			#self.driver.implicitly_wait(10)
 			project.send_keys('\b')
@@ -170,7 +174,7 @@ class Contact(CrawlSpider):
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
 
-			elif ((i>=10) and (i<20)):
+			if ((i>=10) and (i<20)):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('vipul')
 				self.driver.implicitly_wait(20)
@@ -185,37 +189,8 @@ class Contact(CrawlSpider):
 				phone.send_keys('9702293897')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
+
 			if ((i>=20) and (i<30)):
-				name = self.driver.find_element_by_name('user_name')
-				name.send_keys('arjun')
-				self.driver.implicitly_wait(20)
-				time.sleep(3)
-
-				email = self.driver.find_element_by_name('email')
-				email.send_keys('oyeok.noreply2@gmail.com')
-				self.driver.implicitly_wait(20)
-				time.sleep(3)
-
-				phone = self.driver.find_element_by_name('phone')
-				phone.send_keys('7715093181')
-				self.driver.implicitly_wait(20)
-				time.sleep(3)
-			if ((i>=30) and (i<40)):
-				name = self.driver.find_element_by_name('user_name')
-				name.send_keys('vishal')
-				self.driver.implicitly_wait(20)
-				time.sleep(3)
-
-				email = self.driver.find_element_by_name('email')
-				email.send_keys('oyeok.hi3@gmail.com')
-				self.driver.implicitly_wait(20)
-				time.sleep(3)
-
-				phone = self.driver.find_element_by_name('phone')
-				phone.send_keys('7715093035')
-				self.driver.implicitly_wait(20)
-				time.sleep(3)
-			elif ((i>=40) and (i<50)):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('aryan')
 				self.driver.implicitly_wait(20)
@@ -230,7 +205,8 @@ class Contact(CrawlSpider):
 				phone.send_keys('9869848979')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
-			elif ((i>=50) and (i<60)):
+
+			if ((i>=30) and (i<40)):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('malhotra')
 				self.driver.implicitly_wait(20)
@@ -246,10 +222,78 @@ class Contact(CrawlSpider):
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
 
+			if ((i>=40) and (i<50)):
+				name = self.driver.find_element_by_name('user_name')
+				name.send_keys('arjun')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
+
+				email = self.driver.find_element_by_name('email')
+				email.send_keys('oyeok.noreply2@gmail.com')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
+
+				phone = self.driver.find_element_by_name('phone')
+				phone.send_keys('7715093181')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
+
+			if ((i>=50) and (i<60)):
+				name = self.driver.find_element_by_name('user_name')
+				name.send_keys('vishal')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
+
+				email = self.driver.find_element_by_name('email')
+				email.send_keys('oyeok.hi3@gmail.com')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
+
+				phone = self.driver.find_element_by_name('phone')
+				phone.send_keys('7715093035')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
+
+			if ((i>=60) and (i<70)):
+				name = self.driver.find_element_by_name('user_name')
+				name.send_keys('rahul')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
+
+				email = self.driver.find_element_by_name('email')
+				email.send_keys('oyeok.hi2@gmail.com')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
+
+				phone = self.driver.find_element_by_name('phone')
+				phone.send_keys('7715093176')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
+
+			if ((i>=70) and (i<80)):
+				name = self.driver.find_element_by_name('user_name')
+				name.send_keys('sneha')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
+
+				email = self.driver.find_element_by_name('email')
+				email.send_keys('oyeok.realestate3@gmail.com')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)
+
+				phone = self.driver.find_element_by_name('phone')
+				phone.send_keys('7715093067')
+				self.driver.implicitly_wait(20)
+				time.sleep(3)			
+
 			post = self.driver.find_element_by_xpath('//button[@class="btn bg-color-yellow min-width-btn"]')
 			post.click()
 			self.driver.implicitly_wait(25)
 			time.sleep(3)
+
+			print "++++++++++++++++++++++++++++"
+			print "Posted "+str(i)
+			print "++++++++++++++++++++++++++++"
 
 			skip = self.driver.find_element_by_xpath('//div[@class="skipUrlRight"]/a')
 			skip.click()
@@ -261,14 +305,15 @@ class Contact(CrawlSpider):
 				self.collection_B.remove(data_post[i]['_id'])
 			if 'Santacruz' in data_post[i]['locality']:
 				self.collection_s.remove(data_post[i]['_id'])
+			if 'Vile' in data_post[i]['locality']:
+				self.collection_v.remove(data_post[i]['_id'])
 			del data_post[i]['_id']
 			data_post[i].update({'date':str(datetime.date.today())})
 			self.collection_p.insert(dict(data_post[i]))
 			log.msg("Posted Data added to MongoDB database!",level=log.DEBUG)
-			
-			print "++++++++++++++++++++++++++++"
-			print "Posted "+str(i)
-			print "++++++++++++++++++++++++++++"
 
 			time.sleep(15)
 			self.driver.quit()
+			time.sleep(15)
+			if i%5==0:
+				time.sleep(30)

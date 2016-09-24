@@ -58,9 +58,9 @@ class CommonRentSpider(CrawlSpider):
 			self.item['age'] = 'None'
 			self.item['address'] = 'None'
 			self.item['sublocality'] = 'None'
-			self.item['lat'] = 0
-			self.item['longt'] = 0
-			self.item['price_per_sqft'] = 0
+			self.item['lat'] = '0'
+			self.item['longt'] = '0'
+			self.item['price_per_sqft'] = '0'
 			self.item['listing_by'] = 'None'
 			self.item['name_lister'] = 'None'
 

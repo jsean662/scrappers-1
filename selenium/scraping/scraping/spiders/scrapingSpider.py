@@ -18,7 +18,7 @@ from scrapy import log
 class Scraping(CrawlSpider):
 	name = 'scrapeandPost'
 	
-	start_urls = ['http://www.magicbricks.com/property-for-rent/residential-real-estate?bedroom=2,3&proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment&Locality=Bandra-West&cityName=Mumbai&BudgetMin=90000','http://www.magicbricks.com/property-for-rent/residential-real-estate?bedroom=2,3&proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment&Locality=Bandra-East&cityName=Mumbai&BudgetMin=90000','http://www.magicbricks.com/property-for-rent/residential-real-estate?bedroom=2,3&proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment&Locality=Santacruz-West&cityName=Mumbai&BudgetMin=85000','http://www.magicbricks.com/property-for-rent/residential-real-estate?bedroom=2,3&proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment&Locality=Santacruz-East&cityName=Mumbai&BudgetMin=85000','http://www.magicbricks.com/property-for-rent/residential-real-estate?bedroom=2,3&proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment&Locality=Andheri-West&cityName=Mumbai&BudgetMin=85000']
+	start_urls = []
 
 	custom_settings = {
             'DEPTH_LIMIT' : 10000,
@@ -37,6 +37,7 @@ class Scraping(CrawlSpider):
 		self.collection = db['Andheri_1']
 		self.collection_1 = db['Bandra_1']
 		self.collection_s = db['Santacruz']
+		self.collection_v = db['vile']
 
 	
 	def parse(self , response):
@@ -58,6 +59,10 @@ class Scraping(CrawlSpider):
 					self.item['locality'] = 'Santacruz West '
 				if 'Santacruz-East' in str(response.url):
 					self.item['locality'] = 'Santacruz East '
+				if 'Vile-Parle-West' in str(response.url):
+					self.item['locality'] = 'Vile parle west '
+				if 'Vile-Parle-East' in str(response.url):
+					self.item['locality'] = 'Vile Parle East '
 				self.item['sub_loc'] = i.xpath('div[@class="srpColm2"]/div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpAnchor"]/p/a/span[@class="maxProDesWrap showNonCurtailed"]/span[@class="localityFirst"]/text()').extract_first()
 
 				self.item['bed'] = i.xpath('div[@class="srpColm2"]/div[@class="minHeightBlock"]/div[@class="proColmleft"]/div[@class="proNameWrap "]/div[@class="proNameColm1"]/div[@class="srpTopDetailWrapper"]/div[@class="srpAnchor"]/p/a/input[contains(@id,"bedroomVal")]/@value').extract_first()
@@ -68,11 +73,11 @@ class Scraping(CrawlSpider):
 					if '1' in self.item['bed']:
 						self.item['sqft'] = '600'
 					if '2' in self.item['bed']:
-						self.item['sqft'] = '1000'
+						self.item['sqft'] = '800'
 					if '3' in self.item['bed']:
-						self.item['sqft'] = '1200'
+						self.item['sqft'] = '1100'
 					if '4' in self.item['bed']:
-						self.item['sqft'] = '1600'
+						self.item['sqft'] = '1500'
 
 				self.item['status'] = i.xpath('input[contains(@id,"furnshingStatus")]/@value').extract_first()
 				#bprices=float(re.sub("\D", "",bprices))
@@ -124,6 +129,14 @@ class Scraping(CrawlSpider):
 						self.item['rent_price'] = '120000'
 					if (('4' in self.item['bed']) and ('Santacruz' in str(response.url))):
 						self.item['rent_price'] = '250000'
+					if (('1' in self.item['bed']) and ('Vile' in str(response.url))):
+						self.item['rent_price'] = '50000'
+					if (('2' in self.item['bed']) and ('Vile' in str(response.url))):
+						self.item['rent_price'] = '80000'
+					if (('3' in self.item['bed']) and ('Vile' in str(response.url))):
+						self.item['rent_price'] = '120000'
+					if (('4' in self.item['bed']) and ('Vile' in str(response.url))):
+						self.item['rent_price'] = '250000'
 
 
 				self.item['depo'] = str(float(self.item['rent_price'])*3)
@@ -154,6 +167,10 @@ class Scraping(CrawlSpider):
 					self.collection_s.insert(dict(self.item))
 					print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 					log.msg("Santacruz Data added to Santacruz database!",level=log.DEBUG)
+				if 'Vile' in str(response.url):
+					self.collection_v.insert(dict(self.item))
+					print "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+					log.msg("Vile Data added to Vile database!",level=log.DEBUG)
 
 		'''if 'Andheri-West' in str(response.url):
 			cur = int(response.url.split('-')[-1])

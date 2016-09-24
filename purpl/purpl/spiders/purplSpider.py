@@ -61,7 +61,7 @@ class purpleyoSpider(Spider):
 			item['Selling_price'] = '0'
 			item['Monthly_Rent'] = '0'
 			item['price_on_req'] = 'false'
-			item['price_per_sqft'] = 'None'
+			item['price_per_sqft'] = '0'
 			item['listing_by'] = 'None'
 			item['name_lister'] = 'None'
 			item['Details'] = 'None'
@@ -71,8 +71,8 @@ class purpleyoSpider(Spider):
 			item['Possession'] = 'None'
 			item['Launch_date'] = 'None'
 			item['mobile_lister'] = 'None'
-			item['carpet_area'] = 'None'
-			item['listing_date'] = item['listing_date']
+			item['carpet_area'] = '0'
+			item['updated_date'] = item['listing_date']
 			if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
 				item['quality1'] = 1
         	else:
