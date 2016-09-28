@@ -127,7 +127,10 @@ class PropWala(CrawlSpider):
 		# except:
 		# 	self.item['Selling_price'] = '0'
 
-		poss = [pos for pos in value if ('Immediate' in pos) or (('Within' in pos) and ('Year' in pos)) or (('Within' in pos) and ('Month' in pos))][0]
+		try:
+			poss = [pos for pos in value if ('Immediate' in pos) or (('Within' in pos) and ('Year' in pos)) or (('Within' in pos) and ('Month' in pos))][0]
+		except:
+			poss = 'None'
 		if 'Immediate' in poss:
 			self.item['Possession'] = dt.today().strftime('%m/%d/%Y %H:%M:%S')
 			self.item['Status'] = 'Ready to move'

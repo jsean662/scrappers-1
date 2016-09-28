@@ -137,19 +137,19 @@ class CommonSellSpider(CrawlSpider):
 
 			self.item['Status'] = [stat for stat in self.item['Details'] if (('Unfurnished' in stat) or ('semi' in stat) or ('fully' in stat))]
 
-			if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
-				item['quality1'] = 1
+			if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == 'None') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
+				self.item['quality1'] = 1
 			else:
-				item['quality1'] = 0
+				self.item['quality1'] = 0
 
-			if ((not item['Launch_date'] == 'None') or (not item['Possession'] == 'None')):
-				item['quality2'] = 1
+			if ((not self.item['Launch_date'] == 'None') or (not self.item['Possession'] == 'None')):
+				self.item['quality2'] = 1
 			else:
-				item['quality2'] = 0
+				self.item['quality2'] = 0
 
-			if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None')):
-				item['quality3'] = 1
+			if ((not self.item['mobile_lister'] == 'None') or (not self.item['listing_by'] == 'None') or (not self.item['name_lister'] == 'None')):
+				self.item['quality3'] = 1
 			else:
-				item['quality3'] = 0
+				self.item['quality3'] = 0
 
 			yield self.item

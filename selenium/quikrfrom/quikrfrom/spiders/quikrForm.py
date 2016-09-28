@@ -23,25 +23,30 @@ class Contact(CrawlSpider):
 		# MONGODB_COLLECTION = "scrape"
 		connection = pymongo.MongoClient(MONGODB_SERVER,MONGODB_PORT)
 		db = connection['scrapingandposting']
-		self.collection_A = db['Andheri_1']
-		self.collection_B = db['Bandra_1']
-		self.collection_s = db['Santacruz']
-		self.collection_v = db['vile']
+		self.collection_A = db['Andheri']
+		self.collection_B = db['Bandra']
 		self.collection_p = db['post']
 
 	def parse(self,response):
 		#print type(response)
+		a=b=c=d=0
+		t1=t2=t3=t4=t5=t6=t7=t8=0
 		data_post = []
-		data1 = list(self.collection_A.find().limit(20))
-		data2 = list(self.collection_B.find().limit(20))
-		data3 = list(self.collection_s.find().limit(20))
-		data4 = list(self.collection_v.find().limit(20))
+		data1 = list(self.collection_A.find().limit(32))
+		data2 = list(self.collection_B.find().limit(32))
+		# data3 = list(self.collection_s.find().limit(14))
+		# data4 = list(self.collection_v.find().limit(14))
 		for n in range(0,len(data1)):
-			data_post.append(data1[n])
-			data_post.append(data2[n])
-			data_post.append(data3[n])
-			data_post.append(data4[n])
-
+			if ((n%4==0) or (n%4==1)):
+				data_post.append(data1[n])
+				data_post.append(data2[n])
+			if ((n%4==2) or (n%4==3)):
+				data_post.append(data2[n])
+				data_post.append(data1[n])
+			# data_post.append(data3[n])
+			# data_post.append(data4[n])
+		#print data_post
+		
 		for i in range(0,len(data_post)):
 			if (not i==0):
 				self.__init__()
@@ -112,6 +117,9 @@ class Contact(CrawlSpider):
 			rent.click()
 			if '.' in data_post[i]['rent_price']:
 				data_post[i]['rent_price'] = data_post[i]['rent_price'].split('.')[0]
+				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+2000)
+			else:
+				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+2000)
 			rent.send_keys(data_post[i]['rent_price'])
 			self.driver.implicitly_wait(20)
 			time.sleep(3)
@@ -158,7 +166,7 @@ class Contact(CrawlSpider):
 			self.driver.implicitly_wait(20)
 			time.sleep(3)
 
-			if ((i>=0) and (i<10)):
+			if (i%8==0 or a>1):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('pratham')
 				self.driver.implicitly_wait(20)
@@ -173,8 +181,9 @@ class Contact(CrawlSpider):
 				phone.send_keys('9029618053')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
+				t1=t1+1
 
-			if ((i>=10) and (i<20)):
+			if (i%8==1 or a>1):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('vipul')
 				self.driver.implicitly_wait(20)
@@ -189,8 +198,9 @@ class Contact(CrawlSpider):
 				phone.send_keys('9702293897')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
+				t2=t2+1
 
-			if ((i>=20) and (i<30)):
+			if (i%8==2 or a>1):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('aryan')
 				self.driver.implicitly_wait(20)
@@ -205,8 +215,9 @@ class Contact(CrawlSpider):
 				phone.send_keys('9869848979')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
+				t3=t3+1
 
-			if ((i>=30) and (i<40)):
+			if (i%8==3 or a>1):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('malhotra')
 				self.driver.implicitly_wait(20)
@@ -221,8 +232,9 @@ class Contact(CrawlSpider):
 				phone.send_keys('7715093028')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
+				t4=t4+1
 
-			if ((i>=40) and (i<50)):
+			if ((i%8==4) and (d<2)):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('arjun')
 				self.driver.implicitly_wait(20)
@@ -237,8 +249,10 @@ class Contact(CrawlSpider):
 				phone.send_keys('7715093181')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
+				d=d+1
+				t5=t5+1
 
-			if ((i>=50) and (i<60)):
+			if ((i%8==5) and (a<2)):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('vishal')
 				self.driver.implicitly_wait(20)
@@ -253,8 +267,10 @@ class Contact(CrawlSpider):
 				phone.send_keys('7715093035')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
+				a=a+1
+				t6=t6+1
 
-			if ((i>=60) and (i<70)):
+			if ((i%8==6) and (b<2)):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('rahul')
 				self.driver.implicitly_wait(20)
@@ -269,8 +285,10 @@ class Contact(CrawlSpider):
 				phone.send_keys('7715093176')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
+				b=b+1
+				t7=t7+1
 
-			if ((i>=70) and (i<80)):
+			if ((i%8==7) and (c<2)):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('sneha')
 				self.driver.implicitly_wait(20)
@@ -284,7 +302,9 @@ class Contact(CrawlSpider):
 				phone = self.driver.find_element_by_name('phone')
 				phone.send_keys('7715093067')
 				self.driver.implicitly_wait(20)
-				time.sleep(3)			
+				time.sleep(3)
+				c=c+1
+				t8=t8+1		
 
 			post = self.driver.find_element_by_xpath('//button[@class="btn bg-color-yellow min-width-btn"]')
 			post.click()
@@ -293,6 +313,14 @@ class Contact(CrawlSpider):
 
 			print "++++++++++++++++++++++++++++"
 			print "Posted "+str(i)
+			print 'prathamsawant115' + ' = ' + str(t1)
+			print 'vipulmalhotra511' + ' = ' + str(t2)
+			print 'oyeok.noreply3' + ' = ' + str(t3)
+			print 'oyeok.realestate2' + ' = ' + str(t4)
+			print 'oyeok.noreply2' + ' = ' + str(t5)
+			print 'oyeok.hi3' + ' = ' + str(t6)
+			print 'oyeok.hi2' + ' = ' + str(t7)
+			print 'oyeok.realestate3' + ' = ' + str(t8)
 			print "++++++++++++++++++++++++++++"
 
 			skip = self.driver.find_element_by_xpath('//div[@class="skipUrlRight"]/a')

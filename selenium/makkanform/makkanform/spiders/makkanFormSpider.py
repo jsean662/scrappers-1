@@ -25,20 +25,23 @@ class Makaan(CrawlSpider):
 		# MONGODB_COLLECTION = "scrape"
 		connection = pymongo.MongoClient(MONGODB_SERVER,MONGODB_PORT)
 		db = connection['scrapingandposting']
-		self.collection_B = db['Bandra_1']
-		self.collection_s = db['Santacruz']
-		self.collection = db['post']
+		self.collection_B = db['Bandra']
 
 	def parse(self,response):
-		data_post = []
-		data1 = list(self.collection_B.find().limit(20))
-		data2 = list(self.collection_s.find().limit(20))
-		for n in range(0,len(data1)):
-			data_post.append(data1[n])
-			data_post.append(data2[n])
-		
-		for i in range(3,len(data_post)):
-			if (not i==3):
+		t1=t2=t3=t4=0
+		data_post = list(self.collection_B.find().limit(40))#[]
+		# data1 = list(self.collection_B.find().limit(18))
+		# data2 = list(self.collection_s.find().limit(18))
+		# for n in range(0,len(data1)):
+		# 	if ((n%4==0) or (n%4==1)):
+		# 		data_post.append(data1[n])
+		# 		data_post.append(data2[n])
+		# 	if ((n%4==2) or (n%4==3)):
+		# 		data_post.append(data2[n])
+		# 		data_post.append(data1[n])
+		#print data_post
+		for i in range(0,len(data_post)):
+			if (not i==0):
 				self.__init__()
 			self.driver.get(response.url)
 			self.driver.implicitly_wait(40)
@@ -54,26 +57,30 @@ class Makaan(CrawlSpider):
 			self.driver.implicitly_wait(10)
 			time.sleep(4)
 
-			if ((i>=0) and (i<10)):
+			if (i%4==0):
 				emailid = self.driver.find_element_by_id('username')
 				emailid.send_keys('prathamsawant115@gmail.com')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
-			if ((i>=10) and (i<20)):
+				t1=t1+1
+			if (i%4==1):
 				emailid = self.driver.find_element_by_id('username')
 				emailid.send_keys('oyeok.noreply3@gmail.com')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
-			if ((i>=20) and (i<30)):
+				t2=t2+1
+			if (i%4==2):
 				emailid = self.driver.find_element_by_id('username')
 				emailid.send_keys('oyeok.hi3@gmail.com')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
-			if ((i>=30) and (i<40)):
+				t3=t3+1
+			if (i%4==3):
 				emailid = self.driver.find_element_by_id('username')
 				emailid.send_keys('oyeok.realestate2@gmail.com')
 				self.driver.implicitly_wait(20)
 				time.sleep(3)
+				t4=t4+1
 
 			passw = self.driver.find_element_by_id('password')
 			passw.send_keys('nx1234')
@@ -157,6 +164,9 @@ class Makaan(CrawlSpider):
 			action_month.click(month)
 			if '.' in data_post[i]['rent_price']:
 				data_post[i]['rent_price'] = data_post[i]['rent_price'].split('.')[0]
+				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+2000)
+			else:
+				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+2000)
 			action_month.send_keys(data_post[i]['rent_price']).perform()
 			time.sleep(3)
 
@@ -172,7 +182,22 @@ class Makaan(CrawlSpider):
 			if '.' in data_post[i]['depo']:
 				data_post[i]['depo'] = data_post[i]['depo'].split('.')[0]
 			action_secr.send_keys(data_post[i]['depo']).perform()
+			self.driver.implicitly_wait(20)
 			time.sleep(3)
+
+			# avial = self.driver.find_element_by_xpath('//input[@id="availableFrom"]')
+			# action_avail = ActionChains(self.driver)
+			# action_avail.move_to_element(avial).move_to_element(avial)
+			# action_avail.click(avial).click(avial)
+			# self.driver.implicitly_wait(20)
+			# time.sleep(3)
+
+			# sele_avail = self.driver.find_element_by_xpath('//td[@class="is-today is-selected"]/button')
+			# action_sele = ActionChains(self.driver)
+			# action_sele.move_to_element(sele_avail)
+			# action_sele.click(sele_avail)
+			# self.driver.implicitly_wait(20)
+			# time.sleep(3)
 
 			decs = self.driver.find_element_by_id('Description')
 			action_decs = ActionChains(self.driver)
@@ -386,10 +411,14 @@ class Makaan(CrawlSpider):
 
 			print "+++++++++++++++++++++++++++++++"
 			print 'Posted '+str(i)
+			print 'prathamsawant115' + ' = ' + str(t1)
+			print 'oyeok.noreply3' + ' = ' + str(t2)
+			print 'oyeok.hi3' + ' = ' + str(t3)
+			print 'oyeok.realestate2' + ' = ' + str(t4)
 			print "+++++++++++++++++++++++++++++++"
 
 			time.sleep(15)
 			self.driver.quit()
 			time.sleep(15)
-			if i%5==0:
+			if i%4==0:
 				time.sleep(30)

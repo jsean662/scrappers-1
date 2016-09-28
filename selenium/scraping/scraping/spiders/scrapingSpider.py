@@ -18,7 +18,7 @@ from scrapy import log
 class Scraping(CrawlSpider):
 	name = 'scrapeandPost'
 	
-	start_urls = []
+	start_urls = ['http://www.magicbricks.com/property-for-rent/residential-real-estate?bedroom=2&proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment,Residential-House,Villa&Locality=Bandra-West&cityName=Mumbai&BudgetMin=85000','http://www.magicbricks.com/property-for-rent/residential-real-estate?bedroom=2&proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment&Locality=Santacruz-West&cityName=Mumbai&BudgetMin=85000']
 
 	custom_settings = {
             'DEPTH_LIMIT' : 10000,
