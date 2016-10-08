@@ -22,13 +22,17 @@ class Realestate(CrawlSpider):
 		# MONGODB_DB = "scraping"
 		# MONGODB_COLLECTION = "scrape"
 		connection = pymongo.MongoClient(MONGODB_SERVER,MONGODB_PORT)
-		db = connection['scrapingandposting']
-		self.collection = db['post']
+		db = connection['scraping']
+		self.collection_a = db['andheri']
+		self.collection_p = db['post']
 
 	def parse(self,response):
-		data_post = list(self.collection.find({'date':str(datetime.date.today())}))
+		add = 0
+		data_post = list(self.collection_a.find().limit(5))
 
 		for i in range(0,len(data_post)):
+			if i%2==0:
+				add = add + 1000
 			if (not i==0):
 				self.__init__()
 			self.driver.get(response.url)
@@ -42,11 +46,18 @@ class Realestate(CrawlSpider):
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
-			emailid = self.driver.find_element_by_id('user_email')
-			self.driver.implicitly_wait(10)
-			emailid.send_keys(data_post[i]['email']+'@gmail.com')
-			self.driver.implicitly_wait(20)
-			time.sleep(2)
+			if i%2==0:
+				emailid = self.driver.find_element_by_id('user_email')
+				self.driver.implicitly_wait(10)
+				emailid.send_keys('prathamsawant115@gmail.com')
+				self.driver.implicitly_wait(20)
+				time.sleep(2)
+			if i%2==1:
+				emailid = self.driver.find_element_by_id('user_email')
+				self.driver.implicitly_wait(10)
+				emailid.send_keys('')
+				self.driver.implicitly_wait(20)
+				time.sleep(2)
 
 			passwd = self.driver.find_element_by_id('login_password')
 			self.driver.implicitly_wait(10)

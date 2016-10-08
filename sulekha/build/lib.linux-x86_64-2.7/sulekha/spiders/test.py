@@ -7,12 +7,15 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors.sgml import SgmlLinkExtractor
 from datetime import datetime as dt
 import datetime
+import re
 import time
 
 class MySpider(CrawlSpider):
 	name = "SulekhaSpider"
 	allowed_domains = ['property.sulekha.com']
-	start_urls = ["http://property.sulekha.com/property-in-mumbai-for-sale_page-1?sortorder=recent"]
+	start_urls = ["http://property.sulekha.com/property-in-mumbai-for-sale_page-1?sortorder=recent",
+	'http://property.sulekha.com/property-for-rent/mumbai/page-1?sortorder=recent'
+	]
 	custom_settings = {
 			'DEPTH_LIMIT': 10000,
 			'DOWNLOAD_DELAY': 1
@@ -68,10 +71,12 @@ class MySpider(CrawlSpider):
 		self.item['age'] = 'None'
 		self.item['address'] = 'None'
 		self.item['price_on_req'] = 'false'
+		self.item['Building_name'] = 'None'
 		self.item['sublocality'] = 'None'
 		self.item['price_per_sqft'] = '0'
 		self.item['name_lister'] = 'None'
 		self.item['Monthly_Rent'] = '0'
+		self.item['Selling_price'] = '0'
 
 		self.item['data_id'] = response.url.split('_')[-1]
 
@@ -84,36 +89,70 @@ class MySpider(CrawlSpider):
 		except:
 			self.item['sublocality'] = 'None'
 
+		if '-sale-' in str(response.url):
+			if self.item['sublocality'] == 'None':
+				sub = hxs.xpath('//div[@class="page-title"]/div[@class="pull-left"]/small/text()').extract()
+				self.item['sublocality'] = sub[1].strip()
+		if '-rent-' in str(response.url):
+			if self.item['sublocality'] == 'None':
+				sub = hxs.xpath('//div[@class="page-title"]/span/small/text()').extract()
+				self.item['sublocality'] = sub[1].strip()
+
 		self.item['lat'] = hxs.xpath('//input[@id="hdnLat"]/@value').extract_first()
 
 		self.item['longt'] = hxs.xpath('//input[@id="hdnLong"]/@value').extract_first()
 
-		self.item['Bua_sqft'] = hxs.xpath('//input[@id="rawUrl"]/@value').extract_first().split('/')[-1].split('-')[0]
+		area = hxs.xpath('//input[@id="rawUrl"]/@value').extract_first()
+		ch_area = re.findall('[0-9]+',area)
+		if ch_area:
+			self.item['Bua_sqft'] = ch_area[0]
+		else:
+			self.item['Bua_sqft'] = '0'
 
 		t_type = hxs.xpath('//input[@id="rawUrl"]/@value').extract_first()
-		if 'resale' in t_type:
+		if '-rent-' in t_type:
+			self.item['txn_type'] = 'rent'
+		if '-resale-' in t_type:
 			self.item['txn_type'] = 'resale'
-		elif 'sale' in t_type:
+		if '-sale-' in t_type:
 			self.item['txn_type'] = 'sale'
 
-		bildg = hxs.xpath('//div[@class="pull-left"]/h1/text()').extract_first()
-		if (' at ' in bildg) and (' in ' in bildg):
-			self.item['Building_name'] = bildg.split(' at ')[-1].split(' in ')[0]
-		else:
-			self.item['Building_name'] = 'None'
+		if 'sale' in self.item['txn_type']:
+			bildg = hxs.xpath('//div[@class="pull-left"]/h1/text()').extract_first()
+			if (' at ' in bildg) and (' in ' in bildg):
+				self.item['Building_name'] = bildg.split(' at ')[-1].split(' in ')[0]
+		if 'rent' in self.item['txn_type']:
+			bildg = hxs.xpath('//div[@class="page-title"]/span/h1/text()').extract_first()
+			if (' at ' in bildg) and (' in ' in bildg):
+				self.item['Building_name'] = bildg.split(' at ')[-1].split(' in ')[0]
 
 		price = hxs.xpath('//span[@class="price-green22"]/text()').extract()[-1].strip()
-		if 'lakhs' in price:
-			price = str(float(price.split(' lakhs')[0])*100000)
-			self.item['Selling_price'] = price
-		elif 'crores' in price:
-			price = str(float(price.split(' crores')[0])*10000000)
-			self.item['Selling_price'] = price
-		elif 'crore' in price:
-			price = str(float(price.split(' crore')[0])*10000000)
-			self.item['Selling_price'] = price
-		else:
-			self.item['Selling_price'] = price
+		if 'ale' in self.item['txn_type']:
+			if 'lakhs' in price:
+				price = str(float(price.split(' lakhs')[0])*100000)
+				self.item['Selling_price'] = price
+			elif 'crores' in price:
+				price = str(float(price.split(' crores')[0])*10000000)
+				self.item['Selling_price'] = price
+			elif 'crore' in price:
+				price = str(float(price.split(' crore')[0])*10000000)
+				self.item['Selling_price'] = price
+			else:
+				self.item['Selling_price'] = price
+		if 'rent' in self.item['txn_type']:
+			if ',' in price:
+				self.item['Monthly_Rent'] = price.replace(',','')
+			elif 'lakhs' in price:
+				price = str(float(price.split(' lakhs')[0])*100000)
+				self.item['Monthly_Rent'] = price
+			elif 'crores' in price:
+				price = str(float(price.split(' crores')[0])*10000000)
+				self.item['Monthly_Rent'] = price
+			elif 'crore' in price:
+				price = str(float(price.split(' crore')[0])*10000000)
+				self.item['Monthly_Rent'] = price
+			else:
+				self.item['Monthly_Rent'] = price
 
 		self.item['property_type'] = hxs.xpath('//input[@id="d_primarytag"]/@value').extract_first()
 
@@ -138,12 +177,25 @@ class MySpider(CrawlSpider):
 		apa = hxs.xpath('//input[@id="hfldTitle"]/@value').extract_first()
 		if ('BHK' in apa) or ('RK' in apa):
 			self.item['config_type'] = apa.split('- ')[-1].split(' Apartment')[0]
+			if len(self.item['config_type'])>7:
+				conf = re.findall('[0-9]\sBHK',apa)+re.findall('[0-9]\sRK',apa)+re.findall('[0-9]BHK',apa)+re.findall('[0-9]RK',apa)
+				if conf:
+					self.item['config_type'] = conf[0]
+		if self.item['config_type']=='None':
+			conf = re.findall('[0-9]\sBHK',bildg)+re.findall('[0-9]\sRK',bildg)+re.findall('[0-9]BHK',bildg)+re.findall('[0-9]RK',bildg)
+			if conf:
+				self.item['config_type'] = conf[0]
 
 		self.item['Details'] = hxs.xpath('//div[@id="LdHtml"]/text()').extract()[0].strip()
 		
-		dates = hxs.xpath('//div[@class="page-title"]/div[@class="pull-left"]/small/text()').extract()[-1].strip().split('Posted on  ')[-1]
-		self.item['listing_date'] = dt.strftime(dt.strptime(dates,"%b %d, %Y"),"%m/%d/%Y %H:%M:%S")
-		self.item['updated_date'] = self.item['listing_date']
+		if 'rent' in self.item['txn_type']:
+			dates = hxs.xpath('//div[@class="page-title"]/span/small/text()').extract()[-1].strip().split('Posted on ')[-1]
+			self.item['listing_date'] = dt.strftime(dt.strptime(dates,"%b %d, %Y"),"%m/%d/%Y %H:%M:%S")
+			self.item['updated_date'] = self.item['listing_date']
+		if 'sale' in self.item['txn_type']:
+			dates = hxs.xpath('//div[@class="page-title"]/div[@class="pull-left"]/small/text()').extract()[-1].strip().split('Posted on  ')[-1]
+			self.item['listing_date'] = dt.strftime(dt.strptime(dates,"%b %d, %Y"),"%m/%d/%Y %H:%M:%S")
+			self.item['updated_date'] = self.item['listing_date']
 
 		if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == 'None') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
 			self.item['quality1'] = 1

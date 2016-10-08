@@ -7,31 +7,54 @@ from selenium.webdriver.common.action_chains import ActionChains
 from scrapy.selector import Selector
 from scrapy.utils.response import open_in_browser
 import time
+import pymongo
 
 class AcresForm(CrawlSpider):
 	name = 'acresPosting'
 	allowed_domains = ['makaan.com']
 	start_urls = ['http://www.99acres.com/postproperty/route/user/login']
 
-	data_post = [{'locality':'carter road ','sqft':'1200','rent_price':'90000','title':'A spacious 2 Bedroom flat is available for Rent in Carter Road','detail':'SEA VIEW FLAT, Mumbai. It is located on the 9 Floor. It has a covered area of 1200 Sq-ft. The flat has Ceramic Tiles flooring. The flat has 24 Hours Available water supply','bed':'2','flr':'9','t_flr':'12','depo':'300000','status':'semi','email':'deployoyeok@gmail.com','broker':'Shahrukh Shaikh','phone':'9699999103'},{'locality':'carter road ','sqft':'1200','rent_price':'80000','title':'This is a 2BHK flat in Carter rd, Bandra','detail':'It is a good society.walkable distance from malls, educational institutes and nearby shopping complexes.Good location','bed':'2','flr':'4','t_flr':'10','depo':'300000','status':'semi','email':'deployoyeok@gmail.com','broker':'Pratham sawant','phone':'9004074337, 9987427112, 9967075012, 9702293897, 9004076628'}]
-
 	def __init__(self):
 		self.driver = webdriver.Chrome()
+		MONGODB_SERVER = "localhost"
+		MONGODB_PORT = 27017
+		# MONGODB_DB = "scraping"
+		# MONGODB_COLLECTION = "scrape"
+		connection = pymongo.MongoClient(MONGODB_SERVER,MONGODB_PORT)
+		db = connection['scraping']
+		self.collection_a = db['khar']
+		self.collection_p = db['post']
 
 	def parse(self,response):
-		for i in range(1,2):
+		add = 0
+		data_post = list(self.collection_a.find().limit(6))
+
+		for i in range(0,len(data_post)):
+			if i%2==0:
+				add = add + 1000
 			if (not i==0):
 				self.__init__()
 			self.driver.get(response.url)
 			self.driver.implicitly_wait(20)
 			self.driver.maximize_window()
+			self.driver.implicitly_wait(50)
+			time.sleep(5)
 
-			email = self.driver.find_element_by_xpath('//div[@id="UsernameID"]/input')
-			act_email = ActionChains(self.driver)
-			act_email.move_to_element(email)
-			act_email.click(email)
-			act_email.send_keys(self.data_post[i]['email']).perform()
-			time.sleep(2)
+			if (i%2==0):
+				email = self.driver.find_element_by_xpath('//div[@id="UsernameID"]/input')
+				act_email = ActionChains(self.driver)
+				act_email.move_to_element(email)
+				act_email.click(email)
+				act_email.send_keys('prathamsawant115@gmail.com').perform()
+				time.sleep(2)
+			if (i%2==1):
+				email = self.driver.find_element_by_xpath('//div[@id="UsernameID"]/input')
+				act_email = ActionChains(self.driver)
+				act_email.move_to_element(email)
+				act_email.click(email)
+				act_email.send_keys('').perform()
+				time.sleep(2)
+			
 			passwd = self.driver.find_element_by_xpath('//div[@id="PasswordID"]/input')
 			act_passwd = ActionChains(self.driver)
 			act_passwd.move_to_element(passwd)
@@ -65,7 +88,7 @@ class AcresForm(CrawlSpider):
 			act_loc.move_to_element(loc)
 			act_loc.click(loc)
 			self.driver.implicitly_wait(20)
-			act_loc.send_keys(self.data_post[i]['locality']).perform()
+			act_loc.send_keys(data_post[i]['locality']).perform()
 			self.driver.implicitly_wait(25)
 			time.sleep(2)
 
@@ -77,7 +100,7 @@ class AcresForm(CrawlSpider):
 			act_proj = ActionChains(self.driver)
 			act_proj.move_to_element(proj)
 			act_proj.click(proj)
-			act_proj.send_keys(self.data_post[i]['subloc']).perform()
+			act_proj.send_keys(data_post[i]['subloc']).perform()
 			self.driver.implicitly_wait(25)
 			time.sleep(2)
 
@@ -93,7 +116,7 @@ class AcresForm(CrawlSpider):
 			time.sleep(2)
 
 			if (not 'row ng-hide' in self.driver.find_element_by_xpath('//form[@class="ng-pristine ng-isolate-scope ng-invalid ng-invalid-min"]/div').get_attribute('class')):
-				if '1' in self.data_post[i]['bed']:
+				if '1' in data_post[i]['bed']:
 					conf = self.driver.find_element_by_xpath('//div[@id="Floor_Plan_ConfigID"]/div/select/option[@value="1"]').click()
 					self.driver.implicitly_wait(20)
 					time.sleep(2)
@@ -106,7 +129,7 @@ class AcresForm(CrawlSpider):
 			act_area = ActionChains(self.driver)
 			act_area.move_to_element(area)
 			act_area.click(area)
-			act_area.send_keys(self.data_post[i]['sqft']).perform()
+			act_area.send_keys(data_post[i]['sqft']).perform()
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
@@ -114,15 +137,15 @@ class AcresForm(CrawlSpider):
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
-			bedNo = self.driver.find_element_by_xpath('//div[@id="Bedroom_NumSelectID"]/div[@class="makeSelect"]/select/option[@label="'+self.data_post[i]['bed']+'"]').click()
+			bedNo = self.driver.find_element_by_xpath('//div[@id="Bedroom_NumSelectID"]/div[@class="makeSelect"]/select/option[@label="'+data_post[i]['bed']+'"]').click()
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
-			bathNo = self.driver.find_element_by_xpath('//div[@class="bathrooms cInput cSelect ng-isolate-scope ng-valid"]/div[@class="makeSelect"]/select/option[@label="'+self.data_post[i]['bed']+'"]').click()
+			bathNo = self.driver.find_element_by_xpath('//div[@class="bathrooms cInput cSelect ng-isolate-scope ng-valid"]/div[@class="makeSelect"]/select/option[@label="'+data_post[i]['bed']+'"]').click()
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
-			balNo = self.driver.find_element_by_xpath('//div[@id="Balcony_NumID"]/div[@class="makeSelect"]/select/option[@label="'+self.data_post[i]['bed']+'"]').click()
+			balNo = self.driver.find_element_by_xpath('//div[@id="Balcony_NumID"]/div[@class="makeSelect"]/select/option[@label="'+data_post[i]['bed']+'"]').click()
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
@@ -130,11 +153,11 @@ class AcresForm(CrawlSpider):
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
-			tot_flr = self.driver.find_element_by_xpath('//div[@id="Total_FloorID"]/div/select/option[@label="'+self.data_post[i]['t_flr']+'"]').click()
+			tot_flr = self.driver.find_element_by_xpath('//div[@id="Total_FloorID"]/div/select/option[@label="'+data_post[i]['t_flr']+'"]').click()
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
-			flrNo = self.driver.find_element_by_xpath('//div[@id="Floor_NumID"]/div/select/option[@label="'+self.data_post[i]['flr']+'"]').click()
+			flrNo = self.driver.find_element_by_xpath('//div[@id="Floor_NumID"]/div/select/option[@label="'+data_post[i]['flr']+'"]').click()
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
@@ -152,11 +175,16 @@ class AcresForm(CrawlSpider):
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
+			if '.' in data_post[i]['rent_price']:
+				data_post[i]['rent_price'] = data_post[i]['rent_price'].split('.')[0]
+				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+add)
+			else:
+				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+add)
 			monthrent = self.driver.find_element_by_xpath('//div[@id="RentID"]/input')
 			act_monthrent = ActionChains(self.driver)
 			act_monthrent.move_to_element(monthrent)
 			act_monthrent.click(monthrent)
-			act_monthrent.send_keys(self.data_post[i]['rent_price']).perform()
+			act_monthrent.send_keys(data_post[i]['rent_price']).perform()
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
@@ -186,7 +214,7 @@ class AcresForm(CrawlSpider):
 			act_detail = ActionChains(self.driver)
 			act_detail.move_to_element(detail)
 			act_detail.click(detail)
-			act_detail.send_keys(self.data_post[i]['detail']).perform()
+			act_detail.send_keys(data_post[i]['detail']).perform()
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 

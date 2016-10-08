@@ -8,6 +8,7 @@ import time
 import smtplib
 import pymongo
 from scrapy import log
+import os
 
 class Contact(CrawlSpider):
 	name = 'quikrSpider'
@@ -22,36 +23,25 @@ class Contact(CrawlSpider):
 		# MONGODB_DB = "scraping"
 		# MONGODB_COLLECTION = "scrape"
 		connection = pymongo.MongoClient(MONGODB_SERVER,MONGODB_PORT)
-		db = connection['scrapingandposting']
-		self.collection_A = db['Andheri']
-		self.collection_B = db['Bandra']
+		db = connection['scraping']
+		self.collection_a = db['khar']
 		self.collection_p = db['post']
 
 	def parse(self,response):
 		#print type(response)
-		a=b=c=d=0
+		a=d=b=c=2
+		add=0
 		t1=t2=t3=t4=t5=t6=t7=t8=0
-		data_post = []
-		data1 = list(self.collection_A.find().limit(32))
-		data2 = list(self.collection_B.find().limit(32))
-		# data3 = list(self.collection_s.find().limit(14))
-		# data4 = list(self.collection_v.find().limit(14))
-		for n in range(0,len(data1)):
-			if ((n%4==0) or (n%4==1)):
-				data_post.append(data1[n])
-				data_post.append(data2[n])
-			if ((n%4==2) or (n%4==3)):
-				data_post.append(data2[n])
-				data_post.append(data1[n])
-			# data_post.append(data3[n])
-			# data_post.append(data4[n])
-		#print data_post
 		
+		data_post = list(self.collection_a.find().limit(60))
+		#a=48:100,b=60,s=60,k=60
+
 		for i in range(0,len(data_post)):
+			if i%4==0:
+				add = add + 1000
 			if (not i==0):
 				self.__init__()
 			self.driver.get(response.url)
-			
 			self.driver.implicitly_wait(40)
 
 			city = self.driver.find_element_by_xpath('//div[@class="col-md-12 popular-city"]/ul[@class="city-select-city"]/li[3]/a')
@@ -59,7 +49,7 @@ class Contact(CrawlSpider):
 			time.sleep(3)
 
 			#for brokers posting
-			if i<40:
+			if (i%8==0 or i%8==1 or i%8==2 or i%8==3 or ((c>1) and (a>1) and (b>1) and (d>1))):
 				broker = self.driver.find_element_by_xpath('//label[@for="broker"]')
 				broker.click()
 				self.driver.implicitly_wait(20)
@@ -85,14 +75,10 @@ class Contact(CrawlSpider):
 			#self.driver.implicitly_wait(10)
 			project.send_keys('\b')
 			self.driver.implicitly_wait(10)
-			if 'marol' in data_post[i]['locality']:
-				projsel = self.driver.find_element_by_xpath('//ul[@class="dropdown-menu ng-isolate-scope"]/li[2]/a').click()
-				self.driver.implicitly_wait(20)
-				time.sleep(3)
-			else:
-				projsel = self.driver.find_element_by_xpath('//ul[@class="dropdown-menu ng-isolate-scope"]/li[6]/a')
-				projsel.click()
-				time.sleep(3)
+			
+			projsel = self.driver.find_element_by_xpath('//ul[@class="dropdown-menu ng-isolate-scope"]/li[6]/a')
+			projsel.click()
+			time.sleep(3)
 
 			loc = self.driver.find_element_by_xpath('//div[@class="modal-header"]/button')
 			loc.click()
@@ -117,12 +103,15 @@ class Contact(CrawlSpider):
 			rent.click()
 			if '.' in data_post[i]['rent_price']:
 				data_post[i]['rent_price'] = data_post[i]['rent_price'].split('.')[0]
-				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+2000)
+				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+add)
 			else:
-				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+2000)
+				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+add)
 			rent.send_keys(data_post[i]['rent_price'])
 			self.driver.implicitly_wait(20)
 			time.sleep(3)
+
+			self.driver.execute_script('window.scrollTo(0,500);')
+			self.driver.implicitly_wait(20)
 
 			apart = self.driver.find_element_by_xpath('//a[@ng-click="propertyTypeSelection(\'Apartment\')"]')
 			apart.click()
@@ -156,6 +145,33 @@ class Contact(CrawlSpider):
 			self.driver.implicitly_wait(20)
 			time.sleep(3)
 
+			for root,dirs,files in os.walk('/home/karan/scrap_proj/selenium/Postings_photos/1/'+str((i%18)+1)+'/'):
+				for name in files:
+					if '1' in name:
+						path1 = root+name
+					if '2' in name:
+						path2 = root+name
+					if '3' in name:
+						path3 = root+name
+			
+			image1 = self.driver.find_element_by_xpath('//input[@class="dz-hidden-input"]')
+			image1.send_keys(path1)
+			self.driver.implicitly_wait(20)
+			time.sleep(10)
+
+			image2 = self.driver.find_element_by_xpath('//input[@class="dz-hidden-input"]')
+			image2.send_keys(path2)
+			self.driver.implicitly_wait(20)
+			time.sleep(10)
+
+			image3 = self.driver.find_element_by_xpath('//input[@class="dz-hidden-input"]')
+			image3.send_keys(path3)
+			self.driver.implicitly_wait(20)
+			time.sleep(10)
+
+			self.driver.execute_script('window.scrollTo(500,700);')
+			self.driver.implicitly_wait(20)
+
 			title = self.driver.find_element_by_name('adTitle')
 			title.send_keys(data_post[i]['title'])
 			self.driver.implicitly_wait(20)
@@ -166,7 +182,7 @@ class Contact(CrawlSpider):
 			self.driver.implicitly_wait(20)
 			time.sleep(3)
 
-			if (i%8==0 or a>1):
+			if (i%8==0 or ((d>1) and (i%4==0))):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('pratham')
 				self.driver.implicitly_wait(20)
@@ -183,7 +199,7 @@ class Contact(CrawlSpider):
 				time.sleep(3)
 				t1=t1+1
 
-			if (i%8==1 or a>1):
+			if (i%8==1 or ((a>1) and (i%4==1))):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('vipul')
 				self.driver.implicitly_wait(20)
@@ -200,7 +216,7 @@ class Contact(CrawlSpider):
 				time.sleep(3)
 				t2=t2+1
 
-			if (i%8==2 or a>1):
+			if (i%8==2 or ((b>1) and (i%4==2))):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('aryan')
 				self.driver.implicitly_wait(20)
@@ -217,7 +233,7 @@ class Contact(CrawlSpider):
 				time.sleep(3)
 				t3=t3+1
 
-			if (i%8==3 or a>1):
+			if (i%8==3 or ((c>1) and (i%4==3))):
 				name = self.driver.find_element_by_name('user_name')
 				name.send_keys('malhotra')
 				self.driver.implicitly_wait(20)
@@ -308,8 +324,8 @@ class Contact(CrawlSpider):
 
 			post = self.driver.find_element_by_xpath('//button[@class="btn bg-color-yellow min-width-btn"]')
 			post.click()
-			self.driver.implicitly_wait(25)
-			time.sleep(3)
+			self.driver.implicitly_wait(100)
+			time.sleep(20)
 
 			print "++++++++++++++++++++++++++++"
 			print "Posted "+str(i)
@@ -323,18 +339,17 @@ class Contact(CrawlSpider):
 			print 'oyeok.realestate3' + ' = ' + str(t8)
 			print "++++++++++++++++++++++++++++"
 
-			skip = self.driver.find_element_by_xpath('//div[@class="skipUrlRight"]/a')
-			skip.click()
-			self.driver.implicitly_wait(20)
+			try:
+				skip = self.driver.find_element_by_xpath('//div[@class="skipUrlRight"]/a')
+				skip.click()
+				self.driver.implicitly_wait(50)
+				time.sleep(10)
+			except:
+				print "---------------------------"
+				print 'No skip button'
+				print "---------------------------"
+				time.sleep(10)
 			
-			if 'Andheri' in data_post[i]['locality']:
-				self.collection_A.remove(data_post[i]['_id'])
-			if 'Bandra' in data_post[i]['locality']:
-				self.collection_B.remove(data_post[i]['_id'])
-			if 'Santacruz' in data_post[i]['locality']:
-				self.collection_s.remove(data_post[i]['_id'])
-			if 'Vile' in data_post[i]['locality']:
-				self.collection_v.remove(data_post[i]['_id'])
 			del data_post[i]['_id']
 			data_post[i].update({'date':str(datetime.date.today())})
 			self.collection_p.insert(dict(data_post[i]))
@@ -342,6 +357,6 @@ class Contact(CrawlSpider):
 
 			time.sleep(15)
 			self.driver.quit()
-			time.sleep(15)
+			time.sleep(45)
 			if i%5==0:
 				time.sleep(30)

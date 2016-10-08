@@ -1,207 +1,155 @@
-from scrapy.spider import BaseSpider
-from scrapy.selector import HtmlXPathSelector
+from scrapy.selector import Selector
 from olx.items import OlxItem
-from scrapy.contrib.spiders import CrawlSpider, Rule
-from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
-from datetime import datetime,time,timedelta,date
+from scrapy.spiders import CrawlSpider, Rule
+from scrapy.http import Request
+import re
+from datetime import datetime as dt
+from datetime import time,timedelta
+from datetime import date as d
+import time
 
 class MySpider(CrawlSpider):
     name = "olxSpider"
     allowed_domains = ['www.olx.in']
-    start_urls = ["https://www.olx.in/mumbai/houses/?search%5Bphotos%5D=false",
-    "https://www.olx.in/mumbai/apartments/?search%5Bphotos%5D=false",
-    "https://www.olx.in/mumbai/commercial-space/?search%5Bphotos%5D=false",
-    "https://www.olx.in/mumbai/land-plots/?search%5Bphotos%5D=false",
-    "https://www.olx.in/mumbai/guest-houses/",
+    start_urls = ['https://www.olx.in/mumbai/real-estate/']
 
-   ]
-    rules = (
-        Rule(SgmlLinkExtractor(allow=('www.olx.in'), restrict_xpaths=('//*[@id="offers_table"]/tbody/tr/td/table/tbody/tr[1]/td[1]/div/span/a[@href]',)), callback="parsef", follow= True),
-        Rule (SgmlLinkExtractor(restrict_xpaths=('//section[@id="body-container"]/div[1]/div/div[@class="pager rel clr"]/span[@class="fbold next abs large"]/a[@href]',)), follow= True),
-    )
+    item = OlxItem()
  
-    def parsef(self, response):
-        date_d = {'Jan':1,'Feb':2,'Mar':3,'Apr':4,'May':5,'Jun':6,'Jul':7,'Aug':8,'Sep':9,'Oct':10,'Nov':11,'Dec':12}
-        hxs = HtmlXPathSelector(response)
-        titles = hxs.xpath('//span[@class="rel inlblk"]')
-        loc = hxs.xpath('//strong[@class="c2b small"]')
-        dates = hxs.xpath('//span[@class="pdingleft10 brlefte5"]')
-        price= hxs.xpath('//strong[@class="xxxx-large margintop7 inlblk not-arranged"]')
-        postedby= hxs.xpath('//span[@class="block color-5 brkword xx-large"]')
-        contact= hxs.xpath('//strong[@class="large lheight20 fnormal  "]')
-        tran= hxs.xpath('//td[@class="middle"]')
-        ptitle= hxs.xpath('//h1[@class="brkword lheight28"]')
-        detail= hxs.xpath('//table[@class="details fixed marginbott20 margintop5"]')
-        
-        items = []
-        for titles in titles:
-            item = OlxItem()
-            item["data_id"] = map(unicode.strip, titles.xpath("text()").extract())
-            item['Building_name'] = 'None'
-            item['lat'] = '0'
-            item['longt'] = '0'
-            item['Status'] = 'None'
-            item['listing_by'] = 'None'
-            item['Details'] = 'None'
-            item['address'] = 'None'
-            item['sublocality'] = 'None'
-            item['age'] = 'None'
-            item['google_place_id'] = 'None'
-            item['Possession'] = 'None'
-            item['Launch_date'] = 'None'
-            item['price_per_sqft'] = '0'
-            item['areacode'] = 'None'
-            item['management_by_landlord'] = 'None'
-            item['carpet_area'] = '0'
-            
-            item['platform']="OLX"  
-            item['city']="Mumbai"     
-        for loc in loc:
-            item["locality"] = map(unicode.strip, loc.xpath("text()").extract())            
-        for dates in dates:
-            ldate = str(map(unicode.strip, dates.xpath("text()").extract()))
-            #print ldate
-            
-            if 'at' in ldate:
-                item['listing_date']=str(date.today().month)+"/"+str(date.today().day)+"/"+str(date.today().year) + " 00:00:00"
-            elif 'terday' in ldate:
-                item['listing_date']=str((date.today() - timedelta(days=1)).month)+"/"+str((date.today() - timedelta(days=1)).day)+"/"+str((date.today() - timedelta(days=1)).year) + " 00:00:00"
-            elif 'on' in ldate:
-                a=ldate.find('on')
-                ldate=ldate[a+3:a+10]
-                ladte=ldate.replace("'","")
-                if ldate.find(","):
-                    ldate=ldate.replace(",","")
-                date1=ldate.split(" ")
-                if date1[2] in date_d.keys():
-                    date1[2]=date_d[date1[2]]
-                item['listing_date']=str(date1[2])+"/"+str(date1[0])+"/"+str(date.today().year) + " 00:00:00"
-            item['updated_date'] = item['listing_date']
-            '''if "at" in ldate:
-                item['listing_date']=date.today()
-            elif "terday" in ldate:
-                item['listing_date']=date.today() - timedelta(days=1)
-            elif "on" in ldate:
-                a=ldate.find('on')
-                ldate=ldate[a+3:a+10]
-                ldate=ldate.replace("'","")
-                if ldate.find(","):
-                    ldate=ldate.replace(",","")
-                
-                date1 = datetime.strptime(ldate,"%d  %m %Y")
-                item['listing_date']=date1'''
-        
-        for postedby in postedby:
-            item["name_lister"] = map(unicode.strip, postedby.xpath("text()").extract())
-        for contact in contact:
-            item["mobile_lister"] = map(unicode.strip, contact.xpath("text()").extract())
-            
-        for tran in tran: 
-            if "mmercial" in str(map(unicode.strip, tran.xpath("//ul/li[3]/a/span[1]/text()").extract())) :
-                item["property_type"] = "Commercial"
-            elif "Plots" in str(map(unicode.strip, tran.xpath("//ul/li[3]/a/span[1]/text()").extract())):
-                item["property_type"] = "Plots/Land"
-            else:
-                item["property_type"] = "Residential"
-            fl=0
-            
-            if "ale" in str(map(unicode.strip, tran.xpath("//ul/li[4]/a/span[1]/text()").extract())) :
-                item["txn_type"] = "Sale"
-                fl=1
-            elif "uest" in str(map(unicode.strip, tran.xpath("//ul/li[4]/a/span[1]/text()").extract())):
-                item["txn_type"] = "Vacation/Guest"
-            else:
-                item["txn_type"] = "Rent"
-        for price in price:
-            if fl==1:
-                item["Selling_price"] = map(unicode.strip, price.xpath("text()").extract())
-                item['Monthly_Rent'] = '0'
-            elif fl==0:
-                item["Monthly_Rent"] = map(unicode.strip, price.xpath("text()").extract())
-                item['Selling_price'] = '0'
-            if (item['Selling_price'] == '0' and item['Monthly_Rent'] == '0') or (item['Selling_price'] == '' and item['Monthly_Rent']==''):
-                item['price_on_req'] = 'true'
-            else:
-                item['price_on_req'] = 'false'
-                  
-        for ptitle in ptitle:
-            myString= str(map(unicode.strip, ptitle.xpath("text()").extract()))
-            myString = myString.upper()
-            no= myString.find('BHK')
-            x=0
-            if no==-1:
-                no1=myString.find('RK ')
-                s1=no1-2
-                no1=no1+2
-                hk1=myString[s1:no1]
-                item['config_type']= hk1.replace("'","").replace("/","")
-                x=1
-            if no!=-1:     
-                s=no-2
-                no=no+3
-                hk=myString[s:no]
-                item['config_type']= hk.replace("'","").replace("/","") 
-        for detail in detail:
-            if "quare" in str(map(unicode.strip, detail.xpath("tr[1]/td[1]/div[1]/text()").extract())):
-                st=str(map(unicode.strip, detail.xpath("tr[1]/td[1]/div[1]/strong/text()").extract()))
-            elif "quare" in str(map(unicode.strip, detail.xpath("tr[1]/td[2]/div[1]/text()").extract())):
-                st=str(map(unicode.strip, detail.xpath("tr[1]/td[2]/div[1]/strong/text()").extract()))
-            elif "quare" in str(map(unicode.strip, detail.xpath("tr[1]/td[3]/div[1]/text()").extract())):
-                st=str(map(unicode.strip, detail.xpath("tr[1]/td[3]/div[1]/strong/text()").extract()))
-            elif "quare" in str(map(unicode.strip, detail.xpath("tr[3]/td[1]/div[1]/text()").extract())):
-                st=str(map(unicode.strip, detail.xpath("tr[3]/td[1]/div[1]/strong/text()").extract()))
-            elif "quare" in str(map(unicode.strip, detail.xpath("tr[3]/td[2]/div[1]/text()").extract())):
-                st=str(map(unicode.strip, detail.xpath("tr[3]/td[2]/div[1]/strong/text()").extract()))
-            elif "quare" in str(map(unicode.strip, detail.xpath("tr[3]/td[3]/div[1]/text()").extract())):
-                st=str(map(unicode.strip, detail.xpath("tr[3]/td[3]/div[1]/strong/text()").extract()))
-            num=st.find("ft")         
-            st=st[1:num]
-            st=st.replace("u","")
-            st=st.replace("'","")
-            item['Bua_sqft']=st
-            f=0
-            if item['Bua_sqft'] == '':
-                item['Bua_sqft'] = '0'
-            
-            if "oom" in str(map(unicode.strip, detail.xpath("tr[1]/td[1]/div[1]/text()").extract())) and no==-1:
-                st=str(map(unicode.strip, detail.xpath("tr[1]/td[1]/div[1]/strong/text()").extract()))
-                f=1
-            elif "oom" in str(map(unicode.strip, detail.xpath("tr[1]/td[2]/div[1]/text()").extract())) and no==-1:
-                st=str(map(unicode.strip, detail.xpath("tr[1]/td[2]/div[1]/strong/a/text()").extract()))
-                f=1
-            elif "oom" in str(map(unicode.strip, detail.xpath("tr[1]/td[3]/div[1]/text()").extract())) and no==-1:
-                st=str(map(unicode.strip, detail.xpath("tr[1]/td[3]/div[1]/strong/a/text()").extract()))
-                f=1
-            elif "oom" in str(map(unicode.strip, detail.xpath("tr[3]/td[1]/div[1]/text()").extract())) and no==-1:
-                st=str(map(unicode.strip, detail.xpath("tr[3]/td[1]/div[1]/strong/a/text()").extract()))
-                f=1
-            elif "oom" in str(map(unicode.strip, detail.xpath("tr[3]/td[2]/div[1]/text()").extract())) and no==-1:
-                st=str(map(unicode.strip, detail.xpath("tr[3]/td[2]/div[1]/strong/a/text()").extract()))
-                f=1
-            elif "oom" in str(map(unicode.strip, detail.xpath("tr[3]/td[3]/div[1]/text()").extract())) and no==-1:
-                st=str(map(unicode.strip, detail.xpath("tr[3]/td[3]/div[1]/strong/a/text()").extract()))
-                f=1
-            if f==1 and "1" in st:
-                item['config_type']="1 BHK"
-            elif f==1 and "2" in st:
-                item['config_type']="2 BHK"
-            elif f==1 and "3" in st:
-                item['config_type']="3 BHK"
-            if item['config_type'] == '':
-                item['config_type'] = 'None'
-            if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
-                item['quality1'] = 1
-            else:
-                item['quality1'] = 0
-            
-            if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
-                item['quality2'] = 1
-            else:
-                item['quality2'] = 0
+    def parse(self, response):
+        hxs = Selector(response)
+        #print response.body
+        data = hxs.xpath('//*[@id="offers_table"]/tbody/tr/td[contains(@class,"offer")]')
 
-            if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None')):
-                item['quality3'] = 1
-            else:
-                item['quality3'] = 0
-        items.append(item)
-        return(items)
+        for i in data:
+            typ = i.xpath('table/tbody/tr/td[@valign="top"]/p/small/text()').extract_first().strip()
+            if (('Apartments' in typ) or ('Shops' in typ) or ('Houses' in typ)):
+                url = i.xpath('table/tbody/tr/td[@valign="top"]/h3/a/@href').extract_first()
+                
+                yield Request(url,callback=self.parse1,dont_filter=True)
+
+        if 'Next page' in response.xpath('//div[@class="pager rel clr"]/span[last()]/a/span/text()').extract_first():
+            next_url = response.xpath('//div[@class="pager rel clr"]/span[last()]/a/@href').extract_first()
+            
+            yield Request(next_url,callback=self.parse)
+
+    def parse1(self,response):
+        hxs = Selector(response)
+
+        '''
+        Assigning default value
+        '''
+        self.item['Selling_price'] = '0'
+        self.item['Monthly_Rent'] = '0'
+        self.item['lat'] = '0'
+        self.item['longt'] = '0'
+        self.item['Bua_sqft'] = '0'
+        self.item['carpet_area'] = '0'
+        self.item['price_per_sqft'] = '0'
+        self.item['updated_date'] = 'None'
+        self.item['management_by_landlord'] = 'None'
+        self.item['areacode'] = 'None'
+        self.item['mobile_lister'] = 'None'
+        self.item['google_place_id'] = 'None'
+        self.item['Launch_date'] = 'None'
+        self.item['Possession'] = 'None'
+        self.item['age'] = 'None'
+        self.item['address'] = 'None'
+        self.item['price_on_req'] = 'false'
+        self.item['sublocality'] = 'None'
+        self.item['config_type'] = 'None'
+        self.item['listing_date'] = 'None'
+        self.item['txn_type'] = 'None'
+        self.item['property_type'] = 'None'
+        self.item['Building_name'] = 'None'
+        self.item['locality'] = 'None'
+        self.item['price_per_sqft'] = 'None'
+        self.item['Bua_sqft'] = 'None'
+        self.item['Status'] = 'None'
+        self.item['listing_by'] = 'None'
+        self.item['name_lister'] = 'None'
+        self.item['Details'] = 'None'
+
+        self.item['city'] = 'mumbai'
+        self.item['platform'] = 'olx'
+
+        self.item['data_id'] = response.xpath('//span[@class="rel inlblk"]/text()').extract_first().strip()
+
+        lat_long = response.xpath('//div[@id="mapcontainer"]/@class').extract_first()
+        
+        self.item['lat'] = re.findall(" lat: '([0-9.]+)'",lat_long)[0]
+
+        self.item['longt'] = re.findall(" lon: '([0-9.]+)'",lat_long)[0]
+
+        self.item['locality'] = response.xpath('//strong[@class="c2b small"]/text()').extract_first().strip()
+
+        typ = response.xpath('//*[@id="breadcrumbTop"]/tr/td/ul/li[3]/a/span/text()').extract_first().strip()
+        if 'ale' in typ:
+            self.item['txn_type'] = 'Sale'
+        if 'ent' in typ:
+            self.item['txn_type'] = 'Rent'
+
+        if 'ale' in self.item['txn_type']:
+            self.item['Selling_price'] = response.xpath('//strong[@class="xxxx-large margintop7 inlblk not-arranged"]/text()').extract_first()
+            self.item['Monthly_Rent'] = '0'
+        if 'ent' in self.item['txn_type']:
+            self.item['Monthly_Rent'] = response.xpath('//strong[@class="xxxx-large margintop7 inlblk not-arranged"]/text()').extract_first()
+            self.item['Selling_price'] = '0'
+
+        prp_typ = response.xpath('//*[@id="breadcrumbTop"]/tr/td/ul/li[4]/a/span/text()').extract_first().strip()
+        if (('Apartments' in prp_typ) or ('Houses' in prp_typ)):
+            self.item['property_type'] = 'Residential'
+        if ('Shops' in prp_typ):
+            self.item['property_type'] = 'Commercial'
+
+        try:
+            conf = response.xpath('//a[contains(@title,"room")]/text()').extract_first().strip()
+            if (not conf==None):
+                self.item['config_type'] = re.findall('[0-9]',conf)[0]+' BHK'
+        except:
+            try:
+                conf1 = response.xpath('//a[contains(@title,"more")]/text()').extract_first().strip()
+                if (not conf1==None):
+                    self.item['config_type'] = re.findall('[0-9]',conf1)[0]+' BHK'
+            except:
+                print 'No config '+' -->>'+str(response.url)
+                self.item['config_type'] = 'None'
+
+        dates = response.xpath('//span[@class="pdingleft10 brlefte5"]/text()').extract()
+        date1 = ' '.join(re.findall('[\S]+',[date for date in dates if re.findall('[\w]',date)][0])).replace(',','').replace('on ','').replace('at ','').replace('Added ','')
+        if 'terday' in date1:
+            self.item['listing_date'] = str((d.today() - timedelta(days=1)).month)+"/"+str((d.today() - timedelta(days=1)).day)+"/"+str((d.today() - timedelta(days=1)).year) + ' 00:00:00'
+        elif 'oday' in date1:
+            self.item['listing_date'] = str(d.today().month)+'/'+str(d.today().day)+'/'+str(d.today().year) + ' 00:00:00'
+        elif ((' am' in date1) or (' pm' in date1)):
+            self.item['listing_date'] = str(d.today().month)+'/'+str(d.today().day)+'/'+str(d.today().year) +' '+ date1.replace(' am','').replace(' pm','') + ':00'
+        else:
+            self.item['listing_date'] = dt.strftime(dt.strptime(date1,'%d %b'),'%m/%d')+'/'+str(d.today().year) + ' 00:00:00'
+
+        self.item['updated_date'] = self.item['listing_date']
+
+        try:
+            area = response.xpath('//strong[@class="block"]/text()').extract()
+            get_area = [sqf for sqf in area if ' ft' in sqf]
+            if get_area:
+                self.item['Bua_sqft'] = re.findall('[0-9,]+',get_area[0].strip())[0]
+                if ',' in self.item['Bua_sqft']:
+                    self.item['Bua_sqft'] = self.item['Bua_sqft'].replace(',','')
+        except:
+            print 'No Sqft -->>'+str(response.url)
+
+        if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == 'None') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
+            self.item['quality1'] = 1
+        else:
+            self.item['quality1'] = 0
+
+        if ((not self.item['Launch_date'] == 'None') or (not self.item['Possession'] == 'None')):
+            self.item['quality2'] = 1
+        else:
+            self.item['quality2'] = 0
+
+        if ((not self.item['mobile_lister'] == 'None') or (not self.item['listing_by'] == 'None') or (not self.item['name_lister'] == 'None')):
+            self.item['quality3'] = 1
+        else:
+            self.item['quality3'] = 0
+
+        yield self.item

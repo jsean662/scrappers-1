@@ -25,14 +25,18 @@ class SulekhaPost(CrawlSpider):
 		# MONGODB_DB = "scraping"
 		# MONGODB_COLLECTION = "scrape"
 		connection = pymongo.MongoClient(MONGODB_SERVER,MONGODB_PORT)
-		db = connection['scrapingandposting']
-		self.collection = db['post']
+		db = connection['scraping']
+		self.collection_a = db['andheri']
+		self.collection_p = db['post']
 
 	def parse(self,response):
-		data_post = list(self.collection.find({'date':str(datetime.date.today())}))
+		add = 0
+		data_post = list(self.collection_a.find().limit(5))
 		#print data_post
 
-		for i in range(0,len(data_post)):	
+		for i in range(0,len(data_post)):
+			if i%2==0:
+				add = add + 1000
 			if (not i==0):
 				self.__init__()
 			self.driver.get(response.url)
@@ -47,12 +51,12 @@ class SulekhaPost(CrawlSpider):
 
 			self.driver.switch_to.frame(self.driver.find_element_by_tag_name('iframe'))
 
-			if ((i>=0) and (i<5)):
+			if (i%2==0):
 				email = self.driver.find_element_by_id('txtuname')
 				email.send_keys('prathamsawant115@gmail.com')
 				self.driver.implicitly_wait(20)
 				time.sleep(2)
-			if ((i>=5) and (i<10)):
+			if (i%2==1):
 				email = self.driver.find_element_by_id('txtuname')
 				email.send_keys('vipulmalhotra511@gmail.com')
 				self.driver.implicitly_wait(20)

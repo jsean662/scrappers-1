@@ -6,6 +6,7 @@ from scrapy.utils.response import open_in_browser
 import datetime
 import time
 import smtplib
+import os
 import pymongo
 from scrapy import log
 
@@ -16,12 +17,23 @@ class OlxForm(CrawlSpider):
 
 	def __init__(self):
 		self.driver = webdriver.Chrome()
+		MONGODB_SERVER = "localhost"
+		MONGODB_PORT = 27017
+		# MONGODB_DB = "scraping"
+		# MONGODB_COLLECTION = "scrape"
+		connection = pymongo.MongoClient(MONGODB_SERVER,MONGODB_PORT)
+		db = connection['scraping']
+		self.collection_a = db['andheri']
+		self.collection_p = db['post']
 
 	def parse(self,response):
 		t1=t2=t3=t4=t5=t6=t7=t8=0
-		data_post = [{ "_id" : 'ObjectId("57dbeaa2db068c25850daa61")', "status" : "Semi-Furnished", "locality" : "Andheri West ", "sqft" : "1200", "flr" : "2", "detail" : "2 BHK Flat is immediately availbale and location is Andheri West  with all modern amenities for more detail call us...", "bed" : "2", "bath" : "2", "rent_price" : "50000", "t_flr" : "2", "sub_loc" : "Andheri West", "title" : "A sapcious 2 BHK in Andheri West  for rent", "depo" : "200000.0" }]
-
+		add = 0
+		data_post = list(self.collection_a.find().limit(40))
+		#a=40
 		for i in range(0,len(data_post)):
+			if i%8==0:
+				add = add + 1000
 			if (not i==0):
 				self.__init__()
 			self.driver.get(response.url)
@@ -83,11 +95,11 @@ class OlxForm(CrawlSpider):
 			passwd = self.driver.find_element_by_id('userPass')
 			passwd.send_keys('nx1234')
 			self.driver.implicitly_wait(20)
-			time.sleep(1)
+			time.sleep(3)
 
 			login = self.driver.find_element_by_id('se_userLogin').click()
 			self.driver.implicitly_wait(20)
-			time.sleep(1)
+			time.sleep(3)
 
 			click_on_ad = self.driver.find_element_by_id('postNewAdLink').click()
 			self.driver.implicitly_wait(20)
@@ -109,11 +121,9 @@ class OlxForm(CrawlSpider):
 			price = self.driver.find_element_by_name('data[param_price][1]')
 			if '.' in data_post[i]['rent_price']:
 				data_post[i]['rent_price'] = data_post[i]['rent_price'].split('.')[0]
-			# if '.' in data_post[i]['rent_price']:
-			# 	data_post[i]['rent_price'] = data_post[i]['rent_price'].split('.')[0]
-			# 	data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+2000)
-			# else:
-			# 	data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+2000)
+				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+add)
+			else:
+				data_post[i]['rent_price'] = str(int(data_post[i]['rent_price'])+add)
 			price.send_keys(data_post[i]['rent_price'])
 			self.driver.implicitly_wait(20)
 			time.sleep(3)
@@ -158,30 +168,39 @@ class OlxForm(CrawlSpider):
 			time.sleep(2)
 
 			desc = self.driver.find_element_by_id('add-description')
-			desc.send_keys('A sapcious '+data_post[i]['bed']+' BHK flat is availbale immediately.location is '+data_post[i]['locality']+'. With All modern amenities.Easily accessible school , bank and hospital. Also for more detail contact.')
+			desc.send_keys('Nice appartment and locality'+data_post[i]['detail'])
+
+			for root,dirs,files in os.walk('/home/karan/scrap_proj/selenium/Postings_photos/1/'+str((i%18)+1)+'/'):
+				for name in files:
+					if '1' in name:
+						path1 = root+name
+					if '2' in name:
+						path2 = root+name
+					if '3' in name:
+						path3 = root+name
 
 			add_photo = self.driver.find_element_by_id('show-gallery-html').click()
 			self.driver.implicitly_wait(20)
 			time.sleep(3)
 
 			img1 = self.driver.find_element_by_name('image[1]')
-			img1.send_keys('')
+			img1.send_keys(path1)
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
 			img2 = self.driver.find_element_by_name('image[2]')
-			img2.send_keys('')
+			img2.send_keys(path2)
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
 			img3 = self.driver.find_element_by_name('image[3]')
-			img3.send_keys('')
+			img3.send_keys(path3)
 			self.driver.implicitly_wait(20)
 			time.sleep(2)
 
-			submit = self.driver.find_element_by_id('save').click()
-			self.driver.implicitly_wait(20)
-			time.sleep(3)
+			# submit = self.driver.find_element_by_id('save').click()
+			# self.driver.implicitly_wait(20)
+			# time.sleep(3)
 
 			print "+++++++++++++++++++++++++++++++"
 			print "Posted "+str(i)
@@ -195,6 +214,13 @@ class OlxForm(CrawlSpider):
 			print '7715093067 = '+str(t8)
 			print "+++++++++++++++++++++++++++++++"
 
-
-			time.sleep(40)
+			# del data_post[i]['_id']
+			# data_post[i].update({'date':str(datetime.date.today())})
+			# self.collection_p.insert(dict(data_post[i]))
+			# log.msg("Posted Data added to MongoDB database!",level=log.DEBUG)
+			
+			time.sleep(15)
 			self.driver.quit()
+			time.sleep(15)
+			if i%4==0:
+				time.sleep(30)
