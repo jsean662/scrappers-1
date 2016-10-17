@@ -88,15 +88,19 @@ class MagicSpider(scrapy.Spider):
 						item['Details'] = str(str(i.xpath('div[@class="proColmleft"]/div[@class="proDetailsRow "]/div[@class="proDetailsRowElm proDetailsRowListing"]/ul/text()').extract()) + str(i.xpath('div[@class="proColmleft"]/div[@class="proDetailsRow "]/div[@class="proDetailsRowElm proDetailsRowListing"]/ul/li/text()').extract())).replace('[u','').replace('\\n','').replace(',',' ').replace(' u','').replace(']','').replace("'","")
 				
 					price = i.xpath('div[@class="proColmRight"]/div/div/div/span/text()').extract_first()
-					if 'Lac' in price:
-						item['Selling_price']=str(float(price.split()[0])*100000)
-					elif 'Cr' in price:
-						item['Selling_price']=str(float(price.split()[0])*10000000)
+					if not price==None:
+						if 'Lac' in price:
+							item['Selling_price']=str(float(price.split()[0])*100000)
+						elif 'Cr' in price:
+							item['Selling_price']=str(float(price.split()[0])*10000000)
+						else:
+							item['Selling_price'] = '0'
+						if item['Selling_price'] == 'None':
+							item['Selling_price'] = '0'
+						item['Monthly_Rent'] = '0'
 					else:
 						item['Selling_price'] = '0'
-					if item['Selling_price'] == 'None':
-						item['Selling_price'] = '0'
-					item['Monthly_Rent'] = '0'
+						item['Monthly_Rent'] = '0'
 					if item['Selling_price'] == '0' and item['Monthly_Rent'] == '0':
 						item['price_on_req'] = 'true'
 					else:
