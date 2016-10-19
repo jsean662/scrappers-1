@@ -1,3 +1,0 @@
-[scrapy]
-settings = imaMember.settings
-

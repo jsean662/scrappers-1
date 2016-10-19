@@ -92,11 +92,17 @@ class MySpider(CrawlSpider):
 		if '-sale-' in str(response.url):
 			if self.item['sublocality'] == 'None':
 				sub = hxs.xpath('//div[@class="page-title"]/div[@class="pull-left"]/small/text()').extract()
-				self.item['sublocality'] = sub[1].strip()
+				try:
+					self.item['sublocality'] = sub[1].strip()
+				except:
+					print ""
 		if '-rent-' in str(response.url):
 			if self.item['sublocality'] == 'None':
 				sub = hxs.xpath('//div[@class="page-title"]/span/small/text()').extract()
-				self.item['sublocality'] = sub[1].strip()
+				try:
+					self.item['sublocality'] = sub[1].strip()
+				except:
+					print ""
 
 		self.item['lat'] = hxs.xpath('//input[@id="hdnLat"]/@value').extract_first()
 
@@ -116,6 +122,8 @@ class MySpider(CrawlSpider):
 			self.item['txn_type'] = 'resale'
 		if '-sale-' in t_type:
 			self.item['txn_type'] = 'sale'
+		if 'rental' in str(response.url):
+			self.item['txn_type'] = 'rent'
 
 		if 'sale' in self.item['txn_type']:
 			bildg = hxs.xpath('//div[@class="pull-left"]/h1/text()').extract_first()

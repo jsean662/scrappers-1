@@ -8,8 +8,8 @@ from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome()
 
-year=['2014','2015','2016','2013']
-cts = ['3']
+year=['2014','2015','2016']
+cts = ['50']
 for yr in range(0,len(year)):
 	for ct in range(0,len(cts)):
 		driver.get('https://esearchigr.maharashtra.gov.in/testingesearch/Login.aspx')
@@ -30,9 +30,9 @@ for yr in range(0,len(year)):
 		image = driver.find_element_by_xpath('//img[@src="Handler.ashx"]')
 		location = image.location
 		size = image.size
-		driver.save_screenshot('/home/karan/scrap_proj/igrmaha/1.png')
+		driver.save_screenshot('/home/karan/Nexchange/igrmaha/1.png')
 
-		im = Image.open('/home/karan/scrap_proj/igrmaha/1.png')
+		im = Image.open('/home/karan/Nexchange/igrmaha/1.png')
 
 		left = location['x']
 		top = location['y']
@@ -40,8 +40,8 @@ for yr in range(0,len(year)):
 		bottom = location['y'] + size['height']
 
 		im = im.crop((left,top,right,bottom))
-		im.save('/home/karan/scrap_proj/igrmaha/1.png')
-		text = textract.process('/home/karan/scrap_proj/igrmaha/1.png')
+		im.save('/home/karan/Nexchange/igrmaha/1.png')
+		text = textract.process('/home/karan/Nexchange/igrmaha/1.png')
 		text = text.strip()
 
 		capt = driver.find_element_by_id('txtcaptcha')
@@ -62,7 +62,7 @@ for yr in range(0,len(year)):
 		time.sleep(5)
 
 		vill_name = driver.find_element_by_id('txtAreaName')
-		vill_name.send_keys('pava')
+		vill_name.send_keys('vikr')
 		driver.implicitly_wait(100)
 		time.sleep(5)
 
@@ -73,7 +73,7 @@ for yr in range(0,len(year)):
 		driver.implicitly_wait(100)
 		time.sleep(5)
 
-		sel_village = driver.find_element_by_xpath('//option[@value="Pavai"]').click()
+		sel_village = driver.find_element_by_xpath('//select[@id="ddlareaname"]/option[2]').click()
 		driver.implicitly_wait(100)
 		time.sleep(5)
 
@@ -111,12 +111,12 @@ for yr in range(0,len(year)):
 					time.sleep(10)
 					
 					next = driver.window_handles[1]
-
+					driver.implicitly_wait(10)
 					driver.switch_to.window(next)
 					driver.implicitly_wait(20)
 
 					time.sleep(5)
-					f = open('/home/karan/scrap_proj/igrmaha/{}.csv'.format(str('pavai_'+year[yr]+'_'+cts[ct])),'ab')
+					f = open('/home/karan/Nexchange/igrmaha/{}.csv'.format(str('Band_'+year[yr]+'_'+cts[ct])),'ab')
 					keys = driver.find_elements_by_xpath('//body/table[3]/tbody/tr/td[1]')
 					if check==0:
 						for key in keys:
