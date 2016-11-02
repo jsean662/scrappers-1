@@ -73,6 +73,8 @@ class purpleyoSpider(Spider):
 			item['mobile_lister'] = 'None'
 			item['carpet_area'] = '0'
 			item['updated_date'] = item['listing_date']
+			
+			
 			if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
 				item['quality1'] = 1
         	else:

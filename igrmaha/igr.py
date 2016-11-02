@@ -9,7 +9,8 @@ from selenium.webdriver.common.keys import Keys
 driver = webdriver.Chrome()
 
 year=['2014','2015','2016']
-cts = ['50']
+cts = ['63','64']
+vill = 'lowe'
 for yr in range(0,len(year)):
 	for ct in range(0,len(cts)):
 		driver.get('https://esearchigr.maharashtra.gov.in/testingesearch/Login.aspx')
@@ -57,12 +58,12 @@ for yr in range(0,len(year)):
 		driver.implicitly_wait(100)
 		time.sleep(5)
 
-		sel_city = driver.find_element_by_xpath('//option[@value="31"]').click()
+		sel_city = driver.find_element_by_xpath('//option[@value="30"]').click()
 		driver.implicitly_wait(100)
 		time.sleep(5)
 
 		vill_name = driver.find_element_by_id('txtAreaName')
-		vill_name.send_keys('vikr')
+		vill_name.send_keys(vill)
 		driver.implicitly_wait(100)
 		time.sleep(5)
 
@@ -97,7 +98,7 @@ for yr in range(0,len(year)):
 		print "Page Index is --- {}".format(len(page_index))
 		n=2
 
-		while n<=(len(page_index)+1):
+		while n<=(len(page_index)+1) or n==2:
 			
 			driver.implicitly_wait(100)
 			index = driver.find_elements_by_xpath('//table[@id="RegistrationGrid"]/tbody/tr')
@@ -108,15 +109,16 @@ for yr in range(0,len(year)):
 					driver.implicitly_wait(50)
 					driver.find_element_by_xpath('//table[@id="RegistrationGrid"]/tbody/tr['+str(i)+']/td/input').click()
 					driver.implicitly_wait(300)
-					time.sleep(10)
+					time.sleep(20)
+					driver.implicitly_wait(200)
 					
 					next = driver.window_handles[1]
-					driver.implicitly_wait(10)
+					driver.implicitly_wait(100)
 					driver.switch_to.window(next)
-					driver.implicitly_wait(20)
+					driver.implicitly_wait(200)
 
 					time.sleep(5)
-					f = open('/home/karan/Nexchange/igrmaha/{}.csv'.format(str('Band_'+year[yr]+'_'+cts[ct])),'ab')
+					f = open('/home/karan/Nexchange/igrmaha/{}.csv'.format(str(vill+'_'+year[yr]+'_'+cts[ct])),'ab')
 					keys = driver.find_elements_by_xpath('//body/table[3]/tbody/tr/td[1]')
 					if check==0:
 						for key in keys:
@@ -127,7 +129,7 @@ for yr in range(0,len(year)):
 						check=1
 					pairs = driver.find_elements_by_xpath('//body/table[3]/tbody/tr/td[2]')
 					for pair in pairs:
-						text2 = pair.text.encode('utf-8')
+						text2 = pair.text.encode('utf-8').replace('\n','')
 						print text2
 						f.write(text2+'@')
 					f.write('\n')

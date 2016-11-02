@@ -54,7 +54,7 @@ class PropSellSpider(Spider):
 				#url = base_url + url1
 				#print str(url)
 				#yield item
-
+				item['name_lister'] = 'None'
 				item['data_id'] = path[i]['properties'][j]['propertyId']
 				item['config_type'] = str(path[i]['properties'][j]['bedrooms']) + "BHK"
 				item['property_type'] = path[i]['properties'][j]['unitType']
@@ -75,7 +75,7 @@ class PropSellSpider(Spider):
 
 					item['Possession'] = str(dt2)
 				except:
-					item['Possession'] = 'None'
+					item['Possession'] = '0'
     	        #dt3 = dt2.split()[0]
 				try:
 					item['lat'] = path[i]['latitude']
@@ -87,17 +87,18 @@ class PropSellSpider(Spider):
 					item['longt'] = path[i]['locality']['suburb']['city']['centerLongitude']
 
 				item['Status'] = path[i]['projectStatus']
+				item['listing_by'] = 'builder'
 				try:
-				    item['listing_by'] = path[i]['builder']['mainImage']['title']
+				    item['name_lister'] = path[i]['builder']['name']
 				except:
-				    item['listing_by'] = 'None'
+				    item['name_lister'] = 'None'
 				
 				try:
 					item['price_per_sqft'] = path[i]['locality']['avgPricePerUnitArea']
 				except:
 					item['price_per_sqft'] = '0'
 					
-				item['Building_name'] = path[i]['name']
+				item['Building_name'] = path[i]['builder']['name']+' '+path[i]['name']
 				item['address'] = path[i]['address']
 				item['locality'] = path[i]['locality']['suburb']['label']
 				item['sublocality'] = path[i]['locality']['label']
@@ -123,9 +124,8 @@ class PropSellSpider(Spider):
 				except KeyError:
 					item['carpet_area'] = "0"
 				item['platform'] = 'tigerprop'
-				item['name_lister'] = 'None'
 				item['Details'] = 'None'
-				item['Launch_date'] = 'None'
+				item['Launch_date'] = '0'
 				item['age'] = 'None'
 				item['google_place_id'] = 'None'
 				item['mobile_lister'] = 'None'
@@ -136,11 +136,17 @@ class PropSellSpider(Spider):
 				    item['price_on_req'] = 'false'
 				
 				#item['management_by_landlord'] = path[i]['properties'][j]['management_by_landlord']
-				if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
+				if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0'))):
+					item['quality4'] = 1
+				elif (((not item['price_per_sqft'] == '0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None'))):
+					item['quality4'] = 0.5
+				else:
+					item['quality4'] = 0
+				if ((not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
 				    item['quality1'] = 1
 				else:
 				    item['quality1'] = 0
-				if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
+				if ((not item['Launch_date'] == '0') and (not item['Possession'] == '0')):
 					item['quality2'] = 1
 				else:
 					item['quality2'] = 0

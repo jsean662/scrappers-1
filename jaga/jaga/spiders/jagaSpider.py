@@ -44,19 +44,19 @@ class JagahaSpider(Spider):
                     if data_id not in self.data_id_list:
                         self.data_id_list.append(data_id)
                         item = JagaItem()
-                        item['data_id'] = i.xpath('../@data-id').extract()
-                        item['listing_date'] = time.strftime("%d/%m/%Y")
+                        item['data_id'] = i.xpath('./@data-id').extract()
+                        item['listing_date'] = time.strftime("%d/%m/%Y %H:%M:%S")
                         time.sleep(2)
                         item['platform'] = 'jagaha'
                         item['city'] = 'Mumbai'
                         txn_property = i.xpath('div/b/text()').extract_first()
                         if 'Per' in  i.xpath('a/div/span[1]/text()').extract_first().split(' '):
                             item['txn_type'] = 'Lease'
-                            item['Monthly_Rent'] = str(i.xpath('a/div/span[1]/text()').extract_first().replace("INR","").replace("Per Month","").strip())
+                            item['Monthly_Rent'] = str(i.xpath('a/div/span[1]/text()').extract_first().replace("INR","").replace("Per Month","").replace(',','').strip())
                             item['Selling_price'] = '0'
                         else:
-                            item['txn_type'] = 'Buy'
-                            item['Selling_price'] = str(i.xpath('a/div/span[1]/text()').extract_first().replace("INR","").strip())
+                            item['txn_type'] = 'Sale'
+                            item['Selling_price'] = str(i.xpath('a/div/span[1]/text()').extract_first().replace("INR","").replace(',','').strip())
                             item['Monthly_Rent'] = '0'
                         item['lat'] = i.xpath('input[1]/@value').extract_first().split(' ')[0]
                         item['longt'] = i.xpath('input[1]/@value').extract_first().split(' ')[1]
@@ -68,7 +68,7 @@ class JagahaSpider(Spider):
                         item['name_lister'] = 'None'
                         item['config_type'] = 'None'
                         item['mobile_lister'] = 'None'
-                        item['Launch_date'] = 'None'
+                        item['Launch_date'] = '0'
                         item['areacode'] = 'None'
                         item['management_by_landlord'] = 'None'
                         item['sublocality'] = 'None'
@@ -102,6 +102,13 @@ class JagahaSpider(Spider):
         item['Possession'] = x.xpath('div[3]/div[5]/span/text()').extract_first()
         item['age'] = x.xpath('div[3]/div[7]/span/text()').extract_first()
         item['locality'] = x.xpath('div[2]/p[4]/strong/text()').extract_first()
+        
+        if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0'))):
+            item['quality4'] = 1
+        elif (((not item['price_per_sqft'] == '0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None'))):
+            item['quality4'] = 0.5
+        else:
+            item['quality4'] = 0
         if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
             item['quality1'] = 1
         else:

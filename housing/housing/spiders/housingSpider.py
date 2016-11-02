@@ -14,7 +14,7 @@ class HousingSpider(scrapy.Spider):
     name = 'housing'
     
     allowed_domains = ['housing.com']
-    start_urls = ['https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=32964110855b9736fd94&p=1&sort_key=date_added&show_collections=true&show_aggregations=true&placeholder_ids=6,2,3,7&p=1']
+    start_urls = ['https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1ca99c33e3d8b987ccf1&sort_key=date_added&total=27998&np_total_count=1888&resale_total_count=26110&np_offset=0&resale_offset=0&is_last_page=false&project_flat_config_count=5244&negative_aggregation={}&show_collections=true&show_aggregations=true&placeholder_ids=2,3,6,7&p=1']
     #https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1ca99c33e3d8b987ccf1&sort_key=date_added&show_collections=true&show_aggregations=true&placeholder_ids=6,2,3,7&p=1
 
     custom_settings = {
@@ -39,6 +39,11 @@ class HousingSpider(scrapy.Spider):
 
                 item['txn_type'] = path[i]['type']
 
+                try:
+                    item['Building_name'] = path[i]['name']
+                except:
+                    item['Building_name'] = 'None'
+
                 item['property_type'] = 'Residential'
 
                 dates = path[i]['date_added'].replace('T',' ').replace('Z','')
@@ -54,7 +59,7 @@ class HousingSpider(scrapy.Spider):
 
                 item['Bua_sqft'] = path[i]['inventory_configs'][j]['area']
 
-                item['config_type'] = str(path[i]['inventory_configs'][j]['number_of_bedrooms']) + ' BHK'
+                item['config_type'] = str(path[i]['inventory_configs'][j]['number_of_bedrooms']) + 'BHK'
 
                 pos = path[i]['inventory_configs'][j]['completion_date']
                 item['Possession'] = time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(pos))
@@ -88,21 +93,26 @@ class HousingSpider(scrapy.Spider):
                 item['areacode'] = 'None'
                 item['mobile_lister'] = 'None'
                 item['google_place_id'] = 'None'
-                item['Launch_date'] = 'None'
+                item['Launch_date'] = '0'
                 item['age'] = 'None'
                 item['address'] = 'None'
                 item['sublocality'] = 'None'
                 item['platform'] = 'housing'
-                item['Building_name'] = 'None'
                 item['Status'] = 'None'
                 item['listing_by'] = 'None'
                 item['Details'] = 'None'
 
-                if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
+                if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0'))):
+                    item['quality4'] = 1
+                elif (((not item['price_per_sqft'] == '0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None'))):
+                    item['quality4'] = 0.5
+                else:
+                    item['quality4'] = 0
+                if ((not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
                     item['quality1'] = 1
                 else:
                     item['quality1'] = 0
-                if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
+                if ((not item['Launch_date'] == '0') and (not item['Possession'] == '0')):
                     item['quality2'] = 1
                 else:
                     item['quality2'] = 0
@@ -114,5 +124,5 @@ class HousingSpider(scrapy.Spider):
                 yield item
 
         if data['is_last_page']==False:
-            next_url = 'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=32964110855b9736fd94&p=1&sort_key=date_added&show_collections=true&show_aggregations=true&placeholder_ids=6,2,3,7&p='+str(pageNo+1)
+            next_url = 'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1ca99c33e3d8b987ccf1&sort_key=date_added&total=27998&np_total_count=1888&resale_total_count=26110&np_offset=0&resale_offset=0&is_last_page=false&project_flat_config_count=5244&negative_aggregation={}&show_collections=true&show_aggregations=true&placeholder_ids=2,3,6,7&p='+str(pageNo+1)
             yield Request(next_url,callback=self.parse)

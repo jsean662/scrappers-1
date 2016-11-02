@@ -13,167 +13,147 @@ from makkan.items import Website
 from scrapy.loader import ItemLoader
 import time
 import unicodedata
+import json
 import time
 import datetime
 from datetime import datetime as dt
+import re
+
 class MakaanSpider(CrawlSpider):
     name = "makaanSpider"
     
     allowed_domains = ['makaan.com']
-    start_urls = ["https://www.makaan.com/listings?listingType=buy&pageType=LISTINGS_PROPERTY_URLS&cityName=Mumbai&cityId=18&templateId=MAKAAN_CITY_LISTING_BUY&page=1","https://www.makaan.com/listings?listingType=rent&pageType=CITY_URLS&cityName=Mumbai&cityId=18&templateId=MAKAAN_CITY_LISTING_BUY&page=1"]     
-    data_id_list = []
-    #for i in range(2, 40) :
-        #start_urls.append(start_urls + "/?page=" + i)
-    rules = (Rule(LinkExtractor(deny=(), allow=('http://www.makaan.com/'),), callback='parse_item', follow=True, ),)
-  #  def parse(self, response):
-    
+    start_urls = [  
+                   "https://www.makaan.com/listings?listingType=buy&pageType=LISTINGS_PROPERTY_URLS&cityName=Mumbai&cityId=18&templateId=MAKAAN_CITY_LISTING_BUY&page=1",
+                   "https://www.makaan.com/listings?listingType=rent&pageType=CITY_URLS&cityName=Mumbai&cityId=18&templateId=MAKAAN_CITY_LISTING_BUY&page=1"
+                ]
+     
+    item = Website()
     def parse(self, response):
-        #self.log("Scraping: %s" % response.url, level=log.INFO)
-        #time.sleep(2.5)
-        handle_httpstatus_list = [404 , 502, 500 , 408, 400] 
         hxs = Selector(response)
         P = "//div[@class='cardholder']"
         a = hxs.xpath(P)
-        sale = hxs.xpath("//div/div[@class='srow']/div/div[@class='f-count-wrap']/h1/text()").extract_first()
-        c1 = dt.strftime(dt.strptime("2015-01-01","%Y-%m-%d"),"%m/%d/%Y")
-        c2 = dt.strftime(dt.strptime(str(dt.now().date()),"%Y-%m-%d"),"%m/%d/%Y")
         
         for i in a:
-            base_url = "https://www.makaan.com"
+            detail = i.xpath('div[@class="cardWrapper"]/script/text()').extract_first()
+            data = json.loads(detail)
+
+            self.item['age'] = 'None'
+            self.item['Possession'] = '0'
+            self.item['Details'] = 'None'
+            self.item['carpet_area'] = '0'
+            self.item['management_by_landlord'] = 'None'
+            self.item['areacode'] = 'None'
+            self.item['mobile_lister'] = 'None'
+            self.item['google_place_id'] = 'None'
+            self.item['Launch_date'] = '0'
+            self.item['address'] = 'None'
+            self.item['listing_by'] = 'None'
+            self.item['sublocality'] = 'None'
             
-            item = Website()
-            s = i.xpath("div[@class='cardWrapper']/script/text()").extract_first()
-            
-            dt5 = s.split('"verificationDate"')[1].split(',')[0].split('"')[1]#[-21].split('"')[1]
-          #  print dt5
-            number = int(dt5) * 0.001
-            dt2 = time.strftime('%m/%d/%Y %H:%M:%S', time.gmtime(number))
-            
-            dt3 = dt2.split()[0]
+            self.item['property_type'] = data['propertyType']
 
-          #  print dt1
+            self.item['platform'] = 'makaan'
 
-            if c1 < dt3 < c2:
-                data_id = i.xpath('div/@data-listing-id').extract()
-                if data_id not in self.data_id_list:
-                    self.data_id_list.append(data_id)
+            self.item['data_id'] = data['id']
 
-                    item['listing_date'] = dt2
-                    
-                    item['platform'] = 'makaan'
-                    
-                    item['txn_type'] = sale.split('in Mumbai')[0].split('for')[1]
-                    item['data_id'] = i.xpath("div/@data-listing-id").extract()
-                    
-                    sell = i.xpath("div/div/div[2]/div[1]/div[1]/div[1]/div[1]/div/span[1]/meta[1]/@content").extract_first()
-                    
-                    if sell.find("Cr") :
-        	        	sell1 = i.xpath("div/div/div[2]/div[1]/div[1]/div[1]/div[1]/div/span[1]/meta[1]/@content").extract_first().split()[-1]
-        	        	if sell1 == 'Cr':
-        	        		sell2 = sell.split()[0]
-        	        		sell3 = float(sell2)*10000000
-        	        		item['Selling_price']= str(sell3)
-                		elif sell1 =='L':
-                			sell2 = sell.split()[0]
-                			sell3 = float(sell2)*100000
-        	        		item['Selling_price'] = str(sell3)
-        	        	else:
-        	        		sell2 = sell
-        	        		item['Selling_price'] = str(sell2)
+            self.item['name_lister'] = data['builderName']
+            if self.item['name_lister'] == '':
+                self.item['name_lister'] = 'None'
 
-                  
-             	    item['price_per_sqft'] = str(i.xpath("div/div/div[2]/div[1]/div[1]/div[1]/div[2]/span/text()").extract()).replace('[','').replace(']','').replace('u','').replace('/','').replace(' sq ft','').replace("'","").replace(',','')
-                    if item['price_per_sqft'] == '':
-                        item['price_per_sqft'] = 'None'
-                    item['config_type'] = i.xpath("div/div/div[2]/div[1]/div[2]/div/h2/a/span/span/text()").extract()
-                    try:
-                            item['Bua_sqft'] = i.xpath("div/div/div[2]/div[1]/div[2]/span/text()").extract_first().replace("sq ft","")
-                    except AttributeError:
-                            item['Bua_sqft'] = '0'
-                    item['Building_name'] = str(i.xpath("div/div/div[2]/div[2]/div/span[1]/a/span/text()").extract_first())
-                    if item['Building_name'] == '':
-                        item['Building_name'] = 'None'
-                    item['locality'] = i.xpath("div/div/div[2]/div[2]/div/span/span[1]/a/span/text()").extract()
-                    r = i.xpath("div/div/div[2]/div[2]/div/span/span[2]/text()").extract_first()
-                    item['city'] = r.encode('ascii','ignore')#.replace('\\xa0', ' ')
-                    s = i.xpath("div/div/div[2]/div[3]/div[1]/div[1]/text()").extract_first()
-                    item['Status'] = s
-                    item['age'] = 'None'
-                    if s == 'Ready to move':
-                        item['age'] = str(i.xpath("div/div/div[2]/div[3]/div[@class='dcol age']/div[1]/text()").extract_first().strip())
-                        
-                    item['name_lister'] = i.xpath("div/div/div[4]/div/div[2]/span[1]/text()").extract()
-                    r1 = i.xpath("div/div/div[4]/div/div[2]/span[2]/text()").extract()
-                    item['listing_by'] = str(r1).split("(")[1].split(")")[0]
-                    item['mobile_lister'] = i.xpath("div/div/div[4]/div[2]/a/@data-sellerphone").extract_first()
-                    item['property_type'] = 'Residential'
-                    item['Details'] = 'None'
-                    item['Monthly_Rent'] = '0'
-                    item['carpet_area'] = 'None'
-                    item['management_by_landlord'] = 'None'
-                    item['updated_date'] = item['listing_date']
-                    item['areacode'] = 'None'
-                    item['google_place_id'] = 'None'
-                    item['Launch_date'] = 'None'
-                    item['Possession'] = 'None'
-                    item['address'] = 'None'
-                    item['sublocality'] = 'None'
-                    
-                    if item['Selling_price'] == '0' and item['Monthly_Rent'] == '0':
-                        item['price_on_req'] = 'true'
-                    else:
-                        item['price_on_req'] = 'false'
-                    s1 = i.xpath("div/script/text()").extract_first()
-                    dt1 = s1.split('"listingUrl"')[1].split(',')[0].split('"')[1]
-                    #print dt1
+            self.item['lat'] = data['latitude']
+            if self.item['lat'] == '':
+                self.item['lat'] = '0'
 
-                    url1 = base_url + str(dt1)
+            self.item['longt'] = data['longitude']
+            if self.item['longt'] == '':
+                self.item['longt'] = '0'
 
-                    yield Request(url1, callback=self.parse_item,  meta={'item': item}, dont_filter = True)
-                
-                sel = Selector(response)
-               
-                item = Website()
-                listing_count = sel.xpath('//div[@class="list-mainarea"]/div[@data-module="listingsWrapper"]/script/text()').extract_first().split()[1].split('"listingCount":')[-1]
-                max_page = sel.xpath('//div[@class="search-result-footer"]/div[@data-module="pagination"]/script/text()').extract_first().split()[1].split('"totalPages":')[-1]
+            self.item['locality'] = data['localityName']
 
-                if int(listing_count) != 0:
-            
-                    url = response.url.split('&')
-                    page = url[-1].split("=")
-                    #print page
-                    
-                    page[-1] = str(int(page[-1]) + 1)
-                    if int(page[-1]) < int(max_page):
-                        url[-1] = '='.join(page)
-                        url = '&'.join(url)
-                        yield Request(url,callback=self.parse)
-            
-        
-    def parse_item(self,response):
-        hxs = Selector(response)
-        item = response.meta['item']
-        P = "//div[@class='map-area']"
+            self.item['city'] = data['cityName']
 
-        a = hxs.xpath(P)
-        for i in a:
-            s = i.xpath("div[@data-module='mapsModule']/script/text()").extract()
-            item['lat'] = str(s).split('"')[3]
-            item['longt'] = str(s).split('"')[7]
+            self.item['Building_name'] = data['fullName']
+            if self.item['Building_name'] == '':
+                self.item['Building_name'] = 'None'
 
-            if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
-                item['quality1'] = 1
+            self.item['config_type'] = data['bedrooms']+'BHK'
+
+            self.item['txn_type'] = data['listingCategory']
+            if 'mary' in self.item['txn_type']:
+                self.item['txn_type'] = 'Sale'
+
+            if 'ale' in self.item['txn_type']:
+                self.item['Selling_price'] = data['price']
+                self.item['Monthly_Rent'] = '0'
+            if 'ntal' in self.item['txn_type']:
+                self.item['Monthly_Rent'] = data['price']
+                self.item['Selling_price'] = '0'
+
+            if self.item['Selling_price'] == '0' and self.item['Monthly_Rent'] == '0':
+                self.item['price_on_req'] = 'true'
             else:
-                item['quality1'] = 0
-            
-            if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
-                item['quality2'] = 1
-            else:
-                item['quality2'] = 0
+                self.item['price_on_req'] = 'false'
 
-            if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None')):
-                item['quality3'] = 1
+            self.item['Status'] = data['projectStatus']
+            if self.item['Status'] == '':
+                self.item['Status'] = 'None'
+
+            try:
+                dat = int(data['verificationDate'])/1000
+                self.item['listing_date'] = time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(dat))
+                self.item['updated_date'] = self.item['listing_date']
+            except:
+                self.item['listing_date'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+                self.item['updated_date'] = self.item['listing_date']
+
+            if 'ale' in self.item['txn_type']:
+                prc_pr_sf = i.xpath('div[@class="cardWrapper"]/div[@class="cardLayout clearfix"]/div[@class="infoWrap"]/div[@class="headInfo"]/div[@class="priceWrap"]/div[@class="price-rate-col"]/div[@class="rate"]/span[@class="val"]/text()').extract_first()
+                self.item['price_per_sqft'] = re.findall('[0-9]+',prc_pr_sf)
+                self.item['price_per_sqft'] = ''.join(self.item['price_per_sqft'])
             else:
-                item['quality3'] = 0
-            yield item
-        
+                self.item['price_per_sqft'] = '0'
+
+            sqf = i.xpath('.//span[@class="size"]/text()').extract_first()
+            try:
+                self.item['Bua_sqft'] = re.findall('[0-9]+',sqf)
+                self.item['Bua_sqft'] = ''.join(self.item['Bua_sqft'])
+            except:
+                self.item['Bua_sqft'] = '0'
+
+            if 'onstruction' in self.item['Status']:
+                try:
+                    date = i.xpath('div[@class="cardWrapper"]/div[@class="cardLayout clearfix"]/div[@class="infoWrap"]/div[@class="highlight-points"]/div[@class="dcol poss"]/div[1]/text()').extract_first()
+                    self.item['Possession'] = dt.strftime(dt.strptime(date,'%b %Y'),'%m/%d/%Y %H:%M:%S')
+                except:
+                    print date
+            elif 'esale' in self.item['txn_type']:
+                self.item['age'] = i.xpath('div[@class="cardWrapper"]/div[@class="cardLayout clearfix"]/div[@class="infoWrap"]/div[@class="highlight-points"]/div[@class="dcol poss"]/div[@class="val ''"]/text()').extract_first()
+
+            if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0'))):
+                self.item['quality4'] = 1
+            elif (((not self.item['price_per_sqft'] == '0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['lat']=='0')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None'))):
+                self.item['quality4'] = 0.5
+            else:
+                self.item['quality4'] = 0
+            if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == '0') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
+                self.item['quality1'] = 1
+            else:
+                self.item['quality1'] = 0
+
+            if ((not self.item['Launch_date'] == '0') or (not self.item['Possession'] == '0')):
+                self.item['quality2'] = 1
+            else:
+                self.item['quality2'] = 0
+
+            if ((not self.item['mobile_lister'] == 'None') or (not self.item['listing_by'] == 'None') or (not self.item['name_lister'] == 'None')):
+                self.item['quality3'] = 1
+            else:
+                self.item['quality3'] = 0
+
+            yield self.item
+
+        if 'cardholder' in str(response.body):
+            cur_page = int(response.url.split('=')[-1])
+            next_url = '='.join(response.url.split('=')[:-1])+'='+str(cur_page+1)
+            yield Request(next_url,callback=self.parse)

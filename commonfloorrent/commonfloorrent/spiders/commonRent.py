@@ -49,12 +49,10 @@ class CommonRentSpider(CrawlSpider):
 			Assigning default values to self.items 
 			'''
 			self.item['management_by_landlord'] = 'None'
-			self.item['listing_date'] = 'None'
-			self.item['updated_date'] = 'None'
 			self.item['areacode'] = 'None'
 			self.item['mobile_lister'] = 'None'
 			self.item['google_place_id'] = 'None'
-			self.item['Launch_date'] = 'None'
+			self.item['Launch_date'] = '0'
 			self.item['age'] = 'None'
 			self.item['address'] = 'None'
 			self.item['sublocality'] = 'None'
@@ -63,6 +61,8 @@ class CommonRentSpider(CrawlSpider):
 			self.item['price_per_sqft'] = '0'
 			self.item['listing_by'] = 'None'
 			self.item['name_lister'] = 'None'
+			self.item['listing_date'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+			self.item['updated_date'] = self.item['listing_date']
 
 			self.item['platform'] = 'commonfloor'
 
@@ -76,7 +76,10 @@ class CommonRentSpider(CrawlSpider):
 
 			self.item['property_type'] = 'Residential'
 
-			self.item['Building_name'] = response.xpath('//span[@class="subH1"]/text()').extract_first().split('in ')[-1].split(self.item['locality'])[0]
+			try:
+				self.item['Building_name'] = response.xpath('//span[@class="subH1"]/text()').extract_first().split('in ')[-1].split(self.item['locality'])[0].replace('at ','')
+			except:
+				self.item['Building_name'] = 'None'
 
 			price = response.xpath('//div[@class="project-detail row card"]/div/div[@class="row"]/div[1]/div[1]/p[@class="proj-value"]/span/text()').extract_first()
 			if 'Lakh' in price:
@@ -107,13 +110,14 @@ class CommonRentSpider(CrawlSpider):
 				self.item['carpet_area'] = '0'
 
 			self.item['config_type'] = response.xpath('//div[@class="project-unit row card unit-detail-widget"]/div/div[@class="row"]/div/div[@class="row firstRow"]/div[1]/p/span[1]/text()').extract_first()+'BHK'
+			self.item['config_type'] = self.item['config_type'].replace(' ','')
 
 			try:
 				dates = response.xpath('//div[@class="project-detail row card"]/div/div[@class="row"]/div[2]/div[1]/p[2]/text()').extract_first().replace("'",'20')
 				self.item['Possession'] = dt.strftime(dt.strptime(dates,"%b%Y"),"%m/%d/%Y %H:%M:%S")
 			except:
 				logging.log(logging.ERROR,dates)
-				self.item['Possession'] = 'None'
+				self.item['Possession'] = '0'
 
 			self.item['Details'] = response.xpath('//p[@class="propStatus"]/text()').extract()
 
@@ -130,19 +134,28 @@ class CommonRentSpider(CrawlSpider):
 					self.item['listing_date'] = dt.strftime(dt.strptime(list1,"%d %b"),"%m/%d")+"/2016 00:00:00"
 					self.item['updated_date'] = self.item['listing_date']
 				except:
-					self.item['listing_date'] = 'None'
-					self.item['updated_date'] = 'None'
+					self.item['listing_date'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+					self.item['updated_date'] = self.item['listing_date']
 
 			self.item['Bua_sqft'] = [ area for area in self.item['Details'] if 'Sq. Ft.' in area][0].replace(' Sq. Ft.','')
 
 			self.item['Status'] = [stat for stat in self.item['Details'] if (('Unfurnished' in stat) or ('semi' in stat) or ('fully' in stat))]
+			self.item['Status'] = ''.join(self.item['Status'])
 
-			if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == 'None') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
+			self.item['Details'] = ''.join(self.item['Details'])
+
+			if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0'))):
+				self.item['quality4'] = 1
+			elif (((not self.item['price_per_sqft'] == '0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['lat']=='0')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None'))):
+				self.item['quality4'] = 0.5
+			else:
+				self.item['quality4'] = 0
+			if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == '0') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
 				self.item['quality1'] = 1
 			else:
 				self.item['quality1'] = 0
 
-			if ((not self.item['Launch_date'] == 'None') or (not self.item['Possession'] == 'None')):
+			if ((not self.item['Launch_date'] == '0') or (not self.item['Possession'] == '0')):
 				self.item['quality2'] = 1
 			else:
 				self.item['quality2'] = 0

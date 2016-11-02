@@ -36,4 +36,4 @@ class Website(Item):
     quality1 = Field()
     quality2 = Field()
     quality3 = Field()
-    
+    quality4 = Field()

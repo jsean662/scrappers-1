@@ -9,14 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'acres'
+BOT_NAME = '99acres'
 
 SPIDER_MODULES = ['acres.spiders']
 NEWSPIDER_MODULE = 'acres.spiders'
 
-
+ROBOTSTXT_OBEY = False
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'acres (+http://www.yourdomain.com)'
+USER_AGENT = '99acres (+https://www.google.com)'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS=32

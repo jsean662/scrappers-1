@@ -33,19 +33,17 @@ class BookFlat(CrawlSpider):
 			self.item['price_per_sqft'] = '0'
 			self.item['Selling_price'] = '0'
 			self.item['Monthly_Rent'] = '0'
-			self.item['updated_date'] = 'None'
 			self.item['management_by_landlord'] = 'None'
 			self.item['areacode'] = 'None'
 			self.item['mobile_lister'] = 'None'
 			self.item['google_place_id'] = 'None'
-			self.item['Launch_date'] = 'None'
-			self.item['Possession'] = 'None'
+			self.item['Launch_date'] = '0'
+			self.item['Possession'] = '0'
 			self.item['age'] = 'None'
 			self.item['address'] = 'None'
 			self.item['price_on_req'] = 'None'
 			self.item['sublocality'] = 'None'
 			self.item['config_type'] = 'None'
-			self.item['listing_date'] = 'None'
 			self.item['txn_type'] = 'None'
 			self.item['property_type'] = 'None'
 			self.item['Building_name'] = 'None'
@@ -55,6 +53,8 @@ class BookFlat(CrawlSpider):
 			self.item['name_lister'] = 'None'
 			self.item['Details'] = 'None'
 			self.item['data_id'] = 'None'
+			self.item['listing_date'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+			self.item['updated_date'] = self.item['listing_date']
 
 			self.item['property_type'] = 'Residential'
 			self.item['city'] = 'Mumbai'
@@ -90,9 +90,12 @@ class BookFlat(CrawlSpider):
 					self.item['txn_type'] = 'Rent'
 
 			try:
-				self.item['config_type'] = i.xpath('ul[@class="cardFeat"]/li[1]/text()').extract_first().strip()
+				self.item['config_type'] = i.xpath('ul[@class="cardFeat"]/li[1]/text()').extract_first().strip()+'BHK'
 			except:
 				self.item['config_type'] = '0'
+
+			self.item['listing_date'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+			self.item['updated_date'] = self.item['listing_date']
 
 			try:
 				sqf = i.xpath('ul[@class="cardFeat"]/li[3]/text()').extract_first().strip()
@@ -104,12 +107,18 @@ class BookFlat(CrawlSpider):
 				except:
 					self.item['Bua_sqft'] = '0'
 
-			if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == 'None') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
+			if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0'))):
+				self.item['quality4'] = 1
+			elif (((not self.item['price_per_sqft'] == '0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['lat']=='0')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None'))):
+				self.item['quality4'] = 0.5
+			else:
+				self.item['quality4'] = 0
+			if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == '0') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
 				self.item['quality1'] = 1
 			else:
 				self.item['quality1'] = 0
 
-			if ((not self.item['Launch_date'] == 'None') or (not self.item['Possession'] == 'None')):
+			if ((not self.item['Launch_date'] == '0') or (not self.item['Possession'] == '0')):
 				self.item['quality2'] = 1
 			else:
 				self.item['quality2'] = 0

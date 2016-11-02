@@ -39,10 +39,10 @@ class MagicSpider(scrapy.Spider):
 				item['sublocality'] = 'None'
 				item['age'] = 'None'
 				item['google_place_id'] = 'None'
-				item['lat'] = 0
-				item['longt'] = 0
-				item['Possession'] = 'None'
-				item['Launch_date'] = 'None'
+				item['lat'] = '0'
+				item['longt'] = '0'
+				item['Possession'] = '0'
+				item['Launch_date'] = '0'
 				item['mobile_lister'] = 'None'
 				item['areacode'] = 'None'
 				item['management_by_landlord'] = 'None'
@@ -75,7 +75,7 @@ class MagicSpider(scrapy.Spider):
 					item['config_type'] = i.xpath('div/div[@class="srpColm2"]/div[@class="proColmleft"]/div[1]/div/p/a/input[contains(@id,"bedroomVal")]/@value').extract_first()+'BHK'
 					if item['config_type'] == 'BHK':
 						if 'Studio' in i.xpath('div/div[@class="srpColm2"]/div[@class="proColmleft"]/div[1]/div/p/a/input[contains(@id,"propertyVal")]/@value').extract_first():
-							item['config_type'] = 'Studio'
+							item['config_type'] = '1RK'
 				except:
 					item['config_type'] = 'None'
 			
@@ -132,12 +132,18 @@ class MagicSpider(scrapy.Spider):
 			
 				item['updated_date'] = item['listing_date']
 			
-				if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
+				if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0'))):
+					item['quality4'] = 1
+				elif (((not item['price_per_sqft'] == '0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None'))):
+					item['quality4'] = 0.5
+				else:
+					item['quality4'] = 0
+				if ((not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
 					item['quality1'] = 1
 				else:
 					item['quality1'] = 0
 		
-				if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
+				if ((not item['Launch_date'] == '0') and (not item['Possession'] == '0')):
 					item['quality2'] = 1
 				else:
 					item['quality2'] = 0
@@ -149,17 +155,7 @@ class MagicSpider(scrapy.Spider):
 				yield item
 
 			cur = int(response.url.split('-')[-1])
-			# next = response.xpath('//div[@id="pagination"]/span/a[last()]/@href').extract_first()
-			# print next
-			# if ((not next==None) and (not 'javascript:void(0)' in next)):
-			# 	next_page = next.split('-')[-1]
-			# 	next_url = '-'.join(response.url.split('-')[:-1])+'-'+str(next_page)
-			# 	print next_url
-			# 	yield Request(next_url,callback=self.parse)
-			# elif ('pagination' in str(response.body)):
-			# 	next_url = '-'.join(response.url.split('-')[:-1])+'-'+str(cur+1)
-			# 	print next_url
-			# 	yield Request(next_url,callback=self.parse)
+			
 			if not 'noResultContainer' in str(response.body):
 				next_url = '-'.join(response.url.split('-')[:-1])+'-'+str(cur+1)
 				yield Request(next_url,callback=self.parse)

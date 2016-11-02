@@ -46,3 +46,4 @@ class JagaItem(scrapy.Item):
     quality1 = scrapy.Field()
     quality2 = scrapy.Field()
     quality3 = scrapy.Field()
+    quality4 = scrapy.Field()

@@ -82,13 +82,13 @@ class PropRentSpider(Spider):
 				dt1 = int(path[i]['currentListingPrice']['createdAt'] * 0.001)
 				item['listing_date'] = time.strftime('%m/%d/%Y %H:%M:%S', time.gmtime(dt1))
 			except:
-				item['listing_date'] = 'None'
+				item['listing_date'] = '0'
 			
 			try:
 				dt2 = int(path[i]['currentListingPrice']['updatedAt'] * 0.001)
 				item['updated_date'] = time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(dt2))
 			except:
-				item['updated_date'] = 'None'
+				item['updated_date'] = '0'
 
 			try:
 				item['lat'] = path[i]['latitude']
@@ -153,7 +153,7 @@ class PropRentSpider(Spider):
 				dt3 = int(path[i]['property']['project']['launchDate'] * 0.001)
 				item['Launch_date'] = str(time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(dt3)))
 			except:
-				item['Launch_date'] = 'None'
+				item['Launch_date'] = '0'
 
 			try:
 				item['address'] = path[i]['property']['project']['address']
@@ -164,7 +164,7 @@ class PropRentSpider(Spider):
 				dt4 = int(path[i]['property']['project']['possessionDate'] * 0.001)
 				item['Possession'] = str(time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(dt4)))
 			except:
-				item['Possession'] = 'None'
+				item['Possession'] = '0'
 			
 			try:
 				item['Status'] = path[i]['property']['project']['projectStatus']
@@ -189,12 +189,18 @@ class PropRentSpider(Spider):
 
 			item['Details'] = path[i]['property']['project']['description']
 
-			if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
+			if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0'))):
+				item['quality4'] = 1
+			elif (((not item['price_per_sqft'] == '0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None'))):
+				item['quality4'] = 0.5
+			else:
+				item['quality4'] = 0
+			if ((not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
 				item['quality1'] = 1
 			else:
 				item['quality1'] = 0
 			
-			if ((not item['Launch_date'] == 'None') and (not item['Possession'] == 'None')):
+			if ((not item['Launch_date'] == '0') and (not item['Possession'] == '0')):
 				item['quality2'] = 1
 			else:
 				item['quality2'] = 0

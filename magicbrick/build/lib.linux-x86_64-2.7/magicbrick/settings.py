@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'magicbrick.spiders'
 
 ROBOTSTXT_OBEY = False
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'magicbrick (+http://www.yourdomain.com)'
+USER_AGENT = 'magicbricks (+https://www.google.com)'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS=16

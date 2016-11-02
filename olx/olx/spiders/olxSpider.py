@@ -45,25 +45,25 @@ class MySpider(CrawlSpider):
         self.item['Bua_sqft'] = '0'
         self.item['carpet_area'] = '0'
         self.item['price_per_sqft'] = '0'
-        self.item['updated_date'] = 'None'
         self.item['management_by_landlord'] = 'None'
         self.item['areacode'] = 'None'
         self.item['mobile_lister'] = 'None'
         self.item['google_place_id'] = 'None'
         self.item['Launch_date'] = 'None'
-        self.item['Possession'] = 'None'
+        self.item['Possession'] = '0'
         self.item['age'] = 'None'
         self.item['address'] = 'None'
         self.item['price_on_req'] = 'false'
         self.item['sublocality'] = 'None'
         self.item['config_type'] = 'None'
-        self.item['listing_date'] = 'None'
+        self.item['listing_date'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+        self.item['updated_date'] = self.item['listing_date']
         self.item['txn_type'] = 'None'
         self.item['property_type'] = 'None'
         self.item['Building_name'] = 'None'
         self.item['locality'] = 'None'
-        self.item['price_per_sqft'] = 'None'
-        self.item['Bua_sqft'] = 'None'
+        self.item['price_per_sqft'] = '0'
+        self.item['Bua_sqft'] = '0'
         self.item['Status'] = 'None'
         self.item['listing_by'] = 'None'
         self.item['name_lister'] = 'None'
@@ -104,12 +104,12 @@ class MySpider(CrawlSpider):
         try:
             conf = response.xpath('//a[contains(@title,"room")]/text()').extract_first().strip()
             if (not conf==None):
-                self.item['config_type'] = re.findall('[0-9]',conf)[0]+' BHK'
+                self.item['config_type'] = re.findall('[0-9]',conf)[0]+'BHK'
         except:
             try:
                 conf1 = response.xpath('//a[contains(@title,"more")]/text()').extract_first().strip()
                 if (not conf1==None):
-                    self.item['config_type'] = re.findall('[0-9]',conf1)[0]+' BHK'
+                    self.item['config_type'] = re.findall('[0-9]',conf1)[0]+'BHK'
             except:
                 print 'No config '+' -->>'+str(response.url)
                 self.item['config_type'] = 'None'
@@ -137,12 +137,18 @@ class MySpider(CrawlSpider):
         except:
             print 'No Sqft -->>'+str(response.url)
 
-        if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == 'None') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
+        if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0'))):
+            self.item['quality4'] = 1
+        elif (((not self.item['price_per_sqft'] == '0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['lat']=='0')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None'))):
+            self.item['quality4'] = 0.5
+        else:
+            self.item['quality4'] = 0
+        if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == '0') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
             self.item['quality1'] = 1
         else:
             self.item['quality1'] = 0
 
-        if ((not self.item['Launch_date'] == 'None') or (not self.item['Possession'] == 'None')):
+        if ((not self.item['Launch_date'] == '0') or (not self.item['Possession'] == '0')):
             self.item['quality2'] = 1
         else:
             self.item['quality2'] = 0
