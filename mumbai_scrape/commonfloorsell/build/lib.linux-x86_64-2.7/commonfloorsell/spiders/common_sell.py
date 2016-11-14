@@ -75,7 +75,7 @@ class CommonSellSpider(CrawlSpider):
 			self.item['property_type'] = 'Residential'
 
 			try:
-				self.item['Building_name'] = response.xpath('//span[@class="subH1"]/text()').extract_first().split('in ')[-1].split(self.item['locality'])[0]
+				self.item['Building_name'] = response.xpath('//span[@class="subH1"]/text()').extract_first().split('in ')[-1].split(self.item['locality'])[0].replace('at ','')
 			except:
 				self.item['Building_name'] = 'None'
 

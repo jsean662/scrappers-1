@@ -17,8 +17,7 @@ import re
 class MagicSpider(scrapy.Spider):
 	name = 'magicSpider'
 	allowed_domains = ['magicbricks.com']
-	start_urls = ['http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Mumbai/Page-462']
-	#http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Navi-Mumbai/Page-1
+	start_urls = ['http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Mumbai/Page-376']
 	custom_settings = {
 			'DEPTH_LIMIT' : 10000,
 			'DOWNLOAD_DELAY': 5
@@ -29,6 +28,8 @@ class MagicSpider(scrapy.Spider):
 
 			data = hxs.xpath('//div[contains(@id,"resultBlockWrapper")]')
 	
+			#ttl_itm = int(hxs.xpath('//span[@id="resultCount"]/text()').extract_first())
+			# print ttl_itm
 			for i in data:
 				item = MagicbrickItem()
 		
@@ -80,7 +81,10 @@ class MagicSpider(scrapy.Spider):
 					item['config_type'] = 'None'
 			
 				sqf = i.xpath('.//input[contains(@id,"propertyArea")]/@value').extract_first()
-				item['Bua_sqft'] = re.findall('[0-9]+',sqf)[0]
+				if (not sqf==None):
+					item['Bua_sqft'] = re.findall('[0-9]+',sqf)[0]
+				if sqf==None:
+					item['Bua_sqft'] = '0'
 			
 				item['city'] = 'Mumbai'
 			
@@ -112,9 +116,10 @@ class MagicSpider(scrapy.Spider):
 					sqft_per = i.xpath('div/div[@class="srpColm2"]/div[@class="proColmRight"]/div[@class="proPriceColm2"]/div[@class="proPriceColm2"]/div[@class="sqrPrice"]/span[@class="sqrPriceField"]/text()').extract_first()
 					if (not sqft_per==None):
 						item['price_per_sqft'] = ''.join(re.findall('[0-9]+',sqft_per))
+					if sqft_per==None:
+						item['price_per_sqft'] = '0'
 				except:
 					item['price_per_sqft'] = '0'
-			
 				try:
 					item['name_lister'] = i.xpath('div/div[@class="srpColm2"]/div[@class="proColmleft"]/div[@class="proDetailsRow "]/input[contains(@id,"devName")]/@value').extract_first()
 					if item['name_lister']=='':
@@ -156,6 +161,9 @@ class MagicSpider(scrapy.Spider):
 
 			cur = int(response.url.split('-')[-1])
 			
-			if not 'noResultContainer' in str(response.body):
+			# if cur <= (ttl_itm/25)+1:
+			# 	next_url = '-'.join(response.url.split('-')[:-1])+'-'+str(cur+1)
+			# 	yield Request(next_url,callback=self.parse)
+			if not 'noSearchResultPageDiv' in str(response.body):
 				next_url = '-'.join(response.url.split('-')[:-1])+'-'+str(cur+1)
 				yield Request(next_url,callback=self.parse)

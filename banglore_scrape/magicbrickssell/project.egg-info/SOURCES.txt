@@ -1,0 +1,12 @@
+setup.py
+magicbrickssell/__init__.py
+magicbrickssell/items.py
+magicbrickssell/pipelines.py
+magicbrickssell/settings.py
+magicbrickssell/spiders/__init__.py
+magicbrickssell/spiders/magicbricksSell.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
