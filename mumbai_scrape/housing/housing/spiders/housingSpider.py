@@ -11,11 +11,10 @@ from datetime import date
 import time
 
 class HousingSpider(scrapy.Spider):
-    name = 'housing'
+    name = 'housingMumbai'
     
     allowed_domains = ['housing.com']
     start_urls = ['https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1ca99c33e3d8b987ccf1&sort_key=date_added&total=27998&np_total_count=1888&resale_total_count=26110&np_offset=0&resale_offset=0&is_last_page=false&project_flat_config_count=5244&negative_aggregation={}&show_collections=true&show_aggregations=true&placeholder_ids=2,3,6,7&p=1']
-    #https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1ca99c33e3d8b987ccf1&sort_key=date_added&show_collections=true&show_aggregations=true&placeholder_ids=6,2,3,7&p=1
 
     custom_settings = {
         'DEPTH_LIMIT' : 5000,
@@ -84,6 +83,8 @@ class HousingSpider(scrapy.Spider):
                     item['locality'] = path[i]['display_neighbourhood'][1]
                 except:
                     item['locality'] = 'None'
+
+                item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
 
                 '''
                 Assignning Default values

@@ -1,3 +1,0 @@
-[scrapy]
-settings = sulekharent.settings
-

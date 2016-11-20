@@ -19,12 +19,10 @@ class AcresSpider(CrawlSpider):
 
 	start_urls = ['http://www.99acres.com/property-in-bangalore-ffid-page-1?orig_property_type=1,4,2,90,22&search_type=QS&search_location=NRI&lstacn=SEARCH&pageid=QS&search_id=8951691349339355&src=PAGING&lastAcn=SEARCH&lastAcnId=8951691349339355&property_type=1,4,2,90,22']
 	custom_settings = {
-			'DEPTH_LIMIT': 10000,
-			'DOWNLOAD_DELAY': 5
+			'DEPTH_LIMIT': 3000,
+			'DOWNLOAD_DELAY': 10
 		}
 
-	ttl = 0
-	#data_list = []
 	def parse(self,response):
 		hxs = Selector(response)
 		path1 = "//div[@id='ysf']/h1"
@@ -32,16 +30,22 @@ class AcresSpider(CrawlSpider):
 		path = "//div[@id='results']/div[1]/div[contains(@class,'srpWrap')]"
 		x = hxs.xpath(path)
 		
-		ttl_itm = hxs.xpath('//input[@id="prop_count"]/@value').extract_first()
-		self.ttl = ttl_itm
-		# print ttl_itm
-		
 		for i in x:
 			item = AcressellItem()
-			#self.data_list.append(data_id)
 			data_id = i.xpath("@data-propid").extract_first()
 			sqft_check = i.xpath(".//div[@class='srpDataWrap']/span[1]/b[1]/text()").extract_first()
-			sqft_check = re.findall('[0-9]+',sqft_check)
+			print sqft_check
+			if 'Sq.Ft.' in sqft_check:
+				sqft_check = re.findall('[0-9]+',sqft_check)
+			elif 'Sq. Yards' in sqft_check:
+				sqft_check = re.findall('[0-9]+',sqft_check)
+				sqft_check = [str(int(x)*9) for x in sqft_check]
+			elif 'Sq. Meter' in sqft_check:
+				sqft_check = re.findall('[0-9]+',sqft_check)
+				sqft_check = [str(int(float(x)*10.7639)) for x in sqft_check]
+			else:
+				sqft_check = re.findall('[0-9]+',sqft_check)
+			
 			check = 0
 			
 			for s in sqft_check:
@@ -72,21 +76,39 @@ class AcresSpider(CrawlSpider):
 				item['platform'] = '99acres'
 				
 				item['property_type'] = i.xpath('.//meta[@itemprop="name"]/@content').extract_first()
+				if item['property_type'] == '' or item['property_type']==None:
+					item['property_type'] = 'Residential'
 				
 				item['city'] = x1.xpath("span[3]/b/text()").extract_first().split(" ")[0]
 			
 				item['Bua_sqft'] =  s
 				
+				
 				try:
 					item['price_per_sqft'] = i.xpath(".//div[@class='srpDataWrap']/span/text()").extract()
 					item['price_per_sqft'] = ''.join(item['price_per_sqft'])
-					item['price_per_sqft'] = re.findall('[0-9]+',item['price_per_sqft'])
-					if item['price_per_sqft']:
-						item['price_per_sqft'] = item['price_per_sqft'][0]
+					if 'Sq.Ft.' in item['price_per_sqft']:
+						item['price_per_sqft'] = re.findall('[0-9]+',item['price_per_sqft'])
+						if item['price_per_sqft']:
+							item['price_per_sqft'] = item['price_per_sqft'][0]
+					elif 'Sq. Yards' in item['price_per_sqft']:
+						item['price_per_sqft'] = re.findall('[0-9]+',item['price_per_sqft'])
+						if item['price_per_sqft']:
+							item['price_per_sqft'] = str(int(item['price_per_sqft'][0])/9)
+					elif 'Sq. Meter' in item['price_per_sqft']:
+						item['price_per_sqft'] = re.findall('[0-9]+',item['price_per_sqft'])
+						if item['price_per_sqft']:
+							item['price_per_sqft'] = str(int(float(item['price_per_sqft'][0])/10.7639))
+					else:
+						item['price_per_sqft'] = re.findall('[0-9]+',item['price_per_sqft'])
+						if item['price_per_sqft']:
+							item['price_per_sqft'] = item['price_per_sqft'][0]
 					if not item['price_per_sqft']:
 						item['price_per_sqft'] = '0'
 				except:
 					item['price_per_sqft'] = '0'                       
+				
+
 				try:
 					item['Building_name'] = i.xpath(".//a[@class='sName']/b/text()").extract_first().strip()
 				except:
@@ -100,10 +122,6 @@ class AcresSpider(CrawlSpider):
 
 				stat1 = i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span[3]/span/text()").extract()
 				stat2 = i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/span[2]/span/text()").extract()
-				
-				# print stat1
-				# print stat2
-
 				try:
 					if stat1:
 						item['txn_type'] = stat1[1].encode('ascii', 'ignore').decode('ascii').replace('On ','')
@@ -127,7 +145,6 @@ class AcresSpider(CrawlSpider):
 								item['Possession'] = '0'
 				except:
 					pass
-
 				try:
 					if stat2:
 						item['txn_type'] = stat2[1].encode('ascii', 'ignore').decode('ascii').replace('On ','')
@@ -152,6 +169,7 @@ class AcresSpider(CrawlSpider):
 				except:
 					pass
 				
+				
 				detail1 = i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/div[4]/b/text()").extract_first()
 				if (not detail1==None) and ('Description :' in detail1):
 					item['Details'] = i.xpath("div[@class='srpDetail']/div[@class='srpDataWrap']/div[4]/text()").extract()[-1].strip()
@@ -162,6 +180,7 @@ class AcresSpider(CrawlSpider):
 					else:
 						item['Details'] = 'None'
 				
+				
 				if 'Studio Apartment' in item['property_type']:
 					item['config_type'] = '1RK'
 				else:
@@ -170,6 +189,7 @@ class AcresSpider(CrawlSpider):
 					item['config_type'] = conf+'BHK'
 				
 				item['locality'] = i.xpath('.//meta[@itemprop="addressLocality"]/@content').extract_first()
+				
 				
 				try:
 					build = i.xpath("div[@class='srpDetail']/div[last()]/text()").extract()[0].encode('ascii', 'ignore').decode('ascii')
@@ -186,25 +206,21 @@ class AcresSpider(CrawlSpider):
 					item['listing_by'] = 'None'
 					item['name_lister'] = 'None'
 
-				try:
-					date_string = str(i.xpath("div[@class='srpDetail']/div[last()]/text()").extract()).split(':')[-1].replace(' ','').replace(']','').replace('\\n','').replace("'","")
-					if date_string == 'Today':
-						date = time.strftime('%b%d,%Y')
-					else:
-						if date_string == 'Yesterday':
-							date = dt.strftime(dt.now()-datetime.timedelta(1),'%b%d,%Y')
-						else:
-							date = date_string.replace('"','')
-					date = dt.strftime(dt.strptime(date,'%b%d,%Y'),'%m/%d/%Y %H:%M:%S')
-					item['listing_date'] = date
-					item['updated_date'] = item['listing_date']
-				except:
-					logging.log(logging.ERROR,date)
-					item['listing_date'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
-					item['updated_date'] = item['listing_date']
+				
+				date_string = i.xpath('.//div[@class="lf f13 hm10 mb5"]/text()').extract_first().split(':')[-1].strip().replace(' ','').replace(',','')
+				if date_string=='':
+					date_string = i.xpath('.//div[@class="lf f13 hm10 mb5"]/text()').extract()[-1].strip().split(':')[-1].replace(' ','').replace(',','')
+				if 'oday' in date_string:
+					date = time.strftime('%b%d%Y')
+				elif 'esterday' in date_string:
+					date = dt.strftime(dt.now()-datetime.timedelta(1),'%b%d%Y')
+				else:
+					date = date_string
+				item['listing_date'] = dt.strftime(dt.strptime(date,'%b%d%Y'),'%m/%d/%Y %H:%M:%S')
+				item['updated_date'] = item['listing_date']
+				
 				
 				price = i.xpath('.//b[@itemprop="price"]/text()').extract_first()
-				# print price
 				if price:
 					if 'to' in price:
 						price1 = price.split('to')[0]
@@ -220,7 +236,6 @@ class AcresSpider(CrawlSpider):
 						else:
 							if 'Crore' in price2:
 								price2 =  float(str(price2.split()[0])) * 10000000 
-						#print price1 , price2
 						if check == 1:
 							price = str(price1)
 						else:
@@ -242,6 +257,7 @@ class AcresSpider(CrawlSpider):
 				else:
 					item['price_on_req'] = 'false'
 				
+				
 				lat_lng = str(i.xpath("div[@class='wrapttl']/i/@data-maplatlngzm").extract_first()).split(',')
 				item['lat'] = lat_lng[0]
 				if len(lat_lng)>1:
@@ -252,6 +268,8 @@ class AcresSpider(CrawlSpider):
 					item['lat'] = '0'
 					item['longt'] = '0'
 								
+				item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+				
 				if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0'))):
 					item['quality4'] = 1
 				elif (((not item['price_per_sqft'] == '0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0'))):
@@ -274,9 +292,7 @@ class AcresSpider(CrawlSpider):
 					item['quality3'] = 0
 				yield item
 				
-		#print response.body
-		next_page = response.xpath('//input[@id="button_next"]/@value').extract_first()
-		if next_page==None and next_page <= (self.ttl/30):
-			next_page = int(response.url.split('?')[0].split('-')[-1])+1
-		next_url = 'http://www.99acres.com/property-in-bangalore-ffid-page-{}?orig_property_type=1,4,2,90,22&search_type=QS&search_location=NRI&lstacn=SEARCH&pageid=QS&search_id=8951691349339355&src=PAGING&lastAcn=SEARCH&lastAcnId=8951691349339355&property_type=1,4,2,90,22'.format(str(next_page))
-		yield Request(next_url,callback=self.parse)
+		next_page = int(response.url.split('?')[0].split('-')[-1])
+		if next_page < 1000:
+			next_url = 'http://www.99acres.com/property-in-bangalore-ffid-page-{}?orig_property_type=1,4,2,90,22&search_type=QS&search_location=NRI&lstacn=SEARCH&pageid=QS&search_id=8951691349339355&src=PAGING&lastAcn=SEARCH&lastAcnId=8951691349339355&property_type=1,4,2,90,22'.format(str(next_page+1))
+			yield Request(next_url,callback=self.parse)

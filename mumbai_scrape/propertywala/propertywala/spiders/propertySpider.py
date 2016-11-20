@@ -15,12 +15,10 @@ from datetime import datetime as dt
 from dateutil.relativedelta import relativedelta
 
 class PropWala(CrawlSpider):
-	name = "propertyWalaSpider"
+	name = "propertywalaMumbai"
 	allowed_domains = ['propertywala.com']
 	start_urls = [ "https://www.propertywala.com/properties/type-residential/for-sale/location-mumbai_maharashtra",
 		"https://www.propertywala.com/properties/type-residential_apartment_flat/for-rent/location-mumbai_maharashtra"
-		#"https://www.propertywala.com/properties/type-commercial/for-rent/location-mumbai_maharashtra?page=1",
-		#"https://www.propertywala.com/properties/type-commercial/for-sale/location-mumbai_maharashtra?page=1"
 		]      
 	
 	item = PropertywalaItem()
@@ -44,14 +42,11 @@ class PropWala(CrawlSpider):
 			self.maxPage = int(response.xpath('//div[@class="paging"]/a[last()]/@href').extract_first().split('=')[-1])
 		if ((not next==None) and (nextPage <= self.maxPage)):
 			next_url = 'https://www.propertywala.com/'+next
-			# print "+++++++++++++++++++++++++++++++"
-			# print next_url
-			# print "+++++++++++++++++++++++++++++++"
 			yield Request(next_url,callback=self.parse)
 
 	def parse1(self,response):
 		hxs = Selector(response)
-		#print response.body
+
 		self.item['Selling_price'] = '0'
 		self.item['Possession'] = '0'
 		self.item['Status'] = 'None'
@@ -96,7 +91,6 @@ class PropWala(CrawlSpider):
 			self.item['config_type'] = 'None'
 
 		loc = response.xpath('//div[@id="PropertyDetails"]/section/header/h4/text()').extract_first().strip().split(',')
-		# print loc
 		self.item['locality'] = loc[len(loc) - 2]
 
 		build = response.xpath('//div[@id="PropertyDetails"]/section/header/h3/text()').extract_first()
@@ -118,8 +112,6 @@ class PropWala(CrawlSpider):
 			self.item['Building_name'] = 'None'
 
 		value = response.xpath('//ul[@id="PropertyAttributes"]/li/span/text()').extract()
-		# print value
-		# print len(value)
 		if ' rent ' in conf:
 			self.item['txn_type'] = 'Rent'
 		if ' sale ' in conf:
@@ -130,7 +122,6 @@ class PropWala(CrawlSpider):
 			if 'ew' in self.item['txn_type']:
 				self.item['txn_type'] = 'Sale'
 
-		#try:
 		price = response.xpath('//div[@id="PropertyPrice"]/text()').extract()[-1].strip()
 		if 'ale' in self.item['txn_type']:
 			if 'lakh' in price:
@@ -160,8 +151,6 @@ class PropWala(CrawlSpider):
 					self.item['Monthly_Rent'] = str(float(price.split(' ')[0])*10000000)
 				elif ('-' in price):
 					self.item['Monthly_Rent'] = str(float(price.split(' ')[-1])*10000000)
-		# except:
-		# 	self.item['Selling_price'] = '0'
 
 		try:
 			poss = [pos for pos in value if ('Immediate' in pos) or (('Within' in pos) and ('Year' in pos)) or (('Within' in pos) and ('Month' in pos))][0]
@@ -191,6 +180,8 @@ class PropWala(CrawlSpider):
 				self.item['age'] = 'None'
 			if not self.item['age']:
 				self.item['age'] = 'None'
+
+		self.item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
 
 		if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0'))):
 			self.item['quality4'] = 1

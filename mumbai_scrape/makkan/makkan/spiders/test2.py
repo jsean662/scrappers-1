@@ -20,7 +20,7 @@ from datetime import datetime as dt
 import re
 
 class MakaanSpider(CrawlSpider):
-    name = "makaanSpider"
+    name = "makaanMumbai"
     
     allowed_domains = ['makaan.com']
     start_urls = [  
@@ -129,6 +129,8 @@ class MakaanSpider(CrawlSpider):
                     print date
             elif 'esale' in self.item['txn_type']:
                 self.item['age'] = i.xpath('div[@class="cardWrapper"]/div[@class="cardLayout clearfix"]/div[@class="infoWrap"]/div[@class="highlight-points"]/div[@class="dcol poss"]/div[@class="val ''"]/text()').extract_first()
+
+            self.item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
 
             if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0'))):
                 self.item['quality4'] = 1

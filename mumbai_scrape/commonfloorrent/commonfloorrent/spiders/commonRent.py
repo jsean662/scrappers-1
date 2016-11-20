@@ -13,7 +13,7 @@ from datetime import date
 import time
 
 class CommonRentSpider(CrawlSpider):
-	name = 'commonrentSpider'
+	name = 'commonrentMumbai'
 	start_urls = ['https://www.commonfloor.com/listing-search?city=Mumbai&prop_name[]=&property_location_filter[]=&use_pp=0&set_pp=1&polygon=1&page_size=30&search_intent=rent&min_inr=&max_inr=&page=1']
 
 	custom_settings = {
@@ -143,6 +143,8 @@ class CommonRentSpider(CrawlSpider):
 			self.item['Status'] = ''.join(self.item['Status'])
 
 			self.item['Details'] = ''.join(self.item['Details'])
+
+			self.item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
 
 			if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0'))):
 				self.item['quality4'] = 1

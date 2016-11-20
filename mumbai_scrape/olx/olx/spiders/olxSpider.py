@@ -9,7 +9,7 @@ from datetime import date as d
 import time
 
 class MySpider(CrawlSpider):
-    name = "olxSpider"
+    name = "olxMumbai"
     allowed_domains = ['www.olx.in']
     start_urls = ['https://www.olx.in/mumbai/real-estate/']
 
@@ -17,7 +17,6 @@ class MySpider(CrawlSpider):
  
     def parse(self, response):
         hxs = Selector(response)
-        #print response.body
         data = hxs.xpath('//*[@id="offers_table"]/tbody/tr/td[contains(@class,"offer")]')
 
         for i in data:
@@ -136,6 +135,8 @@ class MySpider(CrawlSpider):
                     self.item['Bua_sqft'] = self.item['Bua_sqft'].replace(',','')
         except:
             print 'No Sqft -->>'+str(response.url)
+
+        self.item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
 
         if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0'))):
             self.item['quality4'] = 1

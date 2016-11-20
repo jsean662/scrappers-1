@@ -15,7 +15,7 @@ import sys
 import re
 
 class MagicSpider(scrapy.Spider):
-	name = 'magicSpiderBanglore'
+	name = 'magicbrickssellBanglore'
 	allowed_domains = ['magicbricks.com']
 	start_urls = ['http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Bangalore/Page-1']
 	custom_settings = {
@@ -28,8 +28,6 @@ class MagicSpider(scrapy.Spider):
 
 			data = hxs.xpath('//div[contains(@id,"resultBlockWrapper")]')
 	
-			#ttl_itm = int(hxs.xpath('//span[@id="resultCount"]/text()').extract_first())
-			# print ttl_itm
 			for i in data:
 				item = MagicbrickssellItem()
 		
@@ -137,6 +135,8 @@ class MagicSpider(scrapy.Spider):
 			
 				item['updated_date'] = item['listing_date']
 			
+				item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+
 				if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0'))):
 					item['quality4'] = 1
 				elif (((not item['price_per_sqft'] == '0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None'))):
@@ -161,9 +161,6 @@ class MagicSpider(scrapy.Spider):
 
 			cur = int(response.url.split('-')[-1])
 			
-			# if cur <= (ttl_itm/25)+1:
-			# 	next_url = '-'.join(response.url.split('-')[:-1])+'-'+str(cur+1)
-			# 	yield Request(next_url,callback=self.parse)
 			if not 'noSearchResultPageDiv' in str(response.body):
 				next_url = '-'.join(response.url.split('-')[:-1])+'-'+str(cur+1)
 				yield Request(next_url,callback=self.parse)

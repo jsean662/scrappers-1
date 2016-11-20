@@ -9,12 +9,12 @@ from scrapy.selector import HtmlXPathSelector
 from urlparse import urljoin
 import urlparse
 import time 
-import datetime
+from datetime import datetime as dt
 
 from requests.auth import HTTPProxyAuth
 
 class JagahaSpider(Spider):
-    name = "jagahaSpider"
+    name = "jagahaMumbai"
     allowed_domains = ['jagaha.com']
 
     start_urls = [
@@ -25,7 +25,6 @@ class JagahaSpider(Spider):
         ]
     base_url = 'http://www.jagaha.com'
     custom_settings = {
-            'BOT_NAME': 'jagaha',
             'DEPTH_LIMIT': 7000,
             'DOWNLOAD_DELAY': 3
         }
@@ -102,6 +101,7 @@ class JagahaSpider(Spider):
         item['Possession'] = x.xpath('div[3]/div[5]/span/text()').extract_first()
         item['age'] = x.xpath('div[3]/div[7]/span/text()').extract_first()
         item['locality'] = x.xpath('div[2]/p[4]/strong/text()').extract_first()
+        item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
         
         if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0'))):
             item['quality4'] = 1

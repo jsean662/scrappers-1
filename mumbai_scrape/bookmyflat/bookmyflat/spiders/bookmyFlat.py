@@ -14,7 +14,7 @@ import time
 import re
 
 class BookFlat(CrawlSpider):
-	name = 'bookmySpider'
+	name = 'bookmyMumbai'
 	start_urls = ['http://bookmyflat.com/properties-search-results/page/2/?sort=newest&search_city=Mumbai&search_lat&search_lng&search_category=0&search_type=0']
 	item = BookmyflatItem()
 	page=1
@@ -106,6 +106,8 @@ class BookFlat(CrawlSpider):
 					self.item['Bua_sqft'] = re.findall('[0-9]+',sqf)[0]
 				except:
 					self.item['Bua_sqft'] = '0'
+
+			self.item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
 
 			if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0'))):
 				self.item['quality4'] = 1

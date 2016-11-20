@@ -14,8 +14,9 @@ import json
 from scrapy.selector import XmlXPathSelector
 import lxml.etree as etree
 from urlparse import urljoin
+
 class purpleyoSpider(Spider):
-	name = "purpleyoSpider"
+	name = "purpleyoMumbai"
 	start_urls = [
 			'http://www.purpleyo.com/solr/search?q=Mumbai+India&rows=8&searchtype=resultpage&sort=listingtype+asc,plantype+asc,listingstatus+asc,+issizeavailable+desc,+random_1466580605918+desc,+total_available_size+desc,+viewcount+desc,+updated_at+desc,+pyoindex+desc&start=0&url=http:%2F%2F172.31.17.31%2Fsolr%2Fcollection1%2Fselect%3Ffq%3Dlocaleid:1%26fq%3Dpyoindex:%5B0+TO+1000%5D%26fq%3D(total_available_size:%5B*+TO+*%5D+OR+sizeavailable:%5B*+TO+*%5D)%26fq%3Dcity:%22Mumbai%22%26fq%3Dstatus:%22ACTIVE%22%26fq%3Dpropertytype:(%22OFFICE%22+OR+%22RETAIL%22+OR+%22OFFICE+AND+RETAIL%22)%26fq%3Davailability:("SALE"+OR+"LEASE"+OR+"LEASE%2FSALE")%26start%3D0&wt=json'
 			]
@@ -40,7 +41,6 @@ class purpleyoSpider(Spider):
 			if (i+cur_page) == max_page:
 				break
 			item = PurplItem()
-			#item['desc'] = path[i]['doclist']['docs'][0]
 			item['data_id'] = path[i]['doclist']['docs'][0]['propertyid']
 			item['property_type'] = path[i]['doclist']['docs'][0]['propertytype']
 			item['txn_type'] = path[i]['doclist']['docs'][0]['availability']
@@ -73,7 +73,7 @@ class purpleyoSpider(Spider):
 			item['mobile_lister'] = 'None'
 			item['carpet_area'] = '0'
 			item['updated_date'] = item['listing_date']
-			
+			item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
 			
 			if ((not item['Building_name'] == 'None') and (not item['listing_date'] == 'None') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
 				item['quality1'] = 1

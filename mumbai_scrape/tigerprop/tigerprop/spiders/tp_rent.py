@@ -12,13 +12,14 @@ import lxml.etree as etree
 from urlparse import urljoin
 import urllib
 import time
+from datetime import datetime as dt
+
 class PropRentSpider(Spider):
-	name = "propTigerRentSpider"
+	name = "proptigerresaleMumbai"
 	start_urls = ['https://www.proptiger.com/data/v2/entity/resale-listing?selector={%22filters%22:{%22and%22:[{%22equal%22:{%22bookingStatusId%22:1}},{%22equal%22:{%22cityId%22:18}}]},%22paging%22:{%22start%22:0,%22rows%22:15}}']
 	allowed_domains = ["www.proptiger.com"]
 	rules = (Rule(LinkExtractor(deny=(), allow=('http://www.proptiger.com/'), ), callback='parse', follow=True, ),)
 	custom_settings = {
-	        'BOT_NAME': 'tigerprop',
 	        'DEPTH_LIMIT': 10000,
 	        'DOWNLOAD_DELAY': 2
 	    }
@@ -27,28 +28,20 @@ class PropRentSpider(Spider):
 		jr = response.body
 		jd = json.loads(jr)
 		handle_http_list = [500]
-		path = jd["data"]#["items"]#["groups"]
+		path = jd["data"]
 		base_url = "https://www.proptiger.com/"
-		max_page = int(jd["totalCount"])#"propertyid"]["ngroups"])
-		cur_page = int(response.url.split(':')[-2].split(',')[0])#.split('start')[1].split(':')[1])
-		#print cur_page
-		#print max_page,cur_page
+		max_page = int(jd["totalCount"])
+		cur_page = int(response.url.split(':')[-2].split(',')[0])
 		cur_page1 = cur_page + 15
 		page_num =str(cur_page1)
-		#print page_num
+		
 		url = 'https://www.proptiger.com/data/v2/entity/resale-listing?selector={{%22filters%22:{{%22and%22:[{{%22equal%22:{{%22bookingStatusId%22:1}}}},{{%22equal%22:{{%22cityId%22:18}}}}]}},%22paging%22:{{%22start%22:{x},%22rows%22:15}}}}'.format(x=str(cur_page1))
-		#if jd["statusCode"] == "2XX":
-		#A = json.load(urllib.urlopen(url))
-			#print url
-		#url = url.format(page_num=str(cur_page1))
 		
 		for i in range(0,15):
 			if (i+cur_page) == (max_page):
 				break
 			item = TigerpropItem()
-				#url = base_url + url1
-				#print str(url)
-				#yield item
+
 			item['data_id'] = path[i]['propertyId']
 			
 			try:
@@ -188,6 +181,8 @@ class PropRentSpider(Spider):
 				item['price_on_req'] = 'false'
 
 			item['Details'] = path[i]['property']['project']['description']
+
+			item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
 
 			if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0'))):
 				item['quality4'] = 1

@@ -12,15 +12,16 @@ import lxml.etree as etree
 from urlparse import urljoin
 import urllib
 import time
+from datetime import datetime as dt
+
 class PropSellSpider(Spider):
-	name = "propTigerSpider"
+	name = "proptigerMumbai"
 	start_urls = [
 			'https://www.proptiger.com/app/v2/project-listing?selector={%22filters%22:{%22and%22:[{%22equal%22:{%22cityId%22:18}},{%22equal%22:{%22cityId%22:18}}]},%22paging%22:{%22start%22:0,%22rows%22:15}}'
 			]
 	allowed_domains = ["www.proptiger.com"]
 	rules = (Rule(LinkExtractor(deny=(), allow=('http://www.proptiger.com/'), ), callback='parse', follow=True, ),)
 	custom_settings = {
-	        'BOT_NAME': 'tigerprop',
 	        'DEPTH_LIMIT': 10000,
 	        'DOWNLOAD_DELAY': 2
 	    }
@@ -29,20 +30,15 @@ class PropSellSpider(Spider):
 		jr = response.body
 		jd = json.loads(jr)
 		handle_http_list = [500]
-		path = jd["data"]["items"]#["groups"]
+		path = jd["data"]["items"]
 		base_url = "https://www.proptiger.com/"
-		max_page = int(jd["totalCount"])#"propertyid"]["ngroups"])
+		max_page = int(jd["totalCount"])
 		cur_page = int(response.url.split(',')[2].split('start')[1].split(':')[1])
-		#print max_page,cur_page
 		cur_page1 = cur_page + 15
 		page_num =str(cur_page1)
-		#print page_num
-		url = 'https://www.proptiger.com/app/v2/project-listing?selector={{%22filters%22:{{%22and%22:[{{%22equal%22:{{%22cityId%22:18}}}},{{%22equal%22:{{%22cityId%22:18}}}}]}},%22paging%22:{{%22start%22:{x},%22rows%22:15}}}}'.format(x=str(cur_page1))
-		#if jd["statusCode"] == "2XX":
-		#A = json.load(urllib.urlopen(url))
-			#print url
-		#url = url.format(page_num=str(cur_page1))
 		
+		url = 'https://www.proptiger.com/app/v2/project-listing?selector={{%22filters%22:{{%22and%22:[{{%22equal%22:{{%22cityId%22:18}}}},{{%22equal%22:{{%22cityId%22:18}}}}]}},%22paging%22:{{%22start%22:{x},%22rows%22:15}}}}'.format(x=str(cur_page1))
+				
 		for i in range(0,15):
 			if (i+cur_page) == (max_page):
 				break
@@ -51,9 +47,6 @@ class PropSellSpider(Spider):
 			c = len(count)
 			for j in range(0,c):
 			
-				#url = base_url + url1
-				#print str(url)
-				#yield item
 				item['name_lister'] = 'None'
 				item['data_id'] = path[i]['properties'][j]['propertyId']
 				item['config_type'] = str(path[i]['properties'][j]['bedrooms']) + "BHK"
@@ -68,6 +61,7 @@ class PropSellSpider(Spider):
 				number = int(dt5) * 0.001
 				dt2 = time.strftime('%m/%d/%Y %H:%M:%S', time.gmtime(number))
 				item['updated_date'] = dt2
+				
 				try:
 					dt1 = path[i]['possessionDate']
 					number3 = int(dt1) * 0.001
@@ -76,7 +70,7 @@ class PropSellSpider(Spider):
 					item['Possession'] = str(dt2)
 				except:
 					item['Possession'] = '0'
-    	        #dt3 = dt2.split()[0]
+    	    
 				try:
 					item['lat'] = path[i]['latitude']
 				except KeyError :
@@ -104,7 +98,7 @@ class PropSellSpider(Spider):
 				item['sublocality'] = path[i]['locality']['label']
 				item['city'] = path[i]['locality']['suburb']['city']['label']
 				item['areacode'] = path[i]['localityId']
-				#print item['areacode']
+				
 				try:
 					item['Selling_price'] = str(path[i]['properties'][j]['budget'])
 					item['Monthly_Rent'] = '0'
@@ -135,7 +129,8 @@ class PropSellSpider(Spider):
 				else:
 				    item['price_on_req'] = 'false'
 				
-				#item['management_by_landlord'] = path[i]['properties'][j]['management_by_landlord']
+				item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+
 				if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0'))):
 					item['quality4'] = 1
 				elif (((not item['price_per_sqft'] == '0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None'))):
@@ -155,7 +150,6 @@ class PropSellSpider(Spider):
 				else:
 				    item['quality3'] = 0
 				yield item
-		#url1 = re
 		
 		if (cur_page+15) < ( max_page):
 			yield Request(url, callback=self.parse)

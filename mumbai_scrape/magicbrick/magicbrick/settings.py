@@ -9,14 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'magicbrick'
+BOT_NAME = 'Googlebot'
 
 SPIDER_MODULES = ['magicbrick.spiders']
 NEWSPIDER_MODULE = 'magicbrick.spiders'
 
 ROBOTSTXT_OBEY = False
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'magicbricks (+https://www.google.com)'
+USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS=16

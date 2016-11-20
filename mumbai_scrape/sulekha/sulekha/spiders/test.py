@@ -10,7 +10,7 @@ import re
 import time
 
 class MySpider(CrawlSpider):
-	name = "SulekhaSpider"
+	name = "sulekhasellMumbai"
 	allowed_domains = ['property.sulekha.com']
 	start_urls = ["http://property.sulekha.com/property-in-mumbai-for-sale_page-1?sortorder=recent"
 	]
@@ -34,17 +34,14 @@ class MySpider(CrawlSpider):
 			yield Request(url,callback=self.parse1,dont_filter=True)
 
 		curPage = int(response.url.split('?')[0].split('-')[-1])
-		#print curPage
 
 		if 'Next' in response.xpath('//div[@id="pagediv"]/ul/li[last()]/a/text()').extract_first():
 			nextPage = response.xpath('//div[@class="pagination"]/ul/li[last()]/a/@href').extract_first()
 			next_url = 'http://property.sulekha.com'+nextPage
-			#print next_url
 			yield Request(next_url,callback=self.parse)
 
 	def parse1(self , response):
 		hxs = Selector(response)
-		#print response.body
 
 		'''
 		Assigning default values to items 
@@ -167,6 +164,8 @@ class MySpider(CrawlSpider):
 		dates = hxs.xpath('//div[@class="page-title"]/div[@class="pull-left"]/small/text()').extract()[-1].strip().split('Posted on  ')[-1]
 		self.item['listing_date'] = dt.strftime(dt.strptime(dates,"%b %d, %Y"),"%m/%d/%Y %H:%M:%S")
 		self.item['updated_date'] = self.item['listing_date']
+
+		self.item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
 
 		if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0'))):
 			self.item['quality4'] = 1
