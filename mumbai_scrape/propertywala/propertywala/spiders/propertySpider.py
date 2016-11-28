@@ -93,21 +93,21 @@ class PropWala(CrawlSpider):
 		loc = response.xpath('//div[@id="PropertyDetails"]/section/header/h4/text()').extract_first().strip().split(',')
 		self.item['locality'] = loc[len(loc) - 2]
 
-		build = response.xpath('//div[@id="PropertyDetails"]/section/header/h3/text()').extract_first()
+		build = response.xpath('//div[@id="PropertyDetails"]/section/header/h3/text()').extract_first().strip()
 		buildname = re.findall('for sale in (.*)?,',conf)+re.findall('for rent in (.*)?,',conf)
 		print buildname
 		if buildname:
-			self.item['Building_name'] = buildname[0].split(',')[0]
+			self.item['Building_name'] = buildname[0].split(',')[0].strip()
 		else:
 			self.item['Building_name'] = 'None'
 		if (self.item['Building_name'] in self.item['locality']) or (self.item['locality'] in self.item['Building_name']):
 			self.item['Building_name'] = re.findall(' in (.*)?,',build)+re.findall(' at (.*)?,',build)
 			if self.item['Building_name']:
-				self.item['Building_name'] = self.item['Building_name'][0]
+				self.item['Building_name'] = self.item['Building_name'][0].strip()
 			if not self.item['Building_name']:
 				self.item['Building_name'] = re.findall(' in (.*)?\s',build)
 				if self.item['Building_name']:
-					self.item['Building_name'] = self.item['Building_name'][0]
+					self.item['Building_name'] = self.item['Building_name'][0].strip()
 		if not self.item['Building_name']:
 			self.item['Building_name'] = 'None'
 

@@ -11,10 +11,10 @@ from datetime import date
 import time
 
 class HousingSpider(scrapy.Spider):
-    name = 'housingMumbai'
+    name = 'housingBangalore'
     
     allowed_domains = ['housing.com']
-    start_urls = ['https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1ca99c33e3d8b987ccf1&sort_key=date_added&total=27998&np_total_count=1888&resale_total_count=26110&np_offset=0&resale_offset=0&is_last_page=false&project_flat_config_count=5244&negative_aggregation={}&show_collections=true&show_aggregations=true&placeholder_ids=2,3,6,7&p=1']
+    start_urls = ['https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=747be13fe47cb8ae14c3&sort_key=date_added&total=65963&np_total_count=2105&resale_total_count=63858&np_offset=0&resale_offset=0&is_last_page=false&project_flat_config_count=8865&negative_aggregation={}&show_collections=true&show_aggregations=true&placeholder_ids=2,3,6,7&p=1']
 
     custom_settings = {
         'DEPTH_LIMIT' : 5000,
@@ -76,7 +76,7 @@ class HousingSpider(scrapy.Spider):
 
                 item['sublocality'] = path[i]['polygons_hash']['sublocality']['name']
                 if item['sublocality']==None:
-                    item['sublocality'] = 'None'
+                	item['sublocality'] = 'None'
 
                 try:
                     item['updated_date'] = time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(path[i]['updated_at']))
@@ -128,5 +128,5 @@ class HousingSpider(scrapy.Spider):
                 yield item
 
         if data['is_last_page']==False:
-            next_url = 'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1ca99c33e3d8b987ccf1&sort_key=date_added&total=27998&np_total_count=1888&resale_total_count=26110&np_offset=0&resale_offset=0&is_last_page=false&project_flat_config_count=5244&negative_aggregation={}&show_collections=true&show_aggregations=true&placeholder_ids=2,3,6,7&p='+str(pageNo+1)
+            next_url = 'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=747be13fe47cb8ae14c3&sort_key=date_added&total=65963&np_total_count=2105&resale_total_count=63858&np_offset=0&resale_offset=0&is_last_page=false&project_flat_config_count=8865&negative_aggregation={}&show_collections=true&show_aggregations=true&placeholder_ids=2,3,6,7&p='+str(pageNo+1)
             yield Request(next_url,callback=self.parse)

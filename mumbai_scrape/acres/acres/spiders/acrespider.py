@@ -14,7 +14,7 @@ class AcresSpider(CrawlSpider):
 	name = "acressellMumbai"
 	allowed_domains = ['99acres.com']
 
-	start_urls = ['http://www.99acres.com/property-in-mumbai-ffid-page-1?orig_property_type=1,4,2,90,22&search_type=QS&search_location=NRI&pageid=QS&search_id=7117119418106697&src=PAGING&lastAcn=SEARCH&lastAcnId=7117119418106697&fsl_results=Y&total_fsl_count=2&property_type=1,4,2,90,22' 
+	start_urls = ['http://www.99acres.com/property-in-mumbai-ffid-page-201?orig_property_type=1,4,2,90,22&search_type=QS&search_location=NRI&pageid=QS&search_id=7117119418106697&src=PAGING&lastAcn=SEARCH&lastAcnId=7117119418106697&fsl_results=Y&total_fsl_count=2&property_type=1,4,2,90,22' 
 			]
 	custom_settings = {
 			'DEPTH_LIMIT': 3000,
