@@ -15,11 +15,10 @@ from datetime import datetime as dt
 from dateutil.relativedelta import relativedelta
 
 class PropWala(CrawlSpider):
-	name = "propertywalaMumbai"
+	name = "propertywalaBangalore"
 	allowed_domains = ['propertywala.com']
-	start_urls = [ "https://www.propertywala.com/properties/type-residential/for-sale/location-mumbai_maharashtra",
-		"https://www.propertywala.com/properties/type-residential_apartment_flat/for-rent/location-mumbai_maharashtra"
-		]      
+	start_urls = [ 'https://www.propertywala.com/properties/type-residential_apartment_flat/for-sale/location-bangalore_karnataka','https://www.propertywala.com/properties/type-residential_apartment_flat/for-rent/location-bangalore_karnataka'
+	]      
 	
 	item = PropertywalaItem()
 	maxPage = 0
@@ -67,7 +66,7 @@ class PropWala(CrawlSpider):
 		self.item['name_lister'] = 'None'
 
 
-		self.item['city'] = 'Mumbai'
+		self.item['city'] = 'Bangalore'
 		self.item['platform'] = 'propertywala'
 		self.item['property_type'] = 'Residential'
 

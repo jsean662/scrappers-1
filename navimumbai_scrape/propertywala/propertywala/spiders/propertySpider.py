@@ -15,10 +15,11 @@ from datetime import datetime as dt
 from dateutil.relativedelta import relativedelta
 
 class PropWala(CrawlSpider):
-	name = "propertywalaMumbai"
+	name = "propertywalaNavimumbai"
 	allowed_domains = ['propertywala.com']
-	start_urls = [ "https://www.propertywala.com/properties/type-residential/for-sale/location-mumbai_maharashtra",
-		"https://www.propertywala.com/properties/type-residential_apartment_flat/for-rent/location-mumbai_maharashtra"
+	start_urls = [ 
+		'https://www.propertywala.com/properties/type-residential_apartment_flat/for-sale/location-navi_mumbai_maharashtra',
+		'https://www.propertywala.com/properties/type-residential_apartment_flat/for-rent/location-navi_mumbai_maharashtra'
 		]      
 	
 	item = PropertywalaItem()
@@ -67,7 +68,7 @@ class PropWala(CrawlSpider):
 		self.item['name_lister'] = 'None'
 
 
-		self.item['city'] = 'Mumbai'
+		self.item['city'] = 'Navi Mumbai'
 		self.item['platform'] = 'propertywala'
 		self.item['property_type'] = 'Residential'
 
@@ -78,7 +79,7 @@ class PropWala(CrawlSpider):
 		self.item['data_id'] = response.url.split('/')[-1]
 
 		dat = response.xpath('//li[@class="noPrint"]/time/@datetime').extract_first().replace('Z','')
-
+		
 		self.item['listing_date'] = dt.strftime(dt.strptime(dat,'%Y-%m-%d %H:%M:%S'),'%m/%d/%Y %H:%M:%S')
 
 		self.item['updated_date'] = self.item['listing_date']
@@ -92,14 +93,15 @@ class PropWala(CrawlSpider):
 			self.item['config_type'] = 'None'
 
 		loc = response.xpath('//div[@id="PropertyDetails"]/section/header/h4/text()').extract_first().strip().split(',')
-		self.item['locality'] = loc[len(loc) - 2].strip()
+		self.item['locality'] = loc[len(loc) - 2]
+		self.item['locality'] = self.item['locality'].strip()
 
 		build = response.xpath('//div[@id="PropertyDetails"]/section/header/h3/text()').extract_first().strip()
 		
 		build1 = response.xpath('//div[@id="PropertyDetails"]/section/header/h4/text()').extract_first().strip()
 		
-		buildname = re.findall('for sale in (.*)?,',conf)+re.findall('for rent in (.*)?,',conf)
-
+		buildname = re.findall('for sale in (.*)?,',conf)+re.findall('for rent in (.*)?,',conf)+re.findall('For Rent In (.*)?,',conf)
+		
 		if buildname:
 			self.item['Building_name'] = buildname[0].split(',')[0].strip()
 		else:
@@ -117,8 +119,8 @@ class PropWala(CrawlSpider):
 					if self.item['Building_name'] == '':
 						self.item['Building_name'] = ''.join(build1.split(',')[:1]).replace(self.item['locality'],'')
 		if (self.item['city'] in self.item['Building_name']) or (self.item['locality'] in self.item['Building_name']):
-			self.item['Building_name'] = ''.join(build1.split(',')[:1]).replace(self.item['locality'],'')
-		
+			self.item['Building_name'] = ''.join(build1.split(',')[:2]).replace(self.item['locality'],'')
+
 		value = response.xpath('//ul[@id="PropertyAttributes"]/li/span/text()').extract()
 		if ' rent ' in conf:
 			self.item['txn_type'] = 'Rent'

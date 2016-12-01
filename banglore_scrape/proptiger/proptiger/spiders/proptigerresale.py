@@ -37,7 +37,7 @@ class PropRentSpider(Spider):
 		
 		url = 'https://www.proptiger.com/data/v2/entity/resale-listing?selector={{%22filters%22:{{%22and%22:[{{%22equal%22:{{%22bookingStatusId%22:1}}}},{{%22equal%22:{{%22cityId%22:2}}}}]}},%22paging%22:{{%22start%22:{x},%22rows%22:15}}}}'.format(x=str(cur_page1))
 		
-		for i in range(0,15):
+		for i in range(0,len(path)):
 			if (i+cur_page) == (max_page):
 				break
 			item = ProptigerItem()

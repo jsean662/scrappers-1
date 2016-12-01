@@ -39,7 +39,7 @@ class PropSellSpider(Spider):
 		
 		url = 'https://www.proptiger.com/app/v2/project-listing?selector={{%22filters%22:{{%22and%22:[{{%22equal%22:{{%22cityId%22:18}}}},{{%22equal%22:{{%22cityId%22:18}}}}]}},%22paging%22:{{%22start%22:{x},%22rows%22:15}}}}'.format(x=str(cur_page1))
 				
-		for i in range(0,15):
+		for i in range(0,len(path)):
 			if (i+cur_page) == (max_page):
 				break
 			item = TigerpropItem()
@@ -93,6 +93,8 @@ class PropSellSpider(Spider):
 					item['price_per_sqft'] = '0'
 					
 				item['Building_name'] = path[i]['builder']['name']+' '+path[i]['name']
+				if not path[i]['builder']['name']  in item['Building_name']:
+					item['Building_name'] = path[i]['builder']['name']+' '+path[i]['name']
 				item['address'] = path[i]['address']
 				item['locality'] = path[i]['locality']['suburb']['label']
 				item['sublocality'] = path[i]['locality']['label']

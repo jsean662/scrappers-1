@@ -1,5 +1,5 @@
 import scrapy
-from proptiger.items import ProptigerItem
+from tigerprop.items import TigerpropItem
 from scrapy.spiders import Spider
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
@@ -15,9 +15,9 @@ import time
 from datetime import datetime as dt
 
 class PropSellSpider(Spider):
-	name = "proptigerBangalore"
+	name = "proptigerNavimumbai"
 	start_urls = [
-			'https://www.proptiger.com/app/v2/project-listing?selector={%22filters%22:{%22and%22:[{%22equal%22:{%22cityId%22:2}},{%22equal%22:{%22cityId%22:2}}]},%22paging%22:{%22start%22:0,%22rows%22:15}}'
+			'https://www.proptiger.com/app/v2/project-listing?selector={%22filters%22:{%22and%22:[{%22equal%22:{%22cityId%22:18}},{%22equal%22:{%22suburbId%22:10045}},{%22equal%22:{%22cityId%22:18}},{%22equal%22:{%22suburbId%22:10045}}]},%22paging%22:{%22start%22:0,%22rows%22:15}}'
 			]
 	allowed_domains = ["www.proptiger.com"]
 	rules = (Rule(LinkExtractor(deny=(), allow=('http://www.proptiger.com/'), ), callback='parse', follow=True, ),)
@@ -33,16 +33,16 @@ class PropSellSpider(Spider):
 		path = jd["data"]["items"]
 		base_url = "https://www.proptiger.com/"
 		max_page = int(jd["totalCount"])
-		cur_page = int(response.url.split(',')[2].split('start')[1].split(':')[1])
+		cur_page = int(response.url.split(',')[-2].split('start')[-1].split(':')[-1])
 		cur_page1 = cur_page + 15
 		page_num =str(cur_page1)
 		
-		url = 'https://www.proptiger.com/app/v2/project-listing?selector={{%22filters%22:{{%22and%22:[{{%22equal%22:{{%22cityId%22:2}}}},{{%22equal%22:{{%22cityId%22:2}}}}]}},%22paging%22:{{%22start%22:{x},%22rows%22:15}}}}'.format(x=str(cur_page1))
+		url = 'https://www.proptiger.com/app/v2/project-listing?selector={{%22filters%22:{{%22and%22:[{{%22equal%22:{{%22cityId%22:18}}}},{{%22equal%22:{{%22suburbId%22:10045}}}},{{%22equal%22:{{%22cityId%22:18}}}},{{%22equal%22:{{%22suburbId%22:10045}}}}]}},%22paging%22:{{%22start%22:{x},%22rows%22:15}}}}'.format(x=str(cur_page1))
 				
 		for i in range(0,len(path)):
 			if (i+cur_page) == (max_page):
 				break
-			item = ProptigerItem()
+			item = TigerpropItem()
 			count = path[i]['properties']
 			c = len(count)
 			for j in range(0,c):
@@ -92,7 +92,7 @@ class PropSellSpider(Spider):
 				except:
 					item['price_per_sqft'] = '0'
 					
-				item['Building_name'] = path[i]['name']
+				item['Building_name'] = path[i]['builder']['name']+' '+path[i]['name']
 				if not path[i]['builder']['name']  in item['Building_name']:
 					item['Building_name'] = path[i]['builder']['name']+' '+path[i]['name']
 				item['address'] = path[i]['address']
