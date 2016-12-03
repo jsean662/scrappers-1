@@ -103,20 +103,20 @@ class PropWala(CrawlSpider):
 			self.item['Building_name'] = buildname[0].split(',')[0].strip()
 		else:
 			self.item['Building_name'] = 'None'
-		self.item['Building_name'] = ''.join(build1.split(',')[:2]).replace(self.item['locality'],'')
 		if self.item['locality'] in self.item['Building_name']:
-			if self.item['locality'] in self.item['Building_name']:
-				self.item['Building_name'] = ''.join(re.findall(' in (.*)',build))
-				if ' at ' in self.item['Building_name']:
-					self.item['Building_name'] = self.item['Building_name'].split(' at ')[0]
-				elif ',' in self.item['Building_name']:
-					self.item['Building_name'] = self.item['Building_name'].split(',')[0]
+			self.item['Building_name'] = ''.join(re.findall(' in (.*)',build))
+			if ' at ' in self.item['Building_name']:
+				self.item['Building_name'] = self.item['Building_name'].split(' at ')[0]
+			elif ',' in self.item['Building_name']:
+				self.item['Building_name'] = self.item['Building_name'].split(',')[0]
+			if self.item['Building_name'] == '':
+				self.item['Building_name'] = ''.join(re.findall(' at (.*)',build))
 				if self.item['Building_name'] == '':
-					self.item['Building_name'] = ''.join(re.findall(' at (.*)',build))
-					if self.item['Building_name'] == '':
-						self.item['Building_name'] = ''.join(build1.split(',')[:1]).replace(self.item['locality'],'')
-		if (self.item['city'] in self.item['Building_name']) or (self.item['locality'] in self.item['Building_name']):
-			self.item['Building_name'] = ''.join(build1.split(',')[:1]).replace(self.item['locality'],'')
+					self.item['Building_name'] = ''.join(build1.split(',')[:1]).replace(self.item['locality'],'')
+		if (self.item['city'] in self.item['Building_name']) or (self.item['locality'] in self.item['Building_name']) or (self.item['Building_name'] in self.item['locality']) or (' for ' in self.item['Building_name']):
+			self.item['Building_name'] = ''.join(build1.split(',')[:2]).replace(self.item['locality'],'')
+		if (self.item['Building_name'] == ' ') or (self.item['Building_name'] == ''):
+			self.item['Building_name'] = 'None'
 		
 		value = response.xpath('//ul[@id="PropertyAttributes"]/li/span/text()').extract()
 		if ' rent ' in conf:

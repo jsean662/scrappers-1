@@ -17,11 +17,10 @@ class AcresrentSpider(CrawlSpider):
 	name = "acresrentMumbai"
 	allowed_domains = ['99acres.com']
 
-	start_urls = ['http://www.99acres.com/rent-property-in-mumbai-ffid-page-1?orig_property_type=1,4,2,90,22&search_type=QS&search_location=CP12&lstacn=SEARCH&pageid=QS&src=PAGING&lastAcn=SEARCH&property_type=1,4,2,90,22'
-			]
+	start_urls = ['http://www.99acres.com/rent-property-in-mumbai-ffid-page-1?orig_property_type=1,4,2,90,22&search_type=QS&search_location=CP12&lstacn=SEARCH&pageid=QS&src=PAGING&property_type=1,4,2,90,22']
 	custom_settings = {
 			'DEPTH_LIMIT': 3000,
-			'DOWNLOAD_DELAY': 10
+			'DOWNLOAD_DELAY': 5
 		}
 
 	def parse(self,response):
