@@ -7,8 +7,8 @@ selenium/agent/agent/agents.csv
 selenium/makaanform/andheri/
 olx/olx/olxSpider_items.csv
 
-build/**
-project.egg-info/**
+**/build
+**/project.egg-info
 *setup.py
 *.zip
 *.csv
