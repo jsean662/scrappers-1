@@ -121,3 +121,8 @@ thane_scrape/propertywala/setup.py
 thane_scrape/tigerprop/build/
 thane_scrape/tigerprop/project.egg-info/
 thane_scrape/tigerprop/setup.py
+**/build
+**/project.egg-info
+*setup.py
+*.csv
+*.zip
