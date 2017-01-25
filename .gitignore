@@ -1,11 +1,4 @@
-acres_new.zip
-jaga_new.zip
-
-items.py
-makkan/makkan/makaanSpider_items.csv
 propertywala/build/
-purpl/purpl/purpleyoSpider_items.csv
-selenium/Postings.zip
 selenium/Postings_photos/
 selenium/agent.zip
 selenium/agent/agent/agent1
@@ -129,3 +122,5 @@ mumbai_scrape/builderprojects/setup.py
 *setup.py
 *.csv
 *.zip
+*.cfg
+*.yml

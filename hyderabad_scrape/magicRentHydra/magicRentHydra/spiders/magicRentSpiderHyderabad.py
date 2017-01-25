@@ -1,22 +1,20 @@
 import scrapy
-from magicRentKol.items import MagicrentkolItem
+from magicRentHydra.items import MagicrenthydraItem
 from scrapy.spiders import Spider
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.selector import Selector
 from scrapy.http import Request
 from scrapy.http import FormRequest
-# from urlparse import urljoin
 from datetime import datetime as dt
 from datetime import time, timedelta
 from datetime import date
-# import time
 import re
 
-class MagicrentkolspiderSpider(scrapy.Spider):
-    name = "magicRentKolkata"
+class MagicrentspiderhyderabadSpider(scrapy.Spider):
+    name = "magicRentHyderabad"
     allowed_domains = ['magicbricks.com']
     start_urls = (
-        'http://www.magicbricks.com/property-for-rent/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment,Residential-House,Villa&cityName=Kolkata/Page-%s' % page for page in range(1, 453)
+        'http://www.magicbricks.com/property-for-rent/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Service-Apartment,Residential-House,Villa&cityName=Hyderabad&sortBy=mostRecent/Page-%s' % page for page in range(1, 207)
     )
 
     custom_settings = {
@@ -32,7 +30,7 @@ class MagicrentkolspiderSpider(scrapy.Spider):
         dates = response.xpath('//span[@class="postedBy"]')
         k = 0
         for i in data:
-            item = MagicrentkolItem()
+            item = MagicrenthydraItem()
             
             item['address'] = 'None'
             item['areacode'] = 'None'
@@ -57,7 +55,7 @@ class MagicrentkolspiderSpider(scrapy.Spider):
             if item['property_type'] == 'Studio Apartment' or (item['property_type'] == 'Apartment'):
                 item['config_type'] = '1RK'
 
-            item['city'] = 'Kolkata'
+            item['city'] = 'Hyderabad'
             item['data_id'] = re.findall('[0-9]+', i.xpath('@id').extract_first())[0]
 
             #item['lat'] = i.xpath('.//div[@itemprop="geo"]/input[2]/@value').extract_first() 
@@ -235,5 +233,3 @@ class MagicrentkolspiderSpider(scrapy.Spider):
                 item['quality1'] = 0
 
             yield item
-
-

@@ -1,18 +1,17 @@
 import scrapy
-from magicBuyKol.items import MagicbuykolItem
+from magicBuyHydra.items import MagicbuyhydraItem
 from scrapy.selector import Selector
 import datetime
 from datetime import datetime as dt
 import re
 
-
-class MagicbuykolspiderSpider(scrapy.Spider):
-    name = "magicBuyKolkata"
-    allowed_domains = ["http://www.magicbricks.com/"]
+class MagicbuyhyderabadSpider(scrapy.Spider):
+    name = "magicBuyHyderabad"
+    allowed_domains = ["magicbricks.com"]
     start_urls = ['http://www.magicbricks.com//']
 
     start_urls = [
-        'http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Kolkata/Page-%s' % page for page in range(1, 1411)
+        'http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Hyderabad&sortBy=mostRecent/Page-%s' % page for page in range(1, 597)
     ]
 
     custom_settings = {
@@ -25,7 +24,7 @@ class MagicbuykolspiderSpider(scrapy.Spider):
         data = record.xpath('//div[contains(@id,"resultBlockWrapper")]')
 
         for i in data:
-            item = MagicbuykolItem()
+            item = MagicbuyhydraItem()
 
             item['name_lister'] = 'None'
             item['Details'] = 'None'
@@ -33,7 +32,7 @@ class MagicbuykolspiderSpider(scrapy.Spider):
             item['address'] = 'None'
             item['sublocality'] = 'None'
             item['age'] = '0'
-            item['google_place_id'] = '0'
+            item['google_place_id'] = 'None'
             item['lat'] = '0'
             item['longt'] = '0'
             item['Possession'] = '0'
@@ -41,12 +40,12 @@ class MagicbuykolspiderSpider(scrapy.Spider):
             item['mobile_lister'] = 'None'
             item['areacode'] = 'None'
             item['management_by_landlord'] = 'None'
-            item['Monthly_rent'] = '0'
+            item['monthly_rent'] = '0'
             item['price_per_sqft'] = '0'
 
             item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
 
-            item['city'] = 'Kolkata'
+            item['city'] = 'Hyderabad'
 
             item['Building_name'] = i.xpath('div/input[contains(@id,"projectName")]/@value').extract_first()
             if item['Building_name'] == '':
@@ -98,9 +97,11 @@ class MagicbuykolspiderSpider(scrapy.Spider):
 
             item['Locality'] = i.xpath('div/div[@class="srpColm2"]/div[@class="proColmleft"]/div[1]/div/p/a/abbr/span[1]/span/text()').extract_first()
 
-            try:
-                stat = i.xpath('div/div[@class="srpColm2"]/div[@class="proColmleft"]/div[@class="proDetailsRow "]/div[@class="proDetailsRowElm"]/text()').extract()[-1]
-                if 'Under Construction' in stat:
+
+            stat = i.xpath('.//div[1]/div[2]/div[1]/div[2]/div[1]/text()').extract()
+            #print("STAT: ", stat)
+            try:               
+                if 'Under' in stat:
                     item['Status'] = 'Under Construction'
                     poss = stat.split('Ready by ')[-1].replace("'", "").replace(')','').replace('\n', '').replace('. Freehold', '')
                     #print("POSSESSION: ", poss)
@@ -134,9 +135,16 @@ class MagicbuykolspiderSpider(scrapy.Spider):
                     item['Status'] = 'Ready to move'
                     item['Possession'] = '0'
             except:
-                item['Possession'] = '0'           
+                item['Possession'] = '0'
+                item['Status'] = 'Ready to move'
+
 
             price = i.xpath('.//div/div[@class="srpColm2"]/div[@class="proColmRight"]/div/div/div/span/text()').extract_first()
+            #print("PRICE: ", price)
+            if price == None:
+                price = i.xpath('.//span[contains(@id,"sqrFtPriceField")]/text()').extract_first()
+                price = ''.join(re.findall('[0-9]+', price))
+                #print("PRICE: ", price)
             if not price == None:
                 if 'Lac' in price:
                     item['Selling_price'] = str(float(price.split()[0])*100000)
@@ -164,28 +172,24 @@ class MagicbuykolspiderSpider(scrapy.Spider):
                     item['price_per_sqft'] = str(eval(item['price_per_sqft']) / 720)
             except:
                 item['price_per_sqft'] = '0'
-
-            try:
-                item['name_lister'] = i.xpath('div/div[@class="srpColm2"]/div[@class="proColmleft"]/div[@class="proDetailsRow "]/input[contains(@id,"devName")]/@value').extract_first()
-                if (item['name_lister'] == '') or (item['name_lister'] == 'null') :
-                    item['name_lister'] = 'None'
-            except:
-                item['name_lister'] = 'None'
-
-            item['txn_type'] = i.xpath('div/input[contains(@id,"transactionType")]/@value').extract_first()
-
-            day = i.xpath('div/input[contains(@id,"createDate")]/@value').extract_first()
-
-            item['listing_date'] = dt.strftime(dt.strptime(day, "%b %d, '%y"), '%m/%d/%Y %H:%M:%S')
-
-            item['updated_date'] = item['listing_date']
-
+            
+            
             try:
                 item['listing_by'] = i.xpath('.//div[@class="proAgentWrap"]/div[1]/div/div[1]/text()').extract_first()
                 item['name_lister'] = i.xpath('.//div[@class="proAgentWrap"]/div[@class="comNameElip"]/text()').extract_first().replace("\n", "")
             except:
                 item['listing_by'] = 'None'
                 item['name_lister'] = 'None'
+
+            item['txn_type'] = i.xpath('div/input[contains(@id,"transactionType")]/@value').extract_first()
+
+            day = i.xpath('div/input[contains(@id,"createDate")]/@value').extract_first()
+            try:
+                item['listing_date'] = dt.strftime(dt.strptime(day, "%b %d, '%y"), '%m/%d/%Y %H:%M:%S')
+                item['updated_date'] = item['listing_date']
+            except:
+                item['listing_date'] = 0
+                item['updated_date'] = item['listing_date']
 
             if (((not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft']=='0') and (not item['Building_name']=='None') and (not item['lat']=='0'))):
                 item['quality4'] = 1
@@ -208,4 +212,3 @@ class MagicbuykolspiderSpider(scrapy.Spider):
             else:
                 item['quality3'] = 0
             yield item
-        
