@@ -8,23 +8,25 @@ from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome()
 
-year=['2014','2015','2016']
-cts = ['63','64']
-vill = 'lowe'
+year=['2015','2016','2014']
+cts = ['1200','1201','1202','1203','1204','1205']
+vill = 'malad'
+# c = 1
+# no = 5
 for yr in range(0,len(year)):
 	for ct in range(0,len(cts)):
 		driver.get('https://esearchigr.maharashtra.gov.in/testingesearch/Login.aspx')
 		driver.implicitly_wait(40)
-		driver.maximize_window()
-		driver.implicitly_wait(50)
+		# driver.maximize_window()
+		# driver.implicitly_wait(50)
 
 		userid = driver.find_element_by_id('txtUserid')
-		userid.send_keys('ritesh_1')
+		userid.send_keys('karan1')
 		driver.implicitly_wait(40)
 		time.sleep(5)
 
 		passw = driver.find_element_by_id('txtPswd')
-		passw.send_keys('NMPLbhavans123$')
+		passw.send_keys('Karan123$')
 		driver.implicitly_wait(40)
 		time.sleep(5)
 
@@ -58,7 +60,7 @@ for yr in range(0,len(year)):
 		driver.implicitly_wait(100)
 		time.sleep(5)
 
-		sel_city = driver.find_element_by_xpath('//option[@value="30"]').click()
+		sel_city = driver.find_element_by_xpath('//option[@value="31"]').click()
 		driver.implicitly_wait(100)
 		time.sleep(5)
 
@@ -88,8 +90,8 @@ for yr in range(0,len(year)):
 		time.sleep(60)
 
 		sodh = driver.find_element_by_id('btnSearch').click()
-		driver.implicitly_wait(100)
-		time.sleep(30)
+		driver.implicitly_wait(300)
+		time.sleep(5)
 
 		check = 0
 		main_wnw = driver.window_handles[0]
@@ -98,6 +100,15 @@ for yr in range(0,len(year)):
 		print "Page Index is --- {}".format(len(page_index))
 		n=2
 
+		# if c==0:
+		# 	if no<=11:
+		# 		driver.implicitly_wait(50)
+		# 		driver.find_element_by_xpath('//table[@id="RegistrationGrid"]/tbody/tr[last()]/td/table/tbody/tr/td['+str(no)+']/a').click()
+		# 		driver.implicitly_wait(200)
+		# 		time.sleep(5)
+		# 	c=1
+		# 	n = no + 1
+
 		while n<=(len(page_index)+1) or n==2:
 			
 			driver.implicitly_wait(100)
@@ -105,20 +116,20 @@ for yr in range(0,len(year)):
 			print "INDEX II count is --- {}".format(len(index))
 
 			for i in range(2,len(index)):
-					
+
 					driver.implicitly_wait(50)
 					driver.find_element_by_xpath('//table[@id="RegistrationGrid"]/tbody/tr['+str(i)+']/td/input').click()
 					driver.implicitly_wait(300)
-					time.sleep(20)
+					time.sleep(10)
 					driver.implicitly_wait(200)
 					
 					next = driver.window_handles[1]
-					driver.implicitly_wait(100)
+					driver.implicitly_wait(300)
 					driver.switch_to.window(next)
-					driver.implicitly_wait(200)
+					driver.implicitly_wait(300)
 
 					time.sleep(5)
-					f = open('/home/karan/Nexchange/igrmaha/{}.csv'.format(str(vill+'_'+year[yr]+'_'+cts[ct])),'ab')
+					f = open('/home/karan/Nexchange/igrmaha/{}.csv'.format(vill+'_'+cts[ct]+'_'+year[yr]),'ab')
 					keys = driver.find_elements_by_xpath('//body/table[3]/tbody/tr/td[1]')
 					if check==0:
 						for key in keys:
@@ -135,14 +146,14 @@ for yr in range(0,len(year)):
 					f.write('\n')
 					f.close()
 				
-					time.sleep(10)
+					time.sleep(5)
 					driver.close()
 					time.sleep(5)
 
 					driver.switch_to.window(main_wnw)
 					# print driver.page_source
 					
-					driver.implicitly_wait(50)
+					driver.implicitly_wait(300)
 					# time.sleep(10)
 
 			driver.find_element_by_xpath('//table[@id="RegistrationGrid"]/tbody/tr[last()]/td/table/tbody/tr/td['+str(n)+']/a').click()
@@ -150,8 +161,8 @@ for yr in range(0,len(year)):
 				n=3
 			else:
 				n=n+1
-			driver.implicitly_wait(100)
-			time.sleep(20)
+			driver.implicitly_wait(200)
+			time.sleep(5)
 
 
 		time.sleep(20)

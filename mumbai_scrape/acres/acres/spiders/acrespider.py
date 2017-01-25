@@ -14,7 +14,7 @@ class AcresSpider(CrawlSpider):
 	name = "acressellMumbai"
 	allowed_domains = ['99acres.com']
 
-	start_urls = ['http://www.99acres.com/property-in-mumbai-ffid-page-201?orig_property_type=1,4,2,90,22&search_type=QS&search_location=NRI&pageid=QS&src=PAGING&lastAcn=SEARCH&fsl_results=Y&total_fsl_count=2&property_type=1,4,2,90,22']
+	start_urls = ['http://www.99acres.com/property-in-mumbai-ffid-page-1?orig_property_type=1,4,2,90,22&search_type=QS&search_location=NRI&pageid=QS&src=PAGING&lastAcn=SEARCH&fsl_results=Y&total_fsl_count=2&property_type=1,4,2,90,22']
 	custom_settings = {
 			'DEPTH_LIMIT': 3000,
 			'DOWNLOAD_DELAY': 10
@@ -31,18 +31,21 @@ class AcresSpider(CrawlSpider):
 			item = AcresItem()
 			data_id = i.xpath("@data-propid").extract_first()
 			sqft_check = i.xpath(".//div[@class='srpDataWrap']/span[1]/b[1]/text()").extract_first()
-			print sqft_check
-			
+			#print sqft_check
+			#Acres
 			if 'Sq.Ft.' in sqft_check:
-				sqft_check = re.findall('[0-9]+',sqft_check)
+				sqft_check = sqft_check.replace('Sq.Ft.','')
+				sqft_check = re.findall('[0-9.]+',sqft_check)
 			elif 'Sq. Yards' in sqft_check:
-				sqft_check = re.findall('[0-9]+',sqft_check)
-				sqft_check = [str(int(x)*9) for x in sqft_check]
+				sqft_check = sqft_check.replace('Sq. Yards','')
+				sqft_check = re.findall('[0-9.]+',sqft_check)
+				sqft_check = [str(int(float(x)*9)) for x in sqft_check]
 			elif 'Sq. Meter' in sqft_check:
-				sqft_check = re.findall('[0-9]+',sqft_check)
+				sqft_check = sqft_check.replace('Sq. Meter','')
+				sqft_check = re.findall('[0-9.]+',sqft_check)
 				sqft_check = [str(int(float(x)*10.7639)) for x in sqft_check]
 			else:
-				sqft_check = re.findall('[0-9]+',sqft_check)
+				sqft_check = re.findall('[0-9.]+',sqft_check)
 
 			check = 0
 			
@@ -209,18 +212,21 @@ class AcresSpider(CrawlSpider):
 					item['name_lister'] = 'None'
 
 				
-				date_string = i.xpath('.//div[@class="lf f13 hm10 mb5"]/text()').extract_first().split(':')[-1].strip().replace(' ','').replace(',','')
-				if date_string=='':
-					date_string = i.xpath('.//div[@class="lf f13 hm10 mb5"]/text()').extract()[-1].strip().split(':')[-1].replace(' ','').replace(',','')
-				if 'oday' in date_string:
-					date = time.strftime('%b%d%Y')
-				elif 'esterday' in date_string:
-					date = dt.strftime(dt.now()-datetime.timedelta(1),'%b%d%Y')
-				else:
-					date = date_string
-				item['listing_date'] = dt.strftime(dt.strptime(date,'%b%d%Y'),'%m/%d/%Y %H:%M:%S')
-				item['updated_date'] = item['listing_date']
-				
+				try:
+					date_string = i.xpath('.//div[@class="lf f13 hm10 mb5"]/text()').extract_first().split(':')[-1].strip().replace(' ','').replace(',','')
+					if date_string=='':
+						date_string = i.xpath('.//div[@class="lf f13 hm10 mb5"]/text()').extract()[-1].strip().split(':')[-1].replace(' ','').replace(',','')
+					if 'oday' in date_string:
+						date = time.strftime('%b%d%Y')
+					elif 'esterday' in date_string:
+						date = dt.strftime(dt.now()-datetime.timedelta(1),'%b%d%Y')
+					else:
+						date = date_string
+					item['listing_date'] = dt.strftime(dt.strptime(date,'%b%d%Y'),'%m/%d/%Y %H:%M:%S')
+					item['updated_date'] = item['listing_date']
+				except:
+					item['listing_date'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+					item['updated_date'] = item['listing_date']
 				
 				price = i.xpath('.//b[@itemprop="price"]/text()').extract_first()
 				if price:
