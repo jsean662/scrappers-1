@@ -124,3 +124,8 @@ thane_scrape/tigerprop/setup.py
 mumbai_scrape/builderprojects/build/
 mumbai_scrape/builderprojects/project.egg-info/
 mumbai_scrape/builderprojects/setup.py
+**/build
+**/project.egg-info
+*setup.py
+*.csv
+*.zip
