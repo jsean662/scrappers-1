@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for propertywala_SaleHyderabad project
+# Scrapy settings for propertywalaHyderabad project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -11,15 +11,15 @@
 
 BOT_NAME = 'Googlebot'
 
-SPIDER_MODULES = ['propertywala_SaleHyderabad.spiders']
-NEWSPIDER_MODULE = 'propertywala_SaleHyderabad.spiders'
+SPIDER_MODULES = ['propertywalaHyderabad.spiders']
+NEWSPIDER_MODULE = 'propertywalaHyderabad.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'propertywala_SaleHyderabad.middlewares.PropertywalaSalehyderabadSpiderMiddleware': 543,
+#    'propertywalaHyderabad.middlewares.PropertywalaSalehyderabadSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'propertywala_SaleHyderabad.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'propertywalaHyderabad.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'propertywala_SaleHyderabad.pipelines.SomePipeline': 300,
+#    'propertywalaHyderabad.pipelines.SomePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for propertywalaDelhiSale project
+# Scrapy settings for propertywalaDelhi project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -11,8 +11,8 @@
 
 BOT_NAME = 'Googlebot'
 
-SPIDER_MODULES = ['propertywalaDelhiSale.spiders']
-NEWSPIDER_MODULE = 'propertywalaDelhiSale.spiders'
+SPIDER_MODULES = ['propertywalaDelhi.spiders']
+NEWSPIDER_MODULE = 'propertywalaDelhi.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -47,13 +47,13 @@ DOWNLOAD_DELAY = 5
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'propertywalaDelhiSale.middlewares.PropertywaladelhisaleSpiderMiddleware': 543,
+#    'propertywalaDelhi.middlewares.PropertywaladelhisaleSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'propertywalaDelhiSale.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'propertywalaDelhi.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ DOWNLOAD_DELAY = 5
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'propertywalaDelhiSale.pipelines.SomePipeline': 300,
+#    'propertywalaDelhi.pipelines.SomePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

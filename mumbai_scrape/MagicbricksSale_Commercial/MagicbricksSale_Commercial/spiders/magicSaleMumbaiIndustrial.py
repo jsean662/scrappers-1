@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from ..items import MagicbrickssaleIndustrialItem
+from ..items import MagicbrickssaleCommercialItem
 from scrapy.selector import Selector
 from scrapy.http import Request
 import datetime
@@ -9,7 +9,7 @@ import re
 
 
 class MagicsalemumbaiSpider(scrapy.Spider):
-    name = "magicSaleMumbai"
+    name = "magicSaleMumbaiIndustrial"
     allowed_domains = ["magicbricks.com"]
     start_urls = [
         'http://www.magicbricks.com/property-for-sale/commercial-real-estate?proptype=Warehouse/-Godown&cityName=Mumbai&sortBy=mostRecent/Page-1',
@@ -24,7 +24,7 @@ class MagicsalemumbaiSpider(scrapy.Spider):
 
             data = record.xpath('//div[contains(@id,"resultBlockWrapper")]')
             # data = record.xpath('//div[@class="srcShadow animDef "]')
-            item = MagicbrickssaleIndustrialItem()
+            item = MagicbrickssaleCommercialItem()
             for i in data:
                 try:
 
@@ -48,6 +48,7 @@ class MagicsalemumbaiSpider(scrapy.Spider):
                     item['scraped_time'] = dt.now().strftime('%m/%d/%Y')
                     item['city'] = response.url.split('&cityName=')[1].split('&')[0]
                     item['locality'] = 'None'
+                    item['quality3'] = item['quality4'] = item['quality2'] = item['quality1'] = '0'
 
                     item['Building_name'] = i.xpath('.//input[contains(@id,"projectName")]/@value').extract_first()
                     if item['Building_name'] == ' ' or item['Building_name'] == '' or item['Building_name'] is None:
@@ -160,8 +161,7 @@ class MagicsalemumbaiSpider(scrapy.Spider):
                     if item['Status'] == '' or item['Status'] == ' ' or item['Status'] is None:
                         item['Status'] = 'None'
 
-                    item['Details'] = i.xpath(
-                        './/div/div/div[1]/div[4]/div/div[2]/div[@class="labValu"][last()]/text()').extract_first(
+                    item['Details'] = i.xpath('.//div/div/div[1]/div[4]/div/div[2]/div[@class="labValu"][last()]/text()').extract_first(
                         default='None').strip()
 
                     if item['Details'] == '' or item['Details'] == ' ':
@@ -241,13 +241,14 @@ class MagicsalemumbaiSpider(scrapy.Spider):
                     else:
                         item['address'] = item['city']
 
-                    if (((not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0'))):
+                    if ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')):
                         item['quality4'] = 1
-                    elif (((not item['price_per_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None')) or ((not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None'))):
+                    elif ((not item['price_per_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0')):
                         item['quality4'] = 0.5
                     else:
                         item['quality4'] = 0
-                    if ((not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0'))):
+
+                    if (not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0')):
                         item['quality1'] = 1
                     else:
                         item['quality1'] = 0

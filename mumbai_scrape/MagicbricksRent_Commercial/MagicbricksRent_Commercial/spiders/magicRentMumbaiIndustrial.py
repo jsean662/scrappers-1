@@ -9,7 +9,7 @@ import re
 
 
 class MagicrentmumbaiSpider(scrapy.Spider):
-    name = "magicRentMumbai"
+    name = "magicRentMumbaiIndustrial"
     allowed_domains = ["magicbricks.com"]
     start_urls = [
         'http://www.magicbricks.com/property-for-rent/commercial-real-estate?proptype=Warehouse/-Godown&cityName=Mumbai&sortBy=mostRecent/Page-1',
@@ -44,13 +44,14 @@ class MagicrentmumbaiSpider(scrapy.Spider):
                     item['listing_by'] = 'None'
                     item['age'] = '0'
                     item['sublocality'] = 'None'
-                    item['carpet_area'] = 'None'
+                    item['carpet_area'] = '0'
                     item['scraped_time'] = dt.now().strftime('%m/%d/%Y')
                     item['Status'] = 'None'
                     item['platform'] = 'Magicbricks'
                     item['txn_type'] = 'Rent'
                     item['locality'] = 'None'
                     item['Details'] = 'None'
+                    item['quality3'] = item['quality4'] = item['quality2'] = item['quality1'] = '0'
                     item['property_type'] = 'None'
 
                     proptype = i.xpath('.//p[@class="proHeading"]/a/input[2]/@value').extract_first(default='Commercial')
@@ -255,9 +256,9 @@ class MagicrentmumbaiSpider(scrapy.Spider):
                     else:
                         item['address'] = item['city']
 
-                    if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0'))):
+                    if ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')):
                         item['quality4'] = 1
-                    elif (((not item['price_per_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None'))):
+                    elif ((not item['price_per_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0')):
                         item['quality4'] = 0.5
                     else:
                         item['quality4'] = 0

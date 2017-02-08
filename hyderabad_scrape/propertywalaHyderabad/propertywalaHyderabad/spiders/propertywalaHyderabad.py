@@ -17,7 +17,7 @@ class PropertywalasalehyderabadSpider(scrapy.Spider):
     )
     custom_settings = {
         'DEPTH_LIMIT': 10000,
-        'DOWNLOAD_DELAY': 1}
+        'DOWNLOAD_DELAY': 3.0}
     item = PropertywalaSalehyderabadItem()
 
     def parse(self, response):
@@ -172,9 +172,9 @@ class PropertywalasalehyderabadSpider(scrapy.Spider):
                             buildname = 'None'
 
                         if 'opp.' in buildname.lower():
-                            buildname = buildname.lower().split('opp.')[1]
+                            buildname = buildname.lower().split('opp.')[0]
                         if 'near ' in buildname.lower():
-                            buildname = buildname.lower().split('near ')[1]
+                            buildname = buildname.lower().split('near ')[0]
                         if ' at ' in buildname.lower():
                             buildname = buildname.lower().split(' at ')[1]
                         if ',' in buildname:
@@ -205,6 +205,11 @@ class PropertywalasalehyderabadSpider(scrapy.Spider):
                 self.item['management_by_landlord'] = 'Only for Boys'
             elif 'for girl' in [conf.lower(), build.lower(), build1.lower()]:
                 self.item['management_by_landlord'] = 'Only for Girls'
+
+            try:
+                self.item['areacode'] = re.findall('[0-9]+', address[len(address) - 1])[0]
+            except:
+                self.item['areacode'] = '0'
 
             value = response.xpath('//ul[@id="PropertyAttributes"]/li/span/text()').extract()
             # if ' rent ' in conf:

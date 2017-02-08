@@ -9,10 +9,10 @@ import re
 
 
 class MagicsalemumbaiSpider(scrapy.Spider):
-    name = "magicSaleMumbai"
+    name = "magicSaleMumbaiShop"
     allowed_domains = ["magicbricks.com"]
     start_urls = [
-        'http://www.magicbricks.com/property-for-sale/commercial-real-estate?proptype=Commercial-Office-Space,Office-ITPark-SEZ&cityName=Mumbai&sortBy=mostRecent/Page-1',
+        'http://www.magicbricks.com/property-for-sale/commercial-real-estate?proptype=Commercial-Shop,Commercial-Showroom&cityName=Mumbai&sortBy=mostRecent/Page-1',
     ]
     custom_settings = {
         'DEPTH_LIMIT': 100000,
@@ -48,6 +48,7 @@ class MagicsalemumbaiSpider(scrapy.Spider):
                     item['scraped_time'] = dt.now().strftime('%m/%d/%Y')
                     item['city'] = response.url.split('&cityName=')[1].split('&')[0]
                     item['locality'] = 'None'
+                    item['quality3'] = item['quality4'] = item['quality2'] = item['quality1'] = '0'
 
                     item['Building_name'] = i.xpath('.//input[contains(@id,"projectName")]/@value').extract_first()
                     if item['Building_name'] == ' ' or item['Building_name'] == '' or item['Building_name'] is None:
@@ -226,18 +227,18 @@ class MagicsalemumbaiSpider(scrapy.Spider):
                     else:
                         item['address'] = item['city']
 
-                    if (((not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0'))):
+                    if ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')):
                         item['quality4'] = 1
-                    elif (((not item['price_per_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None')) or ((not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None'))):
+                    elif ((not item['price_per_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0')):
                         item['quality4'] = 0.5
                     else:
                         item['quality4'] = 0
-                    if ((not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0'))):
+                    if (not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0')):
                         item['quality1'] = 1
                     else:
                         item['quality1'] = 0
 
-                    if ((not item['Launch_date'] == '0') and (not item['Possession'] == '0')):
+                    if (not item['Launch_date'] == '0') and (not item['Possession'] == '0'):
                         item['quality2'] = 1
                     else:
                         item['quality2'] = 0
@@ -257,7 +258,7 @@ class MagicsalemumbaiSpider(scrapy.Spider):
 
         if 'resultBlockWrapper' in str(response.body):
             pageno = int(response.url.split('Page-')[1])
-            url = 'http://www.magicbricks.com/property-for-sale/commercial-real-estate?proptype=Commercial-Office-Space,Office-ITPark-SEZ&cityName=Mumbai&sortBy=mostRecent/Page-' + str(pageno + 1)
+            url = 'http://www.magicbricks.com/property-for-sale/commercial-real-estate?proptype=Commercial-Shop,Commercial-Showroom&cityName=Mumbai&sortBy=mostRecent/Page-' + str(pageno + 1)
             # print(url)
             yield Request(url, callback=self.parse, dont_filter=True)
             # pagecount = int(response.xpath('//span[@id="pageCount"]/text()').extract_first(default='0.0').split('.')[0])
@@ -267,6 +268,6 @@ class MagicsalemumbaiSpider(scrapy.Spider):
             #     pass
             # else:
             #     if pageNo < pagecount:
-            #         url = 'http://www.magicbricks.com/property-for-sale/commercial-real-estate?proptype=Commercial-Office-Space,Office-ITPark-SEZ&cityName=Mumbai&sortBy=mostRecent/Page-1' + str(pageNo + 1)
+            #         url = 'http://www.magicbricks.com/property-for-sale/commercial-real-estate?proptype=Commercial-Shop,Commercial-Showroom&cityName=Mumbai&sortBy=mostRecent/Page-1' + str(pageNo + 1)
             #         # print(url)
             #         yield Request(url, callback=self.parse)
