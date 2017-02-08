@@ -9,7 +9,7 @@ from ..items import PropertywalakolkataSaleItem
 
 
 class KolkatasalePropertywalaSpider(scrapy.Spider):
-    name = "propertywalaSaleKolkata"
+    name = "propertywalaKolkata"
     allowed_domains = ["propertywala.com"]
     start_urls = [
         'https://www.propertywala.com/properties/type-residential/for-sale/location-kolkata_west_bengal?orderby=date',
@@ -17,7 +17,7 @@ class KolkatasalePropertywalaSpider(scrapy.Spider):
     ]
     custom_settings = {
         'DEPTH_LIMIT': 10000,
-        'DOWNLOAD_DELAY': 5.0,
+        'DOWNLOAD_DELAY': 3.0,
     }
     item = PropertywalakolkataSaleItem()
 
@@ -25,6 +25,7 @@ class KolkatasalePropertywalaSpider(scrapy.Spider):
         try:
             record = Selector(response)
             data = record.xpath('//li[@class="posted"]')
+            txn = ''
 
             if 'rent' in response.url:
                 txn = 'Rent'
@@ -57,7 +58,7 @@ class KolkatasalePropertywalaSpider(scrapy.Spider):
                     request.meta['agent'] = d
                     request.meta['name'] = name_lister
                     request.meta['data_id'] = ids
-                    request.meta[txn] = txn
+                    request.meta['txn'] = txn
                     yield request
                 except Exception as e:
                     print(e)
@@ -118,7 +119,7 @@ class KolkatasalePropertywalaSpider(scrapy.Spider):
         build = build1 = ''
 
         try:
-            loc = response.xpath('//div[@id="PropertyDetails"]/section/header/h4/text()').extract_first().strip().split(',')
+            loc = response.xpath('//div[@id="PropertyDetails"]/section/header/h4/text()').extract_first(default='None').strip().split(',')
             self.item['locality'] = loc[len(loc) - 2].strip()
 
             build = response.xpath('//div[@id="PropertyDetails"]/section/header/h3/text()').extract_first().strip()
@@ -126,7 +127,7 @@ class KolkatasalePropertywalaSpider(scrapy.Spider):
         except Exception as e:
             self.item['locality'] = 'None'
 
-        address = response.xpath('//div[@id="PropertyDetails"]/section/header/h4/text()').extract_first().strip().split(',')
+        address = response.xpath('//div[@id="PropertyDetails"]/section/header/h4/text()').extract_first(default=self.item['city']).strip().split(',')
         self.item['address'] = address
 
         buildname = ''
@@ -141,14 +142,14 @@ class KolkatasalePropertywalaSpider(scrapy.Spider):
         # (response.xpath('//section[@id="PropertySummary"]/header/h4/text()').extract_first().strip()).split(',')[0]
             try:
                 try:
-                    buildname = response.xpath(".//*[@id='PropertyAttributes']/li[contains(text(),'Society')]/span/a/text()").extract_first()
+                    buildname = response.xpath(".//*[@id='PropertyAttributes']/li[contains(text(),'Society')]/span/a/text()").extract_first().strip()
                 except:
                     buildname = response.xpath(".//*[@id='PropertyAttributes']/li[contains(text(),'Society')]/span/text()").extract_first()
             except:
                 pass
             if buildname == '' or buildname == ' ' or buildname is None:
                 buildname = address[0]
-            if 'flat no' or 'room no' in buildname:
+            if 'flat no' or 'room no' in buildname.lower():
                 buildname = address[1]
 
             if buildname is not None:
@@ -163,17 +164,15 @@ class KolkatasalePropertywalaSpider(scrapy.Spider):
                         if buildname == '':
                             buildname = ''.join(build1.split(',')[:1]).replace(self.item['locality'], '')
 
-                    if (self.item['city'] in buildname) or (self.item['locality'] in buildname) or (
-                        buildname in self.item['locality']):
+                    if (self.item['city'] in buildname) or (self.item['locality'] in buildname) or (buildname in self.item['locality']):
                         buildname = ''.join(build1.split(',')[:2]).replace(self.item['locality'], '')
                     if buildname == ' ':
                         buildname = 'None'
 
-
                     if 'opp.' in buildname.lower():
-                        buildname = buildname.lower().split('opp.')[1]
+                        buildname = buildname.lower().split('opp.')[0]
                     if 'near ' in buildname.lower():
-                        buildname = buildname.lower().split('near ')[1]
+                        buildname = buildname.lower().split('near ')[0]
                     if ' at ' in buildname.lower():
                         buildname = buildname.lower().split(' at ')[1]
                     if ',' in buildname:
@@ -204,6 +203,11 @@ class KolkatasalePropertywalaSpider(scrapy.Spider):
             self.item['management_by_landlord'] = 'Only for Boys'
         elif 'for girl' in [conf.lower(), build.lower(), build1.lower()]:
             self.item['management_by_landlord'] = 'Only for Girls'
+
+        try:
+            self.item['areacode'] = re.findall('[0-9]+', address[len(address)-1])[0]
+        except:
+            self.item['areacode'] = '0'
 
         value = response.xpath('//ul[@id="PropertyAttributes"]/li/span/text()').extract()
         # if ' rent ' in conf:

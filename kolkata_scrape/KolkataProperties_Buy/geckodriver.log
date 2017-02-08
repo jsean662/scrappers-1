@@ -1,0 +1,12 @@
+1483546794392	geckodriver	INFO	Listening on 127.0.0.1:56788
+1483546796306	mozprofile::profile	INFO	Using profile path C:\Users\Vic\AppData\Local\Temp\rust_mozprofile.s4ExpYYAU5Vn
+1483546796308	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1483546796717	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56794
+1483546800468	addons.xpi	WARN	Add-on mozilla_cc2@internetdownloadmanager.com is not compatible with application version.
+1483546800470	addons.xpi	WARN	Add-on mozilla_cc2@internetdownloadmanager.com is not compatible with application version.
+1483546800470	addons.xpi-utils	WARN	Disabling foreign installed add-on mozilla_cc2@internetdownloadmanager.com in winreg-app-user
+[GFX1-]: PossiblyBrokenSurfaceSharing_UnexpectedAMDGPU
+[GFX1-]: PossiblyBrokenSurfaceSharing_UnexpectedAMDGPU
+[GFX1-]: PossiblyBrokenSurfaceSharing_UnexpectedAMDGPU
+[GFX1-]: PossiblyBrokenSurfaceSharing_UnexpectedAMDGPU
+[Child 1536] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
