@@ -17,7 +17,8 @@ from dateutil.relativedelta import relativedelta
 class PropWala(CrawlSpider):
 	name = "propertywalaBangalore"
 	allowed_domains = ['propertywala.com']
-	start_urls = [ 'https://www.propertywala.com/properties/type-residential_apartment_flat/for-sale/location-bangalore_karnataka','https://www.propertywala.com/properties/type-residential_apartment_flat/for-rent/location-bangalore_karnataka'
+	start_urls = [ 'https://www.propertywala.com/properties/type-residential_apartment_flat/for-sale/location-bangalore_karnataka',
+				   'https://www.propertywala.com/properties/type-residential_apartment_flat/for-rent/location-bangalore_karnataka'
 	]      
 	
 	item = PropertywalaItem()

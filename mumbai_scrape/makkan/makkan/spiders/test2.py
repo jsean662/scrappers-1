@@ -1,6 +1,6 @@
 import scrapy
 from scrapy import log
-from urlparse import urljoin
+# from urlparse import urljoin
 from scrapy.spiders import Spider
 from scrapy.http import Request
 from scrapy.exceptions import CloseSpider
@@ -9,7 +9,7 @@ from scrapy.selector import HtmlXPathSelector
 from scrapy.http import Request
 from scrapy.linkextractors import LinkExtractor
 from scrapy.selector import Selector
-from makkan.items import Website
+from ..items import Website
 from scrapy.loader import ItemLoader
 import time
 import unicodedata
@@ -116,7 +116,7 @@ class MakaanSpider(CrawlSpider):
 
             sqf = i.xpath('.//span[@class="size"]/text()').extract_first()
             try:
-                self.item['Bua_sqft'] = re.findall('[0-9]+',sqf)
+                self.item['Bua_sqft'] = re.findall('[0-9]+', sqf)
                 self.item['Bua_sqft'] = ''.join(self.item['Bua_sqft'])
             except:
                 self.item['Bua_sqft'] = '0'
@@ -126,7 +126,8 @@ class MakaanSpider(CrawlSpider):
                     date = i.xpath('div[@class="cardWrapper"]/div[@class="cardLayout clearfix"]/div[@class="infoWrap"]/div[@class="highlight-points"]/div[@class="dcol poss"]/div[1]/text()').extract_first()
                     self.item['Possession'] = dt.strftime(dt.strptime(date,'%b %Y'),'%m/%d/%Y %H:%M:%S')
                 except:
-                    print date
+                    pass
+                    # print date
             elif 'esale' in self.item['txn_type']:
                 self.item['age'] = i.xpath('div[@class="cardWrapper"]/div[@class="cardLayout clearfix"]/div[@class="infoWrap"]/div[@class="highlight-points"]/div[@class="dcol poss"]/div[@class="val ''"]/text()').extract_first()
 
