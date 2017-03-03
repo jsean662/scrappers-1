@@ -1,0 +1,56 @@
+{
+  "id": "26599abc-feff-4244-b51d-595c0bec7a94",
+  "name": "no - compose-birthday",
+  "auto": true,
+  "contexts": [
+    "no-compose",
+    "bouquet"
+  ],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "For birthday please"
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "I need a bouquet for birthday"
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "birthday"
+        }
+      ],
+      "isTemplate": false
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "birthday.bouquet",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "name": "compose",
+          "value": "no"
+        },
+        {
+          "name": "occasion",
+          "value": "birthday"
+        }
+      ],
+      "speech": "Here you can choose a wonderful birthday bouquet!"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false
+}

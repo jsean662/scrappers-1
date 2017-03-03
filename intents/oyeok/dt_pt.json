@@ -1,0 +1,143 @@
+{
+  "templates": [],
+  "userSays": [
+    {
+      "id": "c2a40982-138d-4fbb-9c8b-4219bf279d8e",
+      "data": [
+        {
+          "text": "**"
+        },
+        {
+          "text": "AVAILABLE",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " FOR "
+        },
+        {
+          "text": "COMMERCIAL",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " USE TOO"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "b3e88c43-b425-441a-8273-59334bf9de99",
+      "data": [
+        {
+          "text": "*Glass Facade "
+        },
+        {
+          "text": "Office Space",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " for a Film Production Company*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "27848227-3314-4eba-bc5c-405967661b77",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Direct",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Commercial",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Requirement",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "58b6eca4-6fd2-49d3-b1ad-70dfcf92fa6a",
+  "name": "dt_pt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@label_ignorewords",
+          "name": "label_ignorewords",
+          "value": "$label_ignorewords",
+          "isList": false
+        },
+        {
+          "dataType": "@property_type",
+          "name": "property_type",
+          "value": "$property_type",
+          "isList": false
+        },
+        {
+          "dataType": "@req_avail",
+          "name": "req_avail",
+          "value": "$req_avail",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $property_type , $req_avail"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

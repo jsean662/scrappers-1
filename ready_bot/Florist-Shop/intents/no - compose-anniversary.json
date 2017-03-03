@@ -1,0 +1,55 @@
+{
+  "id": "4042d14d-5e62-4f37-a2f9-0b8371e93d7a",
+  "name": "no - compose-anniversary",
+  "auto": true,
+  "contexts": [
+    "no-compose",
+    "bouquet"
+  ],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "For anniversary"
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "I need a bouquet for anniversary"
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "anniversary"
+        }
+      ],
+      "isTemplate": false
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "name": "compose",
+          "value": "no"
+        },
+        {
+          "name": "occasion",
+          "value": "anniversary"
+        }
+      ],
+      "speech": "Here you can choose a wonderful anniversary bouquet!"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false
+}

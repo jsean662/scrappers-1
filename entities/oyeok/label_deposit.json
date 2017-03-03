@@ -1,0 +1,18 @@
+{
+  "id": "8a5de25c-a714-43c4-a813-132b705417e0",
+  "name": "label_deposit",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Deposit",
+      "synonyms": [
+        "Deposit",
+        "Dpst",
+        "Depo",
+        "deposit"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

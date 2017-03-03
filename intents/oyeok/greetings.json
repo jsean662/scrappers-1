@@ -1,0 +1,124 @@
+{
+  "templates": [
+    "hello",
+    "Respected Associates,",
+    "want to do listing",
+    "oye",
+    "hi",
+    "Dear All,",
+    "Dear Channel Partners,",
+    "Dear Associates,"
+  ],
+  "userSays": [
+    {
+      "id": "8101e4fc-6fd1-43ce-b3e4-a92388d10297",
+      "data": [
+        {
+          "text": "hello"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "01eacce7-3fbc-429b-99bd-c70a7e0d817f",
+      "data": [
+        {
+          "text": "Respected Associates,"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2af8ff38-3f1d-40a0-98a8-7190041b87c3",
+      "data": [
+        {
+          "text": "want "
+        },
+        {
+          "text": "to",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " do listing"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0e67734f-5d61-4f07-b3c1-1d5bc637606b",
+      "data": [
+        {
+          "text": "oye"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c84f2689-b4d0-407a-bbf9-16a0b53a0eb5",
+      "data": [
+        {
+          "text": "hi"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "697cbe19-f78b-419c-bfdb-33ea7fdafeba",
+      "data": [
+        {
+          "text": "Dear All,"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2aa192a4-c753-4245-be05-479f9aa2cd4d",
+      "data": [
+        {
+          "text": "Dear Channel Partners,"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "aaae4e4a-1175-459d-831c-fccb367ea1f4",
+      "data": [
+        {
+          "text": "Dear Associates,"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "56bfacbc-de7b-431c-957b-8672c67ad54b",
+  "name": "greetings",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Hello sir waiting for first parameter"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

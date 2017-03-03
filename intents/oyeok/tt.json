@@ -1,0 +1,316 @@
+{
+  "templates": [
+    "Leave n licence ",
+    "Sale",
+    "Sale ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type ",
+    "@transaction_type:transaction_type"
+  ],
+  "userSays": [
+    {
+      "id": "73d6e360-7893-47db-981c-652ff96d42aa",
+      "data": [
+        {
+          "text": "*Leave n licence*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "f96b29ef-0cc1-4fe8-83f6-09963454b1a8",
+      "data": [
+        {
+          "text": "Leave n licence "
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "51fab19a-b510-418d-8dca-fba566118e42",
+      "data": [
+        {
+          "text": "*Leave n license*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "5550010c-ec0a-43f6-ab98-3e009810c3d4",
+      "data": [
+        {
+          "text": "Sale"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "65e8fd9f-3731-4778-b177-33a035df6df0",
+      "data": [
+        {
+          "text": "Sale "
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "93b18aa0-ce60-4bf3-9fdd-796c30cbbb87",
+      "data": [
+        {
+          "text": "Leave n licence",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "3e50a2dd-b20e-42ea-8393-baad589c7f22",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Leave n licence",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "f5b1159d-e957-4898-a9fa-8f94c5c8a1a0",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Leave n license",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "a13b1429-68b7-4f71-842d-d4212b12afc0",
+      "data": [
+        {
+          "text": "Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "7464b702-f469-4864-b93d-6e089a8ae64b",
+      "data": [
+        {
+          "text": "Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d9df07af-1be5-445f-a82b-371c6fffce58",
+      "data": [
+        {
+          "text": "Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "a6d4234c-5580-4072-a6a4-272460096a9d",
+      "data": [
+        {
+          "text": "Leave n licence",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "3492b4a3-214e-4a02-835c-c237dc62650c",
+      "data": [
+        {
+          "text": "Leave n licence",
+          "alias": "transaction_type",
+          "meta": "@transaction_type"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "a32c9a7f-513c-4048-a2fa-6a5b07619f22",
+      "data": [
+        {
+          "text": "@transaction_type:transaction_type"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "5c792897-54d6-4046-af92-dcf1982974ac",
+      "data": [
+        {
+          "text": "OR",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "07e213ba-3290-4473-b630-d6affdf9f5a6",
+      "data": [
+        {
+          "text": "ll",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e813f827-e7af-4aa9-a85b-31aaaea47a76",
+      "data": [
+        {
+          "text": "LL",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2d077698-f1ab-49e5-b3dc-e7bd68c5d05b",
+      "data": [
+        {
+          "text": "Leave n License",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "5861a3ea-8105-454d-95cf-1c8300ab7bb0",
+      "data": [
+        {
+          "text": "Lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "67781c5a-8f91-4d7e-8b6c-20f003286338",
+      "data": [
+        {
+          "text": "Rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "d9ccec68-b3b5-4903-8962-20636b53732a",
+  "name": "tt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@transaction_type",
+          "name": "transaction_type",
+          "value": "$transaction_type",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $transaction_type"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

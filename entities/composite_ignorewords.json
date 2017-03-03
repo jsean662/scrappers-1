@@ -1,0 +1,317 @@
+{
+  "id": "b444d834-e624-4306-bbd9-a90e26131aa7",
+  "name": "composite_ignorewords",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Exclusive",
+      "synonyms": [
+        "Exclusive"
+      ]
+    },
+    {
+      "value": "urgent",
+      "synonyms": [
+        "urgent"
+      ]
+    },
+    {
+      "value": "URGENT",
+      "synonyms": [
+        "URGENT"
+      ]
+    },
+    {
+      "value": "NOW",
+      "synonyms": [
+        "NOW"
+      ]
+    },
+    {
+      "value": "now",
+      "synonyms": [
+        "now"
+      ]
+    },
+    {
+      "value": "higher floor",
+      "synonyms": [
+        "higher floor"
+      ]
+    },
+    {
+      "value": "middle floor",
+      "synonyms": [
+        "middle floor"
+      ]
+    },
+    {
+      "value": "spacious",
+      "synonyms": [
+        "spacious"
+      ]
+    },
+    {
+      "value": "extensions",
+      "synonyms": [
+        "extensions"
+      ]
+    },
+    {
+      "value": "all extension",
+      "synonyms": [
+        "all extension"
+      ]
+    },
+    {
+      "value": "Lower floor",
+      "synonyms": [
+        "Lower floor"
+      ]
+    },
+    {
+      "value": "good condition",
+      "synonyms": [
+        "good condition"
+      ]
+    },
+    {
+      "value": "plz",
+      "synonyms": [
+        "plz",
+        "Please call"
+      ]
+    },
+    {
+      "value": "Fully Exclusive",
+      "synonyms": [
+        "Fully Exclusive"
+      ]
+    },
+    {
+      "value": "All Electronics",
+      "synonyms": [
+        "All Electronics"
+      ]
+    },
+    {
+      "value": "electronics",
+      "synonyms": [
+        "electronics"
+      ]
+    },
+    {
+      "value": "Tastefully done up",
+      "synonyms": [
+        "Tastefully done up"
+      ]
+    },
+    {
+      "value": "students",
+      "synonyms": [
+        "students"
+      ]
+    },
+    {
+      "value": "compact",
+      "synonyms": [
+        "compact"
+      ]
+    },
+    {
+      "value": "good",
+      "synonyms": [
+        "good"
+      ]
+    },
+    {
+      "value": "INSPECTION AROUND",
+      "synonyms": [
+        "INSPECTION AROUND"
+      ]
+    },
+    {
+      "value": "CALL",
+      "synonyms": [
+        "CALL",
+        "call"
+      ]
+    },
+    {
+      "value": "cheque possible",
+      "synonyms": [
+        "cheque possible"
+      ]
+    },
+    {
+      "value": "allowed",
+      "synonyms": [
+        "allowed"
+      ]
+    },
+    {
+      "value": "Upper basement",
+      "synonyms": [
+        "Upper basement"
+      ]
+    },
+    {
+      "value": "Dance Classes",
+      "synonyms": [
+        "Dance Classes"
+      ]
+    },
+    {
+      "value": "Yoga classes",
+      "synonyms": [
+        "Yoga classes"
+      ]
+    },
+    {
+      "value": "clinic",
+      "synonyms": [
+        "clinic"
+      ]
+    },
+    {
+      "value": "Best for",
+      "synonyms": [
+        "Best for"
+      ]
+    },
+    {
+      "value": "Small clinic",
+      "synonyms": [
+        "Small clinic"
+      ]
+    },
+    {
+      "value": "Courier service",
+      "synonyms": [
+        "Courier service"
+      ]
+    },
+    {
+      "value": "etc",
+      "synonyms": [
+        "etc"
+      ]
+    },
+    {
+      "value": "please  give",
+      "synonyms": [
+        "please  give"
+      ]
+    },
+    {
+      "value": "coaching  classes",
+      "synonyms": [
+        "coaching  classes"
+      ]
+    },
+    {
+      "value": "immediate",
+      "synonyms": [
+        "immediate"
+      ]
+    },
+    {
+      "value": "Onley",
+      "synonyms": [
+        "Onley"
+      ]
+    },
+    {
+      "value": "inspection",
+      "synonyms": [
+        "inspection"
+      ]
+    },
+    {
+      "value": "Brand New",
+      "synonyms": [
+        "Brand New"
+      ]
+    },
+    {
+      "value": "according",
+      "synonyms": [
+        "according"
+      ]
+    },
+    {
+      "value": "3 bathrooms , 6 AC\u0027s, 2 Balconies, 1 Drying Area, Washing Machine , microwave, fridge, hob, piped gas and one Stilt parking, fully security, CC TV, 2 Lifts.",
+      "synonyms": [
+        "3 bathrooms , 6 AC\u0027s, 2 Balconies, 1 Drying Area, Washing Machine , microwave, fridge, hob, piped gas and one Stilt parking, fully security, CC TV, 2 Lifts."
+      ]
+    },
+    {
+      "value": "Next to",
+      "synonyms": [
+        "Next to"
+      ]
+    },
+    {
+      "value": "3 bathrooms",
+      "synonyms": [
+        "3 bathrooms"
+      ]
+    },
+    {
+      "value": "6 AC\u0027s",
+      "synonyms": [
+        "6 AC\u0027s"
+      ]
+    },
+    {
+      "value": "2 Balconies",
+      "synonyms": [
+        "2 Balconies"
+      ]
+    },
+    {
+      "value": "1 Drying Area",
+      "synonyms": [
+        "1 Drying Area"
+      ]
+    },
+    {
+      "value": "Washing Machine",
+      "synonyms": [
+        "Washing Machine"
+      ]
+    },
+    {
+      "value": "microwave",
+      "synonyms": [
+        "microwave"
+      ]
+    },
+    {
+      "value": "fridge",
+      "synonyms": [
+        "fridge"
+      ]
+    },
+    {
+      "value": "hob",
+      "synonyms": [
+        "hob"
+      ]
+    },
+    {
+      "value": "piped gas",
+      "synonyms": [
+        "piped gas"
+      ]
+    },
+    {
+      "value": "and",
+      "synonyms": [
+        "and"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

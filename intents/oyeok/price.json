@@ -1,0 +1,452 @@
+{
+  "templates": [
+    "Per Acer @sys.number:price @label_amt_units:label_amt_units ",
+    "Quote : @sys.number:price @label_amt_units:label_amt_units ",
+    "@sys.number:price @label_amt_units:label_amt_units negotiable",
+    "@sys.number:price  @label_amt_units:label_amt_units ",
+    "@sys.number:price  @label_amt_units:label_amt_units negotiable",
+    "@sys.number:price  @label_amt_units:label_amt_units negotiable",
+    "@sys.number:price  @label_amt_units:label_amt_units NEGO",
+    "@sys.number:price  @label_amt_units:label_amt_units ",
+    "Budget @sys.number:price @label_amt_units:label_amt_units - @sys.number:price @label_amt_units:label_amt_units ",
+    "Budget - @sys.number:price  @label_amt_units:label_amt_units max",
+    "Price @sys.number:price @label_amt_units:label_amt_units .",
+    "@sys.number:price @label_amt_units:label_amt_units ",
+    "@sys.number:price @label_amt_units:label_amt_units ",
+    "@sys.number:price @label_amt_units:label_amt_units ",
+    "Budget: Upto Rs. @sys.number:price  @label_amt_units:label_amt_units "
+  ],
+  "userSays": [
+    {
+      "id": "df18c0cd-d974-46a9-8e96-234d714f4ecb",
+      "data": [
+        {
+          "text": "Per "
+        },
+        {
+          "text": "Acer",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "8",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "Lac",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3bcf2fa5-62c4-47eb-8279-264a6b0b4a73",
+      "data": [
+        {
+          "text": "Quote : "
+        },
+        {
+          "text": "2.50",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "L",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "a7a9a845-4770-44f0-b78a-99dfc0f91e7b",
+      "data": [
+        {
+          "text": "8.75",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "cr",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " negotiable"
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "e3278dcf-d36e-4780-8ecf-f38b52851807",
+      "data": [
+        {
+          "text": "4.25",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cr",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "7e62d591-e153-4d28-8fb5-2bd99cc08f0b",
+      "data": [
+        {
+          "text": "12",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cr",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " negotiable"
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "e109f584-6ba6-4b9f-815a-c773e47e79cd",
+      "data": [
+        {
+          "text": "5.50",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "CR",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " negotiable"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "425909f5-fe7b-40e9-8703-7a4849a39b17",
+      "data": [
+        {
+          "text": "80000",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "PACKAGE",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " NEGO"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "d49c5f0a-aca5-41fa-bf9b-7fa9cba3d078",
+      "data": [
+        {
+          "text": "4.25",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cr",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "796a8166-1eca-49b9-aa92-db847f6a5b40",
+      "data": [
+        {
+          "text": "Budget "
+        },
+        {
+          "text": "50",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "k",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " - "
+        },
+        {
+          "text": "60",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "k",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "15f7b2b1-bae6-409a-94e6-78a8bc7c1780",
+      "data": [
+        {
+          "text": "Budget -"
+        },
+        {
+          "text": "5",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cr",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " max"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e94b4206-0c04-4875-9559-4c62e2b55270",
+      "data": [
+        {
+          "text": "Price "
+        },
+        {
+          "text": "11",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "cr",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " ."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2c94b651-00f2-4a1c-b8cf-5a36ee37daab",
+      "data": [
+        {
+          "text": "85",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "pkg",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8f485674-3673-4d7e-b23a-f0d842e0dc6d",
+      "data": [
+        {
+          "text": "5.6",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "cr",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b245d62e-b9a0-40ad-b047-d3d9d6a8480e",
+      "data": [
+        {
+          "text": "60",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": "kpkg",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a1bdadd5-8658-4363-a2f9-f4f4303473a7",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "5.75",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cr",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " negotiable*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f0a7f07f-cd59-4592-9cea-85cc2de85ea9",
+      "data": [
+        {
+          "text": "Budget: Upto Rs. "
+        },
+        {
+          "text": "60",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "K",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    }
+  ],
+  "id": "9e732ca8-c1b8-4f5b-85ad-a78d0fce346e",
+  "name": "price",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.number",
+          "name": "price",
+          "value": "$price",
+          "isList": true
+        },
+        {
+          "dataType": "@label_amt_units",
+          "name": "label_amt_units",
+          "value": "$label_amt_units",
+          "isList": true
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $price , $label_amt_units"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

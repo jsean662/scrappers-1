@@ -1,0 +1,80 @@
+{
+  "templates": [
+    "@config:config - @sys.number:sqft @label_area:label_area "
+  ],
+  "userSays": [
+    {
+      "id": "11d26dac-fccd-44de-848c-a6d2931b385a",
+      "data": [
+        {
+          "text": "3bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " -"
+        },
+        {
+          "text": "1550",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "carpet",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "97a2b745-95a1-4efb-9d66-6617874ad500",
+  "name": "config_area",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@config",
+          "name": "config",
+          "value": "$config",
+          "isList": false
+        },
+        {
+          "dataType": "@label_area",
+          "name": "label_area",
+          "value": "$label_area",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "sqft",
+          "value": "$sqft",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $config , $label_area , $sqft"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

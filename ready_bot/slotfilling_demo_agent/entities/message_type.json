@@ -1,0 +1,24 @@
+{
+  "id": "faf26138-bfe8-4464-9d8f-b486f1d61bed",
+  "name": "message_type",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "SMS",
+      "synonyms": [
+        "SMS",
+        "Short Message",
+        "Text Message"
+      ]
+    },
+    {
+      "value": "Email",
+      "synonyms": [
+        "Email",
+        "Mail"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

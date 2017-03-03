@@ -1,0 +1,181 @@
+{
+  "id": "b396308f-550f-4cb1-934e-f620871ebb8a",
+  "name": "label_locality_mum",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Andheri west",
+      "synonyms": [
+        "Andheri west",
+        "andheri west",
+        "Andheri w",
+        "Lokhandwala",
+        "7 bunglow",
+        "4 bunglow",
+        "jvlr",
+        "d n nagar",
+        "versova",
+        "yari road",
+        "lokhandwala",
+        "Lokhandwala Complex",
+        "lokhandwala complex",
+        "lokhandwala cmplx"
+      ]
+    },
+    {
+      "value": "Andheri East",
+      "synonyms": [
+        "Andheri",
+        "andheri",
+        "andhri",
+        "Andheri East",
+        "andheri east"
+      ]
+    },
+    {
+      "value": "Juhu",
+      "synonyms": [
+        "Juhu",
+        "juhu",
+        "juhu tara road",
+        "juhu church road",
+        "juhu circle",
+        "pvr/iskon temple",
+        "gulmohar road",
+        "jvpd scheme",
+        "kaifi azmi park",
+        "janki kutir",
+        "Milan Subway",
+        "S v Road",
+        "irla",
+        "juhu post office",
+        "juhu aeroplane garden",
+        "juhu koliwada",
+        "ns road 1",
+        "ns road 2",
+        "ns road 3",
+        "ns road 4",
+        "ns road 5",
+        "ns road 6",
+        "ns road 7",
+        "ns road 8",
+        "ns road 9",
+        "ns road 10",
+        "ns road 11",
+        "ns road 12",
+        "ns road 13"
+      ]
+    },
+    {
+      "value": "Powai",
+      "synonyms": [
+        "Powai",
+        "pawai",
+        "powai",
+        "pwi",
+        "s m shetty",
+        "chandivali",
+        "hiranandani garden",
+        "nahar amarshakti",
+        "raheja vihar",
+        "pelecian heights",
+        "powai bmc garden",
+        "hiranandani club house",
+        "supreme business park",
+        "nomura/deloitte",
+        "hiranandani foundatoin school",
+        "powai park",
+        "eden bunglow",
+        "iit powai market",
+        "old powai market",
+        "galeria",
+        "d mart",
+        "hiranandani mtnl",
+        "powai police station",
+        "L \u0026 T powai"
+      ]
+    },
+    {
+      "value": "Bandra",
+      "synonyms": [
+        "Bandra",
+        "Bndr",
+        "bandra",
+        "Bandra w",
+        "Almeida Park",
+        "Gold Gym/pali Hill",
+        "Pali Naka",
+        "Carter Road",
+        "Union Park",
+        "Ambedkar Road",
+        "Candies",
+        "Mount Mary Hill",
+        "Mehboob Studio",
+        "Bandstand taj Land",
+        "Mount Mary Steps",
+        "D\u0027monte Park",
+        "Hill Road",
+        "Turner Road",
+        "14th Road Bandra",
+        "15th Road Bandra",
+        "16th Road Bandra",
+        "Nargis Dutt Road",
+        "Perry Cross Road",
+        "Rizvi Complex",
+        "St. Paul Road",
+        "Lilavati",
+        "Kfc 33rd Road",
+        "Bandra East",
+        "Bkc - G Block",
+        "Bkc Annexe",
+        "Bandra Talav",
+        "Zig Zag Road",
+        "kalanagar",
+        "bandra Gymkhana",
+        "Bandstand"
+      ]
+    },
+    {
+      "value": "Khar",
+      "synonyms": [
+        "Khar",
+        "khar",
+        "Khar Gymkahana",
+        "Khar Telephone Exchange",
+        "17th Road",
+        "14th Road Khar West",
+        "15th Road Khar West",
+        "16th Road Khar West"
+      ]
+    },
+    {
+      "value": "Santacruz",
+      "synonyms": [
+        "Santacruz",
+        "santacruz",
+        "santacrz",
+        "sntcrz",
+        "Santacruz West",
+        "Central Avenue",
+        "South Avenue",
+        "West Avenue",
+        "East Avenue",
+        "Saraswati Lane",
+        "Shahrukh\u0027s Office",
+        "Veramoda Linking Road",
+        "14th Road Santacruz West",
+        "15th Road Santacruz West",
+        "16th Road Santacruz West"
+      ]
+    },
+    {
+      "value": "Santacruz West",
+      "synonyms": [
+        "Santacruz West",
+        "santacruz west"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

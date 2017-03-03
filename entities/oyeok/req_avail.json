@@ -1,0 +1,65 @@
+{
+  "id": "d60d20b3-e3b1-411f-8b65-ce4b50165583",
+  "name": "req_avail",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Req",
+      "synonyms": [
+        "Requirement",
+        "req",
+        "Req",
+        "Wanted",
+        "requiring",
+        "wanted",
+        "Urgent Inquiry",
+        "Urg Inquiry",
+        "Urgent inquiry",
+        "Inequiry",
+        "Enquiry",
+        "INQ",
+        "ENQ",
+        "require",
+        "Require",
+        "Client",
+        "CLIENT",
+        "CLIENT VISIT TOMMORROW",
+        "CLIENT VISIT TODAY",
+        "VISIT TODAY",
+        "VISIT",
+        "Inquire",
+        "Enquire",
+        "requirement"
+      ]
+    },
+    {
+      "value": "Avail",
+      "synonyms": [
+        "Available",
+        "Avail",
+        "Avl",
+        "Have",
+        "Ask",
+        "Asking",
+        "Quoting",
+        "Availability",
+        "Want to Give",
+        "Availible",
+        "availeble",
+        "avail",
+        "space",
+        "premise",
+        "Space",
+        "Avalb.",
+        "avalb",
+        "Avalb",
+        "available",
+        "on",
+        "ON",
+        "On"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

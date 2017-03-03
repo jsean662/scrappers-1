@@ -1,0 +1,539 @@
+{
+  "templates": [
+    "Opp. Guru Har Krishan High School",
+    "Mumbai-400054",
+    "North Avenue,",
+    "Santacruz West,",
+    "Bandra west quite location",
+    "Location : 14th Road, Bandra West",
+    "Near khar station",
+    "Near CCD carter road",
+    "Near khar gym",
+    "Near Golds gym",
+    "@composite_location:composite_location ",
+    "Location : @composite_location:composite_location ",
+    "@composite_location:composite_location ",
+    "@composite_location:composite_location ",
+    "@composite_location:composite_location ",
+    "@composite_location:composite_location ",
+    "@composite_location:composite_location ",
+    "@composite_location:composite_location ",
+    "@composite_location:composite_location ",
+    "@composite_location:composite_location ",
+    "@composite_location:composite_location ",
+    "@composite_location:composite_location ,",
+    "@sys.url:url @sys.number:number ",
+    "@sys.address:address ,",
+    "@label_sublocality:label_sublocality ",
+    "@sys.address:address ",
+    "Near @sys.address:address ",
+    "Location : @label_locality_mum:label_locality_mum West",
+    "@label_locality_mum:label_locality_mum west quite location",
+    "@composite_location:composite_location"
+  ],
+  "userSays": [
+    {
+      "id": "c8b0ea4b-b6e0-46fd-b903-e1ae26c6e96f",
+      "data": [
+        {
+          "text": "Opp. Guru Har Krishan High School"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "61067922-3b92-4f5f-a405-237fde23c8e3",
+      "data": [
+        {
+          "text": "Mumbai-400054"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a07da7ab-af9d-45a5-b207-a92860fb5949",
+      "data": [
+        {
+          "text": "North Avenue,"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bc461601-8460-45de-8ba6-51828f7b1505",
+      "data": [
+        {
+          "text": "Santacruz West,"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fc171e5f-8ed9-43aa-9efb-6c28a3f74016",
+      "data": [
+        {
+          "text": "Bandra west quite location"
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "869aeb67-75b4-4932-9bb2-da55375bb56e",
+      "data": [
+        {
+          "text": "Location : 14th Road, Bandra West"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "bc919e38-4113-43b9-9257-4b243f33823d",
+      "data": [
+        {
+          "text": "*Khar west*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "55bec934-7eb9-470c-bec7-f7b58bf253fa",
+      "data": [
+        {
+          "text": "Near khar station"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "09a95047-bb43-4d2f-a143-4b4cf0660e9f",
+      "data": [
+        {
+          "text": "Near CCD carter road"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9d80df8b-938a-4697-9249-90f3388de396",
+      "data": [
+        {
+          "text": "Near khar gym"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d6aaa8ac-e010-4af2-91d5-8a06cbe348ff",
+      "data": [
+        {
+          "text": "Near Golds gym"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "eb3483e7-85d0-40c2-b4b2-dbadab3913f5",
+      "data": [
+        {
+          "text": "Bandra west quite location",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "a9dd22a6-b241-4d8a-9d6c-bffea811f2e0",
+      "data": [
+        {
+          "text": "Location : "
+        },
+        {
+          "text": "14th Road, Bandra West",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ed5892ab-333a-46bd-9cab-602bf361da80",
+      "data": [
+        {
+          "text": "Santacruz West,",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b8d014f2-caf9-49df-a355-4944b173d58d",
+      "data": [
+        {
+          "text": "Mumbai-400054",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9f151c33-8f65-4204-beb7-644f03bd4a0e",
+      "data": [
+        {
+          "text": "Opp. Guru Har Krishan High School",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a3209f68-9215-44d1-b0da-9c1ecf823c68",
+      "data": [
+        {
+          "text": "North Avenue,",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "18239214-8528-47e0-86dc-909557aa015f",
+      "data": [
+        {
+          "text": "Near khar station",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1e69be2c-ca1e-48dd-af77-23731a69672f",
+      "data": [
+        {
+          "text": "Near CCD carter road",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e0f4566a-f6f0-4290-a50e-08b2c4eb6d3a",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Khar west",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "0b8a94f6-dfe6-4ff7-8329-a761f2da9e6e",
+      "data": [
+        {
+          "text": "Near khar gym",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e385cb90-4ebc-4a47-bc6f-56bad7bd42fe",
+      "data": [
+        {
+          "text": "Near Golds gym",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "edf434a6-c2b7-4a4a-825f-b785380a0efb",
+      "data": [
+        {
+          "text": "Near Golds gym",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "1ef21f44-af4f-4866-a7be-759d32fc3ca1",
+      "data": [
+        {
+          "text": "Santacruz West",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": false
+        },
+        {
+          "text": ","
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "9a483ca5-a0e1-4ed8-9287-1cb2f04db635",
+      "data": [
+        {
+          "text": "Mumbai-",
+          "alias": "url",
+          "meta": "@sys.url",
+          "userDefined": false
+        },
+        {
+          "text": "400054",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "00740e1f-f6b6-4974-97ff-09d6db3b5b6a",
+      "data": [
+        {
+          "text": "North Avenue",
+          "alias": "address",
+          "meta": "@sys.address",
+          "userDefined": false
+        },
+        {
+          "text": ","
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "037ecf40-64e9-4d87-b82a-eedffe76e549",
+      "data": [
+        {
+          "text": "Near khar gym",
+          "alias": "label_sublocality",
+          "meta": "@label_sublocality",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6f269cde-baec-4e2f-b0f4-754aa96e3ecc",
+      "data": [
+        {
+          "text": "Near khar station",
+          "alias": "address",
+          "meta": "@sys.address",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8003db53-8ec1-4876-8328-5c2908bd3bfc",
+      "data": [
+        {
+          "text": "Near "
+        },
+        {
+          "text": "CCD carter road",
+          "alias": "address",
+          "meta": "@sys.address",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6cf1cd64-63b7-44a1-bf8e-793016697f56",
+      "data": [
+        {
+          "text": "Location : "
+        },
+        {
+          "text": "14th Road, Bandra",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " West"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1571c68a-60cf-4144-8381-565065b5ae69",
+      "data": [
+        {
+          "text": "Bandra",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " west quite location"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "7cfeb4c7-f2d0-4ca1-9798-2bfca54d85ea",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Bandstand",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": false
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2058c10e-7202-4cc2-87da-61f9a5dcebde",
+      "data": [
+        {
+          "text": "@composite_location:composite_location"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    }
+  ],
+  "id": "35332516-c545-4274-9234-191775c0b260",
+  "name": "location",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@composite_location",
+          "name": "composite_location",
+          "value": "$composite_location",
+          "isList": false
+        },
+        {
+          "dataType": "@label_locality_mum",
+          "name": "label_locality_mum",
+          "value": "$label_locality_mum",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.url",
+          "name": "url",
+          "value": "$url",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.address",
+          "name": "address",
+          "value": "$address",
+          "isList": true
+        },
+        {
+          "dataType": "@label_sublocality",
+          "name": "label_sublocality",
+          "value": "$label_sublocality",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

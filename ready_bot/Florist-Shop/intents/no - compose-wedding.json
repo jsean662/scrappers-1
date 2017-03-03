@@ -1,0 +1,64 @@
+{
+  "id": "dfec5c46-2167-41e0-98af-24a7f4eb0ca4",
+  "name": "no - compose-wedding",
+  "auto": true,
+  "contexts": [
+    "no-compose",
+    "bouquet"
+  ],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "For wedding, please."
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "I need a bouquet for wedding."
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "I need a bridal bouquet."
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "wedding"
+        }
+      ],
+      "isTemplate": false
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "wedding.bouquet",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "name": "compose",
+          "value": "no"
+        },
+        {
+          "name": "occasion",
+          "value": "wedding"
+        }
+      ],
+      "speech": "Here you can choose a wonderful bridal bouquet!"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false
+}

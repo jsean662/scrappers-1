@@ -1,0 +1,82 @@
+{
+  "templates": [
+    "@req_avail:req_avail  @sys.number:price @label_amt_units:label_amt_units "
+  ],
+  "userSays": [
+    {
+      "id": "9cde670c-4f9d-413e-a2b7-b26dcaef2e0b",
+      "data": [
+        {
+          "text": "Asking",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1.50",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "L",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "61d7309f-e9d2-4032-a743-cc5c1962f0f5",
+  "name": "dealtype_price",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@req_avail",
+          "name": "req_avail",
+          "value": "$req_avail",
+          "prompts": [],
+          "defaultValue": "Available",
+          "isList": false
+        },
+        {
+          "dataType": "@label_amt_units",
+          "name": "label_amt_units",
+          "value": "$label_amt_units",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "price",
+          "value": "$price",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $req_avail , $price , $label_amt_units"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

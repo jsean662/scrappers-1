@@ -1,0 +1,72 @@
+{
+  "id": "5ed84cc3-9484-458e-b199-e6cfe1cb047a",
+  "name": "no-add - compose-choose",
+  "auto": true,
+  "contexts": [
+    "bouquet",
+    "compose-add"
+  ],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "No, that\u0027s all"
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "No thanks"
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "No"
+        }
+      ],
+      "isTemplate": false
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "bouquet.ready",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "name": "flower-1",
+          "value": "#bouquet.flower-1"
+        },
+        {
+          "name": "amount-1",
+          "value": "#bouquet.amount-1"
+        },
+        {
+          "name": "color-1",
+          "value": "#bouquet.color-1"
+        },
+        {
+          "name": "flower-2",
+          "value": "#bouquet.flower-2"
+        },
+        {
+          "name": "amount-2",
+          "value": "#bouquet.amount-2"
+        },
+        {
+          "name": "color-2",
+          "value": "#bouquet.color-2"
+        }
+      ],
+      "speech": "Great! You can purchase and get your wonderful bouquet at our office. Thank you for the order!"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false
+}

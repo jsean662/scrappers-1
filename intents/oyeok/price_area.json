@@ -1,0 +1,193 @@
+{
+  "templates": [
+    "Area @sys.number:sqft , @sys.number:sqft \u0026 @sys.number:sqft  @label_area_units:label_area_units  @label_area:label_area price @sys.number:price  @label_amt_units:label_amt_units , @sys.number:price  @label_amt_units:label_amt_units , @sys.number:price  @label_amt_units:label_amt_units , 430 square meters are ground +2........"
+  ],
+  "userSays": [
+    {
+      "id": "9bccf5f2-ea78-4d8f-8cf9-6ee213ca932a",
+      "data": [
+        {
+          "text": "Area "
+        },
+        {
+          "text": "270",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "370",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " \u0026 "
+        },
+        {
+          "text": "430",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "square meters",
+          "alias": "label_area_units",
+          "meta": "@label_area_units",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "built up",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": true
+        },
+        {
+          "text": " price "
+        },
+        {
+          "text": "1.75",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "crore",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "2.25",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "crore",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "3.25",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "crore",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "430 square",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "meters are ground",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " +"
+        },
+        {
+          "text": "2",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "........",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "1ab18e07-cf89-4d88-aa36-79652f3c707a",
+  "name": "price_area",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.number",
+          "name": "sqft",
+          "value": "$sqft",
+          "isList": true
+        },
+        {
+          "dataType": "@label_area_units",
+          "name": "label_area_units",
+          "value": "$label_area_units"
+        },
+        {
+          "dataType": "@label_area",
+          "name": "label_area",
+          "value": "$label_area"
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "price",
+          "value": "$price",
+          "isList": true
+        },
+        {
+          "dataType": "@label_amt_units",
+          "name": "label_amt_units",
+          "value": "$label_amt_units",
+          "isList": true
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

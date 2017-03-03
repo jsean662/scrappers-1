@@ -1,0 +1,91 @@
+{
+  "templates": [
+    "Well done up @property_type:property_type "
+  ],
+  "userSays": [
+    {
+      "id": "cf79a7b2-c265-483f-8f1c-fc904391ab4f",
+      "data": [
+        {
+          "text": "Well done up "
+        },
+        {
+          "text": "apartment",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "b19346b6-9884-4fae-91c3-1bbad5275c72",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Office",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hill road",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "fce474ca-de39-4a3a-83ba-750396d92269",
+  "name": "pt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@property_type",
+          "name": "property_type",
+          "value": "$property_type",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $property_type"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,170 @@
+{
+  "templates": [
+    "@req_avail:req_avail ",
+    "@req_avail:req_avail ",
+    "@req_avail:req_avail ",
+    "@req_avail:req_avail ",
+    "@req_avail:req_avail ",
+    "@req_avail:req_avail ",
+    "@req_avail:req_avail"
+  ],
+  "userSays": [
+    {
+      "id": "b499a402-7e65-4885-99e0-f1d947e8ce5d",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "27a3f163-0e2b-47cd-94e0-6be963a2cfab",
+      "data": [
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "4ac69f37-9934-4248-9d43-b8bb1f8a0019",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Required",
+          "alias": "req_avail",
+          "meta": "@req_avail"
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "36004ec5-29ca-4a0d-84f8-8c8669ca84c0",
+      "data": [
+        {
+          "text": "@req_avail:req_avail"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "701ff822-bf24-4987-95dc-5bbbf0a3f8b7",
+      "data": [
+        {
+          "text": "On",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "51ec89fe-79a5-4c16-93a7-d454345393e2",
+      "data": [
+        {
+          "text": "Req",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2bd5cb6e-90de-45a1-96e6-ad99e9bed1f8",
+      "data": [
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f17308b4-d64e-4713-a26a-f09c32d73479",
+      "data": [
+        {
+          "text": "Avail",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7e4f064b-22b0-4393-af63-77dff898a2d3",
+      "data": [
+        {
+          "text": "Requirement",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "7220f733-eb30-4d01-93eb-39f7341ced8b",
+  "name": "dealtype",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@req_avail",
+          "name": "req_avail",
+          "value": "$req_avail",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $req_avail"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

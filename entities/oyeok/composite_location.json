@@ -1,0 +1,39 @@
+{
+  "id": "2d50cd60-05f5-441b-a736-ec51c4ee660e",
+  "name": "composite_location",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "@label_locality_mum:label_locality_mum",
+      "synonyms": [
+        "@label_locality_mum:label_locality_mum"
+      ]
+    },
+    {
+      "value": "Near Golds gym",
+      "synonyms": [
+        "Near Golds gym"
+      ]
+    },
+    {
+      "value": "GULMOHAR",
+      "synonyms": [
+        "GULMOHAR"
+      ]
+    },
+    {
+      "value": "Near khar gym",
+      "synonyms": [
+        "Near khar gym"
+      ]
+    },
+    {
+      "value": "Opp. Guru Har Krishan High School",
+      "synonyms": [
+        "Opp. Guru Har Krishan High School"
+      ]
+    }
+  ],
+  "isEnum": true,
+  "automatedExpansion": false
+}

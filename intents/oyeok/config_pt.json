@@ -1,0 +1,157 @@
+{
+  "templates": [
+    "@config:config  @property_type:property_type ",
+    "@config:config  @property_type:property_type ",
+    "@config:config  @property_type:property_type with terrace",
+    "@config:config @property_type:property_type"
+  ],
+  "userSays": [
+    {
+      "id": "91b84f66-6f50-4918-afb5-c0b35aa528b5",
+      "data": [
+        {
+          "text": "2bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apartment",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 3
+    },
+    {
+      "id": "01a7cc26-aac7-4529-a112-f767d7415e19",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "2bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apartment",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "6de5698b-ccc6-4aaa-9c44-35613322e39c",
+      "data": [
+        {
+          "text": "2bhk",
+          "alias": "config",
+          "meta": "@config"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apartment",
+          "alias": "property_type",
+          "meta": "@property_type"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "86a4fba9-58e1-4731-a5eb-8625720a0a1a",
+      "data": [
+        {
+          "text": "3bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "penthouse",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " with terrace"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e3804514-35b7-4566-9a27-5acce5ace809",
+      "data": [
+        {
+          "text": "@config:config @property_type:property_type"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    }
+  ],
+  "id": "4393d9f7-618f-4e25-b2ef-3f1e388360ce",
+  "name": "config_pt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@config",
+          "name": "config",
+          "value": "$config",
+          "isList": false
+        },
+        {
+          "dataType": "@property_type",
+          "name": "property_type",
+          "value": "$property_type",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $config , $property_type"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,111 @@
+{
+  "templates": [
+    "@label_ignorewords:label_ignorewords  @req_avail:req_avail for @transaction_type:transaction_type "
+  ],
+  "userSays": [
+    {
+      "id": "17e17cb9-c89a-4f06-8c86-deebbb412167",
+      "data": [
+        {
+          "text": "**"
+        },
+        {
+          "text": "AVAILABLE",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " FOR "
+        },
+        {
+          "text": "COMMERCIAL",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " USE TOO"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "11937b08-ea14-403a-8f49-b8d3d37d115d",
+      "data": [
+        {
+          "text": "Urgent",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "requirement",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    }
+  ],
+  "id": "8b90d09a-b0d7-4376-8c96-56da60a19fdf",
+  "name": "dt_tt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@req_avail",
+          "name": "req_avail",
+          "value": "$req_avail",
+          "isList": false
+        },
+        {
+          "dataType": "@transaction_type",
+          "name": "transaction_type",
+          "value": "$transaction_type",
+          "isList": false
+        },
+        {
+          "dataType": "@label_ignorewords",
+          "name": "label_ignorewords",
+          "value": "$label_ignorewords",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "We got $req_avail , $transaction_type"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

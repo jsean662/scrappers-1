@@ -1,0 +1,39 @@
+{
+  "id": "98ff2ff8-a3bc-4427-90f4-5302bb726699",
+  "name": "composite_deposit",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "@label_deposit:label_deposit :@sys.number-integer:depo @label_amt_units:label_amt_units",
+      "synonyms": [
+        "@label_deposit:label_deposit :@sys.number-integer:depo @label_amt_units:label_amt_units"
+      ]
+    },
+    {
+      "value": "5",
+      "synonyms": [
+        "5"
+      ]
+    },
+    {
+      "value": "7",
+      "synonyms": [
+        "7"
+      ]
+    },
+    {
+      "value": "2",
+      "synonyms": [
+        "2"
+      ]
+    },
+    {
+      "value": "6",
+      "synonyms": [
+        "6"
+      ]
+    }
+  ],
+  "isEnum": true,
+  "automatedExpansion": false
+}

@@ -1,0 +1,470 @@
+{
+  "templates": [
+    "Area : @sys.number:sqft  @label_area_units:label_area_units ",
+    "@sys.number:sqft  @label_area:label_area  @label_area:label_area / @sys.number:sqft  @label_area:label_area  @label_area:label_area ",
+    "Size - @sys.number:sqft - @sys.number:sqft  @label_area_units:label_area_units  @label_area:label_area ",
+    "@sys.number:sqft  @label_area_units:label_area_units ",
+    "@label_area:label_area  @sys.number:sqft ",
+    "@sys.number:sqft @label_area:label_area ",
+    "@sys.number:sqft @label_area:label_area ",
+    "@sys.number:sqft @label_area_units:label_area_units ",
+    "With private terrace of @sys.number:sqft @label_area:label_area ",
+    "@sys.number:sqft  @label_area_units:label_area_units  @label_area:label_area ",
+    "@sys.number:sqft @label_area_units:label_area_units",
+    "@sys.number:sqft@label_area:label_area"
+  ],
+  "userSays": [
+    {
+      "id": "3c7339bb-196d-433d-a52d-40da3a6f3481",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "750",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sqft",
+          "alias": "label_area_units",
+          "meta": "@label_area_units",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "0135a866-da5f-4a33-9443-eafb6c7629e6",
+      "data": [
+        {
+          "text": "Area : "
+        },
+        {
+          "text": "2700",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sq. ft.",
+          "alias": "label_area_units",
+          "meta": "@label_area_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "1ad04794-1c31-4dce-98c9-f45379076b37",
+      "data": [
+        {
+          "text": "* "
+        },
+        {
+          "text": "1200",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sqft",
+          "alias": "label_area_units",
+          "meta": "@label_area_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "807cb10e-9ed1-4757-9959-d1ef95fc2f07",
+      "data": [
+        {
+          "text": "*Minimum "
+        },
+        {
+          "text": "Carpet",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": false
+        },
+        {
+          "text": ": "
+        },
+        {
+          "text": "900",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": "-"
+        },
+        {
+          "text": "1000",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sq ft",
+          "alias": "label_area_units",
+          "meta": "@label_area_units",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "36726898-8601-41e7-9fbc-dce816586d44",
+      "data": [
+        {
+          "text": "1500",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "CARPET",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "AREA",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "/",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1700",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "BLT UP",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "AREA",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d9a6efe0-368a-4847-b96c-0e7e80be2131",
+      "data": [
+        {
+          "text": "Size - "
+        },
+        {
+          "text": "1200",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " - "
+        },
+        {
+          "text": "1500",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Sq ft",
+          "alias": "label_area_units",
+          "meta": "@label_area_units",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "carpet",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "4082ca9d-f804-4c88-bf40-e914b9307bfb",
+      "data": [
+        {
+          "text": "32",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Acer",
+          "alias": "label_area_units",
+          "meta": "@label_area_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c7d3a4dc-e2b0-4ff5-9648-2a1676d37ddc",
+      "data": [
+        {
+          "text": "@sys.number:sqft @label_area_units:label_area_units"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "46125e5c-1138-4984-8497-588dba3cd101",
+      "data": [
+        {
+          "text": "CARPET",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "750",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7e672fd5-e2bb-47d4-8c1a-7eda7aed7035",
+      "data": [
+        {
+          "text": "300",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "bu",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fd2fa5eb-2370-44a1-a80e-35e80f2c89fd",
+      "data": [
+        {
+          "text": "@sys.number:sqft@label_area:label_area"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "d49cddff-38e3-4a4d-88f9-94891eac24dd",
+      "data": [
+        {
+          "text": "3562",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "carpet",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f87a89ea-c277-4a8a-9a74-0d7f337a2fdf",
+      "data": [
+        {
+          "text": "2000",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "sqft",
+          "alias": "label_area_units",
+          "meta": "@label_area_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "804dcce8-819a-428a-a0db-6f01df5da0d7",
+      "data": [
+        {
+          "text": "With private terrace of "
+        },
+        {
+          "text": "3000",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "carpet",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "625cded2-bc84-4c58-bef8-03922b85e576",
+      "data": [
+        {
+          "text": "350",
+          "alias": "sqft",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sqft",
+          "alias": "label_area_units",
+          "meta": "@label_area_units",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "carpet",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "362f6da6-9d55-4a95-b3bd-a994264e5031",
+  "name": "area",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@label_area",
+          "name": "label_area",
+          "value": "$label_area",
+          "isList": true
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "sqft",
+          "value": "$sqft",
+          "isList": true
+        },
+        {
+          "dataType": "@label_area_units",
+          "name": "label_area_units",
+          "value": "$label_area_units",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "We got  $label_area , $label_area_units , $sqft"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

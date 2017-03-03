@@ -1,0 +1,24 @@
+{
+  "id": "c0562f9b-977b-4ebc-b385-ecf2bee14828",
+  "name": "label_currency_Rs",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Rs",
+      "synonyms": [
+        "Rs",
+        "rs.",
+        "RS",
+        "Rs."
+      ]
+    },
+    {
+      "value": "Lac",
+      "synonyms": [
+        "Lac"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

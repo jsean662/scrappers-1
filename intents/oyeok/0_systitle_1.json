@@ -1,0 +1,8617 @@
+{
+  "templates": [],
+  "userSays": [
+    {
+      "id": "b86f2c0d-877f-4dcd-a75a-7aa53565f16f",
+      "data": [
+        {
+          "text": "21/10/16, 15:37",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99874 27112",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "REQ",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LL",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "- "
+        },
+        {
+          "text": "officespace",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": "/independent "
+        },
+        {
+          "text": "house",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "d2a95ab0-1822-4be9-b6fa-7982ac1d3890",
+      "data": [
+        {
+          "text": "21/10/16, 14:35",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 77385 67344",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Req",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " Lake "
+        },
+        {
+          "text": "home",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "purchase",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " with car "
+        },
+        {
+          "text": "parking",
+          "alias": "composite_parking",
+          "meta": "@composite_parking",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f9836931-dcc3-4170-9c1e-684dc72d68d6",
+      "data": [
+        {
+          "text": "21/10/16, 14:02",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99870 66878‬",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": ": "
+        },
+        {
+          "text": "Required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Commercial",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Shop",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "On",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "bbbe7ea0-4a00-4e96-997c-2b30a651b2ba",
+      "data": [
+        {
+          "text": "21/10/16, 14:01",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98201 49105",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: ) For "
+        },
+        {
+          "text": "sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Peter dais Rd near mount",
+          "alias": "address",
+          "meta": "@sys.address",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Mary",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bandra West",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": ". . "
+        },
+        {
+          "text": "Lower floor",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": ". "
+        },
+        {
+          "text": ".1350 carpet",
+          "alias": "composite_area",
+          "meta": "@composite_area",
+          "userDefined": false
+        },
+        {
+          "text": ". ."
+        },
+        {
+          "text": "fully furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": ". ..Low maintenance only "
+        },
+        {
+          "text": "5000",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " per month. .With "
+        },
+        {
+          "text": "one car park",
+          "alias": "composite_parking",
+          "meta": "@composite_parking",
+          "userDefined": true
+        },
+        {
+          "text": " ..price. .."
+        },
+        {
+          "text": "8 cr",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": false
+        },
+        {
+          "text": ". . Call  Tarun "
+        },
+        {
+          "text": "9820149105",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": ". ."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "97398e84-a10f-41eb-8879-c4693272ddc0",
+      "data": [
+        {
+          "text": "21/10/16, 13:46",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98195 14766",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " covt "
+        },
+        {
+          "text": "2bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " at near Manish nagar shopping "
+        },
+        {
+          "text": "Andheri (west",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": ") "
+        },
+        {
+          "text": "carpet",
+          "alias": "label_area",
+          "meta": "@label_area",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "area -530 sqft",
+          "alias": "composite_area",
+          "meta": "@composite_area",
+          "userDefined": false
+        },
+        {
+          "text": ".rate -"
+        },
+        {
+          "text": "1.75 cr",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": false
+        },
+        {
+          "text": " .with "
+        },
+        {
+          "text": "furniture",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": ".all cast welcome.for photo \u0026more detail cont -ambalal shah -"
+        },
+        {
+          "text": "9819514766",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "be72df03-a8a3-4faf-ad18-71d3daa567e9",
+      "data": [
+        {
+          "text": "21/10/16, 11:44",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98203 45959",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: Happy "
+        },
+        {
+          "text": "Friday",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " Mandate "
+        },
+        {
+          "text": "SALE",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " at RAHEJA ClASSIQUE "
+        },
+        {
+          "text": "andheri west",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1365 square feet carpet",
+          "alias": "composite_area",
+          "meta": "@composite_area",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "fully furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        },
+        {
+          "text": " building no "
+        },
+        {
+          "text": "5",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " lower floor pool and garden view "
+        },
+        {
+          "text": "2 car parkings",
+          "alias": "composite_parking",
+          "meta": "@composite_parking",
+          "userDefined": true
+        },
+        {
+          "text": " @ "
+        },
+        {
+          "text": "6.25 Cr",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        },
+        {
+          "text": " inspection "
+        },
+        {
+          "text": "2",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " hrs notice ratio open to offers"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bf487661-e1d3-4883-9512-981dc69ab8d9",
+      "data": [
+        {
+          "text": "21/10/16, 11:22",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98339 60242",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "URGENT",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "require",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " a bungalow "
+        },
+        {
+          "text": "70000 carpet",
+          "alias": "composite_area",
+          "meta": "@composite_area",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bandra w",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": "  onlyfor "
+        },
+        {
+          "text": "yoga classes",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "budget 10 to 12 lac",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        },
+        {
+          "text": " for my +"
+        },
+        {
+          "text": "1",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "  client call. "
+        },
+        {
+          "text": "Rishi",
+          "alias": "given-name",
+          "meta": "@sys.given-name",
+          "userDefined": false
+        },
+        {
+          "text": " Rp properties "
+        },
+        {
+          "text": "9833960242",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "845dd5ad-2b89-4fef-a38b-f4ad608f6459",
+      "data": [
+        {
+          "text": "21/10/16, 11:15",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98338 97298",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Have",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " at "
+        },
+        {
+          "text": "BANDSTAND",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "2000 sqft",
+          "alias": "composite_area",
+          "meta": "@composite_area",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "semi furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1 car park",
+          "alias": "composite_parking",
+          "meta": "@composite_parking",
+          "userDefined": true
+        },
+        {
+          "text": " @ "
+        },
+        {
+          "text": "3.50 lacs",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        },
+        {
+          "text": " negotiable.  "
+        },
+        {
+          "text": "Higher floor",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": ". Commanding Sea View."
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "92e16ffe-e4bd-427a-8c43-4edf2ecabaef",
+      "data": [
+        {
+          "text": "21/10/16, 10:54",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98921 13393",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Very",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "urg",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Space",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " For Veg "
+        },
+        {
+          "text": "and",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " Non veg  Restaurant "
+        },
+        {
+          "text": "empty",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "and",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sami furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": " ok Prime Location like "
+        },
+        {
+          "text": "Andheri",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Jogeshwari",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " Goregaon "
+        },
+        {
+          "text": "Vile Parle",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "santacruz",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Khar",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " juhu "
+        },
+        {
+          "text": "Bandra",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " also ok"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "37b50c9c-a089-45cc-b9de-3ba8c7e5315c",
+      "data": [
+        {
+          "text": "21/10/16, 10:47",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98921 13393",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Very",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "urg",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Space",
+          "meta": "@sys.ignore",
+          "userDefined": true
+        },
+        {
+          "text": " For "
+        },
+        {
+          "text": "Fast food",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " Prime Location like "
+        },
+        {
+          "text": "Andheri",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Juhu",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Bandra catter Road",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "08a3e6e5-cb43-4580-9ad0-1a23272695c5",
+      "data": [
+        {
+          "text": "21/10/16, 10:35",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98921 13393",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Very",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "urg",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " Running Restaurant n bar"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8158c63c-bf2d-42d3-b44b-f65e9ab7e3cd",
+      "data": [
+        {
+          "text": "21/10/16, 09:58",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99302 90009",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: ##  ."
+        },
+        {
+          "text": "PALI HILL",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": ".  "
+        },
+        {
+          "text": "SALE",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": "..###"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "4a3674b1-1932-4672-91d3-d58da4d9f296",
+      "data": [
+        {
+          "text": "20/10/16, 18:02",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: Mind blowing "
+        },
+        {
+          "text": "sea view",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "penthouse",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "98b64334-f625-4319-a9e2-a6ea7196bec4",
+      "data": [
+        {
+          "text": "20/10/16, 13:18",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98670 66679",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: Owner want "
+        },
+        {
+          "text": "to",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Urgent",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apt",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " at "
+        },
+        {
+          "text": "hill rd, opp",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": ". "
+        },
+        {
+          "text": "Holly",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "family",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " hospital, "
+        },
+        {
+          "text": "Bandea west",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": ","
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "7c5618bb-8931-4f30-9ce0-ae772c5db157",
+      "data": [
+        {
+          "text": "20/10/16, 11:19",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97692 02414",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Looking",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "fr",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Khar",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "or",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Santacruz West",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "Client",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " -Catholic "
+        },
+        {
+          "text": "family",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": ". Budget "
+        },
+        {
+          "text": "1.80Cr",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": false
+        },
+        {
+          "text": " -"
+        },
+        {
+          "text": "1.90Cr",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        },
+        {
+          "text": ". Leme kno if you have any. Thanks."
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "b5725a8e-5dfe-496a-8058-383c6108f2b2",
+      "data": [
+        {
+          "text": "20/10/16, 09:08",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98194 46626",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Good",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " morning."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7853ec72-02ab-42cf-8d0a-55e488d0cca2",
+      "data": [
+        {
+          "text": "21/10/16, 14:01",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98195 65795",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Urgently",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "reqd",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Office",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Outright",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "c286c253-b020-41ef-be7f-f80b6974cffe",
+      "data": [
+        {
+          "text": "21/10/16, 13:37",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98195 65795",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Req",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LL",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " 😗"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "baf898cc-99c3-413f-a25d-d79cbda976ba",
+      "data": [
+        {
+          "text": "21/10/16, 13:31",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99208 77899",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "2bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apt",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LNL",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2531a99a-1ef8-4a72-ac98-8c92618c51e6",
+      "data": [
+        {
+          "text": "21/10/16, 13:29",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99208 77899",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": "  "
+        },
+        {
+          "text": "Residential",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " apt "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LNL",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": ","
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "16f3d9df-0240-4789-ac12-33a10de392a6",
+      "data": [
+        {
+          "text": "21/10/16, 10:46",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98207 99225",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: *+"
+        },
+        {
+          "text": "1",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Outright",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Requirement",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e9a4017b-e4b5-4742-8985-c0639995dc84",
+      "data": [
+        {
+          "text": "21/10/16, 09:01",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99874 27112",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: Hi"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "83a93c17-f9ea-4133-92d6-94733f3ac7fd",
+      "data": [
+        {
+          "text": "21/10/16, 07:41",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "ebba6ef2-87db-49f6-a277-160d9c01f742",
+      "data": [
+        {
+          "text": "20/10/16, 20:19",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99306 54774",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "SEAVIEW",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9d26740d-7d98-4070-9d06-de8bfb314c8c",
+      "data": [
+        {
+          "text": "20/10/16, 20:17",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99306 54774",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: Beautiful "
+        },
+        {
+          "text": "compact",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3ab680ab-fa3d-4739-ae49-a1ff01de94dd",
+      "data": [
+        {
+          "text": "20/10/16, 20:16",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99306 54774",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: Deal of the day"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "250b1ea3-f9ce-406f-9504-7cb32148897a",
+      "data": [
+        {
+          "text": "20/10/16, 20:12",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99306 54774",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Avaliable",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " *"
+        },
+        {
+          "text": "Fully Sea Facing",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": "* "
+        },
+        {
+          "text": "2bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " 🔛 "
+        },
+        {
+          "text": "Rental",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " Basis"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d2bf83de-53de-4115-b6d8-255b71486051",
+      "data": [
+        {
+          "text": "20/10/16, 20:11",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99306 54774",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: 👌 *"
+        },
+        {
+          "text": "FLATS",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " FOR "
+        },
+        {
+          "text": "SALE",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " AND "
+        },
+        {
+          "text": "LEASE",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "* ("
+        },
+        {
+          "text": "L/L",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": ")",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " *"
+        },
+        {
+          "text": "BANDRA WEST",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a546bd0e-cc5b-42bf-abbd-169dfc52de06",
+      "data": [
+        {
+          "text": "20/10/16, 19:34",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98672 38898",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Muslim client",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7cce3301-073f-40b7-89f2-dbe773a0cb5a",
+      "data": [
+        {
+          "text": "20/10/16, 17:24",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Exclusive",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "4bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "43b99b17-996f-470e-bf33-08cb89e9938a",
+      "data": [
+        {
+          "text": "20/10/16, 15:50",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99300 07802",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Flats",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "1e9a8041-7390-4f31-8d10-bafa0a2c7b05",
+      "data": [
+        {
+          "text": "20/10/16, 13:04",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98926 63770‬",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": ": "
+        },
+        {
+          "text": "Requirement",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": "  small "
+        },
+        {
+          "text": "family",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "5c7af3af-f115-4079-831e-e7ffbf04b058",
+      "data": [
+        {
+          "text": "20/10/16, 12:56",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 95948 88888",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "2 BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "LEASE",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " @ West Coast, "
+        },
+        {
+          "text": "Bandra",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "2fadb834-70c1-4539-86a2-a338d03cf94a",
+      "data": [
+        {
+          "text": "20/10/16, 12:41",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98200 94416",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: Respected Associates,"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "0b586b7e-90e9-4e22-8dac-5998ebfa0bf5",
+      "data": [
+        {
+          "text": "20/10/16, 12:35",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98199 77437",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "2 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "only",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " at "
+        },
+        {
+          "text": "bandra",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " reclamation, "
+        },
+        {
+          "text": "unfurnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flat",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": ", for "
+        },
+        {
+          "text": "2",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "working bachelors",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " ("
+        },
+        {
+          "text": "boys",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": "), budget is upto  "
+        },
+        {
+          "text": "60000 per month",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        },
+        {
+          "text": ". "
+        },
+        {
+          "text": "Immediate",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " possession, "
+        },
+        {
+          "text": "please",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " send us "
+        },
+        {
+          "text": "your listing",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " or "
+        },
+        {
+          "text": "contact",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "09239663-72b4-4bc6-9649-2673d6877919",
+      "data": [
+        {
+          "text": "20/10/16, 11:36",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 77389 00618",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Urgent",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "req",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "4bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "budget 1.50",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nd",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " around andhsri "
+        },
+        {
+          "text": "juhu",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " for Hindu "
+        },
+        {
+          "text": "family",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "call",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "urgent",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "8879849053",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "/"
+        },
+        {
+          "text": "7738900618",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4da925a9-7c1b-4c7e-a19c-c8b5ace445a3",
+      "data": [
+        {
+          "text": "20/10/16, 11:18",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98206 83147",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "- "
+        },
+        {
+          "text": "2BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "Somerset",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " Apts, "
+        },
+        {
+          "text": "Pali Hill",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "expat",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " taste doneup, "
+        },
+        {
+          "text": "furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        },
+        {
+          "text": ", partial seaview, "
+        },
+        {
+          "text": "7th",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " floor, "
+        },
+        {
+          "text": "7 Lac",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deposit",
+          "alias": "label_deposit",
+          "meta": "@label_deposit",
+          "userDefined": false
+        },
+        {
+          "text": " + "
+        },
+        {
+          "text": "1,20,000",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": false
+        },
+        {
+          "text": "/- License fee,        "
+        },
+        {
+          "text": "Company Lease",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        },
+        {
+          "text": " or "
+        },
+        {
+          "text": "Company working individuals",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        },
+        {
+          "text": "-"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c2c53e1e-5797-49a6-9522-be7c358c5a92",
+      "data": [
+        {
+          "text": "20/10/16, 11:17",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99870 66878",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: SOLE MANDATE:"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "99b6e9a0-df03-4656-8637-954830487689",
+      "data": [
+        {
+          "text": "20/10/16, 11:03",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98201 66096",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Apartments",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "SALE",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "fd904536-7efc-479f-a9d5-2e5bedc71756",
+      "data": [
+        {
+          "text": "20/10/16, 11:02",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98923 63730",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Bandra",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "40998e11-dc23-47b1-a2fd-461ef0d89fb9",
+      "data": [
+        {
+          "text": "20/10/16, 10:09",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 90290 70226",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: Hello Friends"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "b636b3b2-4370-4625-8de1-3abe2e198d4d",
+      "data": [
+        {
+          "text": "20/10/16, 09:30",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99302 00173",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Require",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flat",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " for hindu "
+        },
+        {
+          "text": "family",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " at new mhada.  "
+        },
+        {
+          "text": "Rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " upto "
+        },
+        {
+          "text": "46000",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": false
+        },
+        {
+          "text": ". "
+        },
+        {
+          "text": "Inspection",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " tday at "
+        },
+        {
+          "text": "5 pm",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": ".  "
+        },
+        {
+          "text": "Call",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " or sms with ur "
+        },
+        {
+          "text": "direct",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " proposals. Shivam estate "
+        },
+        {
+          "text": "9930200173",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "11254b0f-e9aa-42c9-9c63-8eaad9370366",
+      "data": [
+        {
+          "text": "20/10/16, 09:28",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99302 00173",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "ANDHERI WEST",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": ". LOW BUDGET  "
+        },
+        {
+          "text": "properties",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": "."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bbcd11f0-e495-4bd2-b4f4-be49a87e0c8a",
+      "data": [
+        {
+          "text": "20/10/16, 09:15",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98208 39333",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Bandra",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Pali palms",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": ", 16 Th Rd, "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": "+"
+        },
+        {
+          "text": "2 parking",
+          "alias": "composite_parking",
+          "meta": "@composite_parking",
+          "userDefined": true
+        },
+        {
+          "text": " price "
+        },
+        {
+          "text": "8.25 cr",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": false
+        },
+        {
+          "text": " open "
+        },
+        {
+          "text": "to",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " offers"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "67044bcb-bb20-4140-bba8-a28d254ee4c7",
+      "data": [
+        {
+          "text": "19/10/16, 21:42",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "direct",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " *"
+        },
+        {
+          "text": "Commercial",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "BUNGALOW",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "98791152-d547-46d2-8ade-2b3f1e1be56d",
+      "data": [
+        {
+          "text": "19/10/16, 21:41",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "3ca86b67-f3dc-47ee-a3d7-37843900c985",
+      "data": [
+        {
+          "text": "19/10/16, 20:46",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98207 90860",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Requirement",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "f1260d83-3b7f-4272-824e-39c77ae57182",
+      "data": [
+        {
+          "text": "19/10/16, 20:31",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99309 93984",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "2bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " at "
+        },
+        {
+          "text": "5.5cr",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "61b92124-e8d7-4fb6-ad09-5759c286be81",
+      "data": [
+        {
+          "text": "19/10/16, 20:26",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97680 05769",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Hi",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": ", All "
+        },
+        {
+          "text": "Friends",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "and",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Associates",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": "."
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "1ffa3f45-73a4-417f-ba01-13b77a0878fa",
+      "data": [
+        {
+          "text": "19/10/16, 19:52",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98200 32811",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Very",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "very",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "urgent",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "requirement",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "085de72d-8c96-4b42-9599-a41705161112",
+      "data": [
+        {
+          "text": "19/10/16, 19:08",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98212 27697",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Wanted",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "2",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "or",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "fully furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Bandra east",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "or",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Kalina",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "company lease",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " , its plus "
+        },
+        {
+          "text": "one",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "enquiry",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "3b0de78a-272b-4f83-b9c9-09b1b0534eea",
+      "data": [
+        {
+          "text": "20/10/16, 17:20",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98339 27837",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Wanted",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "Lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " for a "
+        },
+        {
+          "text": "direct",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " client"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "7fce1cf7-b9f0-4747-8f6c-11b0f6f0a418",
+      "data": [
+        {
+          "text": "20/10/16, 17:18",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Only",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "corporate clients",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7ab11bc2-7b95-42b2-9769-e40e74fa2149",
+      "data": [
+        {
+          "text": "20/10/16, 17:24",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99874 27112",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "REQ",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LL",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "- "
+        },
+        {
+          "text": "2BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "semifurnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "350ac9cd-6c05-4e94-9f88-55f66d9d7319",
+      "data": [
+        {
+          "text": "20/10/16, 17:24",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Exclusive",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "4bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "77c43c3a-8c76-4bbc-9f9b-211a09bed48c",
+      "data": [
+        {
+          "text": "20/10/16, 17:24",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99874 27112",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "REQ",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "LL",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "- "
+        },
+        {
+          "text": "2BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Unfurnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Bandra",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Khar",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Santacruz",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "fb5d089f-a741-4629-a058-d926cdf344ef",
+      "data": [
+        {
+          "text": "20/10/16, 16:31",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 98201 05581",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "exclusive",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "4bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flat",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " at 29 th road "
+        },
+        {
+          "text": "bandra west .",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7ba63b37-9ba6-4017-bd71-8e60cd5aca46",
+      "data": [
+        {
+          "text": "20/10/16, 16:28",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 75067 03895",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "✍🏻",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Direct",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "2BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "On Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9b7c98c0-5c90-45c9-b929-03f52758ccfe",
+      "data": [
+        {
+          "text": "20/10/16, 16:14",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98200 94416",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: Dear Associates ,"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f691b79f-17a3-4c27-8d25-100abfa42ff2",
+      "data": [
+        {
+          "text": "26/12/16, 13:01",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97695 65698‬",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": ": *"
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "2 Bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Outright",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "acc93f3e-496c-47f5-8cc5-4e20eb70c27c",
+      "data": [
+        {
+          "text": "26/12/16, 13:01",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97695 65698",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "RUBY LITE",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "d372b37b-f74e-4e54-bcfc-28da0effb14e",
+      "data": [
+        {
+          "text": "26/12/16, 11:34",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 96997 37178",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Santacruz",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " East"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "6e2f6242-5841-44ac-8e75-63fd9cdc23d3",
+      "data": [
+        {
+          "text": "26/12/16, 11:36",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98200 54282",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: Does any1 have a "
+        },
+        {
+          "text": "good contact",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "reasonable pricing",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "pigeon nets",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " ?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "0d809e30-70d1-4b21-9341-2e3ef39aefb8",
+      "data": [
+        {
+          "text": "26/12/16, 12:59",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97695 65698‬",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": ": *"
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Commercial",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " Premises*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "32b88400-6c61-4183-9217-bff3dfae73dc",
+      "data": [
+        {
+          "text": "26/12/16, 12:44",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98339 27837",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "Lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "431160ef-9602-4aff-8608-a2183bf798cf",
+      "data": [
+        {
+          "text": "26/12/16, 12:47",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "84c58529-52f7-4d3d-b2ad-0a740d726d65",
+      "data": [
+        {
+          "text": "26/12/16, 13:01",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97695 65698",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Direct",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "2 Bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "26ddb874-0f21-4862-9ce5-b9b83f3fe5fb",
+      "data": [
+        {
+          "text": "26/12/16, 13:01",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97695 65698",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "2 Bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Outright",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "5fd983cc-c616-43ec-bb28-8a468e77d90f",
+      "data": [
+        {
+          "text": "26/12/16, 12:59",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97695 65698",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Commercial",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Premises",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "89b5fe76-4bc3-4a85-bf13-01440308fd4a",
+      "data": [
+        {
+          "text": "25/01/17, 18:51",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 91675 94973",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "3 BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "FLAT",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " FOR "
+        },
+        {
+          "text": "RENT",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "a2a491d2-589e-4eae-b982-81dde9503f98",
+      "data": [
+        {
+          "text": "13/01/17, 11:07",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97695 65698",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "residential",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flats",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "leave and license",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "14fa0e0b-28e1-4d24-af42-23b49825d730",
+      "data": [
+        {
+          "text": "14/01/17, 15:52",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98339 19786",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "fully furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "commercial",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "space",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "8000 sq ft",
+          "alias": "composite_area",
+          "meta": "@composite_area",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "808370fd-809a-4b80-aacd-f03d717b86a2",
+      "data": [
+        {
+          "text": "14/01/17, 16:20",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99207 36669",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: +"
+        },
+        {
+          "text": "1",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " proposals"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2f5490ef-231f-4d40-92d0-ca10b2da72f3",
+      "data": [
+        {
+          "text": "14/01/17, 17:04",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 96997 37178",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: 📢"
+        },
+        {
+          "text": "Direct",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "BUNGLOW",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "outright",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "30d0f8f9-ce6c-4808-a7a8-d2f861c94069",
+      "data": [
+        {
+          "text": "15/01/17, 12:02",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 98191 04319",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Urgent",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "requirement",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " at "
+        },
+        {
+          "text": "BKC",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "/",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "4 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "F/F",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0804a73d-eb07-4c87-8944-e12f7fe21a8d",
+      "data": [
+        {
+          "text": "15/01/17, 18:29",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98195 14766",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Req",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "shop",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " for glass. "
+        },
+        {
+          "text": "carpet -250sqft",
+          "alias": "composite_area",
+          "meta": "@composite_area",
+          "userDefined": true
+        },
+        {
+          "text": ".budget "
+        },
+        {
+          "text": "60thous",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        },
+        {
+          "text": " ."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9d358a85-3017-4441-a964-7ccec461ebeb",
+      "data": [
+        {
+          "text": "15/01/17, 19:49",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97692 02414",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "outright",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " for a "
+        },
+        {
+          "text": "Christian",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " party budget "
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " an"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "35e17624-b80a-46c5-b1d3-8eff20932b8a",
+      "data": [
+        {
+          "text": "16/01/17, 08:59",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 98208 39333",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Bandra",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " Pali "
+        },
+        {
+          "text": "palms",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": ", 16 Th Rd, "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": "+"
+        },
+        {
+          "text": "2 parking",
+          "alias": "composite_parking",
+          "meta": "@composite_parking",
+          "userDefined": true
+        },
+        {
+          "text": " price "
+        },
+        {
+          "text": "8.25 cr",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "91ff16ec-616b-4f88-b9fe-51be59ac3b1c",
+      "data": [
+        {
+          "text": "16/01/17, 10:32",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99309 15424",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Good",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " Morning   *"
+        },
+        {
+          "text": "Direct",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": "* *"
+        },
+        {
+          "text": "Lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8f6564c1-a5dc-4f48-9764-fed7be6ab0f5",
+      "data": [
+        {
+          "text": "16/01/17, 10:37",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98339 27837",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Wanted",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c7bf7b0c-1f55-4f9d-99c7-baa00946dc8c",
+      "data": [
+        {
+          "text": "16/01/17, 12:33",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98207 99225",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Direct",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Commercial",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Requirement",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "565c09f6-f247-4c56-a913-7b354229e890",
+      "data": [
+        {
+          "text": "16/01/17, 14:06",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 97692 02414",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Req",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " a big "
+        },
+        {
+          "text": "outright",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "1rk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "or",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " converted  "
+        },
+        {
+          "text": "Bandra ( west)",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " , "
+        },
+        {
+          "text": "khar ( west)",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "c655faa1-708a-4f76-a3fb-9346b6fe9744",
+      "data": [
+        {
+          "text": "16/01/17, 14:10",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 97692 02414",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Req",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "25k",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "30k",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        },
+        {
+          "text": "  and "
+        },
+        {
+          "text": "1lakh",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deposit",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " an around"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "58b5a171-b5a5-41f9-998b-fcbe0cdc91d4",
+      "data": [
+        {
+          "text": "16/01/17, 16:14",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98672 38898",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Urgent",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "requirement",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "630600d5-d3ac-4890-b676-6ec58cb4c8f5",
+      "data": [
+        {
+          "text": "16/01/17, 16:17",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 96195 56650",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " Aristo "
+        },
+        {
+          "text": "Sapphire",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "Hasnabad",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "cef911c4-49c6-4847-ad6e-472a764755ce",
+      "data": [
+        {
+          "text": "16/01/17, 16:47",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97692 02414",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Req",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1rk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "khar west",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Christian",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        },
+        {
+          "text": " party budget around "
+        },
+        {
+          "text": "1cr",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "b7ebcb3a-9020-43e9-9d81-b98e9c437084",
+      "data": [
+        {
+          "text": "16/01/17, 18:44",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99878 10633",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "2Bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Flat",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on Rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " For                  "
+        },
+        {
+          "text": "Working Bachelors",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        },
+        {
+          "text": " ("
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "666ac49d-398a-461c-a439-d7b7d3fb6ec2",
+      "data": [
+        {
+          "text": "16/01/17, 18:54",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 96191 12478",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Urgent",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Requirement",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "180-250 ft sq",
+          "alias": "composite_area",
+          "meta": "@composite_area",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "space",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " for delivery kitchen at"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3bf28482-0409-4e3b-b780-5b989907f138",
+      "data": [
+        {
+          "text": "17/01/17, 07:53",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *Distress "
+        },
+        {
+          "text": "Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ebf854c4-0c7a-43ec-b461-3e4db2c19c1d",
+      "data": [
+        {
+          "text": "17/01/17, 08:22",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *Arcnest*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ac0779c9-a9ef-4824-b8d2-1f522eacf09b",
+      "data": [
+        {
+          "text": "17/01/17, 09:21",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 96997 37178",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: 📢"
+        },
+        {
+          "text": "Premises",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " at "
+        },
+        {
+          "text": "Santacruz",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "juhu road",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "25312c8d-addb-4df7-ae19-77d1b97fd433",
+      "data": [
+        {
+          "text": "17/01/17, 09:24",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 98208 39333",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Juhu",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " gazder "
+        },
+        {
+          "text": "4 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": "+ terrace "
+        },
+        {
+          "text": "penthouse",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " +"
+        },
+        {
+          "text": "2 parking",
+          "alias": "composite_parking",
+          "meta": "@composite_parking",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1.50 pkg",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "c05741db-d4ce-4af6-ab3a-bfffb9de1b46",
+      "data": [
+        {
+          "text": "17/01/17, 10:04",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98200 23476",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *SOUTH CENTRAL "
+        },
+        {
+          "text": "4 BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "OUTRIGHT",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "OPTIONS",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": "😗"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "22af7005-4155-4735-9fdb-cac6abb891d3",
+      "data": [
+        {
+          "text": "17/01/17, 11:38",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *Gulaab building*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "88610710-a9a7-4797-9888-6086f093e206",
+      "data": [
+        {
+          "text": "17/01/17, 12:08",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98200 86810",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "On Rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "3eda829b-0109-42ef-9b5e-c3bbdbbaf1f9",
+      "data": [
+        {
+          "text": "17/01/17, 12:11",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97692 02414",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Require",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "residence",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": "/"
+        },
+        {
+          "text": "office",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "vakola",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": "/"
+        },
+        {
+          "text": "kalina.area",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fa5dd28c-8482-4e28-8bbd-07f87ef1b086",
+      "data": [
+        {
+          "text": "17/01/17, 13:06",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 96192 90019",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: Client required "
+        },
+        {
+          "text": "shop",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " or "
+        },
+        {
+          "text": "office",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " budget  "
+        },
+        {
+          "text": "1CRORE",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        },
+        {
+          "text": " PLEASE INFORM "
+        },
+        {
+          "text": "Avl",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": "."
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "fca76071-f795-40fb-a532-ee900eb7023f",
+      "data": [
+        {
+          "text": "17/01/17, 13:10",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97692 02414",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "vakola",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0a0dff59-f6d2-450d-983d-67a666246022",
+      "data": [
+        {
+          "text": "17/01/17, 13:11",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 97692 02414",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: In "
+        },
+        {
+          "text": "one cr",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "09283168-fb8d-4daa-a0eb-1e07ef5460af",
+      "data": [
+        {
+          "text": "17/01/17, 13:42",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98921 13393",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Plot",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " For "
+        },
+        {
+          "text": "sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "in",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "NH17 Mumbai Goa Highway Roha area",
+          "alias": "address",
+          "meta": "@sys.address",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9048e02e-f459-4f4d-8f65-045f78736f0e",
+      "data": [
+        {
+          "text": "17/01/17, 13:47",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 98196 35463",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "■■",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "    *"
+        },
+        {
+          "text": "AVAILABLE",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ON SALE",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": "*   "
+        },
+        {
+          "text": "■■",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1c97f817-a8cf-4539-afdc-9f06735d42bb",
+      "data": [
+        {
+          "text": "17/01/17, 13:48",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98196 35463",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "■■",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": "    *"
+        },
+        {
+          "text": "AVAILABLE",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ON RENT",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*   "
+        },
+        {
+          "text": "■■",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "93325a43-5716-4b1b-8e99-ae84c0960951",
+      "data": [
+        {
+          "text": "17/01/17, 14:51",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 99307 39750",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Urgent",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Req",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Outright",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "127a6932-dea7-4fa2-bbf3-cd7ce54678f9",
+      "data": [
+        {
+          "text": "17/01/17, 15:38",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Bandra",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Almeida park",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "94b8462c-0d55-4b84-885c-7f9d861cfd97",
+      "data": [
+        {
+          "text": "17/01/17, 16:51",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98200 54282",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Bandra",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "/",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "khar",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "/",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "scruz",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "b0b9d2a0-db59-4670-8798-b64f34842cbb",
+      "data": [
+        {
+          "text": "17/01/17, 17:48",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Shop",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hill road",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "147d3070-8980-4e31-81ad-80bab7aa6221",
+      "data": [
+        {
+          "text": "17/01/17, 18:00",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "GULMOHAR",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "70522f88-9971-493d-9137-425328512636",
+      "data": [
+        {
+          "text": "20/10/16, 16:31",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98201 05581",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "exclusive",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "4bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flat",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " at "
+        },
+        {
+          "text": "29 th road",
+          "alias": "address",
+          "meta": "@sys.address",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bandra west",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " ."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ec38ec57-5d8a-46d8-b89b-6a2961407440",
+      "data": [
+        {
+          "text": "17/01/17, 12:11",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 97692 02414",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Require",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "residence",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": "/"
+        },
+        {
+          "text": "office",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " in "
+        },
+        {
+          "text": "vakola",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": "/"
+        },
+        {
+          "text": "kalina.area",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " is around "
+        },
+        {
+          "text": "400sqft",
+          "alias": "composite_area",
+          "meta": "@composite_area",
+          "userDefined": true
+        },
+        {
+          "text": " for a interior "
+        },
+        {
+          "text": "designer",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "office",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": false
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "pls send",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " me ur listings or "
+        },
+        {
+          "text": "call",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "me",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "9769202414",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "/9920151416"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "1386abcf-ba96-4a78-b956-14b472acd92d",
+      "data": [
+        {
+          "text": "18/01/17, 12:03",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Office",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " on hill road*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 3
+    },
+    {
+      "id": "a9f380b2-e789-44cb-9b55-4aa23de7dc3f",
+      "data": [
+        {
+          "text": "18/01/17, 09:02",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98208 39333",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: Owner love to deal with "
+        },
+        {
+          "text": "foreigner",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f55996f2-bd16-4c13-b646-7d4830b297d4",
+      "data": [
+        {
+          "text": "18/01/17, 12:24",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 66339",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " with us "
+        },
+        {
+          "text": "4bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "L/L",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " :"
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "e7ab747d-5c2c-4674-a941-51693e8c49a6",
+      "data": [
+        {
+          "text": "18/01/17, 13:21",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "956e9f1d-7115-4276-bd99-0175d76f38ce",
+      "data": [
+        {
+          "text": "18/01/17, 09:02",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98208 39333",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "Owner love to deal",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "foreigner",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "e8e9ac2d-6b82-450c-9ef7-0597664d72b0",
+      "data": [
+        {
+          "text": "18/01/17, 12:27",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "‪+91 99209 99207",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬\u0027s "
+        },
+        {
+          "text": "security code changed. Tap",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " for more info."
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "4f5d075c-7d15-4481-bd16-2bea55dfd02f",
+      "data": [
+        {
+          "text": "18/01/17, 01:06",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *Dear associates*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "75c68a39-b2fe-4f79-b449-eceb86724c9c",
+      "data": [
+        {
+          "text": "18/01/17, 01:41",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "439795ed-c9e2-428f-99ec-b45387f4630a",
+      "data": [
+        {
+          "text": "18/01/17, 08:12",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: "
+        },
+        {
+          "text": "2 BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "186e6370-1721-4703-9106-e932cdd73ff1",
+      "data": [
+        {
+          "text": "18/01/17, 00:12",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "Bandstand",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "a2be845c-9d04-4094-93bf-269b02a36c01",
+      "data": [
+        {
+          "text": "17/01/17, 18:32",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *Only for "
+        },
+        {
+          "text": "Roman Catholics",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "8c831db5-8521-4295-985f-bd5388682a68",
+      "data": [
+        {
+          "text": "17/01/17, 21:22",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " ‪"
+        },
+        {
+          "text": "+91 98190 04387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "‬: *"
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "urgent",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "outright",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "3d644fd1-2957-45b7-af15-6b191aed8939",
+  "name": "0_systitle_1",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.date-time",
+          "name": "date-time",
+          "value": "$date-time",
+          "isList": true
+        },
+        {
+          "dataType": "@label_delimiter",
+          "name": "label_delimiter",
+          "value": "$label_delimiter",
+          "isList": true
+        },
+        {
+          "dataType": "@sys.phone-number",
+          "name": "phone-number",
+          "value": "$phone-number",
+          "isList": true
+        },
+        {
+          "dataType": "@config",
+          "name": "config",
+          "value": "$config",
+          "isList": true
+        },
+        {
+          "dataType": "@transaction_type",
+          "name": "transaction_type",
+          "value": "$transaction_type",
+          "isList": true
+        },
+        {
+          "dataType": "@req_avail",
+          "name": "req_avail",
+          "value": "$req_avail",
+          "isList": true
+        },
+        {
+          "dataType": "@property_type",
+          "name": "property_type",
+          "value": "$property_type",
+          "isList": true
+        },
+        {
+          "dataType": "@label_customer_type",
+          "name": "label_customer_type",
+          "value": "$label_customer_type",
+          "isList": true
+        },
+        {
+          "dataType": "@label_ignorewords",
+          "name": "label_ignorewords",
+          "value": "$label_ignorewords",
+          "isList": true
+        },
+        {
+          "dataType": "@composite_location",
+          "name": "composite_location",
+          "value": "$composite_location",
+          "isList": true
+        },
+        {
+          "dataType": "@sys.address",
+          "name": "address",
+          "value": "$address",
+          "isList": true
+        },
+        {
+          "dataType": "@label_locality_mum",
+          "name": "label_locality_mum",
+          "value": "$label_locality_mum",
+          "isList": true
+        },
+        {
+          "dataType": "@composite_parking",
+          "name": "composite_parking",
+          "value": "$composite_parking",
+          "isList": true
+        },
+        {
+          "dataType": "@furnishing",
+          "name": "furnishing",
+          "value": "$furnishing",
+          "isList": true
+        },
+        {
+          "dataType": "@composite_area",
+          "name": "composite_area",
+          "value": "$composite_area",
+          "isList": true
+        },
+        {
+          "dataType": "@composite_price",
+          "name": "composite_price",
+          "value": "$composite_price",
+          "isList": true
+        },
+        {
+          "dataType": "@label_deposit",
+          "name": "label_deposit",
+          "value": "$label_deposit",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.given-name",
+          "name": "given-name",
+          "value": "$given-name",
+          "isList": false
+        },
+        {
+          "dataType": "@label_area",
+          "name": "label_area",
+          "value": "$label_area",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

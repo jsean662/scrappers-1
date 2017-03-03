@@ -1,0 +1,33 @@
+{
+  "id": "e9aecc49-87b5-43a7-ad6a-52df127e0db8",
+  "name": "composite_area",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "@sys.number:sqft  @label_area_units:label_area_units",
+      "synonyms": [
+        "@sys.number:sqft  @label_area_units:label_area_units"
+      ]
+    },
+    {
+      "value": "@sys.number:sqft@label_area:label_area",
+      "synonyms": [
+        "@sys.number:sqft@label_area:label_area"
+      ]
+    },
+    {
+      "value": "@sys.number:sqft @label_area_units:label_area_units @label_area:label_area",
+      "synonyms": [
+        "@sys.number:sqft @label_area_units:label_area_units @label_area:label_area"
+      ]
+    },
+    {
+      "value": "@label_area:label_area  @sys.number-integer:sqft @label_area_units:label_area_units",
+      "synonyms": [
+        "@label_area:label_area  @sys.number-integer:sqft @label_area_units:label_area_units"
+      ]
+    }
+  ],
+  "isEnum": true,
+  "automatedExpansion": false
+}

@@ -1,0 +1,31 @@
+{
+  "templates": [],
+  "userSays": [
+    {
+      "id": "96bb5779-5bfb-4555-8d6b-95ba7fa794e0",
+      "data": [
+        {
+          "text": "3Bhk 1865 carpet, 8th, 2prk, *1.8 lakhs rent*, semi furnished,"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "ec5598ee-5e14-4b08-bf42-4f1057c399b8",
+  "name": "config_area_price_tt_furnishing",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "b7223444-39e1-4c75-9e45-c74621632507",
+  "name": "label_area",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Area",
+      "synonyms": [
+        "Area",
+        "area",
+        "size",
+        "config size",
+        "Area :"
+      ]
+    },
+    {
+      "value": "carpet",
+      "synonyms": [
+        "carpet",
+        "crpt",
+        "crpt.",
+        "carpt.",
+        "carpt",
+        "CARPET",
+        "cr.pt",
+        "carpit",
+        "car.pt"
+      ]
+    },
+    {
+      "value": "Bua",
+      "synonyms": [
+        "bu",
+        "builtup",
+        "BUILTUP",
+        "built-up",
+        "b.u.",
+        "built up"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

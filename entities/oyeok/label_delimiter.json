@@ -1,0 +1,27 @@
+{
+  "id": "a052ef43-1f9e-44d1-9ca7-cb90404fc994",
+  "name": "label_delimiter",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "/",
+      "synonyms": [
+        "/"
+      ]
+    },
+    {
+      "value": "-",
+      "synonyms": [
+        "-"
+      ]
+    },
+    {
+      "value": "\u003d",
+      "synonyms": [
+        "\u003d"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

@@ -1,0 +1,58 @@
+{
+  "id": "32040069-8746-45fd-9061-7b119cff0d93",
+  "name": "property_type",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Home",
+      "synonyms": [
+        "Residential",
+        "Home",
+        "House",
+        "Flat",
+        "Res",
+        "Tower",
+        "High Rise",
+        "Resi",
+        "CHS",
+        "Cooperative Housing Society",
+        "Residntial",
+        "Hous",
+        "bhk",
+        "bedroom",
+        "bedrooms",
+        "Config",
+        "apartment",
+        "flat"
+      ]
+    },
+    {
+      "value": "Office",
+      "synonyms": [
+        "Commercial",
+        "Office",
+        "Off",
+        "Com",
+        "premises",
+        "Office Space",
+        "OfficeSpace",
+        "AWFICE",
+        "AFFICE",
+        "OFFECE",
+        "Comm.",
+        "Comm",
+        "Com."
+      ]
+    },
+    {
+      "value": "Shop",
+      "synonyms": [
+        "Shop",
+        "Retail",
+        "Outlet"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

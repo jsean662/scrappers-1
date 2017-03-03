@@ -1,0 +1,66 @@
+{
+  "id": "e8078c3a-86c2-4da7-9dec-e5fbb1bdc77d",
+  "name": "furnishing",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "FF",
+      "synonyms": [
+        "Furnished",
+        "Fully Furnished",
+        "White Goods",
+        "Loaded",
+        "Full Furniture",
+        "Furnish",
+        "Fully-Furnished",
+        "FF",
+        "F F",
+        "F/F",
+        "F/f",
+        "f/f",
+        "f/F",
+        "F-F",
+        "f-f",
+        "F-f",
+        "f-F",
+        "fully fur"
+      ]
+    },
+    {
+      "value": "SF",
+      "synonyms": [
+        "Semi Furnished",
+        "Semi-Furnished",
+        "Kitchen Cabinets and Wardrobe",
+        "Kitchen Cabinet \u0026 Wardrobe",
+        "Semi F",
+        "SF",
+        "S Furnished",
+        "S Furnishing",
+        "S/F",
+        "s/f",
+        "S-F",
+        "s-f",
+        "S-f",
+        "s-F",
+        "S F"
+      ]
+    },
+    {
+      "value": "UF",
+      "synonyms": [
+        "Un Furnished",
+        "UF",
+        "Un-Furnished",
+        "u/f",
+        "U/F",
+        "U-F",
+        "u-f",
+        "u-F",
+        "U F"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

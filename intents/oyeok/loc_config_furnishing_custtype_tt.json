@@ -1,0 +1,218 @@
+{
+  "templates": [
+    "@composite_location:composite_location Supreme serenity @config:config  @furnishing:furnishing  @label_customer_type:label_customer_type taste, 16 Rd @label_ignorewords:label_ignorewords  @composite_location:composite_location  @transaction_type:transaction_type ",
+    "@label_locality_mum:label_locality_mum Supreme serenity @config:config  @furnishing:furnishing  @label_customer_type:label_customer_type taste, 16 Rd @label_ignorewords:label_ignorewords near @label_locality_mum:label_locality_mum gymkhana @transaction_type:transaction_type "
+  ],
+  "userSays": [
+    {
+      "id": "c6b78f4a-e782-4b89-9dfc-699f70cd928e",
+      "data": [
+        {
+          "text": "Khar",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        },
+        {
+          "text": " Supreme serenity "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "fully furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "expat",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        },
+        {
+          "text": " taste, 16 Rd "
+        },
+        {
+          "text": "higher floor",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "near khar gymkhana",
+          "alias": "composite_location",
+          "meta": "@composite_location",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "33fd38c0-6775-406e-852c-b5bfa9d3823f",
+      "data": [
+        {
+          "text": "Khar",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " Supreme serenity "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "fully furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "expat",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " taste, "
+        },
+        {
+          "text": "16 Rd",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "higher floor",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " near "
+        },
+        {
+          "text": "khar",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " gymkhana "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "7c56b022-e125-4567-875b-bfb1d3a05a78",
+  "name": "loc_config_furnishing_custtype_tt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@config",
+          "name": "config",
+          "value": "$config",
+          "isList": false
+        },
+        {
+          "dataType": "@furnishing",
+          "name": "furnishing",
+          "value": "$furnishing",
+          "isList": false
+        },
+        {
+          "dataType": "@label_customer_type",
+          "name": "label_customer_type",
+          "value": "$label_customer_type",
+          "isList": false
+        },
+        {
+          "dataType": "@label_ignorewords",
+          "name": "label_ignorewords",
+          "value": "$label_ignorewords",
+          "isList": false
+        },
+        {
+          "dataType": "@label_locality_mum",
+          "name": "label_locality_mum",
+          "value": "$label_locality_mum",
+          "isList": true
+        },
+        {
+          "dataType": "@transaction_type",
+          "name": "transaction_type",
+          "value": "$transaction_type",
+          "isList": false
+        },
+        {
+          "dataType": "@composite_location",
+          "name": "composite_location",
+          "value": "$composite_location",
+          "isList": true
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

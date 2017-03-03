@@ -1,0 +1,53 @@
+{
+  "id": "cba9a172-33fd-4f25-bf1f-1134f424f179",
+  "name": "compose",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "I need a bouquet"
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "I want to buy a bouquet"
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "Yes"
+        }
+      ],
+      "isTemplate": false
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "bouquet.compose",
+      "affectedContexts": [
+        {
+          "name": "compose",
+          "lifespan": 5
+        },
+        {
+          "name": "bouquet",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "speech": "Okay! Would you like to compose a bouquet yourself?"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false
+}

@@ -1,0 +1,165 @@
+{
+  "id": "4ed357dc-6995-4fc0-9361-537b006d6bb7",
+  "name": "config",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "1BHK",
+      "synonyms": [
+        "1BHK",
+        "1 BHK",
+        "1 bed",
+        "1 bedroom",
+        "1 bed hall kitchen"
+      ]
+    },
+    {
+      "value": "1RK",
+      "synonyms": [
+        "1RK",
+        "1 RK",
+        "1 Room Kitchen",
+        "One Room Kitchen",
+        "Studio"
+      ]
+    },
+    {
+      "value": "1.5BHK",
+      "synonyms": [
+        "1.5BHK",
+        "1.5 BHK",
+        "1 and Half BHK",
+        "1 \u0026 Half BHK"
+      ]
+    },
+    {
+      "value": "2BHK",
+      "synonyms": [
+        "2BHK",
+        "2 BHK",
+        "2 Bedroom"
+      ]
+    },
+    {
+      "value": "2.5BHK",
+      "synonyms": [
+        "2.5BHK",
+        "2.5 BHK",
+        "2 and Half BHK",
+        "2 \u0026 Half BHK"
+      ]
+    },
+    {
+      "value": "0 CABIN",
+      "synonyms": [
+        "1 CABIN",
+        "1 MEETING ROOM",
+        "O CABIN",
+        "2 CABINS",
+        "3 CABINS",
+        "2 MEETING ROOMS",
+        "3 MEETING ROOMS"
+      ]
+    },
+    {
+      "value": "0 WORKSTATION",
+      "synonyms": [
+        "0 WORKSTATION",
+        "1 WORKSTATION",
+        "2 WORK STATION",
+        "3 WORKSTATION",
+        "4 WORKSTATION",
+        "5 WORKSTATION",
+        "6 WORKSTATION",
+        "7 WORKSTATION"
+      ]
+    },
+    {
+      "value": "1,2,3,4,5 BHK",
+      "synonyms": [
+        "1,2,3,4,5 BHK",
+        "1/2/3/4/5 BHK",
+        "1/2/3 BHK",
+        "1/2/3/4 BHK",
+        "1,2,3,4 BHK",
+        "1,2,3 BHk"
+      ]
+    },
+    {
+      "value": "3 BHK",
+      "synonyms": [
+        "3 BHK",
+        "3 bhk",
+        "3 Bhk",
+        "3bhk",
+        "3BHK"
+      ]
+    },
+    {
+      "value": "4 BHK",
+      "synonyms": [
+        "4 BHK",
+        "4BHK",
+        "4bhk",
+        "4 bhk"
+      ]
+    },
+    {
+      "value": "5 BHK",
+      "synonyms": [
+        "5 BHK",
+        "5 bhk",
+        "5BHK",
+        "5bhk",
+        "5 Bhk",
+        "5Bhk"
+      ]
+    },
+    {
+      "value": "6 BHK",
+      "synonyms": [
+        "6 BHK",
+        "6BHK",
+        "6 bhk",
+        "6bhk",
+        "6Bhk",
+        "6 Bhk"
+      ]
+    },
+    {
+      "value": "4.5 BHK",
+      "synonyms": [
+        "4.5 BHK",
+        "4.5BHK",
+        "4.5bhk",
+        "4.5 bhk",
+        "4.5Bhk",
+        "4.5 Bhk"
+      ]
+    },
+    {
+      "value": "5.5 BHK",
+      "synonyms": [
+        "5.5 BHK",
+        "5.5BHK",
+        "5.5bhk",
+        "5.5 bhk",
+        "5.5 Bhk",
+        "5.5Bhk"
+      ]
+    },
+    {
+      "value": "3.5 BHK",
+      "synonyms": [
+        "3.5 BHK",
+        "3.5BHK",
+        "3.5bhk",
+        "3.5 bhk",
+        "3.5Bhk",
+        "3.5 Bhk"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

@@ -1,0 +1,114 @@
+{
+  "templates": [
+    "@label_customer_type:label_customer_type with @sys.number:price  @label_amt_units:label_amt_units "
+  ],
+  "userSays": [
+    {
+      "id": "c13eb69a-260d-49c4-9024-b582100858b4",
+      "data": [
+        {
+          "text": "expat",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "5.8",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lacs",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f3525549-c53d-44d4-abba-ac73d42c7938",
+      "data": [
+        {
+          "text": "Expat",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " taste @ "
+        },
+        {
+          "text": "6.50",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lacs",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "4e4d87df-238a-4f0f-aa53-25fb3bbc71a3",
+  "name": "custtype_price",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@label_amt_units",
+          "name": "label_amt_units",
+          "value": "$label_amt_units",
+          "isList": true
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "price",
+          "value": "$price",
+          "isList": true
+        },
+        {
+          "dataType": "@label_customer_type",
+          "name": "label_customer_type",
+          "value": "$label_customer_type",
+          "isList": true
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $label_customer_type , $price , $label_amt_units"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

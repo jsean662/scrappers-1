@@ -1,0 +1,65 @@
+{
+  "id": "b68e7098-d954-4dc0-80cc-62a81d348030",
+  "name": "no - compose-st-valentines",
+  "auto": true,
+  "contexts": [
+    "no-compose",
+    "bouquet"
+  ],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "I need a bouquet for Saint Valentine\u0027s Day"
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "For Saint Valentine\u0027s Day"
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "Saint Valentine\u0027s Day",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "Saint Valentine\u0027s Day"
+        }
+      ],
+      "isTemplate": false
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "name": "compose",
+          "value": "no"
+        },
+        {
+          "name": "occasion",
+          "value": "saint_valentines"
+        }
+      ],
+      "speech": "Here you can choose a lovely bouquet for your sweetheart!"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false
+}

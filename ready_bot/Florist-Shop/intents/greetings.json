@@ -1,0 +1,36 @@
+{
+  "id": "3cc306cd-7c4e-4a29-a936-3fc1ef3df4e7",
+  "name": "greetings",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "Hello"
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "Hi"
+        }
+      ],
+      "isTemplate": false
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "greeting",
+      "affectedContexts": [],
+      "parameters": [],
+      "speech": "Hello! Would you like to buy a bouquet?"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false
+}

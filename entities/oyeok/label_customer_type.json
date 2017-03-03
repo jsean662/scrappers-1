@@ -1,0 +1,112 @@
+{
+  "id": "60a02c48-bead-4909-b740-447e5a8d7c56",
+  "name": "label_customer_type",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Bachlor",
+      "synonyms": [
+        "Bachlor",
+        "Bchlr",
+        "bachlors",
+        "bachelor\u0027s",
+        "bachleors",
+        "Working Bachelors"
+      ]
+    },
+    {
+      "value": "working",
+      "synonyms": [
+        "working",
+        "wrkng",
+        "WORKING"
+      ]
+    },
+    {
+      "value": "Family",
+      "synonyms": [
+        "Family",
+        "family",
+        "fmly",
+        "fmly"
+      ]
+    },
+    {
+      "value": "Expat",
+      "synonyms": [
+        "Expat",
+        "expat"
+      ]
+    },
+    {
+      "value": "Individual",
+      "synonyms": [
+        "Individual",
+        "individual"
+      ]
+    },
+    {
+      "value": "Company Lease",
+      "synonyms": [
+        "Company Lease",
+        "company lease"
+      ]
+    },
+    {
+      "value": "Corporate",
+      "synonyms": [
+        "Corporate",
+        "corporate"
+      ]
+    },
+    {
+      "value": "Boys",
+      "synonyms": [
+        "Boys",
+        "boys",
+        "only boys",
+        "boys only"
+      ]
+    },
+    {
+      "value": "Girls",
+      "synonyms": [
+        "Girls",
+        "girl",
+        "girls"
+      ]
+    },
+    {
+      "value": "Hindu clients",
+      "synonyms": [
+        "Hindu clients"
+      ]
+    },
+    {
+      "value": "Roman Catholics",
+      "synonyms": [
+        "Roman Catholics"
+      ]
+    },
+    {
+      "value": "students",
+      "synonyms": [
+        "students"
+      ]
+    },
+    {
+      "value": "expact",
+      "synonyms": [
+        "expact"
+      ]
+    },
+    {
+      "value": "foreigner",
+      "synonyms": [
+        "foreigner"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

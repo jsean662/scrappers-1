@@ -1,0 +1,209 @@
+{
+  "templates": [
+    "@label_customer_type:label_customer_type ",
+    "@label_ignorewords:label_ignorewords  @label_customer_type:label_customer_type ",
+    "@label_ignorewords:label_ignorewords for @label_customer_type:label_customer_type ",
+    "@label_customer_type:label_customer_type married couple",
+    "@label_customer_type:label_customer_type married couple",
+    "@label_customer_type:label_customer_type taste",
+    "@label_customer_type:label_customer_type ",
+    "@label_customer_type:label_customer_type ",
+    "for @label_customer_type:label_customer_type "
+  ],
+  "userSays": [
+    {
+      "id": "60964bb1-33bc-4ecf-8a9d-a052a01779e6",
+      "data": [
+        {
+          "text": "Corporate profile",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6c17e7ea-0f76-4a4b-93da-918265a0a395",
+      "data": [
+        {
+          "text": "Only",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "company Lease",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3097b41c-5aa0-4d72-92da-debb413ac6e6",
+      "data": [
+        {
+          "text": "Only",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Hindu clients",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "c9427e57-59f2-4fa8-aeb8-3e846b3b277d",
+      "data": [
+        {
+          "text": "Expat",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        },
+        {
+          "text": " married couple"
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "63eecf85-41a4-4bb0-9176-6c0a2577c36b",
+      "data": [
+        {
+          "text": "Expat",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        },
+        {
+          "text": " married "
+        },
+        {
+          "text": "couple",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 3
+    },
+    {
+      "id": "3cf16062-19f1-42d6-a28b-390d9b5203ad",
+      "data": [
+        {
+          "text": "expact",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        },
+        {
+          "text": " taste"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2bcaf867-987a-4077-90dc-6c31e8b4d7ae",
+      "data": [
+        {
+          "text": "bachlors",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6b11a71d-24f4-4d2b-9225-bdc0112ab2ec",
+      "data": [
+        {
+          "text": "students",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b5d76df9-c60b-431b-abf5-607942e795cd",
+      "data": [
+        {
+          "text": "for "
+        },
+        {
+          "text": "family",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "488e78aa-367e-4be8-94a8-2c44fd9e8738",
+  "name": "custtype",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@label_customer_type",
+          "name": "label_customer_type",
+          "value": "$label_customer_type",
+          "isList": true
+        },
+        {
+          "dataType": "@label_ignorewords",
+          "name": "label_ignorewords",
+          "value": "$label_ignorewords",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

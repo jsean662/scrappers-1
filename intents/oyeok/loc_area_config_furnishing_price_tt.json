@@ -1,0 +1,41 @@
+{
+  "templates": [],
+  "userSays": [
+    {
+      "id": "aa1c5ed1-8c32-4aea-b13f-54e7c8b9bb50",
+      "data": [
+        {
+          "text": "1) *Parle west*, *1400 carpet, 3Bhk* semi furnished, 2park, *80,000/- rent*."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "97d28b38-079a-49ab-88fe-95b53af57746",
+      "data": [
+        {
+          "text": "2) *Juhu JVPD scheme*, off 10th Rd, 3 Bhk, *1800 carpet*, fully furnished with white goods, *2.75 lakh*."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "715a74b8-f773-4313-ba42-8c44826bb932",
+  "name": "loc_area_config_furnishing_price_tt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

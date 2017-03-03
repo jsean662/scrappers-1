@@ -1,0 +1,179 @@
+{
+  "templates": [
+    "@label_locality_mum:label_locality_mum  @config:config new bldg near gymkhana @transaction_type:transaction_type  @sys.number:number @label_amt_units:label_amt_units neg @furnishing:furnishing ",
+    "@label_locality_mum:label_locality_mum  @config:config new bldg near gymkhana @transaction_type:transaction_type  @sys.number:price @label_amt_units:label_amt_units neg @furnishing:furnishing "
+  ],
+  "userSays": [
+    {
+      "id": "dddc191b-4493-4c2b-8272-3fdcf958f56a",
+      "data": [
+        {
+          "text": "Khar",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " new bldg near gymkhana "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1.10",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "pkg",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " neg "
+        },
+        {
+          "text": "fur/ unfurnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e04265a6-3e3b-4988-98ae-364f030e43f7",
+      "data": [
+        {
+          "text": "Khar",
+          "alias": "label_locality_mum",
+          "meta": "@label_locality_mum",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " new bldg near gymkhana "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "1.10",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "pkg",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " neg "
+        },
+        {
+          "text": "fur/ unfurnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "4d86ca8d-82e1-44c1-8277-60c66a8015f0",
+  "name": "loc_config_tt_price_furnishing",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@config",
+          "name": "config",
+          "value": "$config"
+        },
+        {
+          "dataType": "@label_locality_mum",
+          "name": "label_locality_mum",
+          "value": "$label_locality_mum",
+          "isList": false
+        },
+        {
+          "dataType": "@transaction_type",
+          "name": "transaction_type",
+          "value": "$transaction_type",
+          "isList": false
+        },
+        {
+          "dataType": "@label_amt_units",
+          "name": "label_amt_units",
+          "value": "$label_amt_units",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "price",
+          "value": "$price",
+          "isList": false
+        },
+        {
+          "dataType": "@furnishing",
+          "name": "furnishing",
+          "value": "$furnishing",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

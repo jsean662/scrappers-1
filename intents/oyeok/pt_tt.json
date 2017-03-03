@@ -1,0 +1,121 @@
+{
+  "templates": [
+    "@property_type:property_type for @transaction_type:transaction_type ",
+    "@property_type:property_type For @transaction_type:transaction_type in NH17 Mumbai Goa Highway Roha area",
+    "@transaction_type:transaction_type @property_type:property_type",
+    "@property_type:property_type @transaction_type:transaction_type"
+  ],
+  "userSays": [
+    {
+      "id": "b413839a-8830-457a-9f12-226046791512",
+      "data": [
+        {
+          "text": "@transaction_type:transaction_type @property_type:property_type"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "d589674b-48c5-4cd0-b449-f0c930ca4c91",
+      "data": [
+        {
+          "text": "@property_type:property_type @transaction_type:transaction_type"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "7cdc9408-b044-4cd2-b1c3-dd22f26b6c03",
+      "data": [
+        {
+          "text": "shop",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "5dd944b6-b0ed-4b98-b676-35245d5ea498",
+      "data": [
+        {
+          "text": "Plot",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " For "
+        },
+        {
+          "text": "sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " in "
+        },
+        {
+          "text": "NH17 Mumbai Goa Highway Roha area",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "647b206d-12f6-447c-bbf7-195626af35ce",
+  "name": "pt_tt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@property_type",
+          "name": "property_type",
+          "value": "$property_type",
+          "isList": false
+        },
+        {
+          "dataType": "@transaction_type",
+          "name": "transaction_type",
+          "value": "$transaction_type",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $transaction_type , $property_type"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

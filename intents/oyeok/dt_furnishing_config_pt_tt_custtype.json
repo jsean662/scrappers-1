@@ -1,0 +1,182 @@
+{
+  "templates": [
+    "@req_avail:req_avail  @furnishing:furnishing  @config:config on @transaction_type:transaction_type in Aristo Sapphire, Hasnabad"
+  ],
+  "userSays": [
+    {
+      "id": "074ad763-156b-4a42-944a-f262ebf6009f",
+      "data": [
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " in Aristo "
+        },
+        {
+          "text": "Sapphire",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": ", Hasnabad"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "e09d6ef2-9fa1-4f12-a511-aa349d7e4380",
+      "data": [
+        {
+          "text": "Required",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "2Bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Flat",
+          "alias": "property_type",
+          "meta": "@property_type",
+          "userDefined": true
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "Rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " For "
+        },
+        {
+          "text": "Working Bachelors",
+          "alias": "label_customer_type",
+          "meta": "@label_customer_type",
+          "userDefined": true
+        },
+        {
+          "text": " ("
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    }
+  ],
+  "id": "ed329365-e47d-4c0e-9d89-913b1b9fc4e3",
+  "name": "dt_furnishing_config_pt_tt_custtype",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@req_avail",
+          "name": "req_avail",
+          "value": "$req_avail",
+          "isList": false
+        },
+        {
+          "dataType": "@furnishing",
+          "name": "furnishing",
+          "value": "$furnishing",
+          "isList": false
+        },
+        {
+          "dataType": "@config",
+          "name": "config",
+          "value": "$config",
+          "isList": false
+        },
+        {
+          "dataType": "@property_type",
+          "name": "property_type",
+          "value": "$property_type",
+          "isList": false
+        },
+        {
+          "dataType": "@transaction_type",
+          "name": "transaction_type",
+          "value": "$transaction_type",
+          "isList": false
+        },
+        {
+          "dataType": "@label_customer_type",
+          "name": "label_customer_type",
+          "value": "$label_customer_type",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $req_avail , $furnishing , $config , $property_type , $transaction_type , $label_customer_type"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

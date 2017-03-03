@@ -1,0 +1,368 @@
+{
+  "templates": [
+    "@req_avail:req_avail with us @config:config on @transaction_type:transaction_type :",
+    "@config:config  @req_avail:req_avail  @transaction_type:transaction_type ",
+    "@config:config  @req_avail:req_avail  @transaction_type:transaction_type ",
+    "My @req_avail:req_avail is @req_avail:req_avail for @config:config On @transaction_type:transaction_type ",
+    "I am looking for a @config:config on @transaction_type:transaction_type ",
+    "My client @req_avail:req_avail a @config:config on @transaction_type:transaction_type basis"
+  ],
+  "userSays": [
+    {
+      "id": "3050372d-dea6-4de1-8682-0562f5e8a59f",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "AVAILABLE",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": "  "
+        },
+        {
+          "text": "1bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": "\u0027s "
+        },
+        {
+          "text": "ON",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "URGENT",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "L/L",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " BASIS*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3c46661e-6095-4bd2-9a70-96b44dce96ee",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Urgent",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Req",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Outright",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2fda61e8-7c4d-4fe0-a4fb-60da80e44592",
+      "data": [
+        {
+          "text": "Available",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " with us "
+        },
+        {
+          "text": "4bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "L/L",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " :"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "79333194-badd-41d3-8be5-a36f812d4423",
+      "data": [
+        {
+          "text": "3bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b03c2e4d-e772-420a-99e7-3d740eb988fe",
+      "data": [
+        {
+          "text": "2bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "55663a9b-7ec0-4aa6-b2e4-c91884e3a36e",
+      "data": [
+        {
+          "text": "My "
+        },
+        {
+          "text": "Client",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": false
+        },
+        {
+          "text": " is "
+        },
+        {
+          "text": "looking",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "4BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " On "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "846307ad-d428-459d-ad1a-551b51f220d5",
+      "data": [
+        {
+          "text": "I am looking for a "
+        },
+        {
+          "text": "3BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "5707b64f-fcfd-4957-8588-0a88d46db24d",
+      "data": [
+        {
+          "text": "My client "
+        },
+        {
+          "text": "requires",
+          "alias": "req_avail",
+          "meta": "@req_avail",
+          "userDefined": true
+        },
+        {
+          "text": " a "
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "lease",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " basis"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "40b78627-7bc7-457d-ab20-1c06984c1c76",
+  "name": "dt_config_tt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@config",
+          "name": "config",
+          "value": "$config",
+          "isList": false
+        },
+        {
+          "dataType": "@transaction_type",
+          "name": "transaction_type",
+          "value": "$transaction_type",
+          "isList": false
+        },
+        {
+          "dataType": "@req_avail",
+          "name": "req_avail",
+          "value": "$req_avail",
+          "isList": true
+        },
+        {
+          "dataType": "@label_ignorewords",
+          "name": "label_ignorewords",
+          "value": "$label_ignorewords",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $req_avail , $config , $transaction_type"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

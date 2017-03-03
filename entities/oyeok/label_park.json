@@ -1,0 +1,17 @@
+{
+  "id": "4ed6eea9-30ca-4547-927a-b123446df89b",
+  "name": "label_park",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Park",
+      "synonyms": [
+        "Park",
+        "parkings",
+        "parking"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

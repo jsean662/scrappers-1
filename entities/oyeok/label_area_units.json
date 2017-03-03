@@ -1,0 +1,31 @@
+{
+  "id": "f32be148-b6f1-45fe-ba6b-2d47eab2f7eb",
+  "name": "label_area_units",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "sqft",
+      "synonyms": [
+        "sqft",
+        "sq ft",
+        "Sq Ft",
+        "Sq ft",
+        "SQFT",
+        "SQFT.",
+        "sqft."
+      ]
+    },
+    {
+      "value": "Acre",
+      "synonyms": [
+        "Acers",
+        "acres",
+        "Acre",
+        "Acres",
+        "acrs"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

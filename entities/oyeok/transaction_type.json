@@ -1,0 +1,69 @@
+{
+  "id": "ec860f54-b2d2-4512-94f1-5126438b2048",
+  "name": "transaction_type",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "LL",
+      "synonyms": [
+        "Leave \u0026 License",
+        "Lease",
+        "LL",
+        "L/L",
+        "l/l",
+        "L/l",
+        "ll",
+        "Leave and License",
+        "Leave \u0026 Licence",
+        "Leave and Licence",
+        "Leave n License",
+        "Leave n Licence",
+        "LEAVE N LICENCE"
+      ]
+    },
+    {
+      "value": "OR",
+      "synonyms": [
+        "OR",
+        "Sale",
+        "Buy/Sell",
+        "Buy",
+        "Sell",
+        "Outright",
+        "Pre-leased",
+        "Prea leased",
+        "Pre Leased",
+        "Already Rented",
+        "On Rent for Sale",
+        "rented",
+        "on Sale",
+        "O/R",
+        "O/r",
+        "or",
+        "Outrate"
+      ]
+    },
+    {
+      "value": "Rental",
+      "synonyms": [
+        "Rental",
+        "rent",
+        "Rent",
+        "RENT",
+        "RENT.",
+        "rent.",
+        "Rent.",
+        "Rnt",
+        "Rented"
+      ]
+    },
+    {
+      "value": "COMMERCIAL",
+      "synonyms": [
+        "COMMERCIAL"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

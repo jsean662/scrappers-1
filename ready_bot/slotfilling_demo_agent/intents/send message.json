@@ -1,0 +1,129 @@
+{
+  "id": "7d7b9d91-f58e-4e43-a321-e2eed503a61f",
+  "name": "send message",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "c3ee8230-d574-4714-b5f4-043ba66b310a",
+      "data": [
+        {
+          "text": "send message"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9261bf8e-c8f1-4d49-9645-679cca31cf65",
+      "data": [
+        {
+          "text": "send @message_type:message_type"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "b00269f2-9dbd-4e3e-a7c5-a07bda3b01c1",
+      "data": [
+        {
+          "text": "send @message_type:message_type to my @parent:parent"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "9eb0c8fa-bcc1-484a-9bb8-eec5d81f951f",
+      "data": [
+        {
+          "text": "send @message_type:message_type with text @sys.any:text"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "15efb03e-0de7-4eea-9fd2-b74ce62c6222",
+      "data": [
+        {
+          "text": "send @sys.any:text to @parent:parent via @message_type:message_type"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "2ea46101-bbfe-46dc-957a-6e3f2cb9a2d0",
+      "data": [
+        {
+          "text": "send @sys.any:text to @parent:parent by @message_type:message_type"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "ed5c4ca1-bc67-4075-98f7-716493a9255d",
+      "data": [
+        {
+          "text": "send message to @parent:parent"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "0fcfe6ac-4cfb-4953-bb74-14c86fe76fdd",
+      "data": [
+        {
+          "text": "text @sys.any:text"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "send_message",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@message_type",
+          "name": "message_type",
+          "value": "$message_type",
+          "prompts": [
+            "What\u0027s message type?",
+            "What\u0027s message?",
+            "SMS? Email?"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@parent",
+          "name": "parent",
+          "value": "$parent",
+          "prompts": [
+            "Recipient?",
+            "Mummy? Daddy?",
+            "Who should receive this message?"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "text",
+          "value": "$text"
+        }
+      ],
+      "speech": "I\u0027ll send message with text \"$text\" to \"$parent\" via \"$message_type\""
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false
+}

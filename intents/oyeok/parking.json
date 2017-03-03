@@ -1,0 +1,297 @@
+{
+  "templates": [
+    "@sys.number:no  @sys.any:any  @label_park:label_park ",
+    "@sys.number:no  @sys.any:any  @label_park:label_park ",
+    "@sys.number:no  @sys.any:any  @label_park:label_park ",
+    "@sys.number:no  @label_park:label_park ",
+    "@sys.number:no  @sys.any:any  @label_park:label_park ",
+    "@sys.number:no @sys.any:any @label_park:label_park",
+    "@sys.number:no @label_park:label_park"
+  ],
+  "userSays": [
+    {
+      "id": "90772b3c-de8a-4045-8700-365e3e082f1c",
+      "data": [
+        {
+          "text": "One",
+          "alias": "no",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "car",
+          "alias": "any",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "parking",
+          "alias": "label_park",
+          "meta": "@label_park",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "b1b4ac7d-b65e-4799-b205-a87f2b2b801a",
+      "data": [
+        {
+          "text": "* "
+        },
+        {
+          "text": "ONE",
+          "alias": "no",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "CAR",
+          "alias": "any",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "PARKING",
+          "alias": "label_park",
+          "meta": "@label_park",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "3984d344-a145-42a3-9277-a2968b79fb1e",
+      "data": [
+        {
+          "text": "One",
+          "alias": "no",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "covered car",
+          "alias": "any",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "parking",
+          "alias": "label_park",
+          "meta": "@label_park",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "e57d58a3-a9f6-4804-83dc-8c18255a3b67",
+      "data": [
+        {
+          "text": "7",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": ") "
+        },
+        {
+          "text": "PRIVATE CAR",
+          "alias": "any",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "PARKING",
+          "alias": "label_park",
+          "meta": "@label_park",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3740d5bc-a5e6-4a5e-abfc-d758607b527f",
+      "data": [
+        {
+          "text": "One",
+          "alias": "no",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "car",
+          "alias": "any",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "parking",
+          "alias": "label_park",
+          "meta": "@label_park",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 3
+    },
+    {
+      "id": "c432cd00-0390-4cce-b787-017a4a271034",
+      "data": [
+        {
+          "text": "@sys.number:no @sys.any:any @label_park:label_park"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "4840c9c9-bbb7-4d60-9c8f-ba1073242c52",
+      "data": [
+        {
+          "text": "2",
+          "alias": "no",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "parking",
+          "alias": "label_park",
+          "meta": "@label_park",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "118955ae-49de-4499-aeda-8886f6a2ed02",
+      "data": [
+        {
+          "text": "@sys.number:no @label_park:label_park"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "071e6627-d3ad-41e1-b7e7-424ca32c61ee",
+      "data": [
+        {
+          "text": "One",
+          "alias": "no",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "covered car",
+          "alias": "any",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "parking",
+          "alias": "label_park",
+          "meta": "@label_park",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "99bff6a8-ff44-44a1-92f2-0ad097f59d1d",
+  "name": "parking",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@label_park",
+          "name": "label_park",
+          "value": "$label_park",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "no",
+          "value": "$no",
+          "isList": true
+        },
+        {
+          "dataType": "@sys.any",
+          "name": "any",
+          "value": "$any",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $no , $label_park $composite_parking , $any"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,25 @@
+{
+  "id": "e9b959c6-9465-4800-b76b-dc2b97428943",
+  "name": "parent",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Mother",
+      "synonyms": [
+        "Mother",
+        "Mom",
+        "Mummy"
+      ]
+    },
+    {
+      "value": "Father",
+      "synonyms": [
+        "Father",
+        "Dad",
+        "Daddy"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

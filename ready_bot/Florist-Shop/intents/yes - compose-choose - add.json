@@ -1,0 +1,102 @@
+{
+  "id": "9642a4d1-d4f8-495d-af2b-6311d082d390",
+  "name": "yes - compose-choose - add",
+  "auto": true,
+  "contexts": [
+    "compose-add",
+    "bouquet"
+  ],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "add @sys.number:amount-2 @sys.color:color-2 @flower:flower-2"
+        }
+      ],
+      "isTemplate": true
+    },
+    {
+      "data": [
+        {
+          "text": "add @sys.number:amount-2 @flower:flower-2"
+        }
+      ],
+      "isTemplate": true
+    },
+    {
+      "data": [
+        {
+          "text": "add some @sys.color:color-2 @flower:flower-2"
+        }
+      ],
+      "isTemplate": true
+    },
+    {
+      "data": [
+        {
+          "text": "@sys.number:amount-2 @sys.color:color-2 @flower:flower-2"
+        }
+      ],
+      "isTemplate": true
+    },
+    {
+      "data": [
+        {
+          "text": "@sys.number:amount-2 @flower:flower-2"
+        }
+      ],
+      "isTemplate": true
+    },
+    {
+      "data": [
+        {
+          "text": "@sys.color:color-2 @flower:flower-2"
+        }
+      ],
+      "isTemplate": true
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "add.flowers",
+      "affectedContexts": [
+        {
+          "name": "compose-add",
+          "lifespan": 5
+        },
+        {
+          "name": "bouquet",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "required": false,
+          "dataType": "@sys.number",
+          "name": "amount-2",
+          "value": "$amount-2",
+          "defaultValue": ""
+        },
+        {
+          "required": false,
+          "dataType": "@sys.color",
+          "name": "color-2",
+          "value": "$color-2",
+          "defaultValue": ""
+        },
+        {
+          "required": false,
+          "dataType": "@flower",
+          "name": "flower-2",
+          "value": "$flower-2",
+          "defaultValue": ""
+        }
+      ],
+      "speech": "Okay! I added $amount-2 $color-2 $flower-2.original to your bouquet. Anything else?"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false
+}

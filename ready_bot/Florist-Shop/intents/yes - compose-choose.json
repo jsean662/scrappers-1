@@ -1,0 +1,80 @@
+{
+  "id": "2f12da4f-ab10-427b-bbbb-9eeb2ea1319a",
+  "name": "yes - compose-choose",
+  "auto": true,
+  "contexts": [
+    "yes-compose",
+    "bouquet"
+  ],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "add @sys.number:amount-1 @sys.color:color-1 @flower:flower-1"
+        }
+      ],
+      "isTemplate": true
+    },
+    {
+      "data": [
+        {
+          "text": "add @sys.number:amount-1 @flower:flower-1"
+        }
+      ],
+      "isTemplate": true
+    },
+    {
+      "data": [
+        {
+          "text": "add some @sys.color:color-1 @flower:flower-1"
+        }
+      ],
+      "isTemplate": true
+    },
+    {
+      "data": [
+        {
+          "text": "@sys.number:amount-1 @sys.color:color-1 @flower:flower-1"
+        }
+      ],
+      "isTemplate": true
+    },
+    {
+      "data": [
+        {
+          "text": "@sys.number:amount-1 @flower:flower-1"
+        }
+      ],
+      "isTemplate": true
+    },
+    {
+      "data": [
+        {
+          "text": "@sys.color:color-1 @flower:flower-1"
+        }
+      ],
+      "isTemplate": true
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "add.flowers",
+      "affectedContexts": [
+        {
+          "name": "compose-add",
+          "lifespan": 5
+        },
+        {
+          "name": "bouquet",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "speech": "Alright! I put $amount-1 $color-1 $flower-1.original in your lovely bouquet. Should I add anything else?"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false
+}

@@ -1,0 +1,65 @@
+{
+  "id": "bfc55b4b-f636-4b52-8fd5-d4626feeb76a",
+  "name": "property_type",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Home",
+      "synonyms": [
+        "Residential",
+        "Home",
+        "House",
+        "Flat",
+        "Res",
+        "Tower",
+        "High Rise",
+        "Resi",
+        "CHS",
+        "Cooperative Housing Society",
+        "Residntial",
+        "Hous",
+        "bhk",
+        "bedroom",
+        "bedrooms",
+        "Config",
+        "apartment",
+        "flat"
+      ]
+    },
+    {
+      "value": "Office",
+      "synonyms": [
+        "Commercial",
+        "Office",
+        "Off",
+        "Com",
+        "premises",
+        "Office Space",
+        "OfficeSpace",
+        "AWFICE",
+        "AFFICE",
+        "OFFECE",
+        "Comm.",
+        "Comm",
+        "Com."
+      ]
+    },
+    {
+      "value": "Shop",
+      "synonyms": [
+        "Shop",
+        "Retail",
+        "Outlet"
+      ]
+    },
+    {
+      "value": "penthouse",
+      "synonyms": [
+        "penthouse",
+        "Penthouse"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

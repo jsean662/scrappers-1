@@ -1,0 +1,57 @@
+{
+  "id": "c36f3881-20c3-43d3-a7ab-dba79f8978e3",
+  "name": "composite_customer_type",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Bachlor",
+      "synonyms": [
+        "Bachlor"
+      ]
+    },
+    {
+      "value": "students",
+      "synonyms": [
+        "students"
+      ]
+    },
+    {
+      "value": "family",
+      "synonyms": [
+        "family"
+      ]
+    },
+    {
+      "value": "working bachelor",
+      "synonyms": [
+        "working bachelor"
+      ]
+    },
+    {
+      "value": "bachelor",
+      "synonyms": [
+        "bachelor"
+      ]
+    },
+    {
+      "value": "expat",
+      "synonyms": [
+        "expat"
+      ]
+    },
+    {
+      "value": "bachleors",
+      "synonyms": [
+        "bachleors"
+      ]
+    },
+    {
+      "value": "expact",
+      "synonyms": [
+        "expact"
+      ]
+    }
+  ],
+  "isEnum": true,
+  "automatedExpansion": false
+}

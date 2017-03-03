@@ -1,0 +1,269 @@
+{
+  "templates": [
+    "@sys.phone-number:phone-number ",
+    "@sys.phone-number:phone-number ",
+    "@sys.phone-number:phone-number ",
+    "9819066339",
+    "FOR @label_ignorewords:label_ignorewords  @label_ignorewords:label_ignorewords / @sys.phone-number:phone-number  @label_delimiter:label_delimiter  @sys.phone-number:phone-number ",
+    "@sys.phone-number:phone-number , @sys.phone-number:phone-number ",
+    "Contact : @sys.phone-number:phone-number / @sys.phone-number:phone-number "
+  ],
+  "userSays": [
+    {
+      "id": "069a7f85-6c20-4178-a480-17e68ee15aba",
+      "data": [
+        {
+          "text": "07400493393",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "2f68312e-d37f-4481-965f-a8bb4cd752ff",
+      "data": [
+        {
+          "text": "09765158393",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "5b117375-8818-44ac-b5f2-e1bc3ca995bc",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "9819004387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "97ee8c96-3ffa-401e-a976-35558d696ec1",
+      "data": [
+        {
+          "text": "9819066339",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "400e3cc1-9542-4fc1-890f-bec92a632107",
+      "data": [
+        {
+          "text": "9819066339",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ab7fc517-d60c-48f5-8394-38a47d969a72",
+      "data": [
+        {
+          "text": "FOR "
+        },
+        {
+          "text": "DETAILS",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "CALL",
+          "alias": "label_ignorewords",
+          "meta": "@label_ignorewords",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "/",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "9930290009",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "/",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "9820235899",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7adb9148-fadf-433f-804d-8219dc41d969",
+      "data": [
+        {
+          "text": "9323307281",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "9867238898",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "0dc9b36a-d56a-4682-9393-45db7403605f",
+      "data": [
+        {
+          "text": "Contact : "
+        },
+        {
+          "text": "9699737178",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": " /"
+        },
+        {
+          "text": "9870078987",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c176b6cb-2c3d-47e2-af93-62595ddf73d2",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "+91 9819635463",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1d8449f0-067a-466d-a872-ab9db48dae16",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "9819004387",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "*."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "0b63daab-44cf-42be-97f7-0ac95afdabfe",
+  "name": "br_number",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.phone-number",
+          "name": "phone-number",
+          "value": "$phone-number",
+          "isList": true
+        },
+        {
+          "dataType": "@label_ignorewords",
+          "name": "label_ignorewords",
+          "value": "$label_ignorewords",
+          "isList": true
+        },
+        {
+          "dataType": "@label_delimiter",
+          "name": "label_delimiter",
+          "value": "$label_delimiter",
+          "isList": true
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

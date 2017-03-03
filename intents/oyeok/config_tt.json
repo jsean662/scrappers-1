@@ -1,0 +1,163 @@
+{
+  "templates": [
+    "@label_deposit:label_deposit :: @sys.number:price  @label_amt_units:label_amt_units  @transaction_type:transaction_type ",
+    "@config:config on @transaction_type:transaction_type"
+  ],
+  "userSays": [
+    {
+      "id": "327f37be-8e35-452f-a632-73242aac0de0",
+      "data": [
+        {
+          "text": "Deposit",
+          "alias": "label_deposit",
+          "meta": "@label_deposit",
+          "userDefined": false
+        },
+        {
+          "text": " :: "
+        },
+        {
+          "text": "6",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "months",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2e5b4a71-a72a-43fc-aca5-76ee2b1989f8",
+      "data": [
+        {
+          "text": "@config:config on @transaction_type:transaction_type"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "f2d13813-f8a9-4396-a34b-d3a10f740053",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "3 bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "urgent",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "outright",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    }
+  ],
+  "id": "99efd31d-6dc8-4833-a368-7a3cc1e9cfdc",
+  "name": "config_tt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@config",
+          "name": "config",
+          "value": "$config",
+          "isList": false
+        },
+        {
+          "dataType": "@transaction_type",
+          "name": "transaction_type",
+          "value": "$transaction_type",
+          "isList": true
+        },
+        {
+          "dataType": "@label_deposit",
+          "name": "label_deposit",
+          "value": "$label_deposit",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "price",
+          "value": "$price",
+          "isList": false
+        },
+        {
+          "dataType": "@label_amt_units",
+          "name": "label_amt_units",
+          "value": "$label_amt_units",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $config , $transaction_type"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

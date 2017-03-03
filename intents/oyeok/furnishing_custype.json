@@ -1,0 +1,26 @@
+{
+  "templates": [],
+  "userSays": [],
+  "id": "67824fee-b54d-4e9c-82ab-39cc0507fa5c",
+  "name": "furnishing_custype",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

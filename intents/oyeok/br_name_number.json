@@ -1,0 +1,371 @@
+{
+  "templates": [
+    "@sys.given-name:name Chandan @sys.phone-number:phone-number ",
+    "@sys.given-name:name Chandan @sys.phone-number:phone-number ",
+    "@sys.given-name:name Chandan @sys.phone-number:phone-number , @sys.phone-number:phone-number ",
+    "@sys.given-name:name  @sys.phone-number:phone-number ",
+    "@sys.given-name:name  @sys.phone-number:phone-number ",
+    "@sys.given-name:name  @sys.phone-number:phone-number ",
+    "@sys.given-name:name : @sys.phone-number:phone-number ",
+    "@sys.given-name:name : @sys.phone-number:phone-number ",
+    "@sys.given-name:name : @sys.phone-number:phone-number ",
+    "@sys.given-name:name  @label_delimiter:label_delimiter  @sys.phone-number:phone-number .",
+    "@sys.given-name:name  @label_delimiter:label_delimiter  @sys.phone-number:phone-number ",
+    "@sys.given-name:name @label_delimiter:label_delimiter @sys.phone-number:phone-number ",
+    "@sys.given-name:name: @sys.phone-number:phone-number"
+  ],
+  "userSays": [
+    {
+      "id": "b6922eae-e759-4a76-9a4d-632077ebb0e1",
+      "data": [
+        {
+          "text": "Kamal",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": false
+        },
+        {
+          "text": " Chandan "
+        },
+        {
+          "text": "9821123092",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "041cfdf4-c60d-4e68-bfa0-88310fdb7fde",
+      "data": [
+        {
+          "text": "Kamal",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": false
+        },
+        {
+          "text": " Chandan "
+        },
+        {
+          "text": "919821123092",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "783d81f3-59e3-4cdb-9f38-a43f584abfef",
+      "data": [
+        {
+          "text": "Kamal",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": false
+        },
+        {
+          "text": " Chandan "
+        },
+        {
+          "text": "919821123092",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        },
+        {
+          "text": ","
+        },
+        {
+          "text": "9562348569",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a61d6487-4a64-44b0-8f58-06c18947cb1e",
+      "data": [
+        {
+          "text": "Anmol Shroff",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "9821883377",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4f3782b1-8159-480c-9bd4-20ce205f52c5",
+      "data": [
+        {
+          "text": "Kirit Mistry",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "982 008 6810",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "44f7da65-81c9-4943-8716-1b2b9acfca67",
+      "data": [
+        {
+          "text": "Anilkishore",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "9820839555",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3c5d79b5-9b3e-4509-9abc-fae8e8944f45",
+      "data": [
+        {
+          "text": "Parag Shah",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        },
+        {
+          "text": ": "
+        },
+        {
+          "text": "9820023175",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7dbc46f1-1f15-498e-822a-aca6e913c2e2",
+      "data": [
+        {
+          "text": "Rajiv Lakhpati",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        },
+        {
+          "text": ": "
+        },
+        {
+          "text": "9820023476",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8926da97-b9c7-4a43-9756-e89c6c0e22c0",
+      "data": [
+        {
+          "text": "Riddhesh Jadhav",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        },
+        {
+          "text": ": "
+        },
+        {
+          "text": "9773539471",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2b387f49-6c38-4aad-9594-6a912f79b669",
+      "data": [
+        {
+          "text": "@sys.given-name:name: @sys.phone-number:phone-number"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "9745aff4-1aa4-4d1b-9338-2460a46b3706",
+      "data": [
+        {
+          "text": "Pooja Batra",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "9819867813",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        },
+        {
+          "text": "."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "861cde03-670c-4178-89f6-c7f6d37a1709",
+      "data": [
+        {
+          "text": "Deepak",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "9920491508",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "5455d90e-a317-4476-a6b8-d5f7bdca2e36",
+      "data": [
+        {
+          "text": "Prashant",
+          "alias": "name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": true
+        },
+        {
+          "text": "9930739750",
+          "alias": "phone-number",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    }
+  ],
+  "id": "0121bc42-10da-4332-bfb8-7cc340ae9c55",
+  "name": "br_name_number",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.given-name",
+          "name": "name",
+          "value": "$name",
+          "isList": true
+        },
+        {
+          "dataType": "@label_delimiter",
+          "name": "label_delimiter",
+          "value": "$label_delimiter",
+          "isList": true
+        },
+        {
+          "dataType": "@sys.phone-number",
+          "name": "phone-number",
+          "value": "$phone-number",
+          "isList": true
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

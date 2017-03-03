@@ -1,0 +1,147 @@
+{
+  "templates": [
+    "Akhil Kapur",
+    "@sys.given-name:given-name "
+  ],
+  "userSays": [
+    {
+      "id": "fa065372-2886-4659-8804-7b9c63960569",
+      "data": [
+        {
+          "text": "*Moiz khan*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "fc30e0eb-b9d3-487e-bd02-f34aaf302943",
+      "data": [
+        {
+          "text": "*Moiz*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "8eac4ee3-ed13-4d6c-8b47-1d3d408439f6",
+      "data": [
+        {
+          "text": "Akhil Kapur"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "9d8b1396-2d3e-4936-85d4-98984ab7ed1f",
+      "data": [
+        {
+          "text": "*MOIZ*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d27f540d-d1d6-473c-a651-2ca68b59f24e",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Moiz khan",
+          "alias": "given-name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "7631796e-9758-4781-9519-848d5487bf3b",
+      "data": [
+        {
+          "text": "Akhil Kapur",
+          "alias": "given-name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a834dbc1-00ff-4acd-8ed3-ccb28d3e8890",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Moiz",
+          "alias": "given-name",
+          "meta": "@sys.given-name",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "79df91fc-9c17-4ec6-b560-131e2d7391ef",
+      "data": [
+        {
+          "text": "* "
+        },
+        {
+          "text": "ONE CAR PARKING",
+          "alias": "composite_parking",
+          "meta": "@composite_parking",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    }
+  ],
+  "id": "856c5c71-56f9-4e57-b1ce-94b582fae973",
+  "name": "br_name",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.given-name",
+          "name": "given-name",
+          "value": "$given-name",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

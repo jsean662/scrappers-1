@@ -1,0 +1,65 @@
+{
+  "id": "11c1ce9c-6152-4854-8e88-74a3c0eea177",
+  "name": "label_amt_units",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "k",
+      "synonyms": [
+        "k",
+        "K",
+        "k.",
+        "K.",
+        "kpkg",
+        "KPkg",
+        "Kpkg",
+        "kpkgs"
+      ]
+    },
+    {
+      "value": "lacs",
+      "synonyms": [
+        "lacs",
+        "lac",
+        "lacs.",
+        "Lacs.",
+        "lac.",
+        "Lacs",
+        "Lakh",
+        "Lakh.",
+        "Lakhs",
+        "Lakhs.",
+        ".Lac",
+        "lakh",
+        "L"
+      ]
+    },
+    {
+      "value": "cr",
+      "synonyms": [
+        "cr",
+        "Cr",
+        "Cr.",
+        "cr.",
+        "crores",
+        "Crores",
+        "Crores.",
+        "crores.",
+        "CR",
+        "CRORE"
+      ]
+    },
+    {
+      "value": "k",
+      "synonyms": [
+        "pkg",
+        "PACKAGE",
+        "Pkgs",
+        "PKG",
+        "Pkg"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

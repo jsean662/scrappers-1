@@ -1,0 +1,15 @@
+{
+  "id": "24879666-b8ed-4b78-a678-ef4530a43b96",
+  "name": "composite_br_signature",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "*",
+      "synonyms": [
+        "*"
+      ]
+    }
+  ],
+  "isEnum": true,
+  "automatedExpansion": true
+}

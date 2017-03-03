@@ -1,0 +1,53 @@
+{
+  "id": "a10be871-06cc-4a35-bf48-8ddb5e184e16",
+  "name": "yes - compose",
+  "auto": true,
+  "contexts": [
+    "compose",
+    "bouquet"
+  ],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "I want to make a bouquet myself."
+        }
+      ],
+      "isTemplate": false
+    },
+    {
+      "data": [
+        {
+          "text": "Yes"
+        }
+      ],
+      "isTemplate": false
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "compose.bouquet",
+      "affectedContexts": [
+        {
+          "name": "yes-compose",
+          "lifespan": 5
+        },
+        {
+          "name": "bouquet",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "name": "compose",
+          "value": "yes"
+        }
+      ],
+      "speech": "Alright! What kind of flowers would you like to add first?"
+    }
+  ],
+  "state": "LEARNED",
+  "priority": 500000,
+  "webhookUsed": false
+}

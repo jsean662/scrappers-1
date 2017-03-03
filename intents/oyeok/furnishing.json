@@ -1,0 +1,207 @@
+{
+  "templates": [
+    "Condition - @furnishing:furnishing ",
+    "Type : @furnishing:furnishing ",
+    "@furnishing:furnishing ",
+    "@furnishing:furnishing ",
+    "@furnishing:furnishing ",
+    "@furnishing:furnishing"
+  ],
+  "userSays": [
+    {
+      "id": "239ab139-1a7f-4abd-8012-e96805a9b9cb",
+      "data": [
+        {
+          "text": "Condition "
+        },
+        {
+          "text": "-",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Fully Furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "123547ac-866c-4fbf-898f-303d69ecf04f",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "c5cb82f0-bbe9-4751-a31d-8e2359a030c2",
+      "data": [
+        {
+          "text": "Type : "
+        },
+        {
+          "text": "Fully Furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "b545cf16-3321-4112-9538-ad0c52dbeae5",
+      "data": [
+        {
+          "text": "Furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "8e35220c-0f13-4183-8279-a67e778b2d88",
+      "data": [
+        {
+          "text": "Semi furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "88f798d4-70a7-490a-a16b-2d672e9f21c6",
+      "data": [
+        {
+          "text": "* "
+        },
+        {
+          "text": "White Goods",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": " AC TV Fridge"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "ab119ecb-16e6-4540-a6b1-79f82357a49c",
+      "data": [
+        {
+          "text": "* "
+        },
+        {
+          "text": "Fully Furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        },
+        {
+          "text": " Apartment"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "80dc23b0-1e9b-4f50-9813-9709c4308a6c",
+      "data": [
+        {
+          "text": "Fully furnished",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "f268c31c-54dd-4435-8f19-c5815011a6a5",
+      "data": [
+        {
+          "text": "* "
+        },
+        {
+          "text": "White Goods AC TV Fridge",
+          "alias": "furnishing",
+          "meta": "@furnishing",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "047cbe46-5983-49e6-9e29-2ba6b1b2a230",
+      "data": [
+        {
+          "text": "@furnishing:furnishing"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    }
+  ],
+  "id": "d7b2cf5d-dd42-401f-b0c5-069f2af7e794",
+  "name": "furnishing",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@furnishing",
+          "name": "furnishing",
+          "value": "$furnishing",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got $furnishing"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

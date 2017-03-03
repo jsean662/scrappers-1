@@ -1,0 +1,208 @@
+{
+  "templates": [
+    "@sys.date-time:date-time @label_delimiter:label_delimiter +@sys.number:number"
+  ],
+  "userSays": [
+    {
+      "id": "14043bc3-764b-489b-92fe-13a5720cc526",
+      "data": [
+        {
+          "text": "17/01/17, 07:53 - ‪+91 98190 04387‬"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "cb48e233-a204-432e-8b9e-309856b534e6",
+      "data": [
+        {
+          "text": "16/01/17, 21:42",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪+"
+        },
+        {
+          "text": "91 97692 02414",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": "‬"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "de33afcb-8373-4a31-8bd9-8a8544f1bf53",
+      "data": [
+        {
+          "text": "17/01/17, 07:53",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪+"
+        },
+        {
+          "text": "91 98190 04387",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": "‬"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "11ad8d75-3fb0-4160-9024-3e7e628d9bfb",
+      "data": [
+        {
+          "text": "17/01/17, 18:32",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪+"
+        },
+        {
+          "text": "91 98190 04387",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": "‬"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "2a328ef5-3dbe-41a8-9e30-b69bdd9b4225",
+      "data": [
+        {
+          "text": "17/01/17, 21:22",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-",
+          "alias": "label_delimiter",
+          "meta": "@label_delimiter",
+          "userDefined": false
+        },
+        {
+          "text": " ‪+"
+        },
+        {
+          "text": "91 98190 04387",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": "‬"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b9abf424-90c5-4912-b0c8-713e6e0347f8",
+      "data": [
+        {
+          "text": "@sys.date-time:date-time @label_delimiter:label_delimiter +@sys.number:number"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    }
+  ],
+  "id": "3d644fd1-2957-45b7-af15-6b191aed8939",
+  "name": "0_systitle",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.date-time",
+          "name": "date-time",
+          "value": "$date-time",
+          "isList": false
+        },
+        {
+          "dataType": "@label_delimiter",
+          "name": "label_delimiter",
+          "value": "$label_delimiter",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

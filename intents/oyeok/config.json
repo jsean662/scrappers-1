@@ -1,0 +1,198 @@
+{
+  "templates": [
+    "@composite_price:composite_price plus huge terrace",
+    "@config:config ",
+    "@config:config ",
+    "@config:config ",
+    "@config:config ",
+    "@config:config / DUPLEX",
+    "@config:config ",
+    "hi bye @config:config hello",
+    "@config:config ",
+    "@config:config"
+  ],
+  "userSays": [
+    {
+      "id": "5e00f61f-6e8b-45a1-821d-a632256d157c",
+      "data": [
+        {
+          "text": "2 bhk",
+          "alias": "composite_price",
+          "meta": "@composite_price",
+          "userDefined": false
+        },
+        {
+          "text": " plus huge terrace"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "048a3e59-72c7-4888-b806-649c58f9d9ea",
+      "data": [
+        {
+          "text": "2bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "e82a066b-74ae-4c3f-9473-51e711ad1fec",
+      "data": [
+        {
+          "text": "3bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "a3cd3b14-7c7b-4131-81b2-42fd5a22f902",
+      "data": [
+        {
+          "text": "2bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "a1151209-501b-4dfb-a19f-8deed3f8a6c9",
+      "data": [
+        {
+          "text": "3bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "09410195-a288-4b68-bb98-8e8ff9c6b2c1",
+      "data": [
+        {
+          "text": "3 BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "/",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " DUPLEX"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "9df6179a-6fcf-411e-9107-4b78d3280ab9",
+      "data": [
+        {
+          "text": "2 BHK",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "07d60440-983f-4f67-91f5-a2d6d474c306",
+      "data": [
+        {
+          "text": "@config:config"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "98fa0029-23dc-4ecb-9d09-5ca053daee81",
+      "data": [
+        {
+          "text": "hi bye "
+        },
+        {
+          "text": "3bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        },
+        {
+          "text": " hello"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "4858f29b-a593-49ee-be8b-595573a258e5",
+      "data": [
+        {
+          "text": "5bhk",
+          "alias": "config",
+          "meta": "@config",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "70c4dd64-b03d-4d6f-9a98-29fa45dac633",
+  "name": "config",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@config",
+          "name": "config",
+          "value": "$config",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "we got Config: $config"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

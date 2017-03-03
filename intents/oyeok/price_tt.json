@@ -1,0 +1,509 @@
+{
+  "templates": [
+    "@transaction_type:transaction_type :: @sys.number:price @label_amt_units:label_amt_units ",
+    "@sys.number:price  @label_amt_units:label_amt_units  @transaction_type:transaction_type ",
+    "@sys.number:price  @transaction_type:transaction_type ",
+    "Budget @sys.number:price  @label_amt_units:label_amt_units  @transaction_type:transaction_type ",
+    "@sys.number:price  @transaction_type:transaction_type ",
+    "@transaction_type:transaction_type :: @sys.number:price @label_amt_units:label_amt_units ",
+    "Budget @sys.number:price  @label_amt_units:label_amt_units  @transaction_type:transaction_type ",
+    "@sys.number:price  @transaction_type:transaction_type negotiable",
+    "@sys.number:price @label_amt_units:label_amt_units  @transaction_type:transaction_type ",
+    "@transaction_type:transaction_type  @sys.number:price @label_amt_units:label_amt_units ",
+    "@sys.number:price  @transaction_type:transaction_type ",
+    "@transaction_type:transaction_type :: 70k"
+  ],
+  "userSays": [
+    {
+      "id": "19947802-9d38-477d-b9f0-fca0260859b8",
+      "data": [
+        {
+          "text": "Rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " :: "
+        },
+        {
+          "text": "70",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "k",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "2842b16d-65dc-428d-9db0-575c09eadb72",
+      "data": [
+        {
+          "text": "Deposit",
+          "alias": "label_deposit",
+          "meta": "@label_deposit",
+          "userDefined": false
+        },
+        {
+          "text": " ::"
+        },
+        {
+          "text": " 6",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "months",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "cda975e9-d490-4578-916e-52854eee827b",
+      "data": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "135000",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "41f3ed23-e698-47f1-9dc5-1e6433b9c597",
+      "data": [
+        {
+          "text": "One",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lakh",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "8194e272-3dae-411b-86ac-5c7f4fe08abd",
+      "data": [
+        {
+          "text": "75000",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "3d88b726-b5b5-4d1b-a2a3-470a89734cd4",
+      "data": [
+        {
+          "text": "Budget "
+        },
+        {
+          "text": "one",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lakh",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": ""
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "bb307323-0c86-46a2-989d-ffa2696da4c1",
+      "data": [
+        {
+          "text": "75000",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "eddc2174-0d01-4d9e-ba69-038baabfbbbc",
+      "data": [
+        {
+          "text": "Rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " :: "
+        },
+        {
+          "text": "70",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "k",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "88ff5586-cb6f-417f-a267-aea33ccf4c44",
+      "data": [
+        {
+          "text": "Budget "
+        },
+        {
+          "text": "one",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lakh",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 2
+    },
+    {
+      "id": "6697d958-f489-40d0-b668-37cddefaa1a2",
+      "data": [
+        {
+          "text": "1,50,000",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " negotiable"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "f0f62b73-3fc0-4f3f-a9d1-6c8b7e04bfce",
+      "data": [
+        {
+          "text": "💵 *"
+        },
+        {
+          "text": "RENT",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": true
+        },
+        {
+          "text": " @ "
+        },
+        {
+          "text": "75",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "K",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": "*"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "d518452b-6296-4674-9ce7-45999ec68387",
+      "data": [
+        {
+          "text": "62",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "pkg",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sale",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "bfb5d678-3c29-48e5-a838-35ec4e94d146",
+      "data": [
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "85",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": "pkg",
+          "alias": "label_amt_units",
+          "meta": "@label_amt_units",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "35a9e968-624e-4fab-9d2e-1a8a10d5f068",
+      "data": [
+        {
+          "text": "70000",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "306fc281-1ead-4112-aea5-1c3e3db9e9a7",
+      "data": [
+        {
+          "text": "Rent",
+          "alias": "transaction_type",
+          "meta": "@transaction_type",
+          "userDefined": false
+        },
+        {
+          "text": " :: "
+        },
+        {
+          "text": "70k",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "0a446ff6-b969-42a4-a49e-037617a35925",
+  "name": "price_tt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@transaction_type",
+          "name": "transaction_type",
+          "value": "$transaction_type",
+          "isList": false
+        },
+        {
+          "dataType": "@label_amt_units",
+          "name": "label_amt_units",
+          "value": "$label_amt_units",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "price",
+          "value": "$price",
+          "isList": false
+        },
+        {
+          "dataType": "@label_deposit",
+          "name": "label_deposit",
+          "value": "$label_deposit",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "We got $transaction_type ,  $price  , $label_amt_units"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
