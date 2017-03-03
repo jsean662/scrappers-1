@@ -1,15 +1,2 @@
-*__init__.py
-pipelines.py
-*.pyc
-*/*/.idea/*
-*/_pycache_
-*/build
-*/project.egg-info
-**/_pycache_
-**/build
-**/project.egg-info
-*setup.py
-*.csv
+textfiles/
 *.zip
-*.cfg
-*.yml
