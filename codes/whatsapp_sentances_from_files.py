@@ -30,6 +30,8 @@ class TestListing():
         print 'Running checkTt >>>', tt_list
         if tt_list:
             self.final_dict['tt'] = tt_list[0]
+        else:
+            self.final_dict['tt'] = 'LL'
 
     def checkPt(self, pt_list, dict_):
         print 'Running checkPt >>>', pt_list
@@ -49,6 +51,11 @@ class TestListing():
         print 'Running checkConfig >>>', config_list
         if len(config_list) == 1:
             self.final_dict['config'] = config_list[0]
+        if len(config_list) > 1:
+            self.final_dict['config'] = config_list[0]
+        # set default as 2 bhk if config list empty
+        if not config_list:
+            self.find_config['config'] = '2BHK'
 
     def getPrice(self, price):
         print price
@@ -57,6 +64,17 @@ class TestListing():
         print 'Running checkPrice >>>', price_dict
         p_key = price_dict.keys()
 
+        if 'composite_price' in p_key:
+            if price_dict['composite_price']:
+                for prc in price_dict['composite_price']:
+                    try:
+                        price_dict['price'] += [prc['price']]
+                        price_dict['label_amt_units'] += [prc['label_amt_units']]
+                    except:
+                        price_dict['price'] = [prc['price']]
+                        price_dict['label_amt_units'] = [prc['label_amt_units']]
+
+        p_key = price_dict.keys()
         if 'label_amt_units' in p_key:
             if price_dict['label_amt_units']:
                 for n, elemnt in enumerate(price_dict['label_amt_units']):
@@ -152,21 +170,37 @@ class TestListing():
         area_keys = ['composite_area', 'label_area', 'label_area_units', 'sqft']
         park_keys = ['composite_parking', 'label_park', 'no']
 
+        try:
+            self.final_dict['Actual_msg'] = make_dict_chk['Actual_msg']
+        except:
+            print 'No actual mesg'
         self.final_dict['phonenumber'] = make_dict_chk['phone_number'][0]
         self.final_dict['listing_date'] = make_dict_chk['listing_date'][0]
-        self.checkDeal(make_dict_chk['req_avail'], self.final_dict)
-        self.checkConfig(make_dict_chk['config'], self.final_dict)
+        try:
+            self.checkDeal(make_dict_chk['req_avail'], self.final_dict)
+        except:
+            self.checkDeal(['Req'], self.final_dict)
+        try:
+            self.checkConfig(make_dict_chk['config'], self.final_dict)
+        except:
+            self.checkConfig(['2BHK'], self.final_dict)
         print self.final_dict
-        self.checkTt(make_dict_chk['transaction_type'], self.final_dict)
+        try:
+            self.checkTt(make_dict_chk['transaction_type'], self.final_dict)
+        except:
+            self.checkTt(['LL'], self.final_dict)
         print self.final_dict
         try:
             self.checkPt(make_dict_chk['property_type'], self.final_dict)
         except KeyError:
             self.checkPt([], self.final_dict)
         print self.final_dict
-        self.checkPrice({key: make_dict_chk[key]
-                         for key in price_keys if key in make_dict_chk.keys()},
-                        self.final_dict)
+        try:
+            self.checkPrice({key: make_dict_chk[key]
+                            for key in price_keys if key in make_dict_chk.keys()},
+                            self.final_dict)
+        except:
+            self.checkPrice({'price': [90], 'label_amt_units': ['k']}, self.final_dict)
         print self.final_dict
         # self.checkArea({key: make_dict_chk[key]
         #                 for key in area_keys if key in make_dict_chk.keys()},
@@ -198,8 +232,11 @@ def listmaker(orig_msg):
 
     orig_msg = orig_msg.split(' - ', 1)[-1].split(': ', 1)[-1]
     # print orig_msg
+    orig_msg = re.sub('[0-9]+\)', '', orig_msg)
+    orig_msg = orig_msg.replace('*', '').replace('@', '').replace('`', '')
+    orig_msg = orig_msg.replace('(', ' ').replace(')', ' ')
+    orig_msg = orig_msg.replace('_', '').replace('-', '')
     find_config = '([0-9]+(\.?[5]?) (B?b?)(?<=\S)[hHKkEeDdRrOoMm]+)|([0-9]+(\.?[5]?)(B|b)[hHKkEeDdRrOoMm]+)|([1] (R?r?)[Kk]+)|([1](R|r)[Kk])'
-
     count_bhk = re.findall(find_config, orig_msg)
     cnt_bhk_length = len(count_bhk)
     print 'Find BHK and count >>>', count_bhk, len(count_bhk), '\n'
@@ -224,10 +261,8 @@ def sngl_list_qry(single_listing, count, make_dict, t_make_dict):
     ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
 
     for sent in single_listing:
-        if (sent != '') and (not re.findall('\d{10}|\d{11}|\d{12}', sent)):
-            sent = re.sub('[0-9]+\)', '', sent)
-            sent = sent.replace('*', '').replace('@', '').replace('`', '')
-            sent = sent.replace('(', ' ').replace(')', ' ')
+        sent = sent.strip()
+        if (sent != '') and (not re.findall('\d{10}|\d{11}|\d{12}', sent)) and len(sent) < 256:
             print sent
 
             request = ai.text_request()
@@ -235,11 +270,12 @@ def sngl_list_qry(single_listing, count, make_dict, t_make_dict):
             request.query = sent
             # response = request.getresponse().read()
             response = json.loads(request.getresponse().read())
-            # print json.dumps(response,indent=2,sort_keys=True)
+            print json.dumps(response, indent=2, sort_keys=True)
             para_dict = response['result']['parameters']
+
             # context_para_dict = response['result']['contexts'][0]['parameters']
-            # print ">>>>>>>>"
-            # print json.dumps(para_dict, indent=2, sort_keys=True)
+            print "parametrs >>>"
+            print json.dumps(para_dict, indent=2, sort_keys=True)
 
             try:
                 print response['sessionId'], '--', response['result']['metadata']['intentName']
@@ -287,9 +323,9 @@ def reading():
     t_make_dict = {}
     dict_list = []
     t_dict_list = []
-    # crrct_dict = []
+    crrct_dict = []
 
-    with open('/home/karan/Nexchange/api_ai_whatsapp/textfiles/test.txt') as f:
+    with open('/home/karan/Nexchange/api_ai_whatsapp/whatsapp/textfiles/WhatsApp Chat with TRC Bandra to Scruz.txt') as f:
         for line in f:
             line = re.sub('[^\x00-\x7F]+', '', line)
 
@@ -320,7 +356,10 @@ def reading():
                                 print "After API.AI call >>>"
                                 print json.dumps(make_dict, indent=2, sort_keys=True), '\n'
                                 print 'Formatting the message >>>'
-                                print json.dumps(test.checkListing(make_dict), indent=2, sort_keys=True)
+                                # print json.dumps(test.checkListing(make_dict), indent=2, sort_keys=True)
+                                crrct_dict.append(test.checkListing(make_dict))
+                                if count % 50 == 0:
+                                    pd.DataFrame(crrct_dict).to_csv('/home/karan/Nexchange/api_ai_whatsapp/whatsapp/textfiles/store/' + str(count) + '.csv', index=False, encoding='utf-8')
                                 dict_list.append(make_dict)
                                 t_dict_list.append(make_dict)
                                 t_dict_list.append(t_make_dict)
@@ -332,8 +371,10 @@ def reading():
         print listmaker(msg_str)
         df = pd.DataFrame(dict_list)
         df1 = pd.DataFrame(t_dict_list)
+        df_frm = pd.DataFrame(crrct_dict)
         print df
         print df1
+        print df_frm
 
 
 '''def main():

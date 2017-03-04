@@ -12,10 +12,10 @@ def listfinder(msg_list):
     print msg_list
 
 
-def separator(msg):
+def separator(msg_to_sep):
     print 'decide separator'
-    msg = msg.split('\n\n')
-    return msg
+    msg_sep_list = msg_to_sep.split('\n\n')
+    return msg_sep_list
 
 
 def listmaker(orig_msg):
@@ -31,6 +31,10 @@ def listmaker(orig_msg):
 
     orig_msg = orig_msg.split(' - ', 1)[-1].split(': ', 1)[-1]
     # print orig_msg
+    orig_msg = re.sub('[0-9]+\)', '', orig_msg)
+    orig_msg = orig_msg.replace('*', '').replace('@', '').replace('`', '')
+    orig_msg = orig_msg.replace('(', ' ').replace(')', ' ')
+    orig_msg = orig_msg.replace('_', '').replace('-', '')
     find_config = '([0-9]+(\.?[5]?) (B?b?)(?<=\S)[hHKkEeDdRrOoMm]+)|([0-9]+(\.?[5]?)(B|b)[hHKkEeDdRrOoMm]+)|([1] (R?r?)[Kk]+)|([1](R|r)[Kk])'
     count_bhk = re.findall(find_config, orig_msg)
     cnt_bhk_length = len(count_bhk)
@@ -53,7 +57,7 @@ def reading():
     msg_str = ''
     count = 0
 
-    with open('/home/karan/Nexchange/api_ai_whatsapp/textfiles/WhatsApp Chat with TRC Bandra to Scruz.txt') as f:
+    with open('/home/karan/Nexchange/api_ai_whatsapp/whatsapp/textfiles/WhatsApp Chat with TRC Bandra to Scruz.txt') as f:
         for line in f:
             line = re.sub('[^\x00-\x7F]+', '', line)
 
@@ -78,6 +82,7 @@ def reading():
                                         sent = sent.replace('*', '').replace('@',
                                                                              '').replace('`', '')
                                         sent = sent.replace('(', ' ').replace(')', ' ')
+                                        sent = sent.replace('_', '').replace('-', '')
                                         print count, '>>>>>>>', sent
                     msg_str = ''
                     msg_str = line
