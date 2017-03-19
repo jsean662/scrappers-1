@@ -3,11 +3,12 @@
 import os.path
 import sys
 import re
-import time
+# import time
 import nltk
 import json
 import pandas as pd
 from datetime import datetime as dt
+from .testing import TestListing
 
 try:
     import apiai
@@ -20,209 +21,63 @@ except ImportError:
 CLIENT_ACCESS_TOKEN = '8f98e831118844ed84c7772121708a5d'
 
 
-class TestListing():
-    final_dict = {}
+def listfinder(msg_):
+    print 'Running listfinder >>>', msg_
+    msg_ = re.split('[0-9]+\. |[0-9]+\)', msg_)
+    # print '>>>1', msg_
+    # print 'next splitting >>>', msg_list
+    return msg_
 
-    def checkFurnishing(self, furnishing_dict):
-        print furnishing_dict
 
-    def checkTt(self, tt_list, dict_):
-        print 'Running checkTt >>>', tt_list
-        if tt_list:
-            self.final_dict['tt'] = tt_list[0]
+def separator(msg_to_sep):
+    print 'decide separator'
+    form_msg_aftr_brk = []
+    find_config = '([0-9]+(\.?[5]?) (b)(h|e)(?<=\S)[kdrom]*)|([0-9]+(\.?[5]?)(b)(h|e)[kdrom]*)'
+    find_config += '|([1] (r)[k])|([1](r)[k])'
+    msg_sep_list = msg_to_sep.split('\n\n')
+    for single_sep_list in msg_sep_list:
+        count_bhk = re.findall(find_config, single_sep_list)
+        if len(count_bhk) > 1:
+            get_sep_listing = listfinder(single_sep_list)
+            form_msg_aftr_brk += get_sep_listing
         else:
-            self.final_dict['tt'] = 'LL'
-
-    def checkPt(self, pt_list, dict_):
-        print 'Running checkPt >>>', pt_list
-        if pt_list:
-            self.final_dict['property_type'] = pt_list[0]
-        elif 'BHK' in dict_['config']:
-            self.final_dict['property_type'] = 'Home'
-
-    def checkDeal(self, deal_list, dict_):
-        print 'Running checkDeal >>>', deal_list
-        if deal_list:
-            self.final_dict['req_avl'] = deal_list[0]
+            form_msg_aftr_brk += [single_sep_list]
+    cmn_prt = []
+    n_cmn_prt = []
+    for one_msg in form_msg_aftr_brk:
+        if re.findall(find_config, one_msg):
+            n_cmn_prt += [one_msg]
         else:
-            self.final_dict['req_avl'] = 'test'
-
-    def checkConfig(self, config_list, dict_):
-        print 'Running checkConfig >>>', config_list
-        if len(config_list) == 1:
-            self.final_dict['config'] = config_list[0]
-        if len(config_list) > 1:
-            self.final_dict['config'] = config_list[0]
-        # set default as 2 bhk if config list empty
-        if not config_list:
-            self.find_config['config'] = '2BHK'
-
-    def getPrice(self, price):
-        print price
-
-    def checkPrice(self, price_dict, dict_):
-        print 'Running checkPrice >>>', price_dict
-        p_key = price_dict.keys()
-
-        if 'composite_price' in p_key:
-            if price_dict['composite_price']:
-                for prc in price_dict['composite_price']:
-                    try:
-                        price_dict['price'] += [prc['price']]
-                        price_dict['label_amt_units'] += [prc['label_amt_units']]
-                    except:
-                        price_dict['price'] = [prc['price']]
-                        price_dict['label_amt_units'] = [prc['label_amt_units']]
-
-        p_key = price_dict.keys()
-        if 'label_amt_units' in p_key:
-            if price_dict['label_amt_units']:
-                for n, elemnt in enumerate(price_dict['label_amt_units']):
-                    if 'k' in elemnt or 'pkg' in elemnt:
-                        price_dict['label_amt_units'][n] = 1000
-                    if 'lac' in elemnt:
-                        price_dict['label_amt_units'][n] = 100000
-                    if 'cr' in elemnt:
-                        price_dict['label_amt_units'][n] = 10000000
-                if len(price_dict['label_amt_units']) == 1:
-                    price_dict['label_amt_units'] += [1]
-
-        if 'price' in p_key and len(price_dict['price']) <= 2:
-            p_list = []
-            if 'price' in p_key:
-                if price_dict['price']:
-                    if price_dict['label_amt_units']:
-                        if len(price_dict['price']) == 1:
-                            price_dict['price'] += [1]
-                        for r_elmnt in price_dict['price']:
-                            if len(price_dict['label_amt_units']) >= 1:
-                                for c_elmnt in price_dict['label_amt_units']:
-                                    p_list.append(int(r_elmnt*c_elmnt))
-                            else:
-                                p_list.append(int(r_elmnt))
-                    else:
-                        p_list = price_dict['price']
-            print 'After label to price >>>', price_dict
-            print 'all price figures >>>', p_list
-            fmtd_price = []
-
-            if not fmtd_price:
-                # for one value in price and label
-                for dr in p_list:
-                    if [nr/dr for nr in p_list] == [1, 0, 0, 0]:
-                        fmtd_price = [(p_list[0], 0)]
-                        print fmtd_price
-
-            if not fmtd_price:
-                # for Range case
-                c = 0
-                for dr in p_list:
-                    if [nr/dr for nr in p_list] in [[1, 1, 1, 1], [0, 0, 1, 1]]:
-                        c += 1
-                    if c > 3:
-                        fmtd_price = [((p_list[1]+p_list[2])/2, 0)]
-                        print fmtd_price
-
-            if not fmtd_price:
-                # for two price and one label
-                for dr in p_list:
-                    if [nr/dr for nr in p_list] == [1, 0, 1, 0]:
-                        fmtd_price = [((p_list[0]+p_list[2])/2, 0)]
-                        print fmtd_price
-
-            if not fmtd_price:
-                # for rental+deposite case
-                if 'LL' in dict_['tt'] or 'L/L' in dict_['tt']:
-                    fmtd_price = [(dr, nr) for dr in p_list
-                                  for nr in p_list if nr/dr >= 2 and nr/dr <= 10]
-                    print fmtd_price
-
-            if not fmtd_price:
-                # only habing price not label
-                fmtd_price = [(p_list[0], 0)]
-                print fmtd_price
-
-        if 'LL' in dict_['tt']:
-            self.final_dict['price'] = fmtd_price[0][0]
-            if fmtd_price[0][1] == 0:
-                self.final_dict['deposit'] = fmtd_price[0][0]*3
-            else:
-                self.final_dict['deposit'] = fmtd_price[0][1]
-
-        if 'OR' in dict_['tt']:
-            self.final_dict['price'] = fmtd_price[0][0]
-            self.final_dict['deposit'] = 0
-
-    def checkArea(self, area_dict):
-        print area_dict
-
-    def checkPark(self, park_dict, dict_):
-        print 'Running checkPark >>>', park_dict
-        if 'no' in park_dict.keys():
-            if park_dict['no']:
-                self.final_dict['parking'] = park_dict['no'][0]
-
-    def checkListing(self, make_dict_chk):
-        self.final_dict = {}
-        print "Running checkList >>>"
-        price_keys = ['label_amt_units', 'composite_price', 'label_deposit', 'price',
-                      'label_currency_Rs']
-        area_keys = ['composite_area', 'label_area', 'label_area_units', 'sqft']
-        park_keys = ['composite_parking', 'label_park', 'no']
-
-        try:
-            self.final_dict['Actual_msg'] = make_dict_chk['Actual_msg']
-        except:
-            print 'No actual mesg'
-        self.final_dict['phonenumber'] = make_dict_chk['phone_number'][0]
-        self.final_dict['listing_date'] = make_dict_chk['listing_date'][0]
-        try:
-            self.checkDeal(make_dict_chk['req_avail'], self.final_dict)
-        except:
-            self.checkDeal(['Req'], self.final_dict)
-        try:
-            self.checkConfig(make_dict_chk['config'], self.final_dict)
-        except:
-            self.checkConfig(['2BHK'], self.final_dict)
-        print self.final_dict
-        try:
-            self.checkTt(make_dict_chk['transaction_type'], self.final_dict)
-        except:
-            self.checkTt(['LL'], self.final_dict)
-        print self.final_dict
-        try:
-            self.checkPt(make_dict_chk['property_type'], self.final_dict)
-        except KeyError:
-            self.checkPt([], self.final_dict)
-        print self.final_dict
-        try:
-            self.checkPrice({key: make_dict_chk[key]
-                            for key in price_keys if key in make_dict_chk.keys()},
-                            self.final_dict)
-        except:
-            self.checkPrice({'price': [90], 'label_amt_units': ['k']}, self.final_dict)
-        print self.final_dict
-        # self.checkArea({key: make_dict_chk[key]
-        #                 for key in area_keys if key in make_dict_chk.keys()},
-        #                self.final_dict)
-        self.checkPark({key: make_dict_chk[key]
-                        for key in park_keys if key in make_dict_chk.keys()},
-                       self.final_dict)
-        print "After Preparing final dict >>>"
-        print self.final_dict
-        return self.final_dict
-
-
-def separator(msg):
-    # print 'decide separator'
-    msg = msg.split('\n\n')
-    return msg
+            cmn_prt += [one_msg]
+    print '>>>', cmn_prt, n_cmn_prt, '>>>'
+    form_msg_wt_cmn = []
+    form_list = ''
+    for one in n_cmn_prt:
+        form_list += one
+        for one_ech in cmn_prt:
+            one_ech = one_ech.replace('\n', ' ')
+            form_list += '\n' + one_ech
+        form_msg_wt_cmn += [form_list]
+        form_list = ''
+    return form_msg_wt_cmn
 
 
 def listmaker(orig_msg):
-    print 'Original Message >>>', orig_msg, '\n'
+    print "++++++++++++++++++++++++++++++++++++++++++"
+    orig_msg = orig_msg.lower()
+    print '\nOriginal Message >>>', orig_msg
     date = orig_msg.split(' - ', 1)[0]
-    timestamp = dt.strptime(date, '%d/%m/%y, %H:%M').strftime('%s')
+    try:
+        timestamp = dt.strptime(date, '%d/%m/%y, %H:%M').strftime('%s')
+    except:
+        date = date.replace('.', '')
+        try:
+            timestamp = dt.strptime(date, '%d/%m/%y, %H:%M %p').strftime('%s')
+        except:
+            try:
+                timestamp = dt.strptime(date, '%m/%d/%y, %H:%M %p').strftime('%s')
+            except:
+                timestamp = dt.strptime(date, '%d/%m/%Y, %H:%M %p').strftime('%s')
     # orig_date = dt.fromtimestamp(int(timestamp)).strftime('%d/%m/%Y %H:%M:%S')
     # print timestamp, orig_date
 
@@ -232,22 +87,22 @@ def listmaker(orig_msg):
 
     orig_msg = orig_msg.split(' - ', 1)[-1].split(': ', 1)[-1]
     # print orig_msg
-    orig_msg = re.sub('[0-9]+\)', '', orig_msg)
+    # orig_msg = re.sub('[0-9]+\)', '', orig_msg)
     orig_msg = orig_msg.replace('*', '').replace('@', '').replace('`', '')
-    orig_msg = orig_msg.replace('(', ' ').replace(')', ' ')
-    orig_msg = orig_msg.replace('_', '').replace('-', '')
-    find_config = '([0-9]+(\.?[5]?) (B?b?)(?<=\S)[hHKkEeDdRrOoMm]+)|([0-9]+(\.?[5]?)(B|b)[hHKkEeDdRrOoMm]+)|([1] (R?r?)[Kk]+)|([1](R|r)[Kk])'
+    orig_msg = orig_msg.replace('(', ' ')
+    orig_msg = orig_msg.replace('_', '').replace('-', '').replace('~', '')
+    find_config = '([0-9]+(\.?[5]?) (b)(h|e)(?<=\S)[kdrom]*)|([0-9]+(\.?[5]?)(b)(h|e)[kdrom]*)'
+    find_config += '|([1] (r)[k])|([1](r)[k])'
     count_bhk = re.findall(find_config, orig_msg)
     cnt_bhk_length = len(count_bhk)
-    print 'Find BHK and count >>>', count_bhk, len(count_bhk), '\n'
-    print 'Character and word >>>', len(orig_msg), len(nltk.word_tokenize(orig_msg)), '\n'
+    print '\nFind BHK and count >>>', count_bhk, len(count_bhk), '\n'
+    print '\nCharacter and word >>>', len(orig_msg), len(nltk.word_tokenize(orig_msg)), '\n'
 
-    if cnt_bhk_length > 2:
+    if cnt_bhk_length > 1:
         msg_list = separator(orig_msg)
         msg_list.append(timestamp)
         msg_list.append(phone_number)
     elif cnt_bhk_length > 0:
-        # print 'one configurations'
         msg_list = [orig_msg]
         msg_list.append(timestamp)
         msg_list.append(phone_number)
@@ -262,8 +117,14 @@ def sngl_list_qry(single_listing, count, make_dict, t_make_dict):
 
     for sent in single_listing:
         sent = sent.strip()
+        if re.findall('\d{10}|\d{11}|\d{12}', sent) and len(sent) > 100:
+            sent = re.sub('\d{10}|\d{11}|\d{12}', '', sent)
         if (sent != '') and (not re.findall('\d{10}|\d{11}|\d{12}', sent)) and len(sent) < 256:
             print sent
+            sent = re.sub('[0-9]+\)', '', sent)
+            sent = sent.replace('*', '').replace('@', '').replace('`', '')
+            sent = sent.replace('(', ' ').replace(')', ' ').replace('}', '')
+            sent = sent.replace('_', '').replace('-', '').replace('{', '')
 
             request = ai.text_request()
             request.session_id = count
@@ -274,7 +135,7 @@ def sngl_list_qry(single_listing, count, make_dict, t_make_dict):
             para_dict = response['result']['parameters']
 
             # context_para_dict = response['result']['contexts'][0]['parameters']
-            print "parametrs >>>"
+            print "\nparametrs >>>"
             print json.dumps(para_dict, indent=2, sort_keys=True)
 
             try:
@@ -325,15 +186,16 @@ def reading():
     t_dict_list = []
     crrct_dict = []
 
-    with open('/home/karan/Nexchange/api_ai_whatsapp/whatsapp/textfiles/WhatsApp Chat with TRC Bandra to Scruz.txt') as f:
+    textf_path = '/home/karan/Nexchange/api_ai_whatsapp/whatsapp/textfiles/'
+    with open(textf_path + 'WhatsApp Chat with TRC Bandra to Scruz.txt') as f:
         for line in f:
             line = re.sub('[^\x00-\x7F]+', '', line)
 
             ignr = ['joined using', '<Media', 'changed this', 'removed ', 'added ', 'file attached',
                     'join my WhatsApp Group', 'left', 'chat.whatsapp.com', 'security code changed',
                     'secured with end-to-end encryption', 'created group', 'deleted this',
-                    'changed the subject']
-            if re.findall('^[0-9]+/[0-9]+/[0-9]+.', line):
+                    'changed the subject', 'You were added']
+            if re.findall('^[0-9]+/[0-9]+/[0-9]+,.', line):
                 if not any(x in line for x in ignr):
                     if not msg_str == '':
                         multiple_listing = listmaker(msg_str)
@@ -341,7 +203,7 @@ def reading():
                             listingdate = multiple_listing[-2]
                             phonenumber = multiple_listing[-1]
                             multiple_listing = multiple_listing[:-2]
-                            print 'multiple_listing >>>', multiple_listing, '\n'
+                            print '\nmultiple_listing >>>', multiple_listing, '\n'
                             for single_listing in multiple_listing:
                                 single_listing = single_listing.split('\n')
                                 count = count + 1
@@ -349,17 +211,15 @@ def reading():
                                              'phone_number': [phonenumber]}
                                 t_make_dict = {'listing_date': [listingdate],
                                                'phone_number': [phonenumber]}
-                                print 'single_listing >>>', single_listing, '\n'
+                                print '\nsingle_listing >>>', single_listing, '\n'
                                 make_dict, t_make_dict = sngl_list_qry(single_listing, count,
                                                                        make_dict, t_make_dict)
 
-                                print "After API.AI call >>>"
+                                print "\nAfter API.AI call >>>"
                                 print json.dumps(make_dict, indent=2, sort_keys=True), '\n'
-                                print 'Formatting the message >>>'
-                                # print json.dumps(test.checkListing(make_dict), indent=2, sort_keys=True)
+                                print '\nFormatting the message >>>'
                                 crrct_dict.append(test.checkListing(make_dict))
-                                if count % 50 == 0:
-                                    pd.DataFrame(crrct_dict).to_csv('/home/karan/Nexchange/api_ai_whatsapp/whatsapp/textfiles/store/' + str(count) + '.csv', index=False, encoding='utf-8')
+
                                 dict_list.append(make_dict)
                                 t_dict_list.append(make_dict)
                                 t_dict_list.append(t_make_dict)
@@ -370,11 +230,18 @@ def reading():
                 msg_str += line
         print listmaker(msg_str)
         df = pd.DataFrame(dict_list)
+        path = '/home/karan/Nexchange/api_ai_whatsapp/whatsapp/textfiles/store/' \
+               + dt.now().strftime('%d-%m-%y,%H:%M:%S')
+        os.makedirs(path)
+        df.to_csv(path + '/apidict.csv', index=False, encoding='utf-8')
         df1 = pd.DataFrame(t_dict_list)
+        df1.to_csv(path + '/apidict_wt_intent.csv', index=False, encoding='utf-8')
         df_frm = pd.DataFrame(crrct_dict)
-        print df
-        print df1
-        print df_frm
+        df_frm.to_csv(path + '/corrected.csv', index=False, encoding='utf-8')
+        print 'Done .....'
+        # print df
+        # print df1
+        # print df_frm
 
 
 '''def main():
@@ -523,10 +390,10 @@ def reading():
     #         arrng_clmn1.append(i)
 
     # df = df[arrng_clmn+arrng_clmn1]
-    # df.to_csv(
-    #         '/home/karan/Nexchange/api_ai_whatsapp/textfiles/' +
-    #         'file_aftr_testcorrection_test_price.csv',
-    #         header=True, index=False, encoding='utf-8')
+    df.to_csv(
+            '/home/karan/Nexchange/api_ai_whatsapp/textfiles/' +
+            'file_aftr_testcorrection_test_price.csv',
+            header=True, index=False, encoding='utf-8')
     # print df
 '''
 
