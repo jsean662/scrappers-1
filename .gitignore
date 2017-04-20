@@ -1,4 +1,4 @@
-items.py
+**/.idea
 */.idea
 **/_pycache_
 **/build
@@ -7,3 +7,4 @@ items.py
 *.csv
 *.zip
 *.cfg
+*.pyc

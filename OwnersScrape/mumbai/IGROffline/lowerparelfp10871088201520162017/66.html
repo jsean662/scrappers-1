@@ -1,0 +1,2986 @@
+
+<!-- saved from url=(0105)https://esearchigr.maharashtra.gov.in/testingeSearch/wfSearch.aspx?query=16a3d31a2e5e8e4e807cc6260d9a738a -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"><title>Online Document Search.......Department of Registration and Stamps</title><link href="./66_files/StyleSheet.css" rel="stylesheet" type="text/css"><link href="./66_files/style.css" rel="stylesheet" type="text/css"><link href="./66_files/StyleSheet2.css" rel="stylesheet" type="text/css">
+    
+    <!--For Marathi KeyBoard Start-->
+    <script type="text/javascript">
+
+        var devExists = false;
+        var devEditExists = false;
+        var doctype = true;
+        var formName = "";
+        var textAreaName = "";
+        var inputModeRadioName = "";
+        var textFieldArr = new Array();
+        var comments = new Array();
+        var commentDivs = new Array();
+        var rteArr = new Array();
+        var divRelativePos = false;
+        var acEnabled = false;
+        var dx = false; 
+        
+    </script>
+
+   
+
+
+
+    <script type="text/javascript">
+        function NewWindowCall(val) {
+            //    window.open('wfReport.aspx?IndexClick='+val+'', '_blank', 'width=700,height=500,toolbar=no,location=yes,directories=yes,status=yes,menubar=no,scrollbars=yes,copyhistory=yes,modal=yes,resizable = yes');
+            window.open('HtmlReport.aspx?IndexClick=' + val + '', '_blank', 'width=700,height=500,toolbar=no,location=yes,directories=yes,status=yes,menubar=no,scrollbars=yes,copyhistory=yes,modal=yes,resizable = yes');
+        }
+
+        function OnSelectedIndexChange() {
+            var toYear = document.getElementById("");
+
+            var strtoYear = toYear.options[toYear.selectedIndex].text;
+
+            var fromYear = document.getElementById("");
+
+            var strfromYear = fromYear.options[fromYear.selectedIndex].text;
+
+            if ((strtoYear - strfromYear) > 2) {
+                alert('Year Difference Should Not Be Greater Than 2');
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+    <script type="text/javascript" src="./66_files/jquery-1.8.2.js.download"></script>
+    <script type="text/javascript">
+        $(function () {
+            blinkeffect('#lnkblnk');
+        })
+        function blinkeffect(selector) {
+            $(selector).fadeOut('slow', function () {
+                $(this).fadeIn('slow', function () {
+                    blinkeffect(this);
+                });
+            });
+        }
+        $(function () {
+            blinkeffect('#lnkblnk1');
+        })
+        function blinkeffect(selector) {
+            $(selector).fadeOut('slow', function () {
+                $(this).fadeIn('slow', function () {
+                    blinkeffect(this);
+                });
+            });
+        }
+    </script>
+<style type="text/css">
+	.mnuSearchType_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.mnuSearchType_1 { color:Black;font-family:Verdana;font-size:16px;text-decoration:none; }
+	.mnuSearchType_2 { color:Black;font-family:Verdana;font-size:16px;width:256px; }
+	.mnuSearchType_3 { color:White;font-family:Verdana;font-size:Smaller; }
+	.mnuSearchType_4 { background-color:SteelBlue;width:250px;padding:10px 5px 10px 5px; }
+	.mnuSearchType_5 { width:250px;padding:5px 5px 5px 5px; }
+	.mnuSearchType_6 { color:White;font-family:Verdana;font-size:Smaller;font-weight:normal; }
+	.mnuSearchType_7 { background-color:Olive;width:250px;padding:10px 5px 10px 5px; }
+	.mnuSearchType_8 { color:Black;font-weight:bold; }
+	.mnuSearchType_9 { color:Black;font-weight:bold;width:250px; }
+
+</style><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('HTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('HTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('HTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('isaritaHTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('HTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script><script type="text/javascript">Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvddlDistrict"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("RegularExpressionValidator1"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("rfvtxtAreaName"));
+Sys.WebForms.PageRequestManager._addArrayElement('Page_Validators', document.getElementById("ReqPropno"));
+</script><script type="text/javascript">document.getElementById('rfvddlDistrict')['controltovalidate'] = "ddlDistrict"
+document.getElementById('rfvddlDistrict')['focusOnError'] = "t"
+document.getElementById('rfvddlDistrict')['errormessage'] = "---Select District----"
+document.getElementById('rfvddlDistrict')['display'] = "Dynamic"
+document.getElementById('rfvddlDistrict')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvddlDistrict')['initialvalue'] = "---Select District----"
+document.getElementById('RegularExpressionValidator1')['controltovalidate'] = "txtAreaName"
+document.getElementById('RegularExpressionValidator1')['errormessage'] = "Please Enter Village Name Correctly"
+document.getElementById('RegularExpressionValidator1')['evaluationfunction'] = "RegularExpressionValidatorEvaluateIsValid"
+document.getElementById('RegularExpressionValidator1')['validationexpression'] = "[a-zA-Z]{1,}"
+document.getElementById('rfvtxtAreaName')['controltovalidate'] = "txtAreaName"
+document.getElementById('rfvtxtAreaName')['focusOnError'] = "t"
+document.getElementById('rfvtxtAreaName')['errormessage'] = "Enter Area Name"
+document.getElementById('rfvtxtAreaName')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('rfvtxtAreaName')['initialvalue'] = ""
+document.getElementById('ReqPropno')['controltovalidate'] = "txtAttributeValue"
+document.getElementById('ReqPropno')['focusOnError'] = "t"
+document.getElementById('ReqPropno')['errormessage'] = "Enter Property No."
+document.getElementById('ReqPropno')['evaluationfunction'] = "RequiredFieldValidatorEvaluateIsValid"
+document.getElementById('ReqPropno')['initialvalue'] = ""
+</script><script type="text/javascript">window.open('HTMLReportSuchiKramank2.aspx')</script><script type="text/javascript">
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        </script><script type="text/javascript">
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+</script><script type="text/javascript">
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+</script><script type="text/javascript">
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+</script><script type="text/javascript">
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script></head>
+<body style="background-position: 0% 0%; background-repeat: repeat; background-attachment: scroll;
+    color: BLACK;">
+    
+    <form name="form1" method="post" action="https://esearchigr.maharashtra.gov.in/testingeSearch/wfSearch.aspx?query=16a3d31a2e5e8e4e807cc6260d9a738a" onsubmit="javascript:return WebForm_OnSubmit();" id="form1" autocomplete="off">
+<div>
+
+
+
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./66_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./66_files/ScriptResource.axd" type="text/javascript"></script>
+<script src="./66_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script src="./66_files/ScriptResource(2).axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="./66_files/ScriptResource(3).axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	
+	
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpMain','','tupRegistrationGrid','','tupReportSearch',''], [], [], 36000, '');
+//]]>
+</script>
+
+    <center>
+        <div style="border: 1px solid black; width: 1024px">
+            <center>
+                <img src="./66_files/Header1.jpg" style="text-align: center; width: 1024px; height: 96px" alt="">
+                <table style="width: 1024px;">
+                    <tbody><tr>
+                        <td style="width: 150px; color: black; font-family: Verdana; font-size: 10pt">
+                            Online Users :<span id="lblOnlineUser" style="color:Red;font-size:10pt;font-weight:normal;">508</span>
+                        </td>
+                        <td>
+                            <h2 style="text-align: center; margin-top: 0px; margin-bottom: 0px; color: rgb(128, 187, 91);
+                                font-size: 20pt">
+                                eSearch/ई-सर्च</h2>
+                        </td>
+                        <td style="width: 200px; font-family: Verdana;">
+                            <span id="lblVisitorNo" style="color:Black;font-family: Verdana; font-size: 10pt">Number of Visitors :</span>
+                            <span id="lblHitCount" style="color:Red;font-size:10pt;">284032570</span>
+                            <span id="lblSince" style="font-family: Verdana; font-size: 10pt">(Since 1 Feb 2013)</span>
+                        </td>
+                        </tr>
+                        <tr>
+                        
+                        <td>
+                    
+<span id="lblWelcome" style="color:Red;font-family:Verdana;font-size:12px;">Welcome: </span>
+
+                            <span id="lblUser" style="color:Red;font-family:Verdana;font-size:12px;">Jay</span>
+
+</td>
+<td>
+
+</td>
+<td style="text-align: right;">
+
+</td>
+                   
+                
+                </tr>
+                    
+                    <tr>
+                        <td colspan="3">
+
+                            <div id="square" style="background-color: #DFEDFE;
+                                color: black; font-style: normal; font-family: Verdana; font-size: 10pt; width:1024px">
+                                <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> First time in the Country!!! 
+           
+                Data of Registrations done is updated in Real Time to eSearch. 
+            
+                         
+                Please check just before transactions to prevent frauds.</marquee>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody></table>
+                
+            </center>
+            <div style="width: 1024px; margin-top: 5px;">
+                <table id="tblmain" style="width: 1024px; vertical-align: top;">
+                    <tbody><tr>
+                        <td id="Td1" style="margin-top: 0px; vertical-align: top; text-align: left; font-family: Verdana;
+                            border: 1px solid green; border-radius: 13px; width: 260px">
+                            <a href="https://esearchigr.maharashtra.gov.in/testingeSearch/wfSearch.aspx?query=16a3d31a2e5e8e4e807cc6260d9a738a#mnuSearchType_SkipLink"><img alt="Skip Navigation Links" src="./66_files/WebResource(1).axd" width="0" height="0" style="border-width:0px;"></a><table id="mnuSearchType" class="mnuSearchType_5 mnuSearchType_2" cellpadding="0" cellspacing="0" border="0" style="background-color: transparent; text-align: left">
+	<tbody><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Search By Property Details" id="mnuSearchTypen0">
+		<td><table class="mnuSearchType_4 mnuSearchType_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tbody><tr>
+				<td style="white-space:nowrap;width:100%;"><a class="mnuSearchType_1 mnuSearchType_3 mnuSearchType_6" href="javascript:__doPostBack(&#39;mnuSearchType&#39;,&#39;1&#39;)">मिळकत निहाय/Property Details</a></td>
+			</tr>
+		</tbody></table></td>
+	</tr><tr style="height:5px;">
+		<td></td>
+	</tr><tr style="height:5px;">
+		<td></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Search By Document Number" id="mnuSearchTypen1">
+		<td><table class="mnuSearchType_4 mnuSearchType_9" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tbody><tr>
+				<td style="white-space:nowrap;width:100%;"><a class="mnuSearchType_1 mnuSearchType_3 mnuSearchType_8" href="javascript:__doPostBack(&#39;mnuSearchType&#39;,&#39;3&#39;)">दस्त निहाय/Document Number</a></td>
+			</tr>
+		</tbody></table></td>
+	</tr><tr style="height:5px;">
+		<td></td>
+	</tr><tr style="height:5px;">
+		<td></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Change Password" id="mnuSearchTypen2">
+		<td><table class="mnuSearchType_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tbody><tr>
+				<td style="white-space:nowrap;width:100%;"><a class="mnuSearchType_1 mnuSearchType_3" href="javascript:__doPostBack(&#39;mnuSearchType&#39;,&#39;4&#39;)">Change Password</a></td>
+			</tr>
+		</tbody></table></td>
+	</tr><tr style="height:5px;">
+		<td></td>
+	</tr><tr style="height:5px;">
+		<td></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" title="Logout" id="mnuSearchTypen3">
+		<td><table class="mnuSearchType_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tbody><tr>
+				<td style="white-space:nowrap;width:100%;"><a class="mnuSearchType_1 mnuSearchType_3" href="javascript:__doPostBack(&#39;mnuSearchType&#39;,&#39;5&#39;)">Logout</a></td>
+			</tr>
+		</tbody></table></td>
+	</tr><tr style="height:5px;">
+		<td></td>
+	</tr>
+</tbody></table><a id="mnuSearchType_SkipLink"></a>
+                        
+                              
+                            <div>
+                                <table>
+                                    <tbody><tr><td style="width: 180px">
+                                        <div onmouseover="this.stop();" onmouseout="this.start();" style="background-color: White;
+                                            font-size: 10pt; font-family: verdana; height: 100px; border: 2px solid #4682B4;
+                                            border-radius: 14px; background-color: #DFEDFE;">
+                                            <marquee style="height: 90px" scrollamount="1" behavior="scroll" direction="up" onmouseover="this.stop();" onmouseout="this.start();"> 
+                                           
+                                             <p style="color:Maroon"> Now 1985-2002 data is also available for search for selected offices.</p>  
+                                         
+                                         <p style="color:Maroon"> Now Filing,eFiling &amp; eRegistration data is also available for search.</p>    For IE users please add compatibility view settings.</marquee>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                </tr></tbody></table>
+                            </div>
+                        </td>
+
+                        <td style="margin-top: 0px; vertical-align: top; text-align: left; border: 1px solid green;
+                            border-radius: 13px; width: 250px">
+                            <div id="UpMain" style="vertical-align: top">
+                                    
+                                            <table style="background-image: none; background-color: transparent; font-weight: normal;
+                                                font-size: 12px; font-family: Verdana; width: 250px;">
+                                                <tbody><tr>
+                                                    <td colspan="3" style="font-weight: bold; vertical-align: top; height: 2px; text-align: left;">
+                                                        <span id="lblPropertyDetails" style="display:inline-block;font-weight:bold;width:227px;"> मिळकत तपशील/Property Details</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 149px; background-color: transparent; text-align: left; height: 30px;">
+                                                        &nbsp;<span id="lblyear">सन./Year</span>
+                                                    </td>
+                                                    <td style="width: 362px; background-image: none; background-color: transparent; text-align: left;
+                                                        height: 30px;">
+                                                        <select name="ddlFromYear" id="ddlFromYear" onchange="return OnSelectedIndexChange();" style="font-family:Mangal;font-size:13px;height:24px;width:200px;">
+	<option value="2017">2017</option>
+	<option value="2016">2016</option>
+	<option selected="selected" value="2015">2015</option>
+	<option value="2014">2014</option>
+	<option value="2013">2013</option>
+	<option value="2012">2012</option>
+	<option value="2011">2011</option>
+	<option value="2010">2010</option>
+	<option value="2009">2009</option>
+	<option value="2008">2008</option>
+	<option value="2007">2007</option>
+	<option value="2006">2006</option>
+	<option value="2005">2005</option>
+	<option value="2004">2004</option>
+	<option value="2003">2003</option>
+	<option value="2002">2002</option>
+	<option value="2001">2001</option>
+	<option value="2000">2000</option>
+	<option value="1999">1999</option>
+	<option value="1998">1998</option>
+	<option value="1997">1997</option>
+	<option value="1996">1996</option>
+	<option value="1995">1995</option>
+	<option value="1994">1994</option>
+	<option value="1993">1993</option>
+	<option value="1992">1992</option>
+	<option value="1991">1991</option>
+	<option value="1990">1990</option>
+	<option value="1989">1989</option>
+	<option value="1988">1988</option>
+	<option value="1987">1987</option>
+	<option value="1986">1986</option>
+	<option value="1985">1985</option>
+
+</select>
+                                                    </td>
+                                                    <td colspan="1" style="height: 30px; width: 86px;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 149px; text-align: left;">
+                                                        &nbsp;
+                                                    </td>
+                                                    <td style="text-align: left; width: 362px;">
+                                                        
+                                                        
+                                                    </td>
+                                                    <td colspan="1" style="width: 86px">
+                                                       
+                                                    
+                                                                                                           
+                                                    
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="height: 26px; text-align: left; width: 149px;">
+                                                        <span id="lblDistrict">जिल्हा/District</span>
+                                                    </td>
+                                                    <td colspan="1" style="height: 26px; text-align: left; width: 362px;">
+                                                        <select name="ddlDistrict" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ddlDistrict\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddlDistrict" style="font-family:Mangal;font-size:13px;height:24px;width:200px;">
+	<option value="---Select District----">---Select District----</option>
+	<option value="1">पुणे</option>
+	<option value="2">सातारा</option>
+	<option value="3">सांगली</option>
+	<option value="4">कोल्हापूर</option>
+	<option value="5">सोलापूर</option>
+	<option value="6">ठाणे</option>
+	<option value="7">रायगड</option>
+	<option value="8">रत्नागिरी</option>
+	<option value="9">सिंधुदुर्ग</option>
+	<option value="10">नाशिक</option>
+	<option value="11">जळगाव</option>
+	<option value="12">धुळे</option>
+	<option value="13">अहमदनगर</option>
+	<option value="14">औरंगाबाद</option>
+	<option value="15">जालना</option>
+	<option value="16">बीड</option>
+	<option value="17">लातूर</option>
+	<option value="18">नांदेड</option>
+	<option value="19">परभणी</option>
+	<option value="20">उस्मानाबाद</option>
+	<option value="21">अमरावती</option>
+	<option value="22">यवतमाळ</option>
+	<option value="23">अकोला</option>
+	<option value="24">बुलढाणा</option>
+	<option value="25">नागपूर</option>
+	<option value="26">वर्धा</option>
+	<option value="27">चंद्रपूर</option>
+	<option value="28">भंडारा</option>
+	<option value="29">गडचिरोली</option>
+	<option selected="selected" value="30">मुंबई जिल्हा</option>
+	<option value="31">मुंबई उपनगर जिल्हा</option>
+	<option value="32">गोंदिया</option>
+	<option value="33">वाशिम</option>
+	<option value="34">हिंगोली</option>
+	<option value="35">नंदुरबार</option>
+	<option value="1001">महाराष्ट्रातील इतर जिल्हे</option>
+	<option value="1002">महाराष्ट्र सोडून इतर जिल्हे</option>
+	<option value="6001">पालघर</option>
+
+</select>
+                                                    </td>
+                                                    <td colspan="1" style="width: 86px; height: 26px;">
+                                                        <span id="rfvddlDistrict" style="color:Red;display:none;">*</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="height: 23px; text-align: left; width: 149px; vertical-align: top;">
+                                                        <span id="lblVillageName" style="display:inline-block;width:120px;"> गावाचे नाव भरा/Enter Village Name</span>
+                                                    </td>
+                                                    <td colspan="1" style="height: 23px; text-align: left; width: 362px;">
+                                                        <input name="txtAreaName" type="text" value="lowe" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;txtAreaName\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txtAreaName" title="Enter Minimum three characters in English." style="width:200px;">
+                                                        <span style="font-weight: normal; font-size: x-small; float: none; word-spacing: 0px;
+                                                            text-transform: none; text-indent: 0px; line-height: 18px; white-space: normal;
+                                                            letter-spacing: normal; orphans: 2; widows: 2;">
+                                                            <br>
+                                                            <div style="color: red;">
+                                                                Enter Minimum one characters in English</div>
+                                                            <span id="RegularExpressionValidator1" style="display:inline-block;color:Red;width:236px;visibility:hidden;">Please Enter Village Name Correctly</span></span>
+                                                    </td>
+                                                    <td colspan="1" style="width: 86px; height: 23px; vertical-align: top; text-align: left;">
+                                                        <span id="rfvtxtAreaName" style="color:Red;visibility:hidden;">*</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left; width: 149px; height: 32px;">
+                                                        <span id="lblSelectVillage">गाव निवडा/Select Village</span>
+                                                    </td>
+                                                    <td colspan="1" style="text-align: left; width: 362px; height: 32px;">
+                                                        <select name="ddlareaname" id="ddlareaname" style="font-family:Mangal;font-size:13px;height:24px;width:200px;">
+	<option value="-----Select Area----">-----Select Area----</option>
+	<option selected="selected" value="Lower Parel">Lower Parel</option>
+
+</select>
+                                                    </td>
+                                                    <td colspan="1" style="width: 86px; height: 32px">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <table style="font-weight: normal; font-size: 12px; font-family: &#39;Verdana&#39;, Serif;
+                                                            width: 334px;">
+                                                            <tbody><tr>
+                                                                <td style="vertical-align: top; text-align: left; height: 1px; width: 20px;">
+                                                                    <span id="lblproptyno" style="display:inline-block;width:163px;">मिळकत क्रमांक/Property No.</span>
+                                                                </td>
+                                                                <td style="vertical-align: top; text-align: left; height: 1px; width: 56px;">
+                                                                    <input name="txtAttributeValue" type="text" value="1087" id="txtAttributeValue" class="Label" style="width:150px;">
+                                                                </td>
+                                                                <td style="vertical-align: top; text-align: left; width: 22px; height: 1px;">
+                                                                    <span id="ReqPropno" style="color:Red;visibility:hidden;">*</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="3">
+                                                                    <div style="color: red; font-size: x-small; font-weight: normal; font-size: 12px;
+                                                                        font-family: &#39;Verdana&#39;, Serif;">
+                                                                        (Enter SurveyNo./CTSNo./MilkatNo./GatNo./PlotNo.)</div>
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                        <tr style="height:50px">
+    <td> 
+             
+             
+            
+            
+             </td>  
+    <td align="left">
+ 
+               
+            
+            
+            
+            </td>
+
+
+            <td>
+            
+                <input type="hidden" name="HidOTP" id="HidOTP" value="72334">
+                 <span id="lblmsg" style="color:Red;"></span>
+            
+            </td>
+    </tr>
+
+
+
+
+
+                                                            <tr>
+                                                                <td align="center" style="vertical-align: top; width: 100px;">
+                                                                    <input type="submit" name="btnCancel" value=" रद्द " id="btnCancel" class="Button" style="font-weight:normal;height:24px;width:70px;">
+                                                                </td>
+                                                                <td style="vertical-align: top; width: 100px;" align="center">
+                                                                    
+                                                                       
+                                                                </td>
+                                                                
+                                                                <td style="vertical-align: top; width: 120px;" align="left">
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                            <td></td>
+                                                            <td>
+                                                             <div id="UpdateProgress1" style="display:none;" role="status" aria-hidden="true">
+	<span style="font-size: 11pt; background-attachment: fixed; background-repeat: no-repeat;
+                                                                                font-family: Verdana"><img src="./66_files/ajax-loader1.gif" style="width: 67px">Please Wait.....</span>
+</div>
+                                                                    </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="vertical-align: top;" colspan="3">
+                                                                    
+                                                                    <br>
+                                                                    
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" style="vertical-align: top; width: 100px;">
+                                                                    &nbsp;
+                                                                </td>
+                                                                <td align="center" style="vertical-align: top; width: 100px;">
+                                                                    &nbsp;
+                                                                    </td>
+                                                                <td align="left" style="vertical-align: top; width: 120px;">
+                                                                    &nbsp;
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        
+                                </div>
+                        </td>
+                        <td style="vertical-align: top; text-align: left; border: 1px solid green; width: 280px">
+                            <div style="height: 300px; overflow-y: scroll">
+                                <table style="font-weight: normal; font-size: 13px; font-family: &#39;Times New Roman&#39;, Serif;
+                                    text-align: right;">
+                                    <tbody><tr>
+                                        <td style="background-image: none; vertical-align: top; text-align: left; color: black;
+                                            font-weight: bold">
+                                            सुचना -
+                                    </td></tr><tr>
+                                        <td style="background-image: none; vertical-align: top; text-align: left; height: 27px;">
+                                            १) सन 2002 ते आत्तापर्यंत संगणकीकृत नोंदणी प्रणालीमध्ये नोंदविलेल्या दस्तांची माहिती
+                                            या प्रणाली मध्ये उपलब्ध आहेत.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-image: none; vertical-align: middle; text-align: left; height: 29px;">
+                                            २)सन 2002 पुर्वी नोंदविण्यात आलेल्या दस्ताची डाटा एंट्री करण्यात आलेली असल्यास त्या
+                                            दस्तांची माहिती या प्रणाली
+                                            मध्ये उपलब्ध आहेत.(अधिक माहितीसाठी पहा : उपलब्धत यादी)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-image: none; vertical-align: top; text-align: left; height: 28px;">
+                                            ३)या प्रणालीद्वारे पुस्तक क्रं.१ मध्ये नोंदणी झालेल्या (म्हणजेच मृत्युपत्र व कुलमुखत्यार
+                                            पत्रे वगळून) दस्तांची उपलब्ध माहिती मिळू शकेल.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-image: none; vertical-align: top; text-align: left; height: 26px;">
+                                            ४)या प्रणालीद्वारे उपलब्ध माहिती म्हणजे मिळकतीच्या मालकीबाबतचे प्रमाणपत्र नाही याची
+                                            नोंद घ्यावी.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-image: none; vertical-align: top; text-align: left; height: 29px;">
+                                            ५)या प्रणालीव्दारे अहवाल उपलब्ध माहितीच्या आधारे,केवळ प्राथमिक माहितीसाठी आहेत.
+                                            मुळ अभिलेख पाहण्यासाठी किंवा प्रमाणित प्रतीसाठी संबंधित दुय्यम निबंधक कार्यालय यांचेशी
+                                            संपर्क साधावा.
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody></table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="vertical-align: top; text-align: left; font-family: Verdana;
+                            width: 900px">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="vertical-align: top; text-align: center; font-family: Verdana;
+                            width: 1020px;">
+                            <div style="vertical-align: top; text-align: center; font-family: Verdana; width: 1020px;
+                                overflow-x: scroll">
+                                <table>
+                                    <tbody><tr>
+                                        <td>
+                                            <div id="upRegistrationGrid">
+                                                    <div>
+	<table class="Label" cellspacing="2" cellpadding="4" rules="all" border="3" id="RegistrationGrid" style="width:1020px;height:355px;font-size:10pt;font-family:Mangal;color:Black;border-width:3px;border-style:Solid;border-color:#999999;background-color:Transparent;border-right: buttonface 1px solid; border-top: buttonface 1px solid;
+                                                        border-left: buttonface 1px solid; border-bottom: buttonface 1px solid; position: static;
+                                                        background-color: transparent">
+		<tbody><tr style="color:White;background-color:SteelBlue;font-family:Verdana;font-size:X-Small;font-weight:normal;">
+			<th scope="col">DocNo</th><th scope="col">DName</th><th scope="col">RDate</th><th scope="col">SROName</th><th scope="col">Seller Name</th><th scope="col">Purchaser Name</th><th scope="col">Property Description</th><th scope="col">SROCode</th><th scope="col">Status</th><th scope="col">IndexII</th>
+		</tr><tr style="background-color:Transparent;">
+			<td>2705</td><td>Agreement Relating to Deposit of Title Deeds,Pawn</td><td>04/11/2015</td><td>Joint S.R. Mumbai City 2</td><td>PUNJAB NATIONAL BANK SANTA CRUZ (W) (SCW) 400024030</td><td>MANISH L SARDA,UTKARSH S SARDA</td><td>B/46  AHUJA TOWERS MUMBAI R D MARG</td><td style="width:1px;">319</td><td style="width:1px;">5</td><td><input type="button" value="IndexII" onclick="javascript:__doPostBack(&#39;RegistrationGrid&#39;,&#39;indexII$0&#39;)" class="Button"></td>
+		</tr><tr style="background-color:AliceBlue;">
+			<td>2767</td><td>Agreement Relating to Deposit of Title Deeds,Pawn</td><td>10/11/2015</td><td>Joint S.R. Mumbai City 2</td><td>PUNJAB NATIONAL BANK BANDRA (BND) 400024004</td><td>DEEPAK LAXMAN SARDA,HIMANSHU SANTOSH SARDA</td><td>46A  AHUJA TOWER  RAJABHAU DESAI ROAD</td><td style="width:1px;">319</td><td style="width:1px;">5</td><td><input type="button" value="IndexII" onclick="javascript:__doPostBack(&#39;RegistrationGrid&#39;,&#39;indexII$1&#39;)" class="Button"></td>
+		</tr><tr align="left" style="color:Black;background-color:#CCCCCC;">
+			<td colspan="10"><table border="0">
+				<tbody><tr>
+					<td><a href="javascript:__doPostBack(&#39;RegistrationGrid&#39;,&#39;Page$1&#39;)" style="color:Black;">1</a></td><td><a href="javascript:__doPostBack(&#39;RegistrationGrid&#39;,&#39;Page$2&#39;)" style="color:Black;">2</a></td><td><a href="javascript:__doPostBack(&#39;RegistrationGrid&#39;,&#39;Page$3&#39;)" style="color:Black;">3</a></td><td><span>4</span></td>
+				</tr>
+			</tbody></table></td>
+		</tr>
+	</tbody></table>
+</div>
+                                                </div>
+                                            <div id="upReportSearch">
+                                                    
+                                                </div>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="vertical-align: top; text-align: left; font-family: Verdana;">
+                            <table style="font-weight: normal; font-size: 13px; font-family: &#39;Times New Roman&#39;, Serif;
+                                text-align: left;">
+                                <tbody><tr>
+                                    <td style="background-image: none; text-align: left;">
+                                        <hr style="height: 3px; background-color: #0099cc;" id="HR2">
+                                        <span style="font-size: 9pt; font-family: Verdana; text-align: center;"><strong style="text-align: center">
+                                            DISCLAIMER </strong>:Information owned, maintained and updated by : Dept. Of Registration
+                                            &amp; Stamps,Maharashtra.All queries/Comments regarding the contents may be sent
+                                            at IGR, Pune(M.S.)<br>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-image: none; text-align: center; font-family: Verdana;">
+                                        &nbsp;Send us feedback on&nbsp;
+                                        <span id="Label2" style="font-size:X-Small;font-weight:bold;font-style: italic">feedback[at]igrmaharashtra[dot]gov[dot]in</span>.
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="vertical-align: top; text-align: left; font-family: Verdana;">
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="vertical-align: top; text-align: left; font-family: Verdana;">
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            
+                            
+                        </td>
+                    </tr>
+                </tbody></table>
+                
+            </div>
+        </div>
+    </center>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("rfvddlDistrict"), document.getElementById("RegularExpressionValidator1"), document.getElementById("rfvtxtAreaName"), document.getElementById("ReqPropno"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var rfvddlDistrict = document.all ? document.all["rfvddlDistrict"] : document.getElementById("rfvddlDistrict");
+rfvddlDistrict.controltovalidate = "ddlDistrict";
+rfvddlDistrict.focusOnError = "t";
+rfvddlDistrict.errormessage = "---Select District----";
+rfvddlDistrict.display = "Dynamic";
+rfvddlDistrict.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rfvddlDistrict.initialvalue = "---Select District----";
+var RegularExpressionValidator1 = document.all ? document.all["RegularExpressionValidator1"] : document.getElementById("RegularExpressionValidator1");
+RegularExpressionValidator1.controltovalidate = "txtAreaName";
+RegularExpressionValidator1.errormessage = "Please Enter Village Name Correctly";
+RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+RegularExpressionValidator1.validationexpression = "[a-zA-Z]{1,}";
+var rfvtxtAreaName = document.all ? document.all["rfvtxtAreaName"] : document.getElementById("rfvtxtAreaName");
+rfvtxtAreaName.controltovalidate = "txtAreaName";
+rfvtxtAreaName.focusOnError = "t";
+rfvtxtAreaName.errormessage = "Enter Area Name";
+rfvtxtAreaName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rfvtxtAreaName.initialvalue = "";
+var ReqPropno = document.all ? document.all["ReqPropno"] : document.getElementById("ReqPropno");
+ReqPropno.controltovalidate = "txtAttributeValue";
+ReqPropno.focusOnError = "t";
+ReqPropno.errormessage = "Enter Property No.";
+ReqPropno.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ReqPropno.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var mnuSearchType_Data = new Object();
+mnuSearchType_Data.disappearAfter = 500;
+mnuSearchType_Data.horizontalOffset = 0;
+mnuSearchType_Data.verticalOffset = 0;
+mnuSearchType_Data.staticHoverClass = 'mnuSearchType_9';
+mnuSearchType_Data.staticHoverHyperLinkClass = 'mnuSearchType_8';
+mnuSearchType_Data.iframeUrl = '/testingeSearch/WebResource.axd?d=FeCiNugvLzGSsTS_uYP6n4N652aWZMPAq7_c1eYOdJeSjXN229hTOtUTJNCAmGHZv3EjyzqUxUlm9mrR0sIwlNeUrG5ygCc51yimJPDVlfk1&t=635329055200000000';
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('rfvddlDistrict').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvddlDistrict'));
+}
+
+document.getElementById('RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidator1'));
+}
+
+document.getElementById('rfvtxtAreaName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('rfvtxtAreaName'));
+}
+
+document.getElementById('ReqPropno').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqPropno'));
+}
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":100,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+//]]>
+</script>
+<span style="display: none !important;"><input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""></span><span style="display: none !important;"><input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""></span><span style="display: none !important;"><input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value=""></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTk4NDU5NzkyMA9kFgICAw9kFiICAw8PFgIeBFRleHQFAzUxOWRkAgcPDxYCHwAFCTI4NDAzMjU3MGRkAg0PDxYCHwAFA0pheWRkAhEPZBYCZg9kFgICAQ9kFgZmD2QWFAIFDxAPZBYCHghvbkNoYW5nZQUfcmV0dXJuIE9uU2VsZWN0ZWRJbmRleENoYW5nZSgpO2QWAQICZAIJDxAPZBYCHwEFH3JldHVybiBPblNlbGVjdGVkSW5kZXhDaGFuZ2UoKTtkFgFmZAIPDxAPFgYeDkRhdGFWYWx1ZUZpZWxkBQdKRFJDb2RlHg1EYXRhVGV4dEZpZWxkBQhKRFJNbmFtZR4LXyFEYXRhQm91bmRnZBAVJxYtLS1TZWxlY3QgRGlzdHJpY3QtLS0tDOCkquClgeCko+ClhxLgpLjgpL7gpKTgpL7gpLDgpL4S4KS44KS+4KSC4KSX4KSy4KWAG+CkleCli+CksuCljeCkueCkvuCkquClguCksBXgpLjgpYvgpLLgpL7gpKrgpYLgpLAM4KSg4KS+4KSj4KWHD+CksOCkvuCkr+Ckl+CkoRvgpLDgpKTgpY3gpKjgpL7gpJfgpL/gpLDgpYAe4KS44KS/4KSC4KSn4KWB4KSm4KWB4KSw4KWN4KSXD+CkqOCkvuCktuCkv+CklQ/gpJzgpLPgpJfgpL7gpLUM4KSn4KWB4KSz4KWHFeCkheCkueCkruCkpuCkqOCkl+CksBjgpJTgpLDgpILgpJfgpL7gpKzgpL7gpKYP4KSc4KS+4KSy4KSo4KS+CeCkrOClgOCkoQ/gpLLgpL7gpKTgpYLgpLAS4KSo4KS+4KSC4KSm4KWH4KShD+CkquCksOCkreCko+ClgB7gpIngpLjgpY3gpK7gpL7gpKjgpL7gpKzgpL7gpKYV4KSF4KSu4KSw4KS+4KS14KSk4KWAEuCkr+CkteCkpOCkruCkvuCksw/gpIXgpJXgpYvgpLLgpL4V4KSs4KWB4KSy4KSi4KS+4KSj4KS+EuCkqOCkvuCkl+CkquClguCksA/gpLXgpLDgpY3gpKfgpL4Y4KSa4KSC4KSm4KWN4KSw4KSq4KWC4KSwEuCkreCkguCkoeCkvuCksOCkvhjgpJfgpKHgpJrgpL/gpLDgpYvgpLLgpYAi4KSu4KWB4KSC4KSs4KSIIOCknOCkv+CksuCljeCkueCkvjLgpK7gpYHgpILgpKzgpIgg4KSJ4KSq4KSo4KSX4KSwIOCknOCkv+CksuCljeCkueCkvhXgpJfgpYvgpILgpKbgpL/gpK/gpL4P4KS14KS+4KS24KS/4KSuFeCkueCkv+CkguCkl+Cli+CksuClgBjgpKjgpILgpKbgpYHgpLDgpKzgpL7gpLBH4KSu4KS54KS+4KSw4KS+4KS34KWN4KSf4KWN4KSw4KS+4KSk4KWA4KSyIOCkh+CkpOCksCDgpJzgpL/gpLLgpY3gpLngpYdL4KSu4KS54KS+4KSw4KS+4KS34KWN4KSf4KWN4KSwIOCkuOCli+CkoeClguCkqCDgpIfgpKTgpLAg4KSc4KS/4KSy4KWN4KS54KWHD+CkquCkvuCksuCkmOCksBUnFi0tLVNlbGVjdCBEaXN0cmljdC0tLS0BMQEyATMBNAE1ATYBNwE4ATkCMTACMTECMTICMTMCMTQCMTUCMTYCMTcCMTgCMTkCMjACMjECMjICMjMCMjQCMjUCMjYCMjcCMjgCMjkCMzACMzECMzICMzMCMzQCMzUEMTAwMQQxMDAyBDYwMDEUKwMnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnFgECHmQCFQ8PFgIfAAUEbG93ZWRkAh0PEA8WBh8CBQxWaWxsYWdlTmFtZUUfAwUMVmlsbGFnZU5hbWVFHwRnZBAVAhQtLS0tLVNlbGVjdCBBcmVhLS0tLQtMb3dlciBQYXJlbBUCFC0tLS0tU2VsZWN0IEFyZWEtLS0tC0xvd2VyIFBhcmVsFCsDAmdnFgECAWQCJQ8PFgIeB1Zpc2libGVoZGQCJw8PFgQfBWgfAAUFNzIzMzRkZAIrDw8WBB8AZR8FZ2RkAi8PDxYEHwVoHgdFbmFibGVkaGRkAjEPDxYEHwAFBlN1Ym1pdB8FaGRkAgEPZBYOAgUPEGRkFgBkAgkPEA8WBh8CBQdKRFJDb2RlHwMFCEpEUk1uYW1lHwRnZBAVJxYtLS1TZWxlY3QgRGlzdHJpY3QtLS0tDOCkquClgeCko+ClhxLgpLjgpL7gpKTgpL7gpLDgpL4S4KS44KS+4KSC4KSX4KSy4KWAG+CkleCli+CksuCljeCkueCkvuCkquClguCksBXgpLjgpYvgpLLgpL7gpKrgpYLgpLAM4KSg4KS+4KSj4KWHD+CksOCkvuCkr+Ckl+CkoRvgpLDgpKTgpY3gpKjgpL7gpJfgpL/gpLDgpYAe4KS44KS/4KSC4KSn4KWB4KSm4KWB4KSw4KWN4KSXD+CkqOCkvuCktuCkv+CklQ/gpJzgpLPgpJfgpL7gpLUM4KSn4KWB4KSz4KWHFeCkheCkueCkruCkpuCkqOCkl+CksBjgpJTgpLDgpILgpJfgpL7gpKzgpL7gpKYP4KSc4KS+4KSy4KSo4KS+CeCkrOClgOCkoQ/gpLLgpL7gpKTgpYLgpLAS4KSo4KS+4KSC4KSm4KWH4KShD+CkquCksOCkreCko+ClgB7gpIngpLjgpY3gpK7gpL7gpKjgpL7gpKzgpL7gpKYV4KSF4KSu4KSw4KS+4KS14KSk4KWAEuCkr+CkteCkpOCkruCkvuCksw/gpIXgpJXgpYvgpLLgpL4V4KSs4KWB4KSy4KSi4KS+4KSj4KS+EuCkqOCkvuCkl+CkquClguCksA/gpLXgpLDgpY3gpKfgpL4Y4KSa4KSC4KSm4KWN4KSw4KSq4KWC4KSwEuCkreCkguCkoeCkvuCksOCkvhjgpJfgpKHgpJrgpL/gpLDgpYvgpLLgpYAi4KSu4KWB4KSC4KSs4KSIIOCknOCkv+CksuCljeCkueCkvjLgpK7gpYHgpILgpKzgpIgg4KSJ4KSq4KSo4KSX4KSwIOCknOCkv+CksuCljeCkueCkvhXgpJfgpYvgpILgpKbgpL/gpK/gpL4P4KS14KS+4KS24KS/4KSuFeCkueCkv+CkguCkl+Cli+CksuClgBjgpKjgpILgpKbgpYHgpLDgpKzgpL7gpLBH4KSu4KS54KS+4KSw4KS+4KS34KWN4KSf4KWN4KSw4KS+4KSk4KWA4KSyIOCkh+CkpOCksCDgpJzgpL/gpLLgpY3gpLngpYdL4KSu4KS54KS+4KSw4KS+4KS34KWN4KSf4KWN4KSwIOCkuOCli+CkoeClguCkqCDgpIfgpKTgpLAg4KSc4KS/4KSy4KWN4KS54KWHD+CkquCkvuCksuCkmOCksBUnFi0tLVNlbGVjdCBEaXN0cmljdC0tLS0BMQEyATMBNAE1ATYBNwE4ATkCMTACMTECMTICMTMCMTQCMTUCMTYCMTcCMTgCMTkCMjACMjECMjICMjMCMjQCMjUCMjYCMjcCMjgCMjkCMzACMzECMzICMzMCMzQCMzUEMTAwMQQxMDAyBDYwMDEUKwMnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnFgFmZAIPDxBkZBYBZmQCEw8QZGQWAWZkAhkPDxYCHwBlZGQCIw8WAh4FVmFsdWUFBTcyMzM0ZAI1DxYCHwcFJGE3MTZhNDJhLWEzMmYtNDg5Yi1hNzJlLTBkY2Y4M2MxMGRmNWQCAg9kFgYCBQ8QDxYGHwIFB0pEUkNvZGUfAwUISkRSTW5hbWUfBGdkEBUnFi0tLVNlbGVjdCBEaXN0cmljdC0tLS0M4KSq4KWB4KSj4KWHEuCkuOCkvuCkpOCkvuCksOCkvhLgpLjgpL7gpILgpJfgpLLgpYAb4KSV4KWL4KSy4KWN4KS54KS+4KSq4KWC4KSwFeCkuOCli+CksuCkvuCkquClguCksAzgpKDgpL7gpKPgpYcP4KSw4KS+4KSv4KSX4KShG+CksOCkpOCljeCkqOCkvuCkl+Ckv+CksOClgB7gpLjgpL/gpILgpKfgpYHgpKbgpYHgpLDgpY3gpJcP4KSo4KS+4KS24KS/4KSVD+CknOCks+Ckl+CkvuCktQzgpKfgpYHgpLPgpYcV4KSF4KS54KSu4KSm4KSo4KSX4KSwGOCklOCksOCkguCkl+CkvuCkrOCkvuCkpg/gpJzgpL7gpLLgpKjgpL4J4KSs4KWA4KShD+CksuCkvuCkpOClguCksBLgpKjgpL7gpILgpKbgpYfgpKEP4KSq4KSw4KSt4KSj4KWAHuCkieCkuOCljeCkruCkvuCkqOCkvuCkrOCkvuCkphXgpIXgpK7gpLDgpL7gpLXgpKTgpYAS4KSv4KS14KSk4KSu4KS+4KSzD+CkheCkleCli+CksuCkvhXgpKzgpYHgpLLgpKLgpL7gpKPgpL4S4KSo4KS+4KSX4KSq4KWC4KSwD+CkteCksOCljeCkp+CkvhjgpJrgpILgpKbgpY3gpLDgpKrgpYLgpLAS4KSt4KSC4KSh4KS+4KSw4KS+GOCkl+CkoeCkmuCkv+CksOCli+CksuClgCLgpK7gpYHgpILgpKzgpIgg4KSc4KS/4KSy4KWN4KS54KS+MuCkruClgeCkguCkrOCkiCDgpIngpKrgpKjgpJfgpLAg4KSc4KS/4KSy4KWN4KS54KS+FeCkl+Cli+CkguCkpuCkv+Ckr+Ckvg/gpLXgpL7gpLbgpL/gpK4V4KS54KS/4KSC4KSX4KWL4KSy4KWAGOCkqOCkguCkpuClgeCksOCkrOCkvuCksEfgpK7gpLngpL7gpLDgpL7gpLfgpY3gpJ/gpY3gpLDgpL7gpKTgpYDgpLIg4KSH4KSk4KSwIOCknOCkv+CksuCljeCkueClh0vgpK7gpLngpL7gpLDgpL7gpLfgpY3gpJ/gpY3gpLAg4KS44KWL4KSh4KWC4KSoIOCkh+CkpOCksCDgpJzgpL/gpLLgpY3gpLngpYcP4KSq4KS+4KSy4KSY4KSwFScWLS0tU2VsZWN0IERpc3RyaWN0LS0tLQExATIBMwE0ATUBNgE3ATgBOQIxMAIxMQIxMgIxMwIxNAIxNQIxNgIxNwIxOAIxOQIyMAIyMQIyMgIyMwIyNAIyNQIyNgIyNwIyOAIyOQIzMAIzMQIzMgIzMwIzNAIzNQQxMDAxBDEwMDIENjAwMRQrAydnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2cWAWZkAgsPEGRkFgFmZAIPDxBkZBYBZmQCFw9kFgJmD2QWAgIBDzwrABEDAA8WBh8FZx8EZx4LXyFJdGVtQ291bnQCIGQBEBYAFgAWAAwUKwAAFgJmD2QWBgIBD2QWFGYPDxYCHwAFBDI3MDVkZAIBDw8WAh8ABTFBZ3JlZW1lbnQgUmVsYXRpbmcgdG8gRGVwb3NpdCBvZiBUaXRsZSBEZWVkcyxQYXduZGQCAg8PFgIfAAUKMDQvMTEvMjAxNWRkAgMPDxYCHwAFGEpvaW50IFMuUi4gTXVtYmFpIENpdHkgMmRkAgQPDxYCHwAFM1BVTkpBQiBOQVRJT05BTCBCQU5LIFNBTlRBIENSVVogKFcpIChTQ1cpIDQwMDAyNDAzMGRkAgUPDxYCHwAFHk1BTklTSCBMIFNBUkRBLFVUS0FSU0ggUyBTQVJEQWRkAgYPDxYCHwAFIkIvNDYgIEFIVUpBIFRPV0VSUyBNVU1CQUkgUiBEIE1BUkdkZAIHDw8WAh8ABQMzMTlkZAIIDw8WAh8ABQE1ZGQCCg9kFgICAQ8PFgIeD0NvbW1hbmRBcmd1bWVudAUCMzBkZAICD2QWFGYPDxYCHwAFBDI3NjdkZAIBDw8WAh8ABTFBZ3JlZW1lbnQgUmVsYXRpbmcgdG8gRGVwb3NpdCBvZiBUaXRsZSBEZWVkcyxQYXduZGQCAg8PFgIfAAUKMTAvMTEvMjAxNWRkAgMPDxYCHwAFGEpvaW50IFMuUi4gTXVtYmFpIENpdHkgMmRkAgQPDxYCHwAFK1BVTkpBQiBOQVRJT05BTCBCQU5LIEJBTkRSQSAoQk5EKSA0MDAwMjQwMDRkZAIFDw8WAh8ABSpERUVQQUsgTEFYTUFOIFNBUkRBLEhJTUFOU0hVIFNBTlRPU0ggU0FSREFkZAIGDw8WAh8ABSU0NkEgIEFIVUpBIFRPV0VSICBSQUpBQkhBVSBERVNBSSBST0FEZGQCBw8PFgIfAAUDMzE5ZGQCCA8PFgIfAAUBNWRkAgoPZBYCAgEPDxYCHwkFAjMxZGQCAw8PFgIfBWhkZAIdDw8WAh8ABQExZGQCHg8PFgIfAAUHTWFyYXRoaWRkAh8PDxYCHwAFBDIwMTVkZAIgDw8WAh8ABQQyMDE1ZGQCIg8PFgIfAAUEMjAxNWRkAiQPDxYCHwAFBDI3MDVkZAIlDw8WAh8ABQIzMGRkAiYPDxYCHwAFBUZhbHNlZGQCKA8PFgIfAAUSSkRSREJNdW1iYWlTYXJpdGEyZGQCLA8PFgIfAAULTG93ZXIgUGFyZWxkZAIvDw8WAh8ABQMzMTlkZAIxDw8WAh8ABRJKRFJEQk11bWJhaVNhcml0YTFkZBgDBRBSZWdpc3RyYXRpb25HcmlkDzwrAAwCAgIDCAIEZAUKTXVsdGlWaWV3Mw8PZGZkBQ1tbnVTZWFyY2hUeXBlDw9kBQExZCgQCW4pnIrxoNx/GOWKQ2ZwjCUs6Wg+xdu1iomY6s8B"></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D8C84ABB"></span><span style="display: none !important;"><input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAFk9capwjARgkm7BHjUwQFOUaAAWLjgEBU+gbZ89q8a2l+AmEFee3hwzBh12ZxQYpM0lJe8reyDzmrN/IiyaksZZ1VDzkjnYxyilNvCTpDRHwXik9d1R8/bRS9UiAAVWqaVhiY0sd5UdRTckmrsNNXJZFZNgRhCoUmt1fJbw2JQNkkUpKQPJpOJihRAdpadMMURHNeuwAIyAs/sf8DPeByuAgyjqGBmFO7P96696abjo5lswOPW8Rj9E7AluAfZvLHB4gGeHUB8zqueLI0H/fujHp/qNjV84T3Vada3xEgkRH1Jt4HrHVuthYTp8h9hRq1f5PWXBYTKWcrGK22WxenXo+lIu3fFmpXstDO6PcM8prOkycLkwvQlkby95PooilsxJom9E/SmvevVoJ78joirPgRIdtmVZjd9win+lOhA3l5biWQh7FAJ8O/Q7uGhmIBxrMsY7uvDjAiAeQawFdM2Pc93HJHKJRYu51c0bWcTmJ1C65BQWb78YTe8eOu0LrRswIWVPE0z71g1Kn8DeOW4uNhwbe+bFwhV9LowfFh7JwqErXteiUiz6LINofAMU72d9MnRzRzrJEU7lAdp082oINE9oYvLR51Ytxc0NtFlT410nCXKuJD0fzs9HLRuZSmIJz5FnbNlP2yfXXnlW5B8OmUAYLjAaWWnAkhtSlbGlRdrgZczQ6m2kq4e88XFw8rVqMZKfwiRBMvp2Abb+6iROCsHRaAEHIr772zKgggdQ+/Y70CguMUsYzwXWhAYQ8roq2jkCwqVaGv/YaF8qcu25MRc6lySAsr9vN3RHWCNUhb34cQOrOeyfdjXWp8J91X1wmAQZIyJ+0kB+Tcv+ISgXO54KQv2swn2lBmW/XYFVLfTRp0P82khSh5IQ0qoYtI04dMNy4Jz6vjiUpjKnByq+PtvWLcVztwElEQypshXRaH0++imzh2vum+hdNF9AMLEfnJ12Weaz3v75uRkNo/lN7TUS+8tVDA2eT25vPjXLr0tsjiP9fzhoBv0fPV5hFiCLQjzCrvsYhuJfejEVwITpZLGmjxBukhtAudErTARBZtMVdJc7KwhoiiYFqY8ijrwhI5U2g26EfBBe1eI8MHu/idfALeg0E70R/Ag2Wev6QE5jfk5rkvVoeHGQa7Xs44bUfjpgVtUitnY+yyAu+l5FKy4YY1eutlS3QP78gawW9WA2Q7yxDZ06BRY4PygNlP/NQAKeSEbkWfd0pf3d4AEb2q1ujcV8/vTTlfbfGsPYOalb+ffMoUk5XOG5Bmz+ybxAIyWewXGK4uEyZLlqIuM7WibdX66L9a8/EFDgObb6n6oGHchycv2UYUKtgGuBv6H8K++mFXR4QOo+oB+AOUt0fSM5iSfSnU0ZL9FDBp89XXDGl3u+1yb9/30S8VcwzG59Pv9epfYXjrqXq94VBJ/ul0C+ldPNghk4YoCiq2m6y0DCfE8sBfGxT9iMMUAbArzksNOc57jvXJNYHEvGJmBgWXCSSvh7ZcRUysbTDBchiG9rG1UMT75A5IIrMpcvJYQt1xeT3d0AGzoJ7k19X/6Yw8feUrquucAjs8dx7Baag+0UG1oQHs1deQkgBQF8i6hazmkVeoNPoFBlieLgVBsZr82kx90dnMP7AQKJlK+Dq7WvWeIu36+3jR8LkG7xC86EqPfdOndV3JsDvBsvGG9m+Ot37oCEEXP3EjBFcbJhKDmF3SRK8k6sXhrq0fxDuB8jME/eD6DPbq0Ddli0sUOQXDZX2f+6i+FbXuExGLWfIn6X+coYJfxOT6jqPMW+vjkFkyhr7lkRmogEbV4qON6RU6mDnGsgBJUfmQ4GdWOiZk72rS8DpGXmvHGoCC8j1FEQPfm6RARN/QKpo+rXoF2WWaEIhFDvsAFyWBZgnopbE74+oK51P7dTbhk/eEDlmNlJu9L3HX7sqBgOZyfHS9zg"></span></form>
+
+
+</body></html>
