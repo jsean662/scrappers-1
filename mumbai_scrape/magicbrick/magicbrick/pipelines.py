@@ -13,6 +13,7 @@ class MagicbrickPipeline(object):
 from scrapy import signals
 from scrapy.exporters import CsvItemExporter
 
+
 class CSVPipeline(object):
 
   def __init__(self):

@@ -9,14 +9,15 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'Googlebot'
+BOT_NAME = 'Bingbot'
 
 SPIDER_MODULES = ['Makaan_DelhiSale.spiders']
 NEWSPIDER_MODULE = 'Makaan_DelhiSale.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+# USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+USER_AGENT = 'Mozilla/5.0 (compatible; Bingbot/2.0; +http://www.bing.com/bingbot.htm)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
