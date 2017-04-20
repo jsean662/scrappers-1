@@ -20,6 +20,7 @@ USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
+<<<<<<< HEAD:OwnersScrape/mumbai/propertywalaMumbaiOwners/propertywalaMumbaiOwners/settings.py
 # ITEM_PIPELINES = {
 #     'propertywalaMumbaiOwners.pipelines.MyImagesPipeline': 1,
 # }
@@ -28,6 +29,13 @@ ROBOTSTXT_OBEY = False
 # IMAGES_STORE = './Owners_Rent'
 # DEPTH_LIMIT = 10000
 # DOWNLOAD_DELAY = 5.0
+=======
+ITEM_PIPELINES = {
+    'scrapy.pipelines.images.ImagesPipeline': 1,
+}
+IMAGES_STORE = './Owners_Sale'
+
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f:OwnersScrape/mumbai/propertywalaMumbaiOwners/propertywalaMumbaiOwners/settings.py
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
 

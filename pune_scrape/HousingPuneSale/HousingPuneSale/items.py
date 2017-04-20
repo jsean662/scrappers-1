@@ -8,7 +8,11 @@
 import scrapy
 
 
+<<<<<<< HEAD
 class HousingpuneItem(scrapy.Item):
+=======
+class HousingpunerentItem(scrapy.Item):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
     management_by_landlord = scrapy.Field()
     areacode = scrapy.Field()
     mobile_lister = scrapy.Field()

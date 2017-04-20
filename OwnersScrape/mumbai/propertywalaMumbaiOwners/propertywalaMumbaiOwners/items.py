@@ -10,8 +10,13 @@ import scrapy
 
 class PropertywalamumbaiownersItem(scrapy.Item):
     image_urls = scrapy.Field()
+<<<<<<< HEAD
     images = scrapy.Field()
     image_path = scrapy.Field()
+=======
+    image = scrapy.Field()
+    image_paths = scrapy.Field()
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
     Status = scrapy.Field()
     price_per_sqft = scrapy.Field()
     areacode = scrapy.Field()

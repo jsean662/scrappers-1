@@ -13,8 +13,12 @@ class MakaansalehyderabadSpider(scrapy.Spider):
     name = "Makaan_Hyderabad"
     allowed_domains = ["makaan.com"]
     start_urls = [
+<<<<<<< HEAD
         'https://www.makaan.com/listings?sortBy=date-desc&listingType=buy&pageType=LISTINGS_PROPERTY_URLS&cityName=Hyderabad&cityId=12&templateId=MAKAAN_CITY_LISTING_BUY&format=json&page=1',
         'https://www.makaan.com/listings?sortBy=date-desc&listingType=rent&pageType=LISTINGS_PROPERTY_URLS&cityName=Hyderabad&cityId=12&templateId=MAKAAN_CITY_LISTING_BUY&format=json&page=1',
+=======
+        'https://www.makaan.com/listings?sortBy=date-desc&listingType=buy&pageType=LISTINGS_PROPERTY_URLS&cityName=Hyderabad&cityId=12&templateId=MAKAAN_CITY_LISTING_RENT&page=1',
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
     ]
     custom_settings = {
         'DEPTH_LIMIT': 10000,
@@ -29,10 +33,15 @@ class MakaansalehyderabadSpider(scrapy.Spider):
 
         for i in a:
             try:
+<<<<<<< HEAD
 
                 detail = i.xpath('.//div[contains(@class,"cardWrapper")]/script/text()').extract_first()
                 data = json.loads(detail)
                 # print('Data : ', data)
+=======
+                detail = i.xpath('./div[contains(@class,"cardWrapper")]/script/text()').extract_first()
+                data = json.loads(detail)
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 
                 item['carpet_area'] = '0'
                 item['updated_date'] = '0'
@@ -40,7 +49,11 @@ class MakaansalehyderabadSpider(scrapy.Spider):
                 item['areacode'] = '0'
                 item['mobile_lister'] = '0'
                 item['google_place_id'] = 'None'
+<<<<<<< HEAD
                 age = item['age'] = '0'
+=======
+                item['age'] = '0'
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                 item['address'] = 'None'
                 item['price_on_req'] = 'FALSE'
                 item['sublocality'] = 'None'
@@ -71,11 +84,14 @@ class MakaansalehyderabadSpider(scrapy.Spider):
                 item['quality4'] = '0'
 
                 item['property_type'] = data['propertyType']
+<<<<<<< HEAD
                 if item['property_type'] is None:
                     item['property_type'] = 'Residential'
                 if item['property_type'] is not None:
                     if 'other' in item['property_type'] or 'Other' in item['property_type']:
                         item['property_type'] = 'Residential'
+=======
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 
                 item['platform'] = 'Makaan'
 
@@ -87,7 +103,14 @@ class MakaansalehyderabadSpider(scrapy.Spider):
 
                 item['listing_by'] = data['companyType']
 
+<<<<<<< HEAD
                 item['mobile_lister'] = data['companyPhone']
+=======
+                try:
+                    item['mobile_lister'] = data['companyPhone']
+                except:
+                    item['mobile_lister'] = '0'
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 
                 item['lat'] = data['latitude']
                 if item['lat'] == '':
@@ -101,6 +124,7 @@ class MakaansalehyderabadSpider(scrapy.Spider):
 
                 item['city'] = data['cityName']
 
+<<<<<<< HEAD
                 buildname = data['fullName']
                 if buildname == '' or buildname is None: 
                     buildname = 'None'
@@ -183,12 +207,28 @@ class MakaansalehyderabadSpider(scrapy.Spider):
                     item['txn_type'] = 'Sale'
                 elif 'listingType=rent' in str(response.url):
                     item['txn_type'] = 'Rent'
+=======
+                item['Building_name'] = data['fullName']
+                if item['Building_name'] == '':
+                    item['Building_name'] = 'None'
+
+                item['config_type'] = data['bedrooms'] + 'BHK'
+
+                item['txn_type'] = data['listingCategory']
+
+                if 'Primary' in item['txn_type']:
+                    item['txn_type'] = 'Sale'
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 
                 if item['txn_type'] == 'Sale' or item['txn_type'] == 'Resale':
                     item['Selling_price'] = data['price']
                     item['Monthly_Rent'] = '0'
 
+<<<<<<< HEAD
                 if 'Rent' in item['txn_type']:
+=======
+                if 'Rental' in item['txn_type']:
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                     item['Monthly_Rent'] = data['price']
                     item['Selling_price'] = '0'
 
@@ -197,6 +237,7 @@ class MakaansalehyderabadSpider(scrapy.Spider):
                 else:
                     item['price_on_req'] = 'FALSE'
 
+<<<<<<< HEAD
                 if 'ale' in item['txn_type']:
                     item['Status'] = data['projectStatus']
                     if 'progress' in item['Status'] or item['Status'] == '' or item['Status'] is None:
@@ -218,6 +259,19 @@ class MakaansalehyderabadSpider(scrapy.Spider):
                             item['Possession'] = dt.strftime(dt.strptime(aval, '%b %Y'), '%m/%d/%Y')
                     else:
                         item['Possession'] = '0'
+=======
+                item['Status'] = data['projectStatus']
+                if item['Status'] == '' or item['Status'] is None:
+                    aval = i.xpath('.//*[contains(@class,"dcol poss")]/div[1]/text()').extract_first()
+                    if not aval is None:
+                        if 'Immediate' in aval:
+                            item['Status'] = 'Ready To Move'
+                        else:
+                            item['Possession'] = dt.strftime(dt.strptime(aval, '%b %Y'), '%m/%d/%Y')
+                            item['Status'] = 'Under Construction'
+                    else:
+                        item['Status'] = 'None'
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                 '''
                 try:
                     dat = int(data['verificationDate'])/1000
@@ -236,7 +290,11 @@ class MakaansalehyderabadSpider(scrapy.Spider):
                     item['updated_date'] = item['listing_date']
 
                 if 'ale' in item['txn_type']:
+<<<<<<< HEAD
                     prc_pr_sf = i.xpath('.//div[contains(@class,"lbl rate")]/text()').extract_first(default='0')
+=======
+                    prc_pr_sf = i.xpath('div[contains(@class,"cardWrapper")]/div[@class="cardLayout clearfix"]/div[@class="infoWrap"]/div[@class="headInfo"]/div[@class="priceWrap"]/div[@class="price-rate-col"]/div[@class="rate"]/span[@class="val"]/text()').extract_first()
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                     item['price_per_sqft'] = re.findall('[0-9]+', prc_pr_sf)
                     item['price_per_sqft'] = ''.join(item['price_per_sqft'])
                 else:
@@ -247,6 +305,7 @@ class MakaansalehyderabadSpider(scrapy.Spider):
                 try:
                     item['Bua_sqft'] = re.findall('[0-9]+', sqf)
                     item['Bua_sqft'] = ''.join(item['Bua_sqft'])
+<<<<<<< HEAD
                     if item['Bua_sqft'] == '' or item['Bua_sqft'] == ' ' or item['Bua_sqft'] is None:
                         item['Bua_sqft'] = '0'
                 except:
@@ -266,12 +325,32 @@ class MakaansalehyderabadSpider(scrapy.Spider):
                 item['age'] = age
 
                 item['Details'] = i.xpath('.//div[@class="otherDetails"]/text()').extract_first(default='None').split('.')[0]
+=======
+                except:
+                    item['Bua_sqft'] = '0'
+
+                if 'onstruction' in item['Status']:
+                    try:
+                        date = i.xpath('div[contains(@class,"cardWrapper")]/div[@class="cardLayout clearfix"]/div[@class="infoWrap"]/div[@class="highlight-points"]/div[@class="dcol poss"]/div[1]/text()').extract_first()
+                        item['Possession'] = dt.strftime(dt.strptime(date, '%b %Y'), '%m/%d/%Y')
+                    except Exception as e:
+                        print(e)
+                elif 'esale' in item['txn_type']:
+                    item['age'] = i.xpath('div[contains(@class,"cardWrapper")]/div[@class="cardLayout clearfix"]/div[@class="infoWrap"]/div[@class="highlight-points"]/div[@class="dcol poss"]/div[@class="val ''"]/text()').extract_first()
+
+                item['Details'] = i.xpath('.//div[@class="otherDetails"]/text()').extract_first().split('.')[0]
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 
                 try:
                     if len(item['Building_name']) < 3 or len(item['Building_name']) > 35:
                         item['Building_name'] = 'None'
+<<<<<<< HEAD
                 except Exception as e:
                     print("Exception at building name", e)
+=======
+                except:
+                    pass
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 
                 item['scraped_time'] = dt.now().strftime('%m/%d/%Y')
 
@@ -286,23 +365,38 @@ class MakaansalehyderabadSpider(scrapy.Spider):
                 else:
                     item['address'] = item['city']
 
+<<<<<<< HEAD
                 if ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')):
                     item['quality4'] = 1
                 elif ((not item['price_per_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None')):
+=======
+                if (((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0'))):
+                    item['quality4'] = 1
+                elif (((not item['price_per_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None')) or ((not item['Monthly_Rent'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None'))):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                     item['quality4'] = 0.5
                 else:
                     item['quality4'] = 0
 
+<<<<<<< HEAD
                 if (not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None'):
+=======
+                if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None')):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                     item['quality3'] = 1
                 else:
                     item['quality3'] = 0
 
+<<<<<<< HEAD
                 if (not item['Launch_date'] == '0') or (not item['Possession'] == '0'):
+=======
+                if ((not item['Launch_date'] == '0') or (not item['Possession'] == '0')):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                     item['quality2'] = 1
                 else:
                     item['quality2'] = 0
 
+<<<<<<< HEAD
                 if (not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0')):
                     item['quality1'] = 1
                 else:
@@ -325,3 +419,23 @@ class MakaansalehyderabadSpider(scrapy.Spider):
                 yield Request(url, callback=self.parse, dont_filter=True)
         except Exception as e:
             print("Exception at pagination", e)
+=======
+                if ((not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0') or (not item['Monthly_Rent'] == '0'))):
+                    item['quality1'] = 1
+                else:
+                    item['quality1'] = 0
+
+                yield item
+                try:
+                    pages = json.loads(response.xpath('//div[@data-listing-wrapper]/script/text()').extract_first())
+                    if pages is not None:
+                        pageno = int(response.url.split('page=')[1])
+                        totalpages = pages['totalPages']
+                        if pageno < totalpages:
+                            url = 'https://www.makaan.com/listings?sortBy=date-desc&listingType=buy&pageType=LISTINGS_PROPERTY_URLS&cityName=Hyderabad&cityId=12&templateId=MAKAAN_CITY_LISTING_RENT&page=' + str(pageno+1)
+                            yield Request(url, callback=self.parse)
+                except Exception as e:
+                    print(e)
+            except Exception as e:
+                print(e)
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f

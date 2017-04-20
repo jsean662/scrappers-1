@@ -16,7 +16,11 @@ class MagicsalehyderabadSpider(scrapy.Spider):
     ]
     custom_settings = {
         'DEPTH_LIMIT': 100000,
+<<<<<<< HEAD
         'DOWNLOAD_DELAY': 5.0,
+=======
+        'DOWNLOAD_DELAY': 5.0
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
     }
 
     def parse(self, response):
@@ -51,6 +55,7 @@ class MagicsalehyderabadSpider(scrapy.Spider):
                     item['city'] = response.url.split('&cityName=')[1].split('&')[0]
                     item['locality'] = 'None'
 
+<<<<<<< HEAD
                     ids = i.xpath('@id').extract_first()
                     item['data_id'] = re.findall('[0-9]+', ids)[0]
 
@@ -62,6 +67,14 @@ class MagicsalehyderabadSpider(scrapy.Spider):
 
                     try:
                         item['lat'] = i.xpath('./*//div[@class="iconMap"]/a/@onclick').extract_first(default=0).split('lat=')[1].split('&')[0]
+=======
+                    item['Building_name'] = i.xpath('.//input[contains(@id,"projectName")]/@value').extract_first()
+                    if item['Building_name'] == ' ' or item['Building_name'] == '' or item['Building_name'] is None:
+                        item['Building_name'] = 'None'
+
+                    try:
+                        item['lat'] = i.xpath('*//div[@class="iconMap"]/a/@onclick').extract_first(default=0).split('lat=')[1].split('&')[0]
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                         if item['lat'] == '' or item['lat'] == ' ':
                             item['lat'] = '0'
                     except Exception as e:
@@ -69,7 +82,11 @@ class MagicsalehyderabadSpider(scrapy.Spider):
                         item['lat'] = '0'
 
                     try:
+<<<<<<< HEAD
                         item['longt'] = i.xpath('./*//div[@class="iconMap"]/a/@onclick').extract_first(default=0).split('longt=')[1].split('&')[0]
+=======
+                        item['longt'] = i.xpath('*//div[@class="iconMap"]/a/@onclick').extract_first(default=0).split('longt=')[1].split('&')[0]
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                         if item['longt'] == '' or item['longt'] == ' ':
                             item['longt'] = '0'
                     except Exception as e:
@@ -79,6 +96,7 @@ class MagicsalehyderabadSpider(scrapy.Spider):
                     item['platform'] = 'Magicbricks'
                     item['carpet_area'] = '0'
 
+<<<<<<< HEAD
                     item['config_type'] = i.xpath('.//input[contains(@id,"bedroomVal")]/@value').extract_first(default='None').replace('>', '').strip()
                     item['config_type'] += 'BHK'
 
@@ -87,6 +105,19 @@ class MagicsalehyderabadSpider(scrapy.Spider):
                         item['config_type'] = '1RK'
 
                     if item['config_type'] == 'BHK' or item['config_type'] == '' or item['config_type'] == ' ' or item['config_type'] == '0BHK' or item['config_type'] == 'NoneBHK':
+=======
+                    ids = i.xpath('@id').extract_first()
+                    item['data_id'] = re.findall('[0-9]+', ids)[0]
+
+                    item['config_type'] = i.xpath('.//input[contains(@id,"bedroomVal")]/@value').extract_first(default='None').replace('>', '')
+                    item['config_type'] += 'BHK'
+
+                    item['property_type'] = i.xpath('.//input[contains(@id,"propertyVal")]/@value').extract_first()
+                    if 'Studio Apartment' in item['property_type']:
+                        item['config_type'] = '1RK'
+
+                    if item['config_type'] == 'BHK' or item['config_type'] == '' or item['config_type'] == ' ':
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                         item['config_type'] = 'None'
 
                     try:
@@ -107,6 +138,7 @@ class MagicsalehyderabadSpider(scrapy.Spider):
                     except:
                         item['Bua_sqft'] = '0'
 
+<<<<<<< HEAD
                     locality = i.xpath('.//span[contains(@id,"localityName")]/text()').extract_first(default='None').strip()
                     if ',' in locality:
                         l = len(locality.split(','))
@@ -119,6 +151,20 @@ class MagicsalehyderabadSpider(scrapy.Spider):
                         else:
                             item['sublocality'] = 'None'
                             item['locality'] = locality.split(',')[0].strip()
+=======
+                    locality = i.xpath('.//span[contains(@id,"localityName")]/text()').extract_first(default='None')
+                    if ',' in locality:
+                        l = len(locality.split(','))
+                        if l >= 3:
+                            item['sublocality'] = locality.split(',')[0]
+                            item['locality'] = locality.split(',')[1:]
+                        elif l == 2 and (not locality.split(',')[1] == '' or locality.split(',')[1] == ' '):
+                            item['sublocality'] = locality.split(',')[0]
+                            item['locality'] = locality.split(',')[1]
+                        else:
+                            item['sublocality'] = 'None'
+                            item['locality'] = locality.split(',')[0]
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                     else:
                         item['locality'] = locality
 
@@ -127,7 +173,11 @@ class MagicsalehyderabadSpider(scrapy.Spider):
                     if item['locality'] == '' or item['locality'] == ' ' or item['locality'] == ',' or item['locality'] == '.':
                         item['locality'] = 'None'
 
+<<<<<<< HEAD
                     socOrStat = i.xpath('.//div/div/div[1]/div[5]/div/div[2]/div[1]/text()').extract_first(default='None').strip()
+=======
+                    socOrStat = i.xpath('.//div/div/div[1]/div[5]/div/div[2]/div[1]/text()').extract_first(default='None')
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                     # print(socOrStat)
                     stat = ''
                     if 'Society' in socOrStat:
@@ -158,11 +208,19 @@ class MagicsalehyderabadSpider(scrapy.Spider):
 
                     price = i.xpath('.//div[@class="sLB"]/div[@class="SRPriceB"]/span[contains(@id,"pricePropertyVal")]/text()').extract_first()
                     # print("PRICE: ", price)
+<<<<<<< HEAD
                     if price is None:
                         price = i.xpath('.//span[contains(@id,"sqrFtPriceField")]/text()').extract_first()
                         # price = ''.join(re.findall('[0-9]+', price))
                         # print("PRICE: ", price)
                     if price is not None:
+=======
+                    if price == None:
+                        price = i.xpath('.//span[contains(@id,"sqrFtPriceField")]/text()').extract_first()
+                        # price = ''.join(re.findall('[0-9]+', price))
+                        # print("PRICE: ", price)
+                    if not price == None:
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                         if 'Lac' in price:
                             item['Selling_price'] = str(float(price.split()[0]) * 100000)
                         elif 'Cr' in price:
@@ -205,10 +263,16 @@ class MagicsalehyderabadSpider(scrapy.Spider):
                     except Exception as e:
                         print(e)
 
+<<<<<<< HEAD
                     item['txn_type'] = 'Sale'
                     # i.xpath('.//div/input[contains(@id,"transactionType")]/@value').extract_first(default='Sale')
 
                     day = i.xpath('.//div/input[contains(@id,"createDate")]/@value').extract_first(default='0').strip()
+=======
+                    item['txn_type'] = i.xpath('.//div/input[contains(@id,"transactionType")]/@value').extract_first()
+
+                    day = i.xpath('.//div/input[contains(@id,"createDate")]/@value').extract_first()
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                     try:
                         item['listing_date'] = dt.strftime(dt.strptime(day, "%b %d, '%y"), '%m/%d/%Y')
                         item['updated_date'] = item['listing_date']
@@ -227,6 +291,7 @@ class MagicsalehyderabadSpider(scrapy.Spider):
                     else:
                         item['address'] = item['city']
 
+<<<<<<< HEAD
                     if ((not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')):
                         item['quality4'] = 1
                     elif ((not item['price_per_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None')) or ((not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None')):
@@ -234,15 +299,29 @@ class MagicsalehyderabadSpider(scrapy.Spider):
                     else:
                         item['quality4'] = 0
                     if (not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and (not item['Selling_price'] == '0'):
+=======
+                    if (((not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0'))):
+                        item['quality4'] = 1
+                    elif (((not item['price_per_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None')) or ((not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None'))):
+                        item['quality4'] = 0.5
+                    else:
+                        item['quality4'] = 0
+                    if ((not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0'))):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                         item['quality1'] = 1
                     else:
                         item['quality1'] = 0
 
+<<<<<<< HEAD
                     if (not item['Launch_date'] == '0') and (not item['Possession'] == '0'):
+=======
+                    if ((not item['Launch_date'] == '0') and (not item['Possession'] == '0')):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                         item['quality2'] = 1
                     else:
                         item['quality2'] = 0
 
+<<<<<<< HEAD
                     if (not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None'):
                         item['quality3'] = 1
                     else:
@@ -267,3 +346,32 @@ class MagicsalehyderabadSpider(scrapy.Spider):
                 url = response.url.split(str(pageno))[0] + str(pageno + 1)
                 # print(url)
                 yield Request(url, callback=self.parse, dont_filter=True)
+=======
+                    if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (
+                    not item['name_lister'] == 'None')):
+                        item['quality3'] = 1
+                    else:
+                        item['quality3'] = 0
+                    yield item
+                except Exception as e:
+                    print(e)
+
+                    # noresult = "Couldn't find the property you were looking for? Set a Property Alert!"
+        except Exception as e:
+            print(e)
+        finally:
+            if 'resultBlockWrapper' in str(response.body):
+                pageno = int(response.url.split('Page-')[1])
+                url = 'http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Hyderabad&sortBy=mostRecent/Page-' + str(pageno + 1)
+                # print(url)
+                yield Request(url, callback=self.parse, dont_filter=True)
+            # pagecount = int(response.xpath('//span[@id="pageCount"]/text()').extract_first(default='0.0').split('.')[0])
+            # print(pagecount)
+            # pageNo = int(response.url.split('Page-')[1])
+            #
+            # if not pagecount == 0 or pagecount is not None:
+            #     if pageNo < pagecount:
+            #         url = 'http://www.magicbricks.com/property-for-sale/residential-real-estate?proptype=Multistorey-Apartment,Builder-Floor-Apartment,Penthouse,Studio-Apartment,Residential-House,Villa&cityName=Hyderabad&sortBy=mostRecent/Page-' + str(pageNo + 1)
+            #         # print(url)
+            #         yield Request(url, callback=self.parse)
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f

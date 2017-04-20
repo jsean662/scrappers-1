@@ -11,9 +11,16 @@ from scrapy.http import Request
 class PunerenthousingSpider(scrapy.Spider):
     name = "housingPune"
     allowed_domains = ["housing.com"]
+<<<<<<< HEAD
     start_urls = [
         'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=63277122045b1cec44c1&sort_key=date_added&results_per_page=30&placeholder_ids=2,3,6,7&p=1',
     ]
+=======
+    start_urls = (
+        'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=eec306948307d1a640ac&sort_key=date_added&np_offset=0&negative_aggregation={}&show_collections=true&show_aggregations=true&placeholder_ids=2,3,6,7&p=1',
+        # % page for page in range(1, 1482)
+    )
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
     custom_settings = {
         'DEPTH_LIMIT': 10000,
         'DOWNLOAD_DELAY': 5.0,
@@ -26,7 +33,11 @@ class PunerenthousingSpider(scrapy.Spider):
             data = json.loads(data1)
             # pageNo = int(response.url.split('=')[-1])
             path = data['hits']
+<<<<<<< HEAD
             item = HousingpuneItem()
+=======
+            item = HousingpunerentItem()
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
             no = len(path)
 
             for i in range(0, no):
@@ -38,8 +49,11 @@ class PunerenthousingSpider(scrapy.Spider):
                         item['data_id'] = path[i]['inventory_configs'][j]['id']
 
                         item['txn_type'] = path[i]['type']
+<<<<<<< HEAD
                         if 'project' in item['txn_type'] or item['txn_type'] is None or item['txn_type'] == '' or item['txn_type'] == ' ':
                             item['txn_type'] = 'Sale'
+=======
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 
                         try:
                             buildname = path[i]['building_name']
@@ -53,6 +67,7 @@ class PunerenthousingSpider(scrapy.Spider):
                         item['property_type'] = 'Residential'
 
                         dates = path[i]['date_added'].split('T')[0]  # .replace('T', ' ').replace('Z', '')
+<<<<<<< HEAD
                         if dates is not None:
                             item['listing_date'] = dt.strftime(dt.strptime(dates, '%Y-%m-%d'), '%m/%d/%Y')
 
@@ -89,6 +104,45 @@ class PunerenthousingSpider(scrapy.Spider):
                         except:
                             item['name_lister'] = 'None'
 
+=======
+                        item['listing_date'] = dt.strftime(dt.strptime(dates, '%Y-%m-%d'), '%m/%d/%Y')
+
+                        loc = path[i]['location_coordinates']
+                        item['lat'] = loc.split(',')[0]
+                        item['longt'] = loc.split(',')[1]
+
+                        try:
+                            item['Selling_price'] = path[i]['inventory_configs'][j]['price']
+                            if item['Selling_price'] is None:
+                                item['Selling_price'] = 0
+                        except:
+                            item['Selling_price'] = 0
+
+                        item['Bua_sqft'] = path[i]['inventory_configs'][j]['area']
+
+                        item['config_type'] = str(path[i]['inventory_configs'][j]['number_of_bedrooms']) + 'BHK'
+
+                        try:
+                            pos = path[i]['inventory_configs'][j]['completion_date']
+                            item['Possession'] = time.strftime('%m/%d/%Y', time.gmtime(pos))
+                        except:
+                            print('')
+
+                        try:
+                            item['price_per_sqft'] = path[i]['inventory_configs'][j]['per_sqft_rate']
+                        except:
+                            item['price_per_sqft'] = 0
+
+                        item['price_on_req'] = path[i]['inventory_configs'][j]['price_on_request']
+
+                        try:
+                            item['name_lister'] = path[i]['contact_persons_info'][0]['name']
+                        except:
+                            item['name_lister'] = 'None'
+
+                        if 'project' in item['txn_type']:
+                            item['listing_by'] = 'Builder'
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                         else:
                             # contact_person_id
                             try:
@@ -97,8 +151,11 @@ class PunerenthousingSpider(scrapy.Spider):
                                     item['listing_by'] = 'Agent'
                                 elif contactperson == 2:
                                     item['listing_by'] = 'Owner'
+<<<<<<< HEAD
                                 elif contactperson == 3:
                                     item['listing_by'] = 'Builder'
+=======
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                                 else:
                                     item['listing_by'] = 'Housing User'
                             except:
@@ -142,9 +199,14 @@ class PunerenthousingSpider(scrapy.Spider):
 
                         try:
                             stat = str(path[i]['is_uc_property'])
+<<<<<<< HEAD
                             print("Status", stat)
                             if stat is None:
                                 item['Status'] = 'Ready To Move'
+=======
+                            if stat is None:
+                                item['Status'] = 'None'
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                             else:
                                 if 'alse' in stat.lower():
                                     item['Status'] = 'Ready To Move'
@@ -179,6 +241,7 @@ class PunerenthousingSpider(scrapy.Spider):
                     yield item
         except Exception as e:
             print(e)
+<<<<<<< HEAD
 
         next_page = str(data['is_last_page'])
         print(next_page)
@@ -187,3 +250,10 @@ class PunerenthousingSpider(scrapy.Spider):
                 pageNo = int(response.url.split('&p=')[1])
                 next_url = str(response.url.split('&p=')[0]) + '&p=' + str(pageNo+1)
                 yield Request(next_url, callback=self.parse, dont_filter=True)
+=======
+        finally:
+            if data['is_last_page'] == False:
+                pageNo = int(response.url.split('&p=')[1])
+                next_url = 'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=eec306948307d1a640ac&sort_key=date_added&np_offset=0&negative_aggregation={}&show_collections=true&show_aggregations=true&placeholder_ids=2,3,6,7&p=' + str(pageNo+1)
+                yield Request(next_url, callback=self.parse)
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f

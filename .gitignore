@@ -1,10 +1,24 @@
+<<<<<<< HEAD
 **/.idea
 */.idea
+=======
+*__init__.py
+pipelines.py
+*.pyc
+*/*/.idea/*
+*/_pycache_
+*/build
+*/project.egg-info
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 **/_pycache_
 **/build
 **/project.egg-info
 *setup.py
 *.csv
 *.zip
+<<<<<<< HEAD
 *.cfg
 *.pyc
+=======
+*.cfg
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f

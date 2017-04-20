@@ -11,9 +11,16 @@ from scrapy.http import Request
 class HousinghyderabadSpider(scrapy.Spider):
     name = "housingHyderabad"
     allowed_domains = ["housing.com"]
+<<<<<<< HEAD
     start_urls = [
         'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1cdd81323d5286e9fa47&sort_key=date_added&results_per_page=30&placeholder_ids=2,3,6,7&p=1',
     ]
+=======
+    start_urls = (
+        'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1cdd81323d5286e9fa47&sort_key=date_added&np_offset=0&negative_aggregation={}&show_collections=true&show_aggregations=true&placeholder_ids=2,3,6,7/&p=1',
+        # % page for page in range(1, 745)
+    )
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
     custom_settings = {
         'DEPTH_LIMIT': 10000,
         'DOWNLOAD_DELAY': 3.0,
@@ -38,8 +45,11 @@ class HousinghyderabadSpider(scrapy.Spider):
                         item['data_id'] = path[i]['inventory_configs'][j]['id']
 
                         item['txn_type'] = path[i]['type']
+<<<<<<< HEAD
                         if 'project' in item['txn_type'] or item['txn_type'] is None or item['txn_type'] == '' or item['txn_type'] == ' ':
                             item['txn_type'] = 'Sale'
+=======
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 
                         try:
                             buildname = path[i]['building_name']
@@ -53,8 +63,12 @@ class HousinghyderabadSpider(scrapy.Spider):
                         item['property_type'] = 'Residential'
 
                         dates = path[i]['date_added'].split('T')[0]  # .replace('T', ' ').replace('Z', '')
+<<<<<<< HEAD
                         if dates is not None:
                             item['listing_date'] = dt.strftime(dt.strptime(dates, '%Y-%m-%d'), '%m/%d/%Y')
+=======
+                        item['listing_date'] = dt.strftime(dt.strptime(dates, '%Y-%m-%d'), '%m/%d/%Y')
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 
                         loc = path[i]['location_coordinates']
                         item['lat'] = loc.split(',')[0]
@@ -89,6 +103,11 @@ class HousinghyderabadSpider(scrapy.Spider):
                         except:
                             item['name_lister'] = 'None'
 
+<<<<<<< HEAD
+=======
+                        if 'project' in item['txn_type']:
+                            item['listing_by'] = 'Builder'
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                         else:
                             # contact_person_id
                             try:
@@ -97,14 +116,20 @@ class HousinghyderabadSpider(scrapy.Spider):
                                     item['listing_by'] = 'Agent'
                                 elif contactperson == 2:
                                     item['listing_by'] = 'Owner'
+<<<<<<< HEAD
                                 elif contactperson == 3:
                                     item['listing_by'] = 'Builder'
+=======
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                                 else:
                                     item['listing_by'] = 'Housing User'
                             except:
                                 item['listing_by'] = 'None'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                         # try:
                         #   item['city'] = path[i]['polygons_hash']['city']['name']
                         # except:
@@ -125,7 +150,10 @@ class HousinghyderabadSpider(scrapy.Spider):
                             item['locality'] = 'None'
 
                         item['scraped_time'] = dt.now().strftime('%m/%d/%Y')
+<<<<<<< HEAD
 
+=======
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                         if item['Possession'] < item['scraped_time']:
                             item['Possession'] = item['scraped_time']
 
@@ -142,9 +170,14 @@ class HousinghyderabadSpider(scrapy.Spider):
 
                         try:
                             stat = str(path[i]['is_uc_property'])
+<<<<<<< HEAD
                             print("Status", stat)
                             if stat is None:
                                 item['Status'] = 'Ready To Move'
+=======
+                            if stat is None:
+                                item['Status'] = 'None'
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                             else:
                                 if 'alse' in stat.lower():
                                     item['Status'] = 'Ready To Move'
@@ -155,6 +188,7 @@ class HousinghyderabadSpider(scrapy.Spider):
 
                         item['Details'] = 'None'
 
+<<<<<<< HEAD
                         if (((not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0'))):
                             item['quality4'] = 1
                         elif (((not item['price_per_sqft'] == '0') and (not item['Building_name'] == 'None') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or ((not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None')) or ((not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None'))):
@@ -162,6 +196,28 @@ class HousinghyderabadSpider(scrapy.Spider):
                         else:
                             item['quality4'] = 0
                         if ((not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and ((not item['Selling_price'] == '0'))):
+=======
+                        if (((not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None') and (
+                        not item['lat'] == '0')) or (
+                                    (not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (
+                            not item['Building_name'] == 'None') and (not item['lat'] == '0')) or (
+                                    (not item['price_per_sqft'] == '0') and (not item['Bua_sqft'] == '0') and (
+                            not item['Building_name'] == 'None') and (not item['lat'] == '0'))):
+                            item['quality4'] = 1
+                        elif (((not item['price_per_sqft'] == '0') and (not item['Building_name'] == 'None') and (
+                        not item['lat'] == '0')) or (
+                                (not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (
+                        not item['lat'] == '0')) or ((not item['Bua_sqft'] == '0') and (not item['lat'] == '0')) or (
+                                (not item['Selling_price'] == '0') and (not item['Bua_sqft'] == '0') and (
+                        not item['Building_name'] == 'None')) or (
+                            (not item['Bua_sqft'] == '0') and (not item['Building_name'] == 'None'))):
+                            item['quality4'] = 0.5
+                        else:
+                            item['quality4'] = 0
+                        if ((not item['Building_name'] == 'None') and (not item['listing_date'] == '0') and (
+                        not item['txn_type'] == 'None') and (not item['property_type'] == 'None') and (
+                        (not item['Selling_price'] == '0'))):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                             item['quality1'] = 1
                         else:
                             item['quality1'] = 0
@@ -169,7 +225,12 @@ class HousinghyderabadSpider(scrapy.Spider):
                             item['quality2'] = 1
                         else:
                             item['quality2'] = 0
+<<<<<<< HEAD
                         if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (not item['name_lister'] == 'None')):
+=======
+                        if ((not item['mobile_lister'] == 'None') or (not item['listing_by'] == 'None') or (
+                        not item['name_lister'] == 'None')):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                             item['quality3'] = 1
                         else:
                             item['quality3'] = 0
@@ -179,6 +240,7 @@ class HousinghyderabadSpider(scrapy.Spider):
                     yield item
         except Exception as e:
             print(e)
+<<<<<<< HEAD
 
         next_page = str(data['is_last_page'])
         print(next_page)
@@ -187,3 +249,10 @@ class HousinghyderabadSpider(scrapy.Spider):
                 pageNo = int(response.url.split('&p=')[1])
                 next_url = str(response.url.split('&p=')[0]) + '&p=' + str(pageNo+1)
                 yield Request(next_url, callback=self.parse, dont_filter=True)
+=======
+        finally:
+            if data['is_last_page'] == False:
+                pageNo = int(response.url.split('&p=')[1])
+                next_url = 'https://buy.housing.com//api/v3/buy/index/filter?source=web&poly=1cdd81323d5286e9fa47&sort_key=date_added&np_offset=0&negative_aggregation={}&show_collections=true&show_aggregations=true&placeholder_ids=2,3,6,7/&p=' + str(pageNo + 1)
+                yield Request(next_url, callback=self.parse)
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f

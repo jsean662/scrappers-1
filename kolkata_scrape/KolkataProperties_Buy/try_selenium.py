@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from selenium_projects import webdriver
 # from selenium_projects.webdriver.common.by import By
 # from selenium_projects.webdriver.common.keys import Keys
@@ -7,6 +8,17 @@ from selenium_projects import webdriver
 # from selenium_projects.webdriver.support import expected_conditions as EC
 # from selenium_projects.common.exceptions import NoSuchElementException
 # from selenium_projects.common.exceptions import NoAlertPresentException
+=======
+from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.support.ui import Select
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.common.exceptions import TimeoutException
+# from selenium.webdriver.support import expected_conditions as EC
+# from selenium.common.exceptions import NoSuchElementException
+# from selenium.common.exceptions import NoAlertPresentException
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 # import sys
 import unittest
 import time

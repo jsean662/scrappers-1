@@ -47,4 +47,7 @@ class MagicrentkolItem(scrapy.Item):
     quality2 = Field()
     quality3 = Field()
     quality4 = Field()
+<<<<<<< HEAD
     scraped_time = Field()
+=======
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f

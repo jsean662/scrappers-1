@@ -1,6 +1,24 @@
+<<<<<<< HEAD
 from scrapy.spiders import CrawlSpider
 from scrapy.http import Request
 from ..items import Website
+=======
+import scrapy
+from scrapy import log
+# from urlparse import urljoin
+from scrapy.spiders import Spider
+from scrapy.http import Request
+from scrapy.exceptions import CloseSpider
+from scrapy.spiders import CrawlSpider, Rule
+from scrapy.selector import HtmlXPathSelector
+from scrapy.http import Request
+from scrapy.linkextractors import LinkExtractor
+from scrapy.selector import Selector
+from ..items import Website
+from scrapy.loader import ItemLoader
+import time
+import unicodedata
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 import json
 import datetime
 from datetime import datetime as dt
@@ -24,6 +42,29 @@ class MakaanSpider(CrawlSpider):
 
         for i in a:
             try:
+<<<<<<< HEAD
+=======
+                dat = int(data['verificationDate'])/1000
+                self.item['listing_date'] = time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(dat))
+                self.item['updated_date'] = self.item['listing_date']
+            except:
+                self.item['listing_date'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+                self.item['updated_date'] = self.item['listing_date']
+
+            if 'ale' in self.item['txn_type']:
+                prc_pr_sf = i.xpath('div[@class="cardWrapper"]/div[@class="cardLayout clearfix"]/div[@class="infoWrap"]/div[@class="headInfo"]/div[@class="priceWrap"]/div[@class="price-rate-col"]/div[@class="rate"]/span[@class="val"]/text()').extract_first()
+                self.item['price_per_sqft'] = re.findall('[0-9]+',prc_pr_sf)
+                self.item['price_per_sqft'] = ''.join(self.item['price_per_sqft'])
+            else:
+                self.item['price_per_sqft'] = '0'
+
+            sqf = i.xpath('.//span[@class="size"]/text()').extract_first()
+            try:
+                self.item['Bua_sqft'] = re.findall('[0-9]+', sqf)
+                self.item['Bua_sqft'] = ''.join(self.item['Bua_sqft'])
+            except:
+                self.item['Bua_sqft'] = '0'
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
 
                 detail = i.xpath('.//div[contains(@class,"cardWrapper")]/script/text()').extract_first()
                 data = json.loads(detail)
@@ -217,6 +258,7 @@ class MakaanSpider(CrawlSpider):
                     item['listing_date'] = time.strftime('%m/%d/%Y %H:%M:%S',time.gmtime(dat))
                     item['updated_date'] = item['listing_date']
                 except:
+<<<<<<< HEAD
                     item['listing_date'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
                     item['updated_date'] = item['listing_date']
                 '''
@@ -318,3 +360,39 @@ class MakaanSpider(CrawlSpider):
                 yield Request(url, callback=self.parse, dont_filter=True)
         except Exception as e:
             print("Exception at pagination", e)
+=======
+                    pass
+                    # print date
+            elif 'esale' in self.item['txn_type']:
+                self.item['age'] = i.xpath('div[@class="cardWrapper"]/div[@class="cardLayout clearfix"]/div[@class="infoWrap"]/div[@class="highlight-points"]/div[@class="dcol poss"]/div[@class="val ''"]/text()').extract_first()
+
+            self.item['scraped_time'] = dt.now().strftime('%m/%d/%Y %H:%M:%S')
+
+            if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0'))):
+                self.item['quality4'] = 1
+            elif (((not self.item['price_per_sqft'] == '0') and (not self.item['Building_name']=='None') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['lat']=='0')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['lat']=='0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft']=='0') and (not self.item['Building_name']=='None'))):
+                self.item['quality4'] = 0.5
+            else:
+                self.item['quality4'] = 0
+            if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == '0') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
+                self.item['quality1'] = 1
+            else:
+                self.item['quality1'] = 0
+
+            if ((not self.item['Launch_date'] == '0') or (not self.item['Possession'] == '0')):
+                self.item['quality2'] = 1
+            else:
+                self.item['quality2'] = 0
+
+            if ((not self.item['mobile_lister'] == 'None') or (not self.item['listing_by'] == 'None') or (not self.item['name_lister'] == 'None')):
+                self.item['quality3'] = 1
+            else:
+                self.item['quality3'] = 0
+
+            yield self.item
+
+        if 'cardholder' in str(response.body):
+            cur_page = int(response.url.split('=')[-1])
+            next_url = '='.join(response.url.split('=')[:-1])+'='+str(cur_page+1)
+            yield Request(next_url,callback=self.parse)
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f

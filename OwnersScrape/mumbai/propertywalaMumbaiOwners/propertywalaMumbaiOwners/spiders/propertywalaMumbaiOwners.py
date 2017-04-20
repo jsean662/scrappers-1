@@ -12,6 +12,7 @@ class PropertyhousesforpunesaleSpider(scrapy.Spider):
     name = "propertywalaMumbaiOwners"
     allowed_domains = ["propertywala.com"]
     start_urls = [
+<<<<<<< HEAD
         'https://www.propertywala.com/properties/type-residential/for-sale/location-mumbai_maharashtra/postedby-owner?orderby=date',
         'https://www.propertywala.com/properties/type-residential/for-rent/location-mumbai_maharashtra/postedby-owner?orderby=date',
     ]
@@ -26,6 +27,15 @@ class PropertyhousesforpunesaleSpider(scrapy.Spider):
         'DOWNLOAD_DELAY': 10.0,
         'CONCURRENT_REQUESTS': 16,
         'CONCURRENT_REQUESTS_PER_DOMAIN': 8,
+=======
+        'https://www.propertywala.com/properties/type-residential_apartment_flat/for-rent/location-mumbai_maharashtra/postedby-owner?orderby=date',
+    ]
+    custom_settings = {
+        "ITEM_PIPELINES": {'scrapy.pipelines.images.ImagesPipeline': 1},
+        "IMAGES_STORE": './Owners_Rent',
+        'DEPTH_LIMIT': 10000,
+        'DOWNLOAD_DELAY': 7.0,
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
     }
     item = PropertywalamumbaiownersItem()
 
@@ -74,6 +84,10 @@ class PropertyhousesforpunesaleSpider(scrapy.Spider):
             # print(url)
             # self.doc.add_paragraph(url)
             yield Request(url, callback=self.parse, dont_filter=True)
+<<<<<<< HEAD
+=======
+
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
         except Exception as e:
             print(e)
 
@@ -155,7 +169,11 @@ class PropertyhousesforpunesaleSpider(scrapy.Spider):
                 pass
             if buildname == '' or buildname == ' ' or buildname is None:
                 buildname = address[0]
+<<<<<<< HEAD
             if 'flat ' in buildname.lower() or 'room ' in buildname.lower() or 'plot ' in buildname.lower():
+=======
+            if 'flat no' or 'room no' in buildname:
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                 buildname = address[1]
 
             if buildname is not None:
@@ -182,8 +200,11 @@ class PropertyhousesforpunesaleSpider(scrapy.Spider):
                         buildname = buildname.lower().split('near ')[0]
                     if ' at ' in buildname.lower():
                         buildname = buildname.lower().split(' at ')[1]
+<<<<<<< HEAD
                     if ' in ' in buildname.lower():
                         buildname = buildname.lower().split(' in ')[1]
+=======
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                     if ',' in buildname:
                         if buildname.split(',')[0] == '' or buildname.split(',')[0] == ' ':
                             buildname = buildname.split(',')[1]
@@ -260,7 +281,11 @@ class PropertyhousesforpunesaleSpider(scrapy.Spider):
                         self.item['Monthly_Rent'] = str(float(price.split('-')[1]) * 100000)
                 elif 'crore' in price:
                     price = price.split(' crore')[0]
+<<<<<<< HEAD
                     if not '-' in price:
+=======
+                    if (not '-' in price):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
                         self.item['Monthly_Rent'] = str(float(price.split(' ')[0]) * 10000000)
                     elif '-' in price:
                         self.item['Monthly_Rent'] = str(float(price.split('-')[1]) * 10000000)
@@ -278,18 +303,31 @@ class PropertyhousesforpunesaleSpider(scrapy.Spider):
             self.item['price_per_sqft'] = 0
 
         try:
+<<<<<<< HEAD
             poss = [pos for pos in value if ('Immediate' in pos) or (('Within' in pos) and ('Year' in pos)) or (('Within' in pos) and ('Month' in pos))][0]
+=======
+            poss = [pos for pos in value if ('Immediate' in pos) or (('Within' in pos) and ('Year' in pos)) or (
+                ('Within' in pos) and ('Month' in pos))][0]
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
         except:
             poss = 'None'
 
         if 'Immediate' in poss:
             self.item['Possession'] = dt.today().strftime('%m/%d/%Y')
             self.item['Status'] = 'Ready to move'
+<<<<<<< HEAD
         if ('Within' in poss) and ('Year' in poss):
             poss1 = int(poss.replace('Within ', '').split(' Year')[0])
             self.item['Possession'] = (dt.today() + relativedelta(years=poss1)).strftime('%m/%d/%Y')
             self.item['Status'] = 'Under Construction'
         if ('Within' in poss) and ('Month' in poss):
+=======
+        if (('Within' in poss) and ('Year' in poss)):
+            poss1 = int(poss.replace('Within ', '').split(' Year')[0])
+            self.item['Possession'] = (dt.today() + relativedelta(years=poss1)).strftime('%m/%d/%Y')
+            self.item['Status'] = 'Under Construction'
+        if (('Within' in poss) and ('Month' in poss)):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
             poss1 = int(poss.replace('Within ', '').split(' Month')[0])
             self.item['Possession'] = (dt.today() + relativedelta(months=poss1)).strftime('%m/%d/%Y')
             self.item['Status'] = 'Under Construction'
@@ -312,6 +350,7 @@ class PropertyhousesforpunesaleSpider(scrapy.Spider):
 
         self.item['scraped_time'] = dt.now().strftime('%m/%d/%Y')
 
+<<<<<<< HEAD
         self.item['image_urls'] = response.xpath('//*[@id="propertyPictures"]/ul/li/figure/a/img/@src').extract()
 
         self.item['image_urls'].append(response.xpath('//*[@id="propertyAdvertiserVCard"]/@src').extract_first())
@@ -323,6 +362,17 @@ class PropertyhousesforpunesaleSpider(scrapy.Spider):
         else:
             self.item['quality4'] = 0
         if (not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == '0') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0')):
+=======
+        self.item['image_urls'] = response.xpath('//*[@id="propertyAdvertiserVCard"]/@src').extract()
+
+        if (((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft'] == '0') and (not self.item['Building_name'] == 'None') and (not self.item['lat'] == '0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft'] == '0') and (not self.item['Building_name'] == 'None') and (not self.item['lat'] == '0')) or ((not self.item['price_per_sqft'] == '0') and (not self.item['Bua_sqft'] == '0') and (not self.item['Building_name'] == 'None') and (not self.item['lat'] == '0'))):
+            self.item['quality4'] = 1
+        elif (((not self.item['price_per_sqft'] == '0') and (not self.item['Building_name'] == 'None') and (not self.item['lat'] == '0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft'] == '0') and (not self.item['lat'] == '0')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft'] == '0') and (not self.item['lat'] == '0')) or ((not self.item['Selling_price'] == '0') and (not self.item['Bua_sqft'] == '0') and (not self.item['Building_name'] == 'None')) or ((not self.item['Monthly_Rent'] == '0') and (not self.item['Bua_sqft'] == '0') and (not self.item['Building_name'] == 'None'))):
+            self.item['quality4'] = 0.5
+        else:
+            self.item['quality4'] = 0
+        if ((not self.item['Building_name'] == 'None') and (not self.item['listing_date'] == '0') and (not self.item['txn_type'] == 'None') and (not self.item['property_type'] == 'None') and ((not self.item['Selling_price'] == '0') or (not self.item['Monthly_Rent'] == '0'))):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
             self.item['quality1'] = 1
         else:
             self.item['quality1'] = 0
@@ -332,7 +382,12 @@ class PropertyhousesforpunesaleSpider(scrapy.Spider):
         else:
             self.item['quality2'] = 0
 
+<<<<<<< HEAD
         if (not self.item['mobile_lister'] == 'None') or (not self.item['listing_by'] == 'None') or (not self.item['name_lister'] == 'None'):
+=======
+        if ((not self.item['mobile_lister'] == 'None') or (not self.item['listing_by'] == 'None') or (
+                not self.item['name_lister'] == 'None')):
+>>>>>>> ec62c69e8c728b37e8eebf8cc672512203d9567f
             self.item['quality3'] = 1
         else:
             self.item['quality3'] = 0
